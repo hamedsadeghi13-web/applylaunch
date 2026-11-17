@@ -1,0 +1,35 @@
+{
+ "sources": {
+  "curated": 886,
+  "discovered": 0,
+  "discovered_by_status": {},
+  "curated_reachable": 590,
+  "curated_with_real_positions": 413,
+  "discovered_verified": 0,
+  "really_extractable_total": 413
+ },
+ "positions": {
+  "total": 2777,
+  "by_type": {
+   "Research job": 285,
+   "PhD": 640,
+   "Postdoc": 179,
+   "Scholarship": 330,
+   "Internship": 1019,
+   "Master": 324
+  },
+  "with_deadline": 265,
+  "with_salary": 177,
+  "countries": 57
+ },
+ "professors": {
+  "total": 0,
+  "institutions_processed": 0,
+  "with_official_page": 0,
+  "with_public_email": 0,
+  "status": {},
+  "with_evidence_link": 0,
+  "from_open_positions": 0
+ },
+ "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score."
+}
