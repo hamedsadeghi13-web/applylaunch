@@ -1,0 +1,45 @@
+name: Update opportunities
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: applylaunch-data        # the three data workflows never run at the same time
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: crawler/requirements.txt
+      - run: pip install -r crawler/requirements.txt
+      - name: Run
+        run: |
+          python crawler/crawl.py
+          python crawler/report.py
+        env:
+          # optional secrets: add them in GitHub -> Settings -> Secrets and variables -> Actions (never in the code)
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+          BUDGET_MIN: "300"
+          WORKERS: "24"
+      - name: Publish data
+        run: |
+          git config user.name  "applylaunch-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs/data crawler/state.json
+          git diff --cached --quiet || git commit -m "Update opportunities $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break || sleep 5; done
