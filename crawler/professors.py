@@ -12,7 +12,7 @@ Pipeline (independent of the positions crawler):
 Rules: e-mails are never guessed (only e-mails printed on an official page or public ORCID record, on the university's own domain);
 status = 3 ("unclear") unless a page says otherwise; every status carries evidence text + link + check date.
 """
-import argparse, datetime as dt, json, os, re, sys, time, zlib, threading
+import argparse, datetime as dt, json, os, re, sys, time, zlib, threading, tempfile
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin, urlparse
 
@@ -140,8 +140,14 @@ class API:
         if session is None:
             session = requests.Session()
             session.headers['User-Agent'] = crawl.UA
+            retry = requests.adapters.Retry(total=3, connect=3, read=2, backoff_factor=0.5,
+                status_forcelist=(429, 500, 502, 503, 504),
+                allowed_methods=frozenset(['GET']), respect_retry_after_header=True)
+            adapter = requests.adapters.HTTPAdapter(max_retries=retry, pool_connections=16, pool_maxsize=16)
+            session.mount('http://', adapter)
+            session.mount('https://', adapter)
             self.local.session = session
-        r = session.get(url, params=params, headers=headers, timeout=25)
+        r = session.get(url, params=params, headers=headers, timeout=(10, 25))
         r.raise_for_status()
         return r.json()
 
@@ -170,16 +176,20 @@ class ThreadSafeFetcher:
 
 
 def atomic_json(path, data):
-    """Write JSON safely: a crash cannot leave a half-written checkpoint."""
-    folder = os.path.dirname(path)
-    if folder:
-        os.makedirs(folder, exist_ok=True)
-    tmp = path + '.tmp'
-    with open(tmp, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
-        f.flush()
-        os.fsync(f.fileno())
-    os.replace(tmp, path)
+    """Write JSON via a unique same-directory temporary file and atomic replace."""
+    path = os.path.abspath(path)
+    folder = os.path.dirname(path) or '.'
+    os.makedirs(folder, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(prefix='.tmp-', suffix='.json', dir=folder)
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, path)
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
 
 
 def oa_params():
@@ -393,14 +403,24 @@ def main():
     deadline = t0 + a.budget_min * 60
     state = json.load(open(a.state, encoding='utf-8')) if os.path.exists(a.state) else {}
     insts, profs = state.get('institutions', {}), state.get('professors', {})
+    excluded = set(state.get('excluded', []))
+    institution_cursor = int(state.get('institution_cursor', 0) or 0)
     api, F = API(), ThreadSafeFetcher(delay=a.delay)
     oa = discover.OpenAlex(a.openalex_base)
-    # ---- institutions (least recently processed first)
+    # ---- refresh the full discovered institution registry (600-page cap retained)
     for it in oa.pages('institutions', f'type:education,works_count:>{a.min_works}', 'id,display_name,homepage_url,country_code,works_count,geo', 600):
         insts.setdefault(it['id'], dict(name=it['display_name'], cc=(it.get('country_code') or '').upper(), city=((it.get('geo') or {}).get('city') or ''), home=it.get('homepage_url') or '', last=''))
-    todo = sorted(insts.items(), key=lambda kv: kv[1]['last'])[:a.max_inst]
+    # Round-robin selection prevents institutions with equal last-processed dates from starving.
+    ordered = sorted(insts.items(), key=lambda kv: kv[0])
+    if ordered:
+        institution_cursor %= len(ordered)
+        batch_size = min(max(1, a.max_inst), len(ordered))
+        todo = [ordered[(institution_cursor + i) % len(ordered)] for i in range(batch_size)]
+        institution_cursor = (institution_cursor + batch_size) % len(ordered)
+    else:
+        todo = []
     urls = dict(orcid=a.orcid_base, s2=a.s2_base)
-    data_lock = threading.Lock()
+    data_lock = threading.RLock()
     checkpoint_lock = threading.Lock()
     processed_authors = [0]
     last_checkpoint = [0.0]
@@ -417,7 +437,9 @@ def main():
                 pub = [{k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])} for p in plist[:a.publish_max]]
                 # Save resumable state first. If the process stops before the public file,
                 # the next run can rebuild it from this state without losing discoveries.
-                atomic_json(a.state, dict(institutions=insts, professors=profs))
+                atomic_json(a.state, dict(institutions=insts, professors=profs,
+                                          excluded=sorted(excluded),
+                                          institution_cursor=institution_cursor))
                 atomic_json(a.out, dict(updated=TODAY.isoformat(), count=len(pub), professors=pub))
             last_checkpoint[0] = now
 
@@ -436,7 +458,11 @@ def main():
             r.raise_for_status()
             res = r.json().get('results', [])
         except Exception as ex:
-            print('  authors error', inst['name'][:30], str(ex)[:60])
+            print('  authors error', inst['name'][:30], str(ex)[:100], flush=True)
+            # Rotate a temporarily failing institution instead of retrying it first forever.
+            with data_lock:
+                inst['last'] = TODAY.isoformat()
+            save_checkpoint(force=True)
             return 0
         doms = inst_dom_of(inst)
         complete = True
@@ -445,19 +471,31 @@ def main():
                 complete = False
                 break
             key = au['id']
-            if key in profs and profs[key].get('checked') and (TODAY - dt.date.fromisoformat(profs[key]['checked'])).days < 30:
-                continue
+            with data_lock:
+                if key in excluded:
+                    continue
+                existing = profs.get(key)
+                if existing and existing.get('checked'):
+                    try:
+                        if (TODAY - dt.date.fromisoformat(existing['checked'])).days < 30:
+                            continue
+                    except (TypeError, ValueError):
+                        pass
             p = dict(id=zlib.crc32(key.encode()) & 0x7fffffff, oa=key, name=au['display_name'], orcid=au.get('orcid') or '', uni=inst['name'], cc=inst['cc'], city=inst['city'],
                      topics=[t.get('display_name') for t in (au.get('topics') or [])[:6] if t.get('display_name')], works=au.get('works_count'), cites=au.get('cited_by_count'))
+            enrich_failed = False
             try:
                 q = enrich(p, F, api, urls, doms)
             except Exception as ex:
-                q, complete = None, False
-                print('  enrich error', p['name'], str(ex)[:60])
+                q = None
+                enrich_failed = True
+                print('  enrich error', p['name'], str(ex)[:100], flush=True)
             with data_lock:
                 if q:
                     profs[key] = q
                     got += 1
+                elif not enrich_failed and p.get('rk') == 'x':
+                    excluded.add(key)
                 processed_authors[0] += 1
             # Save completed discoveries before moving to the next author.
             save_checkpoint()
