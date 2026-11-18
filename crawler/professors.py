@@ -400,7 +400,6 @@ def main():
     ap.add_argument('--delay', type=float, default=1.0)
     a = ap.parse_args()
     t0 = time.time()
-    deadline = t0 + a.budget_min * 60
     state = json.load(open(a.state, encoding='utf-8')) if os.path.exists(a.state) else {}
     insts, profs = state.get('institutions', {}), state.get('professors', {})
     excluded = set(state.get('excluded', []))
@@ -419,7 +418,14 @@ def main():
         institution_cursor = (institution_cursor + batch_size) % len(ordered)
     else:
         todo = []
+    # Start the enrichment budget after institution discovery, so API pagination
+    # does not consume the entire processing window.
+    deadline = time.time() + a.budget_min * 60
     urls = dict(orcid=a.orcid_base, s2=a.s2_base)
+    try:
+        positions = json.load(open(a.positions, encoding='utf-8')).get('positions', [])
+    except Exception:
+        positions = []
     data_lock = threading.RLock()
     checkpoint_lock = threading.Lock()
     processed_authors = [0]
@@ -433,6 +439,7 @@ def main():
                 return
             with data_lock:
                 plist = list(profs.values())
+                linked_count = link_positions(plist, positions)
                 plist.sort(key=lambda p: (0 if p.get('page') else 1, p.get('st', 3), -(p.get('cites') or 0)))
                 pub = [{k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])} for p in plist[:a.publish_max]]
                 # Save resumable state first. If the process stops before the public file,
