@@ -12,7 +12,7 @@ Pipeline (independent of the positions crawler):
 Rules: e-mails are never guessed (only e-mails printed on an official page or public ORCID record, on the university's own domain);
 status = 3 ("unclear") unless a page says otherwise; every status carries evidence text + link + check date.
 """
-import argparse, datetime as dt, json, os, re, sys, time, zlib
+import argparse, datetime as dt, json, os, re, sys, time, zlib, threading
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin, urlparse
 
@@ -121,21 +121,65 @@ def public_emails(text, soup, ok_domains):
 
 # ------------------------------------------------------------------ API clients
 class API:
+    """Thread-local HTTP sessions with a shared per-host request interval."""
     def __init__(self, delay=0.15):
-        self.s = requests.Session()
-        self.s.headers['User-Agent'] = crawl.UA
         self.delay = delay
-        self.last = {}
+        self.local = threading.local()
+        self.lock = threading.Lock()
+        self.next_ok = {}
 
     def get(self, url, params=None, headers=None):
         host = urlparse(url).netloc
-        w = self.delay - (time.time() - self.last.get(host, 0))
-        if w > 0:
-            time.sleep(w)
-        self.last[host] = time.time()
-        r = self.s.get(url, params=params, headers=headers, timeout=25)
+        with self.lock:
+            now = time.time()
+            at = max(now, self.next_ok.get(host, 0))
+            self.next_ok[host] = at + self.delay
+        if at > now:
+            time.sleep(at - now)
+        session = getattr(self.local, 'session', None)
+        if session is None:
+            session = requests.Session()
+            session.headers['User-Agent'] = crawl.UA
+            self.local.session = session
+        r = session.get(url, params=params, headers=headers, timeout=25)
         r.raise_for_status()
         return r.json()
+
+
+class ThreadSafeFetcher:
+    """One Fetcher/session per worker, with a shared per-host politeness delay."""
+    def __init__(self, delay=1.0):
+        self.delay = delay
+        self.local = threading.local()
+        self.lock = threading.Lock()
+        self.next_ok = {}
+
+    def get(self, url):
+        host = urlparse(url).netloc
+        with self.lock:
+            now = time.time()
+            at = max(now, self.next_ok.get(host, 0))
+            self.next_ok[host] = at + self.delay
+        if at > now:
+            time.sleep(at - now)
+        fetcher = getattr(self.local, 'fetcher', None)
+        if fetcher is None:
+            fetcher = crawl.Fetcher(delay=0)
+            self.local.fetcher = fetcher
+        return fetcher.get(url)
+
+
+def atomic_json(path, data):
+    """Write JSON safely: a crash cannot leave a half-written checkpoint."""
+    folder = os.path.dirname(path)
+    if folder:
+        os.makedirs(folder, exist_ok=True)
+    tmp = path + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
 
 
 def oa_params():
@@ -349,14 +393,36 @@ def main():
     deadline = t0 + a.budget_min * 60
     state = json.load(open(a.state, encoding='utf-8')) if os.path.exists(a.state) else {}
     insts, profs = state.get('institutions', {}), state.get('professors', {})
-    api, F = API(), crawl.Fetcher(delay=a.delay)
+    api, F = API(), ThreadSafeFetcher(delay=a.delay)
     oa = discover.OpenAlex(a.openalex_base)
     # ---- institutions (least recently processed first)
     for it in oa.pages('institutions', f'type:education,works_count:>{a.min_works}', 'id,display_name,homepage_url,country_code,works_count,geo', 600):
         insts.setdefault(it['id'], dict(name=it['display_name'], cc=(it.get('country_code') or '').upper(), city=((it.get('geo') or {}).get('city') or ''), home=it.get('homepage_url') or '', last=''))
     todo = sorted(insts.items(), key=lambda kv: kv[1]['last'])[:a.max_inst]
     urls = dict(orcid=a.orcid_base, s2=a.s2_base)
-    new_total = 0
+    data_lock = threading.Lock()
+    checkpoint_lock = threading.Lock()
+    processed_authors = [0]
+    last_checkpoint = [0.0]
+
+    def save_checkpoint(force=False):
+        """Persist completed work regularly; called by workers and at safe boundaries."""
+        with checkpoint_lock:
+            now = time.time()
+            if not force and processed_authors[0] % 10 != 0 and now - last_checkpoint[0] < 30:
+                return
+            with data_lock:
+                plist = list(profs.values())
+                plist.sort(key=lambda p: (0 if p.get('page') else 1, p.get('st', 3), -(p.get('cites') or 0)))
+                pub = [{k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])} for p in plist[:a.publish_max]]
+                # Save resumable state first. If the process stops before the public file,
+                # the next run can rebuild it from this state without losing discoveries.
+                atomic_json(a.state, dict(institutions=insts, professors=profs))
+                atomic_json(a.out, dict(updated=TODAY.isoformat(), count=len(pub), professors=pub))
+            last_checkpoint[0] = now
+
+    # Persist institution discovery before starting the long-running enrichment stage.
+    save_checkpoint(force=True)
 
     def one(item):
         iid, inst = item
@@ -373,8 +439,10 @@ def main():
             print('  authors error', inst['name'][:30], str(ex)[:60])
             return 0
         doms = inst_dom_of(inst)
+        complete = True
         for au in res:
             if time.time() > deadline:
+                complete = False
                 break
             key = au['id']
             if key in profs and profs[key].get('checked') and (TODAY - dt.date.fromisoformat(profs[key]['checked'])).days < 30:
@@ -384,17 +452,24 @@ def main():
             try:
                 q = enrich(p, F, api, urls, doms)
             except Exception as ex:
-                q = None
+                q, complete = None, False
                 print('  enrich error', p['name'], str(ex)[:60])
-            if q:
-                profs[key] = q
-                got += 1
-        inst['last'] = TODAY.isoformat()
+            with data_lock:
+                if q:
+                    profs[key] = q
+                    got += 1
+                processed_authors[0] += 1
+            # Save completed discoveries before moving to the next author.
+            save_checkpoint()
+        if complete:
+            with data_lock:
+                inst['last'] = TODAY.isoformat()
+            save_checkpoint(force=True)
         return got
     inst_dom_of = lambda inst: inst_dom(inst['home'])
     with ThreadPoolExecutor(a.workers) as ex:
-        for g in ex.map(one, todo):
-            new_total += g
+        list(ex.map(one, todo))
+    save_checkpoint(force=True)
     # ---- link to open positions, publish
     plist = list(profs.values())
     try:
@@ -406,9 +481,7 @@ def main():
     pub = []
     for p in plist[:a.publish_max]:
         pub.append({k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])})
-    os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
-    json.dump(dict(updated=TODAY.isoformat(), count=len(pub), professors=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-    json.dump(dict(institutions=insts, professors=profs), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    save_checkpoint(force=True)
     em = sum(1 for p in plist if p.get('email'))
     print(f'PROFESSORS: {len(plist)} people from {sum(1 for i in insts.values() if i["last"])} institutions | official page {sum(1 for p in plist if p.get("page"))} | public e-mails {em} | status1 {sum(1 for p in plist if p.get("st")==1)} status2 {sum(1 for p in plist if p.get("st")==2)} status4 {sum(1 for p in plist if p.get("st")==4)} | linked to open positions {linked} | {int(time.time()-t0)}s')
 
