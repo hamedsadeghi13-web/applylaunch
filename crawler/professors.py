@@ -12,7 +12,7 @@ Pipeline (independent of the positions crawler):
 Rules: e-mails are never guessed (only e-mails printed on an official page or public ORCID record, on the university's own domain);
 status = 3 ("unclear") unless a page says otherwise; every status carries evidence text + link + check date.
 """
-import argparse, datetime as dt, json, os, re, sys, time, zlib, threading, tempfile
+import argparse, copy, datetime as dt, json, os, re, sys, time, zlib, threading, tempfile
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin, urlparse
 
@@ -438,7 +438,7 @@ def main():
             if not force and processed_authors[0] % 10 != 0 and now - last_checkpoint[0] < 30:
                 return
             with data_lock:
-                plist = list(profs.values())
+                plist = copy.deepcopy(list(profs.values()))
                 linked_count = link_positions(plist, positions)
                 plist.sort(key=lambda p: (0 if p.get('page') else 1, p.get('st', 3), -(p.get('cites') or 0)))
                 pub = [{k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])} for p in plist[:a.publish_max]]
@@ -516,7 +516,7 @@ def main():
         list(ex.map(one, todo))
     save_checkpoint(force=True)
     # ---- link to open positions, publish
-    plist = list(profs.values())
+    plist = copy.deepcopy(list(profs.values()))
     try:
         positions = json.load(open(a.positions, encoding='utf-8')).get('positions', [])
     except Exception:
