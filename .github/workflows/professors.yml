@@ -15,7 +15,7 @@ concurrency:
 jobs:
   professors:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 210
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,9 +34,10 @@ jobs:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
-          BUDGET_MIN: "240"
+          BUDGET_MIN: "150"
           MAX_INST: "40"
       - name: Publish data
+        if: always()          # also commit partial results if the run above failed or was stopped
         run: |
           git config user.name  "applylaunch-bot"
           git config user.email "bot@users.noreply.github.com"

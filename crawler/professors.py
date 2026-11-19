@@ -20,7 +20,7 @@ import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import crawl, discover                           # noqa: E402
+import crawl, discover, guard                    # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -133,7 +133,7 @@ class API:
         if w > 0:
             time.sleep(w)
         self.last[host] = time.time()
-        r = self.s.get(url, params=params, headers=headers, timeout=25)
+        r = self.s.get(url, params=params, headers=headers, timeout=(10, 20))
         r.raise_for_status()
         return r.json()
 
@@ -366,7 +366,7 @@ def main():
         flt = f'last_known_institutions.id:{iid},works_count:>10,cited_by_count:>50'
         try:
             r = requests.get(f'{a.openalex_base}/authors', params=dict(oa_params(), filter=flt, sort='cited_by_count:desc', **{'per-page': min(100, a.per_inst)},
-                             select='id,display_name,orcid,works_count,cited_by_count,topics'), headers={'User-Agent': crawl.UA}, timeout=30)
+                             select='id,display_name,orcid,works_count,cited_by_count,topics'), headers={'User-Agent': crawl.UA}, timeout=(10, 30))
             r.raise_for_status()
             res = r.json().get('results', [])
         except Exception as ex:
@@ -392,23 +392,27 @@ def main():
         inst['last'] = TODAY.isoformat()
         return got
     inst_dom_of = lambda inst: inst_dom(inst['home'])
-    with ThreadPoolExecutor(a.workers) as ex:
-        for g in ex.map(one, todo):
-            new_total += g
-    # ---- link to open positions, publish
-    plist = list(profs.values())
-    try:
-        positions = json.load(open(a.positions, encoding='utf-8')).get('positions', [])
-    except Exception:
-        positions = []
-    linked = link_positions(plist, positions)
-    plist.sort(key=lambda p: (0 if p.get('page') else 1, p.get('st', 3), -(p.get('cites') or 0)))
-    pub = []
-    for p in plist[:a.publish_max]:
-        pub.append({k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])})
-    os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
-    json.dump(dict(updated=TODAY.isoformat(), count=len(pub), professors=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-    json.dump(dict(institutions=insts, professors=profs), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    def save():
+        """link, publish and checkpoint (called at the end, every 15 min and by the watchdog)"""
+        plist = list(guard.snapshot(profs).values())
+        try:
+            positions = json.load(open(a.positions, encoding='utf-8')).get('positions', [])
+        except Exception:
+            positions = []
+        linked = link_positions(plist, positions)
+        plist.sort(key=lambda p: (0 if p.get('page') else 1, p.get('st', 3), -(p.get('cites') or 0)))
+        pub = [{k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])} for p in plist[:a.publish_max]]
+        os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
+        json.dump(dict(updated=TODAY.isoformat(), count=len(pub), professors=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        json.dump(dict(institutions=guard.snapshot(insts), professors=guard.snapshot(profs)), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        return plist, linked
+
+    guard.start(deadline, save)
+    ex = ThreadPoolExecutor(a.workers)
+    for g in ex.map(one, todo):
+        new_total += g
+    ex.shutdown(wait=False)
+    plist, linked = save()
     em = sum(1 for p in plist if p.get('email'))
     print(f'PROFESSORS: {len(plist)} people from {sum(1 for i in insts.values() if i["last"])} institutions | official page {sum(1 for p in plist if p.get("page"))} | public e-mails {em} | status1 {sum(1 for p in plist if p.get("st")==1)} status2 {sum(1 for p in plist if p.get("st")==2)} status4 {sum(1 for p in plist if p.get("st")==4)} | linked to open positions {linked} | {int(time.time()-t0)}s')
 
