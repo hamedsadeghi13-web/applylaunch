@@ -3,24 +3,24 @@
   "curated": 886,
   "discovered": 0,
   "discovered_by_status": {},
-  "curated_reachable": 599,
-  "curated_with_real_positions": 427,
+  "curated_reachable": 602,
+  "curated_with_real_positions": 433,
   "discovered_verified": 0,
-  "really_extractable_total": 427
+  "really_extractable_total": 433
  },
  "positions": {
-  "total": 3082,
+  "total": 3252,
   "by_type": {
-   "PhD": 714,
-   "Postdoc": 205,
-   "Research job": 333,
-   "Scholarship": 361,
-   "Internship": 1085,
-   "Master": 384
+   "Postdoc": 228,
+   "Research job": 346,
+   "PhD": 749,
+   "Scholarship": 380,
+   "Internship": 1119,
+   "Master": 430
   },
-  "with_deadline": 335,
-  "with_salary": 207,
-  "countries": 57
+  "with_deadline": 378,
+  "with_salary": 242,
+  "countries": 58
  },
  "professors": {
   "total": 0,
