@@ -42,8 +42,8 @@ S4 = [r'(not|no longer|currently not|are not|am not)\s+(currently\s+)?(accepting
 HOW_PORTAL = re.compile(r'(do not|don\'t|please do not|kindly do not|cannot)\s+(send|e-?mail|contact)[^.]{0,60}(directly|unsolicited|applications)|apply\s+(only\s+)?(through|via|using)\s+(the\s+)?(online\s+)?(application|portal|system|graduate school)|official\s+application\s+(procedure|portal)|applications?\s+must\s+be\s+submitted\s+(through|via)', re.I)
 HOW_EMAIL = re.compile(r'(e-?mail|contact|write to|reach out to)\s+(me|us|the professor)|get in touch|send\s+(me|us)?\s*(your\s+)?(cv|resume|curriculum)|informal\s+(enquir|inquir)', re.I)
 JOIN_LINK = re.compile(r'(join (us|the group|our group)|prospective|open positions?|openings|vacanc|opportunit|work with us|students? wanted|available (positions|projects)|phd positions?|apply)', re.I)
-EMAIL_RX = re.compile(r'[A-Za-z0-9._%+\-]+@[A-Za-z0-9\-]+(?:\.[A-Za-z0-9\-]+)+')
-OBF_RX = re.compile(r'([A-Za-z0-9._%+\-]+)\s*[\[\(]\s*at\s*[\]\)]\s*([A-Za-z0-9\-]+(?:\s*[\[\(]?\.?[\]\)]?\s*[A-Za-z0-9\-]+)*\.[a-z]{2,})', re.I)
+EMAIL_RX = re.compile(r'[A-Za-z0-9._%+\-]{1,64}@[A-Za-z0-9\-]{1,63}(?:\.[A-Za-z0-9\-]{1,63}){1,5}')
+OBF_RX = re.compile(r'([A-Za-z0-9._%+\-]{1,40})\s{0,3}[\[\(]\s{0,3}at\s{0,3}[\]\)]\s{0,3}([A-Za-z0-9\-]{1,40}(?:\s{0,3}[\[\(]?\s{0,3}(?:dot|\.)\s{0,3}[\]\)]?\s{0,3}[A-Za-z0-9\-]{1,30}){1,4})', re.I)
 DEPT_RX = re.compile(r'((?:Department|Faculty|School|Institute|Centre|Center|Chair|Division|Laboratory|Fakultät|Institut|Lehrstuhl|Département|Departamento|Dipartimento|Fakulte|Bölüm)\s+(?:of|for|für|de|di|del|du)?\s*[A-Z][\w&\-]*(?:(?:\s+(?:and|&|of|for))?\s+[A-Z][\w&\-]*){0,5})')
 
 
@@ -55,6 +55,7 @@ def sentence_around(text, m, width=170):
 
 
 def classify_status(text):
+    text = text[:20000]
     """returns (status, evidence_sentence or '', accepts letters, how)"""
     hits = {1: None, 2: None, 4: None}
     for st, pats in ((1, S1), (2, S2), (4, S4)):
@@ -107,9 +108,9 @@ def public_emails(text, soup, ok_domains):
     for a in soup.find_all('a', href=True):
         if a['href'].lower().startswith('mailto:'):
             found.append(a['href'][7:].split('?')[0].strip())
-    found += EMAIL_RX.findall(text)
-    for m in OBF_RX.finditer(text):
-        found.append(m.group(1) + '@' + re.sub(r'\s*[\[\(]?\.?[\]\)]?\s*', '.', m.group(2)).strip('.'))
+    found += EMAIL_RX.findall(text[:30000])
+    for m in OBF_RX.finditer(text[:30000]):
+        found.append(m.group(1) + '@' + re.sub(r'\s{0,3}[\[\(]?\s{0,3}(?:dot|\.)\s{0,3}[\]\)]?\s{0,3}', '.', m.group(2), flags=re.I).strip('.'))
     out = []
     for e in found:
         e = e.strip().lower().strip('.,;')
@@ -227,6 +228,7 @@ def enrich(p, F, api, urls, inst_dom):
     if page:
         try:
             html, _, final = F.get(page)
+            html = html[:500000]
             soup = BeautifulSoup(html, 'lxml')
             for t in soup(['script', 'style', 'noscript']):
                 t.decompose()
@@ -351,6 +353,9 @@ def main():
     insts, profs = state.get('institutions', {}), state.get('professors', {})
     api, F = API(), crawl.Fetcher(delay=a.delay)
     oa = discover.OpenAlex(a.openalex_base)
+    SAVE = {}
+    guard.start(deadline, lambda: SAVE['f']())
+    print(f'start: {len(insts)} institutions and {len(profs)} people already known', flush=True)
     # ---- institutions (least recently processed first)
     for it in oa.pages('institutions', f'type:education,works_count:>{a.min_works}', 'id,display_name,homepage_url,country_code,works_count,geo', 600):
         insts.setdefault(it['id'], dict(name=it['display_name'], cc=(it.get('country_code') or '').upper(), city=((it.get('geo') or {}).get('city') or ''), home=it.get('homepage_url') or '', last=''))
@@ -390,6 +395,7 @@ def main():
                 profs[key] = q
                 got += 1
         inst['last'] = TODAY.isoformat()
+        print(f'  institution done: {inst["name"][:40]} | {got} people | total {len(profs)} | {int(time.time()-t0)}s', flush=True)
         return got
     inst_dom_of = lambda inst: inst_dom(inst['home'])
     def save():
@@ -407,7 +413,7 @@ def main():
         json.dump(dict(institutions=guard.snapshot(insts), professors=guard.snapshot(profs)), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         return plist, linked
 
-    guard.start(deadline, save)
+    SAVE['f'] = save
     ex = ThreadPoolExecutor(a.workers)
     for g in ex.map(one, todo):
         new_total += g

@@ -15,6 +15,8 @@ concurrency:
 jobs:
   professors:
     runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"
     timeout-minutes: 210
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +28,8 @@ jobs:
       - run: pip install -r crawler/requirements.txt
       - name: Run
         run: |
-          python crawler/professors.py
+          # "timeout" stops the program from outside even if it is frozen; the last checkpoint is still published
+          timeout -k 30 "$((BUDGET_MIN + 6))m" python crawler/professors.py || echo "Stopped by the time limit (exit code $?) - publishing the last checkpoint"
           python crawler/report.py
         env:
           # optional secrets: add them in GitHub -> Settings -> Secrets and variables -> Actions (never in the code)
@@ -35,12 +38,13 @@ jobs:
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           BUDGET_MIN: "150"
-          MAX_INST: "40"
+          MAX_INST: "25"
+          PER_INST: "60"
       - name: Publish data
         if: always()          # also commit partial results if the run above failed or was stopped
         run: |
           git config user.name  "applylaunch-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add docs/data crawler/prof_state.json
+          git add -A docs/data crawler/*.json
           git diff --cached --quiet || git commit -m "Update professors $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && break || sleep 5; done

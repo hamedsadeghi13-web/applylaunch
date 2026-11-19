@@ -9,7 +9,10 @@ so the "publish" step of the workflow always has fresh data to commit.
 import os, threading, time
 
 
-def start(deadline_ts, save, grace=300, every=900):
+def start(deadline_ts, save, grace=180, every=300):
+    import faulthandler, sys
+    # C-level watchdog (works even when Python code is stuck): prints where every thread is, every 20 minutes
+    faulthandler.dump_traceback_later(1200, repeat=True, file=sys.stderr)
     def watchdog():
         while True:
             time.sleep(20)

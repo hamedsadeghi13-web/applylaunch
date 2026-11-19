@@ -15,7 +15,9 @@ concurrency:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    env:
+      PYTHONUNBUFFERED: "1"
+    timeout-minutes: 270
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,7 +28,8 @@ jobs:
       - run: pip install -r crawler/requirements.txt
       - name: Run
         run: |
-          python crawler/crawl.py
+          # "timeout" stops the program from outside even if it is frozen; the last checkpoint is still published
+          timeout -k 30 "$((BUDGET_MIN + 6))m" python crawler/crawl.py || echo "Stopped by the time limit (exit code $?) - publishing the last checkpoint"
           python crawler/report.py
         env:
           # optional secrets: add them in GitHub -> Settings -> Secrets and variables -> Actions (never in the code)
@@ -34,12 +37,13 @@ jobs:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
-          BUDGET_MIN: "300"
+          BUDGET_MIN: "210"
           WORKERS: "24"
       - name: Publish data
+        if: always()          # also commit partial results if the run above failed or was stopped
         run: |
           git config user.name  "applylaunch-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add docs/data crawler/state.json
+          git add -A docs/data crawler/*.json
           git diff --cached --quiet || git commit -m "Update opportunities $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && break || sleep 5; done

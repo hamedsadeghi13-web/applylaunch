@@ -305,13 +305,23 @@ def main():
             return vet(e, F, deadline_ts)
         except Exception as ex:
             return dict(e, status='unreachable', reason='error: ' + str(ex)[:60], vetted=TODAY.isoformat(), quality=0)
-    with ThreadPoolExecutor(a.workers) as ex:
-        res = list(ex.map(work, new + due))
-    for r in res:
+    def save():
+        import guard
+        out = sorted(guard.snapshot(entries).values(), key=lambda s: (-s.get('quality', 0), s['name']))
+        json.dump(dict(updated=TODAY.isoformat(), sources=out), open(a.registry, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+        return out
+
+    def work2(e):
+        r = work(e)
         if r:
             entries[r['id']] = r
-    out = sorted(entries.values(), key=lambda s: (-s.get('quality', 0), s['name']))
-    json.dump(dict(updated=TODAY.isoformat(), sources=out), open(a.registry, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+        return r
+    import guard
+    guard.start(deadline_ts, save, grace=240)
+    ex = ThreadPoolExecutor(a.workers)
+    list(ex.map(work2, new + due))
+    ex.shutdown(wait=False)
+    out = save()
     from collections import Counter
     c = Counter(s.get('status') for s in out)
     print(f'DISCOVERY: {len(new)} new candidates found ({dup} duplicates rejected), {len(due)} re-tested | registry now {len(out)} sources: {dict(c)}')

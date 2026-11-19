@@ -94,7 +94,7 @@ class Fetcher:
         if not self.allowed(url):
             raise PermissionError('robots.txt')
         self._wait(urlparse(url).netloc)
-        r = self.s.get(url, timeout=self.timeout, allow_redirects=True)
+        r = self.s.get(url, timeout=(10, self.timeout), allow_redirects=True)
         if r.status_code >= 400:
             raise RuntimeError(f'HTTP {r.status_code}')
         if len(r.content) > 3_000_000:
@@ -501,29 +501,37 @@ def main():
             if done[0] % 25 == 0:
                 print(f'  {done[0]}/{len(todo)} sources, {len(pos)} positions, {int(time.time()-t0)}s', flush=True)
 
-    with ThreadPoolExecutor(a.workers) as ex:
-        list(ex.map(work, todo))
+    def save():
+        """clean + publish + checkpoint (end of run, every 15 min, and by the watchdog)"""
+        import guard
+        pos_c, ss_c = guard.snapshot(pos), guard.snapshot(sstat)
+        out, seen_key = [], set()
+        for k, r in list(pos_c.items()):
+            dl = dt.date.fromisoformat(r['deadline']) if r.get('deadline') else None
+            stale = (TODAY - dt.date.fromisoformat(r['last_seen'])).days > 21
+            if (dl and dl < TODAY) or stale:
+                del pos_c[k]
+                continue
+            dk = (re.sub(r'\W+', '', r['title'].lower()), re.sub(r'\W+', '', (r['inst'] or '').lower()))
+            if dk in seen_key:
+                continue
+            seen_key.add(dk)
+            out.append(r)
+        out.sort(key=lambda r: (r['deadline'] or '9999', r['title']))
+        pub = [{k: v for k, v in r.items() if k != 'sid'} for r in out]
+        os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
+        json.dump(dict(updated=TODAY.isoformat(), count=len(pub), positions=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        json.dump(dict(positions=pos_c, sources=ss_c), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        return out, ss_c
 
-    # clean: expired, long unseen, duplicates
-    out, seen_key = [], set()
-    for k, r in list(pos.items()):
-        dl = dt.date.fromisoformat(r['deadline']) if r.get('deadline') else None
-        stale = (TODAY - dt.date.fromisoformat(r['last_seen'])).days > 21
-        if (dl and dl < TODAY) or stale:
-            del pos[k]
-            continue
-        dk = (re.sub(r'\W+', '', r['title'].lower()), re.sub(r'\W+', '', (r['inst'] or '').lower()))
-        if dk in seen_key:
-            continue
-        seen_key.add(dk)
-        out.append(r)
-    out.sort(key=lambda r: (r['deadline'] or '9999', r['title']))
-    pub = [{k: v for k, v in r.items() if k != 'sid'} for r in out]
-    os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
-    json.dump(dict(updated=TODAY.isoformat(), count=len(pub), positions=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-    json.dump(dict(positions=pos, sources=sstat), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-    ok = sum(1 for v in sstat.values() if v.get('ok'))
-    print(f'DONE: {len(out)} positions | {done[0]} sources visited this run | {ok}/{len(sstat)} sources reachable | {int(time.time()-t0)}s')
+    import guard
+    guard.start(deadline_ts, save)
+    ex = ThreadPoolExecutor(a.workers)
+    list(ex.map(work, todo))
+    ex.shutdown(wait=False)
+    out, ss_c = save()
+    ok = sum(1 for v in ss_c.values() if v.get('ok'))
+    print(f'DONE: {len(out)} positions | {done[0]} sources visited this run | {ok}/{len(ss_c)} sources reachable | {int(time.time()-t0)}s')
 
 if __name__ == '__main__':
     main()
