@@ -23,12 +23,15 @@
   "countries": 58
  },
  "professors": {
-  "total": 0,
-  "institutions_processed": 0,
-  "with_official_page": 0,
-  "with_public_email": 0,
-  "status": {},
-  "with_evidence_link": 0,
+  "total": 1358,
+  "institutions_processed": 25,
+  "with_official_page": 64,
+  "with_public_email": 53,
+  "status": {
+   "1": 2,
+   "3": 1356
+  },
+  "with_evidence_link": 2,
   "from_open_positions": 0
  },
  "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score."
