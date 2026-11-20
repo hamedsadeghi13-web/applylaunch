@@ -73,7 +73,52 @@ rep = dict(
                     status=dict(Counter(p.get('st', 3) for p in profs)), with_evidence_link=sum(1 for p in profs if p.get('ev')),
                     from_open_positions=sum(1 for p in profs if 'open-position' in p.get('src', []))),
     note='Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score.')
+
+# ---- global institution database + coverage numbers for the home page (docs/data/coverage.json)
+idb = load(os.path.join(HERE, 'institutions.json'), {})
+irecs = idb.get('institutions', {})
+NAME2CC = {}
+try:
+    sys.path.insert(0, HERE)
+    import crawl as _c
+    NAME2CC = {v.lower(): k for k, v in _c.ISO_NAME.items()}
+except Exception:
+    pass
+def cc_of(s):
+    c = (s.get('cc') or '').upper()
+    return c if len(c) == 2 else NAME2CC.get((s.get('country') or '').lower(), '')
+ver = [s for s in reg if s.get('status') == 'verified']
+src_cc = {cc_of(s) for s in curated + ver} - {''}
+cities = {(s.get('city') or '').strip().lower() for s in curated + ver} - {''}
+inst_cc = Counter(r['cc'] for r in irecs.values())
+inst_doms = {}
+for r in irecs.values():
+    if r.get('w'):
+        inst_doms[r['w']] = r
+ver_doms = set()
+import re as _re
+def _dom(u):
+    h = _re.sub(r'^www\d?\.', '', (u.split('//')[-1].split('/')[0]).lower())
+    p = h.split('.')
+    return '.'.join(p[-3:]) if len(p) >= 3 and p[-2] in ('co', 'com', 'ac', 'edu', 'org', 'gov') and len(p[-1]) == 2 else '.'.join(p[-2:])
+ver_doms = {_dom(s['url']) for s in ver + curated if s.get('url') and (per_src.get(s['id']) or s.get('status') == 'verified')}
+inst_with_src = sum(1 for r in irecs.values() if r.get('w') and _dom(r['w']) in ver_doms)
+reg_by_dom = {_dom(s['url']): s for s in reg if s.get('url')}
+checked = sum(1 for r in irecs.values() if r.get('w') and _dom(r['w']) in reg_by_dom)
+pages_found = Counter()
+for s in reg:
+    for k in (s.get('pages') or {}):
+        pages_found[k] += 1
+prog = idb.get('progress', {})
+rep['institutions'] = dict(
+    total=len(irecs), countries=len(inst_cc), with_website=sum(1 for r in irecs.values() if r.get('w')), with_ror=sum(1 for r in irecs.values() if r.get('ror')),
+    by_directory=dict(Counter(x for r in irecs.values() for x in r.get('s', []))), checked_for_opportunities=checked, with_verified_source=inst_with_src,
+    pages_identified=dict(pages_found), directory_tasks_done={d: sum(1 for v in c.values() if v.get('done')) for d, c in prog.items()},
+    top_countries=dict(inst_cc.most_common(25)), updated=idb.get('updated'))
+coverage = dict(updated=_dt.date.today().isoformat(), countries=len(src_cc), cities=len(cities), universities=max(len(irecs), sum(1 for s in curated + ver if s.get('type') == 'university')), sources=len(curated) + len(ver),
+                institutions_countries=len(inst_cc), institutions_with_website=rep['institutions']['with_website'], institutions_checked=checked, institutions_with_source=inst_with_src)
 os.makedirs(os.path.join(ROOT, 'docs', 'data'), exist_ok=True)
+json.dump(coverage, open(os.path.join(ROOT, 'docs', 'data', 'coverage.json'), 'w'))
 json.dump(rep, open(os.path.join(ROOT, 'docs', 'data', 'report.json'), 'w'), indent=1)
 md = f"""## ApplyLaunch run report
 | | |
@@ -90,6 +135,7 @@ md = f"""## ApplyLaunch run report
 | Duplicates / stale dropped (last run) | {meta.get('duplicates_dropped')} / {meta.get('expired_or_stale_dropped')} |
 | Countries with positions | {len(cc_pos)} |
 | Admission status 1/2/3/4 | {rep['professors']['status']} |
+| Institutions in the global database / countries / checked for opportunities / with a verified source | {rep['institutions']['total']} / {rep['institutions']['countries']} / {checked} / {inst_with_src} |
 | Professors with an evidence link | {rep['professors']['with_evidence_link']} |
 """
 print(md)

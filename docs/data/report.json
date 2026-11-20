@@ -221,5 +221,18 @@
   "with_evidence_link": 92,
   "from_open_positions": 22
  },
- "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score."
+ "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score.",
+ "institutions": {
+  "total": 0,
+  "countries": 0,
+  "with_website": 0,
+  "with_ror": 0,
+  "by_directory": {},
+  "checked_for_opportunities": 0,
+  "with_verified_source": 0,
+  "pages_identified": {},
+  "directory_tasks_done": {},
+  "top_countries": {},
+  "updated": null
+ }
 }

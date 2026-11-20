@@ -2,7 +2,7 @@ name: Discover new sources
 
 on:
   schedule:
-    - cron: "30 1 * * 0"
+    - cron: "30 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONUNBUFFERED: "1"
-    timeout-minutes: 150
+    timeout-minutes: 200
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,8 +41,8 @@ jobs:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
-          BUDGET_MIN: "90"
-          MAX_NEW: "800"
+          BUDGET_MIN: "150"
+          MAX_NEW: "1500"
           RENDER_BUDGET_MIN: "30"
       - name: Publish data
         if: always()          # also commit partial results if the run above failed or was stopped

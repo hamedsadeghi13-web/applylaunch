@@ -546,7 +546,7 @@ footer{padding-left:56px}
 // Numbers shown at the top of the home page. Replace with real numbers from your server.
 // Real counts taken from the Sources / Countries sheets of PhD_Position_Finder.xlsx (distinct countries, cities, universities+institutes, source URLs).
 // Update them whenever the source list grows.
-const STATS = { countries: 65, cities: 486, universities: 731, sources: 885 };
+let STATS = { countries: 65, cities: 486, universities: 731, sources: 885 };
 
 /* ============================ TEXT (en | fa | tr) ============================ */
 const LI = { en: 0, fa: 1, tr: 2 };
@@ -554,6 +554,7 @@ const STR = {
  home:['Home','خانه','Ana sayfa'], explore:['Explore','جستجو','Keşfet'], saved:['Saved','ذخیره‌شده‌ها','Kaydedilenler'], profile:['Profile','پروفایل','Profil'],
  tagline:['Big dreams. Real opportunities.','رؤیاهای بزرگ. فرصت‌های واقعی.','Büyük hayaller. Gerçek fırsatlar.'],
  login:['Log in','ورود','Giriş'], signup:['Sign up','ثبت‌نام','Kayıt ol'],
+ stDb:['Global database: {n} higher-education institutions in {c} countries · {k} checked for opportunities so far · {v} with a verified opportunity source. The rest are being checked gradually, a batch every day.','پایگاه جهانی: {n} مؤسسه‌ی آموزش عالی در {c} کشور · تاکنون {k} مورد برای یافتن فرصت بررسی شده · {v} مورد دارای منبع تأییدشده. بقیه به‌تدریج و هر روز یک بسته بررسی می‌شوند.','Küresel veri tabanı: {c} ülkede {n} yükseköğretim kurumu · şimdiye kadar {k} kurum fırsatlar için kontrol edildi · {v} kurumun doğrulanmış kaynağı var. Kalanlar her gün bir paketle kademeli kontrol edilir.'],
  stCountries:['countries covered','کشور تحت پوشش','ülke kapsanıyor'], stCities:['cities with sources','شهر دارای منبع','kaynaklı şehir'], stUni:['universities and institutes','دانشگاه و مؤسسه','üniversite ve enstitü'], stSrc:['sources in the search list','منبع در فهرست جستجو','arama listesindeki kaynak'],
  h1:['Find Your Next Academic Opportunity','فرصت تحصیلی بعدی‌تان را پیدا کنید','Bir Sonraki Akademik Fırsatını Bul'],
  sub:['Discover universities, scholarships, and research opportunities from around the world.','دانشگاه‌ها، بورسیه‌ها و فرصت‌های پژوهشی سراسر جهان را در این سایت پیدا کنید.','Dünyanın dört bir yanındaki üniversiteleri, burslar ve araştırma fırsatlarını keşfet.'],
@@ -1455,7 +1456,7 @@ function viewHome(){
  const tags=ids.map(t=>`<button class="tag" data-act="tag" data-v="${t}">${fieldName(t)}</button>`).join('')+`<button class="tag" data-act="tag" data-v="fullphd">${fundName('full')} · PhD</button>`;
  return `<div class="wrap">
  <section class="sec" style="padding-top:20px"><h1>${T('h1')}</h1><p class="muted" style="font-size:15px;margin:12px 0 28px">${T('sub')}</p>
-  <div class="kp">${[['globe','countries','stCountries'],['pin','cities','stCities'],['cap','universities','stUni'],['link','sources','stSrc']].map(x=>`<div class="kpi"><span class="kic">${KIC[x[0]]}</span><span><b>${fmt(STATS[x[1]])}</b><small>${T(x[2])}</small></span></div>`).join('')}</div></section>
+  <div class="kp">${[['globe','countries','stCountries'],['pin','cities','stCities'],['cap','universities','stUni'],['link','sources','stSrc']].map(x=>`<div class="kpi"><span class="kic">${KIC[x[0]]}</span><span><b>${fmt(STATS[x[1]])}</b><small>${T(x[2])}</small></span></div>`).join('')}</div>${STATS.db&&STATS.db.institutions_countries?`<p class="muted small" style="margin:12px 0 0">${T('stDb').replace('{n}',fmt(STATS.db.universities)).replace('{c}',fmt(STATS.db.institutions_countries)).replace('{k}',fmt(STATS.db.institutions_checked)).replace('{v}',fmt(STATS.db.institutions_with_source))}</p>`:''}</section>
  <section class="sec"><h2>${T('qsT')}</h2><p class="muted" style="margin:6px 0 18px">${T('qsS')}</p>${searchBar()}<div class="tags"><span class="small muted">${T('popular')}:</span>${tags}</div></section></div>`;
 }
 const fld=(label,inner)=>`<div class="fld"><label>${label}</label>${inner}</div>`;
@@ -1868,7 +1869,8 @@ async function loadProfs(){
 }
 function viewProfsSoon(){return `<div class="wrap"><section class="sec" style="padding-top:20px"><h1>${T('profNav')}</h1></section><div class="empty">${T('profSoon')}</div></div>`}
 
-loadData().then(loadProfs).then(()=>{S.saved=S.saved.filter(id=>POSITIONS.some(p=>p.id===id));
+async function loadCoverage(){try{const r=await fetch('data/coverage.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const c=await r.json();['countries','cities','universities','sources'].forEach(k=>{if(c[k]>0)STATS[k]=c[k]});STATS.db=c}catch(e){}}
+loadData().then(loadProfs).then(loadCoverage).then(()=>{S.saved=S.saved.filter(id=>POSITIONS.some(p=>p.id===id));
  /* first-time visitors have no profile: open straight on the real search results instead of an empty 'build a profile' wall */
  try{if(!P.goals.length&&!P.fieldSel.length&&!P.customFields.length&&!P.rkw&&!P.regions.length&&!P.countries.length&&!P.unis.length&&!P.topN){S.mode='search';S.pmode='search'}}catch(e){}
  render(false)});

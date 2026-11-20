@@ -74,6 +74,31 @@ def find_listing_links(soup, base, limit=6):
     return [u for u, _ in sorted(scored.items(), key=lambda x: -x[1])][:limit]
 
 
+PAGE_KINDS = [('phd', r'(phd|ph\.d|doctoral|doctorate|doctoral (school|studies|programmes?)|promotion)'),
+              ('scholarship', r'(scholarship|stipend|fellowship|financial aid|funding|bursar|stipendi|beurs|bourse|beca)'),
+              ('graduate', r'(graduate (school|studies|admissions?|programs?)|postgraduate|research degrees?|masters?|master\'s)'),
+              ('admissions', r'(admissions?|apply|how to apply|application|prospective students|study with us|bewerbung|zulassung)'),
+              ('jobs', r'(jobs?\b|careers?|vacanc|work with us|stellen|karriere|offres? d.emploi|empleo)')]
+
+
+def classify_pages(soup, base):
+    """Find the official admissions / graduate-school / PhD / scholarship / jobs pages that the university home page links to."""
+    base_dom = reg_domain(host_of(base))
+    out = {}
+    for a in soup.find_all('a', href=True):
+        h = a['href'].strip()
+        if h.startswith(('mailto:', 'tel:', 'javascript:', '#')):
+            continue
+        u = urljoin(base, h)
+        if not u.startswith('http') or crawl.BAD_EXT.search(u) or reg_domain(host_of(u)) != base_dom:
+            continue
+        t = a.get_text(' ', strip=True)[:80]
+        for kind, rx in PAGE_KINDS:
+            if kind not in out and (re.search(rx, t, re.I) or re.search(rx, urlparse(u).path, re.I)):
+                out[kind] = u
+    return out
+
+
 def find_depts(soup, base, limit=4):
     base_dom = reg_domain(host_of(base))
     out = []
@@ -118,6 +143,11 @@ def vet(entry, F, deadline_ts):
     listing = find_listing_links(soup, final)
     rss = rss_links(soup, final)
     depts = find_depts(soup, final) if e.get('type') in ('university', 'institute') else []
+    pages = classify_pages(soup, final) if e.get('type') in ('university', 'institute') else {}
+    e['pages'] = pages
+    for k in ('phd', 'scholarship', 'graduate', 'jobs'):            # these pages are tried by the extractor as listing pages too
+        if pages.get(k) and pages[k] not in listing:
+            listing.append(pages[k])
     js_hint = looks_js_only(html)
     if e.get('type', '').startswith('aggregator') and not listing:
         listing = [final]                                    # portals list ads on their own pages
@@ -272,6 +302,34 @@ def ror_candidates(pages=3):
                 time.sleep(0.4)
 
 
+def inst_candidates(path):
+    """Institutions from the global database (crawler/institutions.json), interleaved by country so that small countries are reached early.
+    Already-known domains are skipped by push(); everything yielded here is vetted before it counts as a source."""
+    if not os.path.exists(path):
+        return
+    try:
+        recs = json.load(open(path, encoding='utf-8')).get('institutions', {})
+    except Exception:
+        return
+    by = {}
+    for k, r in recs.items():
+        if r.get('w'):
+            by.setdefault(r['cc'], []).append((len(r.get('s', [])), r.get('ror') != '', k, r))
+    for cc in by:
+        by[cc].sort(key=lambda x: (-x[0], x[2]))
+    queues = sorted(by.values(), key=len)
+    i = 0
+    while any(queues):
+        for q in queues:
+            if i < len(q):
+                _, _, k, r = q[i]
+                yield dict(id=sid_for(r['w']), name=r['n'], type='university', country=crawl.ISO_NAME.get(r['cc'], r['cc']), cc=r['cc'], city=r.get('c', ''), url=r['w'],
+                           search=None, method='auto', active=True, via='institutions-db', inst=k, ror=r.get('ror') or None, wd=r.get('wd') or None)
+        i += 1
+        if i > 5000:
+            return
+
+
 def seed_candidates(path):
     if os.path.exists(path):
         for s in json.load(open(path, encoding='utf-8')):
@@ -310,6 +368,7 @@ def main():
     ap.add_argument('--registry', default=os.path.join(HERE, 'registry.json'))
     ap.add_argument('--sources', default=os.path.join(HERE, 'sources.json'))
     ap.add_argument('--seeds', default=os.path.join(HERE, 'seeds.json'))
+    ap.add_argument('--institutions', default=os.path.join(HERE, 'institutions.json'))
     ap.add_argument('--openalex-base', default=os.environ.get('OPENALEX_BASE', 'https://api.openalex.org'))
     ap.add_argument('--search-base', default='https://api.search.brave.com/res/v1/web/search')
     ap.add_argument('--max-new', type=int, default=int(os.environ.get('MAX_NEW', 450)))
@@ -345,7 +404,7 @@ def main():
     countries = sorted({s.get('country') for s in curated if s.get('country') and s['country'] not in ('Global', 'Multi', 'Europe')})[:12]
     gens.append(search_candidates(a.search_base, SEARCH_QUERIES, countries))
     # each independent method gets its own share, so no single directory fills the whole quota
-    quota = max(20, a.max_new // max(1, len(gens)))
+    quota = max(20, min(120, a.max_new // max(1, len(gens))))
     by_via = {}
     for g in gens:
         n0 = len(cands)
@@ -354,6 +413,13 @@ def main():
             if len(cands) - n0 >= quota:
                 break
         by_via[g.__name__ if hasattr(g, '__name__') else 'list'] = len(cands) - n0
+    # the global institution database gets everything that is left of the quota (it is by far the largest directory)
+    n0 = len(cands)
+    for c in inst_candidates(a.institutions):
+        if len(cands) >= a.max_new:
+            break
+        push(c)
+    by_via['institutions-db'] = len(cands) - n0
     print('candidates by method:', by_via, flush=True)
     new = cands[:a.max_new]
     # ---- 2. which existing entries are due for a re-test

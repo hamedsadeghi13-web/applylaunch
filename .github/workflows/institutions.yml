@@ -1,0 +1,50 @@
+name: Build institution database
+
+on:
+  schedule:
+    - cron: "10 22 * * 2,6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: applylaunch-data        # the three data workflows never run at the same time
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONUNBUFFERED: "1"
+    timeout-minutes: 110
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}      # newest commit of the branch, not the commit that was current when the run was queued
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: crawler/requirements.txt
+      - run: pip install -r crawler/requirements.txt
+      - name: Run
+        run: |
+          # "timeout" stops the program from outside even if it is frozen; the last checkpoint is still published
+          timeout -k 30 "$((BUDGET_MIN + 6))m" python crawler/institutions.py || echo "Stopped by the time limit (exit code $?) - publishing the last checkpoint"
+          python crawler/report.py
+        env:
+          # optional secrets: add them in GitHub -> Settings -> Secrets and variables -> Actions (never in the code)
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+          BUDGET_MIN: "90"
+      - name: Publish data
+        if: always()          # also commit partial results if the run above failed or was stopped
+        run: |
+          git config user.name  "applylaunch-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A docs/data crawler/*.json
+          git diff --cached --quiet || git commit -m "Update institution database $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break || sleep 5; done
