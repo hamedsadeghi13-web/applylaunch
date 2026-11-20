@@ -38,8 +38,8 @@ jobs:
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           BUDGET_MIN: "150"
-          MAX_INST: "25"
-          PER_INST: "60"
+          MAX_INST: "150"
+          PER_INST: "100"
       - name: Publish data
         if: always()          # also commit partial results if the run above failed or was stopped
         run: |

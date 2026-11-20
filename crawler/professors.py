@@ -25,6 +25,7 @@ import crawl, discover, guard                    # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 TODAY = dt.date.today()
+COUNTRIES = ('DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA').split()
 
 RANK_RX = [('s', r'assistant professor|lecturer|junior professor|juniorprofessor|maître de conférences|ricercatore|universitair docent|yrd\.? ?doç|dr\. öğr'),
            ('a', r'associate professor|senior lecturer|reader\b|\bdoçent|professore associato|universitair hoofddocent|docteur hdr|privatdozent|\bPD\b'),
@@ -356,10 +357,26 @@ def main():
     SAVE = {}
     guard.start(deadline, lambda: SAVE['f']())
     print(f'start: {len(insts)} institutions and {len(profs)} people already known', flush=True)
-    # ---- institutions (least recently processed first)
-    for it in oa.pages('institutions', f'type:education,works_count:>{a.min_works}', 'id,display_name,homepage_url,country_code,works_count,geo', 600):
-        insts.setdefault(it['id'], dict(name=it['display_name'], cc=(it.get('country_code') or '').upper(), city=((it.get('geo') or {}).get('city') or ''), home=it.get('homepage_url') or '', last=''))
-    todo = sorted(insts.items(), key=lambda kv: kv[1]['last'])[:a.max_inst]
+    # ---- institutions: one small request per country (no cursor paging), so every country is covered and the list keeps growing.
+    #      Existing institutions are never removed. Order of work: never-processed first, then least recently processed,
+    #      interleaved across countries so one run does not only see the US.
+    for cc in COUNTRIES:
+        if time.time() > deadline - 600:
+            break
+        try:
+            r = requests.get(f'{a.openalex_base}/institutions', params=dict(oa_params(), filter=f'type:education,country_code:{cc},works_count:>{a.min_works // 4}', sort='works_count:desc',
+                             **{'per-page': 60}, select='id,display_name,homepage_url,country_code,works_count,geo'), headers={'User-Agent': crawl.UA}, timeout=(10, 30))
+            if r.status_code != 200:
+                print(f'  OpenAlex institutions {cc}: HTTP {r.status_code} {r.text[:120]!r}', flush=True)
+                continue
+            for rank, it in enumerate(r.json().get('results', [])):
+                e = insts.setdefault(it['id'], dict(name=it['display_name'], cc=cc, city=((it.get('geo') or {}).get('city') or ''), home=it.get('homepage_url') or '', last=''))
+                e['rk'] = rank
+        except Exception as ex:
+            print(f'  OpenAlex institutions {cc} error: {str(ex)[:80]}', flush=True)
+        time.sleep(0.3)
+    print(f'institutions known: {len(insts)} in {len({i["cc"] for i in insts.values()})} countries, never processed: {sum(1 for i in insts.values() if not i["last"])}', flush=True)
+    todo = sorted(insts.items(), key=lambda kv: (kv[1]['last'], kv[1].get('rk', 99), kv[1]['cc']))[:a.max_inst]
     urls = dict(orcid=a.orcid_base, s2=a.s2_base)
     new_total = 0
 
