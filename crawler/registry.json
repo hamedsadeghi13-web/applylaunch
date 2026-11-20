@@ -1,0 +1,6352 @@
+{
+"updated": "2026-11-20",
+"sources": [
+{
+"id": "Raf012b3e",
+"name": "Academic Jobs Online",
+"type": "aggregator-global",
+"country": "United States",
+"cc": null,
+"city": "",
+"url": "https://academicjobsonline.org/ajo",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"math.duke.edu"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 100,
+"listing": [
+"https://academicjobsonline.org/ajo/jobs",
+"https://academicjobsonline.org/ajo/login/ja",
+"https://academicjobsonline.org/help/academicjobs/userdoc/",
+"https://academicjobsonline.org/help/academicjobs/misc/math_AJO_2877.html",
+"https://academicjobsonline.org/help/academicjobs/misc/privacy.html"
+],
+"rss": [
+"https://academicjobsonline.org/ajo?joblst--------rss"
+],
+"sitemap": [
+"https://academicjobsonline.org/sitemap.xml"
+],
+"sample": [
+"Postdoctoral position in Theoretical Nuclear and Particle Astrophysics",
+"Faculty positions (Full/Associate/Assistant Research Fellow)"
+]
+},
+{
+"id": "R4e49eb81",
+"name": "MathJobs",
+"type": "aggregator-global",
+"country": "Global",
+"cc": null,
+"city": "",
+"url": "https://www.mathjobs.org/jobs",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"math.duke.edu"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 100,
+"listing": [
+"https://www.mathjobs.org/jobs/list",
+"https://www.mathjobs.org/jobs/login/ja",
+"https://www.mathjobs.org/jobs",
+"https://www.mathjobs.org/jobs/employers",
+"https://www.mathjobs.org/jobs/contact",
+"https://www.mathjobs.org/jobs/login/top"
+],
+"rss": [
+"https://www.mathjobs.org/jobs?joblst------rss"
+],
+"sitemap": [
+"https://www.mathjobs.org/sitemap.xml"
+],
+"sample": [
+"The Abdus Salam International Centre for Theoretical Physics, Mathematics Group",
+"Associate Research Officer"
+]
+},
+{
+"id": "Rceeafbab",
+"name": "Helmholtz Munich",
+"type": "institute",
+"country": "Germany",
+"cc": "DE",
+"city": "Munich",
+"url": "http://www.helmholtz-muenchen.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I3018134672",
+"ror": "https://ror.org/00cfam450",
+"works": 42804,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.helmholtz-munich.de/karriere/stellenangebote",
+"https://www.helmholtz-munich.de/karriere",
+"https://www.helmholtz-munich.de/karriere/lernen-und-entwicklung/hersciencecareer-sponsorship-programm",
+"https://www.helmholtz-munich.de/en/scientific-talent-and-career-development",
+"https://www.helmholtz-munich.de/en/postdoc",
+"https://www.helmholtz-munich.de/en/career-center"
+],
+"rss": [
+"https://www.helmholtz-munich.de/feed.xml"
+],
+"sitemap": [
+"https://www.helmholtz-munich.de/en/sitemap.xml",
+"https://www.helmholtz-munich.de/sitemap.xml"
+],
+"sample": [
+"Gute wissenschaftliche Praxis",
+"Postdoc Center"
+]
+},
+{
+"id": "R62b74ef6",
+"name": "Jobs in Science (Germany)",
+"type": "aggregator-europe",
+"country": "Germany",
+"cc": null,
+"city": "",
+"url": "https://www.academics.com/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "7 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.academics.com/career-advice",
+"https://www.academics.com/jobs/fully-funded-phd-positions-in-astronomy-biology-computer-science-chemistry-materials-data-science-scientific-computing-earth-science-mathematics-neuroscience-and-physics-institute-of-science-and-technology-austria-ista-klosterneuburg-1112242#SPCoLCw=",
+"https://www.academics.com/jobs/2-x-research-support-positions-m-f-d-max-planck-institut-fuer-pflanzenzuechtungsforschung-1111552#SPCoLCw=",
+"https://www.academics.com/jobsearch/position-phd-student/UQ==",
+"https://www.academics.com/jobsearch/position-postdoc/Ug==",
+"https://www.academics.com/career-advice/working-in-germany"
+],
+"rss": [],
+"sitemap": [
+"https://storage.googleapis.com/ac_prod_sitemap/prod/COM/sitemap.xml.gz"
+],
+"sample": [
+"Fully Funded PhD Positions in Astronomy, Biology, Computer Science, Chemistry & ",
+"2 x Research Support positions (m/f/d)"
+]
+},
+{
+"id": "R65f7ddc0",
+"name": "Karolinska Institutet",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "https://ki.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I28166907",
+"ror": "https://ror.org/056d84691",
+"works": 234646,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://nyheter.ki.se/ki-firade-arets-masterstipendiater-under-ceremoni"
+],
+"rss": [
+"https://nyheter.ki.se/latest-news/rss.xml"
+],
+"sitemap": [
+"https://ki.se/sitemap.xml",
+"https://medarbetare.ki.se/sitemap.xml"
+],
+"sample": [
+"Doctoral education at MTC",
+"PhD Education at the Department"
+]
+},
+{
+"id": "Rd2abbfd3",
+"name": "Sandia National Laboratories",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Albuquerque",
+"url": "https://www.sandia.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210104735",
+"ror": "https://ror.org/01apwpt12",
+"works": 84166,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.sandia.gov/careers",
+"https://www.sandia.gov/careers/jobs-app/",
+"https://www.sandia.gov/careers/career-possibilities/students-and-postdocs/",
+"https://www.sandia.gov/careers/career-possibilities/career-opportunities",
+"https://www.sandia.gov/careers/",
+"https://www.sandia.gov/careers/veterans"
+],
+"rss": [
+"https://www.sandia.gov/feed/",
+"https://www.sandia.gov/comments/feed/"
+],
+"sitemap": [
+"https://www.sandia.gov/wp-sitemap.xml",
+"https://www.sandia.gov/wp/wp-sitemap.xml"
+],
+"sample": [
+"Students and Postdocs",
+"Students and Postdocs"
+]
+},
+{
+"id": "R5151d78d",
+"name": "Scripps Research Institute",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "San Diego",
+"url": "https://www.scripps.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I123431417",
+"ror": "https://ror.org/02dxx6824",
+"works": 45437,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"scrippsresearch.sharepoint.com"
+],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.scripps.edu/careers/",
+"https://www.scripps.edu/science/translational-institute/education-training/t32-postdoctoral-training-program/",
+"https://education.scripps.edu/cpdo/students-and-postdocs/prospective-postdocs/index.html",
+"https://www.scripps.edu/news-events/events/the-front-row-lecture-series-darrell-irvine-phd/"
+],
+"rss": [
+"https://www.scripps.edu/feed/"
+],
+"sitemap": [
+"https://www.scripps.edu/sitemap_index.xml"
+],
+"sample": [
+"Endowing the 1991–1992 PhD Cohort Graduate Fellowship",
+"A salute to 50 years of discovery: Dale Boger Alumni Endowed Graduate Fellowship"
+]
+},
+{
+"id": "R8e5cac2f",
+"name": "University of Florida",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Gainesville",
+"url": "https://www.ufl.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I33213144",
+"ror": "https://ror.org/02y3ad647",
+"works": 374287,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.ufl.edu/academics/academic-career-services/",
+"https://www.sfa.ufl.edu/types-of-aid/employment/",
+"https://jobs.ufl.edu/"
+],
+"rss": [
+"https://www.ufl.edu/feed/",
+"https://www.ufl.edu/comments/feed/"
+],
+"sitemap": [
+"https://www.ufl.edu/sitemap_index.xml"
+],
+"sample": [
+"Academic & Career Services",
+"International Applicants"
+]
+},
+{
+"id": "Reac39a9b",
+"name": "Boston University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Boston",
+"url": "https://www.bu.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I111088046",
+"ror": "https://ror.org/05qwgg493",
+"works": 223435,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.bu.edu/research/postdocs/",
+"https://www.bu.edu/faculty/resource-by-career-stage/",
+"https://www.bu.edu/faculty/about/career-stage-definitions/"
+],
+"rss": [],
+"sitemap": [
+"https://www.bu.edu/sitemap.xml"
+],
+"sample": [
+"School of Medicine announce2s 70 faculty hires, promotions | BU Today | Boston U",
+"BU president and Boston mayor honor scholarship winners | BU Today | Boston Univ"
+]
+},
+{
+"id": "Rdf7a1bad",
+"name": "California Institute of Technology",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Pasadena",
+"url": "https://www.caltech.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I122411786",
+"ror": "https://ror.org/05dxps055",
+"works": 253101,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://hr.caltech.edu/careers",
+"https://www.caltech.edu/about/news/caltech-postdoc-awarded-lor%C3%A9al-usa-for-women-in-science-grant",
+"http://career.caltech.edu/",
+"https://breakthrough.caltech.edu/story/david-fager-caltech-scholarship/"
+],
+"rss": [],
+"sitemap": [
+"https://www.caltech.edu/sitemap.xml"
+],
+"sample": [
+"Caltech Postdoc Awarded L'Oréal USA For Women in Science Grant",
+"Sea Level Rise and A Marine Corps Mentality: A Conversation with Brent Minchew ("
+]
+},
+{
+"id": "R8d6500eb",
+"name": "Carnegie Mellon University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Pittsburgh",
+"url": "https://www.cmu.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I74973139",
+"ror": "https://ror.org/05x2bcf33",
+"works": 164326,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.cmu.edu/career/outcomes/post-grad-dashboard.html",
+"https://www.cmu.edu/jobs/",
+"https://www.cmu.edu/sfs/"
+],
+"rss": [],
+"sitemap": [
+"https://www.cmu.edu/sitemap.xml"
+],
+"sample": [
+"Jobs and Internships",
+"International Students"
+]
+},
+{
+"id": "Re5ec42e4",
+"name": "Case Western Reserve University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Cleveland",
+"url": "https://case.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I58956616",
+"ror": "https://ror.org/051fd9666",
+"works": 183810,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://case.edu/hr/careers",
+"https://case.edu/news/meet-phd-student-who-competed-and-helped-his-team-win-international-innovation-competition"
+],
+"rss": [],
+"sitemap": [
+"https://case.edu/law/sitemap.xml",
+"https://case.edu/academic-careers/sitemap.xml"
+],
+"sample": [
+"LLM Financial Aid and Scholarships",
+"Scholarship and Service: Reconsidering the Arab Uprisings"
+]
+},
+{
+"id": "R3cb36f1e",
+"name": "Centers for Disease Control and Prevention",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Atlanta",
+"url": "http://www.cdc.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1289490764",
+"ror": "https://ror.org/042twtr12",
+"works": 94483,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://jobs.cdc.gov/index.html"
+],
+"rss": [],
+"sitemap": [
+"https://www.cdc.gov/wcms-auto-sitemap-index.xml"
+],
+"sample": [
+"About Fellowships and Training Opportunities",
+"Explore Short-Term and Full-Time Training Opportunities"
+]
+},
+{
+"id": "R09550be2",
+"name": "Fulbright",
+"type": "funder",
+"country": "United States",
+"cc": null,
+"city": "",
+"url": "https://fulbrightprogram.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [],
+"wp": "https://fulbrightprogram.org",
+"sample": [
+"Forging America’s Critical Minerals Partnerships",
+"Ruth Siboni"
+]
+},
+{
+"id": "R9cccda9a",
+"name": "German Cancer Research Center",
+"type": "institute",
+"country": "Germany",
+"cc": "DE",
+"city": "Heidelberg",
+"url": "https://www.dkfz.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I17937529",
+"ror": "https://ror.org/04cdgtt98",
+"works": 62581,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.dkfz.de/ueber-uns/organisation/stabstellen",
+"https://www.dkfz.de/karriere",
+"https://www.dkfz.de/karriere/stellenangebote",
+"https://www.dkfz.de/karriere/career-service",
+"https://www.dkfz.de/karriere/interational-phd-program",
+"https://www.dkfz.de/karriere/international-postdoc-program"
+],
+"rss": [],
+"sitemap": [
+"https://www.dkfz.de/sitemap.xml"
+],
+"sample": [
+"Wissenschaftliche Core Facilities und Services",
+"Internationale Kooperationen"
+]
+},
+{
+"id": "Rb604eb0c",
+"name": "Hebrew University of Jerusalem",
+"type": "university",
+"country": "Israel",
+"cc": "IL",
+"city": "Jerusalem",
+"url": "http://new.huji.ac.il/en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I197251160",
+"ror": "https://ror.org/03qxff017",
+"works": 163239,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://en.huji.ac.il/scholarship_opportunities",
+"https://en.huji.ac.il/news/hebrew-university-awards-honorary-doctorates-nobel-laureates-honors-father-slain",
+"http://www.research-students.huji.ac.il/en",
+"https://hr.huji.ac.il/mihrazim",
+"https://international.huji.ac.il/research-job-board"
+],
+"rss": [],
+"sitemap": [
+"https://en.huji.ac.il/sitemap.xml"
+],
+"sample": [
+"Scholarship Opportunities | en.new.huji",
+"HUJI International"
+]
+},
+{
+"id": "R5125aaed",
+"name": "Huazhong University of Science and Technology",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Wuhan",
+"url": "http://english.hust.edu.cn/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I47720641",
+"ror": "https://ror.org/00p991c53",
+"works": 276255,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"english.tjmu.edu.cn"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"http://english.hust.edu.cn/ABOUT/Facts___Figures.htm"
+],
+"rss": [],
+"sitemap": [
+"http://english.hust.edu.cn/sitemap.xml"
+],
+"sample": [
+"International Education",
+"INTERNATIONAL HUST"
+]
+},
+{
+"id": "R35f864b8",
+"name": "Hungarian Academy of Sciences",
+"type": "institute",
+"country": "Hungary",
+"cc": "HU",
+"city": "Budapest",
+"url": "http://mta.hu/english/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I7597260",
+"ror": "https://ror.org/02ks8qq67",
+"works": 77926,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"http://mta.hu/english/doctoral-council-105975",
+"https://mta.hu/open-positions"
+],
+"rss": [],
+"sitemap": [
+"https://mta.hu/sitemap.xml"
+],
+"sample": [
+"Momentum MSCA Postdoctoral Programme │MSCA Fellowship │ Hungary",
+"Doctoral Council"
+]
+},
+{
+"id": "R305796f0",
+"name": "Icahn School of Medicine at Mount Sinai",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "New York",
+"url": "https://icahn.mssm.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I98704320",
+"ror": "https://ror.org/04a9tmd77",
+"works": 171910,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://icahn.mssm.edu/education/postdoc",
+"https://icahn.mssm.edu/education/phd",
+"https://icahn.mssm.edu/education/md-phd"
+],
+"rss": [],
+"sitemap": [
+"https://icahn.mssm.edu/sitemap.xml"
+],
+"sample": [
+"PhD Programs | Icahn School of Medicine",
+"Master's Programs | Icahn School of Medicine"
+]
+},
+{
+"id": "R80046a58",
+"name": "Indiana University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Bloomington",
+"url": "https://www.iu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I592451",
+"ror": "https://ror.org/01kg8sb98",
+"works": 152386,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://iu.edu/academics/career.html",
+"https://iu.edu/cost-financial-aid/scholarships-awards.html",
+"https://iu.edu/cost-financial-aid/",
+"https://news.iu.edu/live/news/52408-iu-indianapolis-camp-prepares-rising-9th-graders",
+"https://jobs.iu.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://iu.edu/sitemap.xml"
+],
+"sample": [
+"Prepare for a rewarding career",
+"Discover more help for college costs"
+]
+},
+{
+"id": "R5ca01c08",
+"name": "Iowa State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Ames",
+"url": "https://www.iastate.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I173911158",
+"ror": "https://ror.org/04rswrd78",
+"works": 195505,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.iastate.edu/learn-by-doing/career-preparation",
+"https://www.iastate.edu/admission-and-aid/affording-college/scholarships",
+"https://jobs.iastate.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://www.iastate.edu/sitemap.xml"
+],
+"sample": [
+"Jeffry Sander, research scientist and head of genome editing, Corteva Agriscienc",
+"Career Preparation"
+]
+},
+{
+"id": "R963a1ea3",
+"name": "Lawrence Livermore National Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Livermore",
+"url": "https://www.llnl.gov",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1282311441",
+"ror": "https://ror.org/041nk4h53",
+"works": 116833,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.llnl.gov/join-our-team/careers",
+"https://www.llnl.gov/join-our-team/careers/find-your-job",
+"https://www.llnl.gov/join-our-team/careers/career-areas",
+"https://www.llnl.gov/join-our-team/careers/llns-postdoc-fellowship-programs",
+"https://www.llnl.gov/join-our-team/careers/student-internship-veteran-programs",
+"https://www.llnl.gov/join-our-team/careers/events-resources"
+],
+"rss": [],
+"sitemap": [
+"https://www.llnl.gov/sitemap.xml"
+],
+"sample": [
+"Ready to Join Our Team?",
+"Upcoming Recruiting Events"
+]
+},
+{
+"id": "R93596729",
+"name": "Leibniz-Institut für Pflanzengenetik und Kulturpflanzenforschung (IPK)",
+"type": "institute",
+"country": "Germany",
+"cc": "DE",
+"city": "Gatersleben",
+"url": "https://www.ipk-gatersleben.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210127902",
+"ror": "https://ror.org/02skbsp27",
+"works": 217669,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.ipk-gatersleben.de/institut/leitung-und-gremien/postdoc-board",
+"https://www.ipk-gatersleben.de/institut/leitung-und-gremien/phd-student-board",
+"https://www.ipk-gatersleben.de/karriere/stellenangebote",
+"https://www.ipk-gatersleben.de/karriere/forschungsgruppen",
+"https://www.ipk-gatersleben.de/karriere/graduiertenprogramm",
+"https://www.ipk-gatersleben.de/karriere/themen-fuer-studierende"
+],
+"rss": [],
+"sitemap": [
+"https://www.ipk-gatersleben.de/sitemap.xml"
+],
+"sample": [
+"Wissenschaftlicher Beirat | Leibniz-Institut (IPK)",
+"PostDoc Board | Leibniz-Institut (IPK)"
+]
+},
+{
+"id": "R7bab1010",
+"name": "Massachusetts Institute of Technology",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Cambridge",
+"url": "https://web.mit.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I63966007",
+"ror": "https://ror.org/042nb2s44",
+"works": 396736,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://hr.mit.edu/jobs",
+"https://mitsloan.mit.edu/programs/phd/victor-de-chaisemartin-ne-wang"
+],
+"rss": [],
+"sitemap": [
+"https://web.mit.edu/sitemap.xml"
+],
+"sample": [
+"Your Eligibility for MIT Benefits - Postdoctoral Fellows",
+"Children's College Scholarship Plan"
+]
+},
+{
+"id": "Re486185d",
+"name": "Michigan State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "East Lansing",
+"url": "https://msu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I87216513",
+"ror": "https://ror.org/05hs6h993",
+"works": 371821,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://admissions.msu.edu/academics/career-interest-areas",
+"https://careers.msu.edu/",
+"https://careers.msu.edu",
+"http://careers.msu.edu/cw/en-us/listing/"
+],
+"rss": [],
+"sitemap": [
+"https://msu.edu/sitemap.xml"
+],
+"sample": [
+"First-year scholarships",
+"Scholarships for transfer students"
+]
+},
+{
+"id": "Rc0088a49",
+"name": "National Academy of Sciences of Ukraine",
+"type": "institute",
+"country": "Ukraine",
+"cc": "UA",
+"city": "Kyiv",
+"url": "http://www.nas.gov.ua/en/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I149851306",
+"ror": "https://ror.org/00je4t102",
+"works": 108155,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.nas.gov.ua/en/activity/pidgotovka-naukovix-kadriv"
+],
+"rss": [],
+"sitemap": [
+"https://nas.gov.ua/sitemap.xml"
+],
+"sample": [
+"Training of scientific personnel",
+"Membership in international organizations"
+]
+},
+{
+"id": "Raaf8a6f5",
+"name": "National Bureau of Economic Research",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Cambridge",
+"url": "https://www.nber.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1321305853",
+"ror": "https://ror.org/04grmx538",
+"works": 67638,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.nber.org/career-resources",
+"https://www.nber.org/calls-papers-and-proposals",
+"https://www.nber.org/career-resources/research-assistant-positions-nber",
+"https://www.nber.org/career-resources/research-assistant-positions-not-nber",
+"https://www.nber.org/career-resources/staff-positions-nber",
+"https://www.nber.org/career-resources/calls-fellowship-applications"
+],
+"rss": [],
+"sitemap": [
+"https://www.nber.org/sitemap.xml"
+],
+"sample": [
+"International Finance and Macroeconomics",
+"International Trade and Investment"
+]
+},
+{
+"id": "R9fa2e339",
+"name": "National Institute of Advanced Industrial Science and Technology",
+"type": "institute",
+"country": "Japan",
+"cc": "JP",
+"city": "Tsukuba",
+"url": "https://www.aist.go.jp/index_en.html",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I73613424",
+"ror": "https://ror.org/01703db54",
+"works": 110226,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.aist.go.jp/aist_e/humanres/index.html",
+"https://www.aist.go.jp/aist_e/humanres/"
+],
+"rss": [],
+"sitemap": [
+"https://www.aist.go.jp/sitemap.xml"
+],
+"sample": [
+"AIST:AIST International Affairs Office Inquiry Form",
+"AIST:Research Assistant (RA)"
+]
+},
+{
+"id": "R2f54fed3",
+"name": "Oak Ridge National Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Oak Ridge",
+"url": "https://www.ornl.gov",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1289243028",
+"ror": "https://ror.org/01qz5mb56",
+"works": 140532,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.ornl.gov/careers-at-ornl/",
+"https://www.ornl.gov/news/kai-li-named-acs-early-career-fellow/",
+"https://www.ornl.gov/education-workforce/"
+],
+"rss": [
+"https://www.ornl.gov/feed/",
+"https://www.ornl.gov/comments/feed/"
+],
+"sitemap": [
+"https://www.ornl.gov/wp-sitemap.xml"
+],
+"sample": [
+"The Alston S. Householder Fellowship in Applied Mathematics and Scientific Compu",
+"About the Householder Fellowship – Oak Ridge National Lab"
+]
+},
+{
+"id": "R473b85fa",
+"name": "Oregon Health & Science University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Portland",
+"url": "https://www.ohsu.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I165690674",
+"ror": "https://ror.org/009avj582",
+"works": 152854,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"pharmacy.oregonstate.edu"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.ohsu.edu/postdoctoral-affairs",
+"https://www.ohsu.edu/postdoctoral-affairs/about-ohsu-postdoctoral-affairs",
+"https://www.ohsu.edu/human-resources",
+"https://www.ohsu.edu/human-resources/faculty-and-physician-jobs-ohsu",
+"https://www.ohsu.edu/education/financial-aid-and-scholarship-information",
+"https://www.ohsu.edu/school-of-nursing/nursing-scholarships"
+],
+"rss": [],
+"sitemap": [
+"https://www.ohsu.edu/sitemap.xml"
+],
+"sample": [
+"Fikadu G. Tafesse Ph.D. | OHSU People | OHSU",
+"Kimberly E. Beatty Ph.D. | OHSU People | OHSU"
+]
+},
+{
+"id": "R9ca34dc0",
+"name": "Polish Academy of Sciences",
+"type": "institute",
+"country": "Poland",
+"cc": "PL",
+"city": "Warsaw",
+"url": "https://pan.pl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I99542240",
+"ror": "https://ror.org/01dr6c206",
+"works": 164072,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://pan.pl/sitemap_index.xml"
+],
+"sample": [
+"Zapraszamy na MSCA@30 Poland: Celebrating Careers, Connections and Impact",
+"We are now accepting applications for long-term research fellowships in Japan"
+]
+},
+{
+"id": "R3ad3867e",
+"name": "Slovak Academy of Sciences",
+"type": "institute",
+"country": "Slovakia",
+"cc": "SK",
+"city": "Bratislava",
+"url": "https://www.sav.sk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I207624831",
+"ror": "https://ror.org/03h7qq074",
+"works": 51812,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://oms.sav.sk/programy-a-stipendia/program-mobility/",
+"https://oms.sav.sk/programy-a-stipendia/excelentny-vyskum/sav-upjs-erc-visiting-fellowship-grants/"
+],
+"rss": [
+"https://www.sav.sk/rss/"
+],
+"sitemap": [
+"https://www.sav.sk/sitemap.xml"
+],
+"sample": [
+"MSCA PF podpora",
+"Témy doktorandského štúdia"
+]
+},
+{
+"id": "Ra575ea8e",
+"name": "The University of Queensland",
+"type": "university",
+"country": "Australia",
+"cc": "AU",
+"city": "Brisbane",
+"url": "https://www.uq.edu.au",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I165143802",
+"ror": "https://ror.org/00rqy9422",
+"works": 280166,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"go8.edu.au",
+"universitas21.com",
+"universitiesaustralia.edu.au",
+"wun.ac.uk"
+],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://study.uq.edu.au/study-options/phd-mphil-professional-doctorate",
+"https://about.uq.edu.au/careers",
+"https://scholarships.uq.edu.au",
+"https://scholarships.uq.edu.au/",
+"https://study.uq.edu.au/admissions/phd-mphil-professional-doctorate",
+"https://about.uq.edu.au/careers/why-work-uq"
+],
+"rss": [],
+"sitemap": [
+"https://www.uq.edu.au/sitemap.xml"
+],
+"sample": [
+"Higher degrees by research (HDR) at UQ",
+"Find a PhD or MPhil project with a scholarship"
+]
+},
+{
+"id": "Re2dbc127",
+"name": "The University of Western Australia",
+"type": "university",
+"country": "Australia",
+"cc": "AU",
+"city": "Perth",
+"url": "https://www.uwa.edu.au",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I177877127",
+"ror": "https://ror.org/047272k79",
+"works": 165033,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"go8.edu.au",
+"universityofwesternaustralia.cn"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.uwa.edu.au/study/discover-uwa/future-career",
+"https://www.uwa.edu.au/study/scholarships-and-fees",
+"https://www.uwa.edu.au/study/scholarships-and-fees/scholarships",
+"https://www.uwa.edu.au/study/support-information/high-schools-and-career-advisors",
+"https://www.uwa.edu.au/partners-and-community/convocation/prizes-and-scholarships",
+"https://www.uwa.edu.au/about/working-at-uwa/careers"
+],
+"rss": [],
+"sitemap": [
+"https://www.uwa.edu.au/sitemap.xml",
+"https://www.uwa.edu.au/ias/sitemap.xml"
+],
+"sample": [
+"Fellowships",
+"IAS Visiting Fellowships"
+]
+},
+{
+"id": "Re473758d",
+"name": "Universidade de São Paulo",
+"type": "university",
+"country": "Brazil",
+"cc": "BR",
+"city": "São Paulo",
+"url": "https://www5.usp.br",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I17974374",
+"ror": "https://ror.org/036rp1748",
+"works": 571578,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www5.usp.br/institucional/concursos-e-licitacoes/"
+],
+"rss": [
+"https://www5.usp.br/feed/"
+],
+"sitemap": [
+"https://www5.usp.br/wp-sitemap.xml",
+"https://www5.usp.br/sitemap.xml"
+],
+"sample": [
+"Cooperação internacional – # USP – Universidade de São Paulo #",
+"Institutional – # USP – Universidade de São Paulo #"
+]
+},
+{
+"id": "R2c6922f6",
+"name": "University of Alabama at Birmingham",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Birmingham",
+"url": "https://www.uab.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I32389192",
+"ror": "https://ror.org/008s83205",
+"works": 163098,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"uasystem.edu"
+],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.uab.edu/postdocs/",
+"https://www.uab.edu/admissions/cost/scholarships",
+"https://www.uab.edu/humanresources/home/careers",
+"https://www.uab.edu/faculty/promotion-and-tenure",
+"https://www.uab.edu/faculty/jobs",
+"https://www.uab.edu/business/home/careers"
+],
+"rss": [],
+"sitemap": [
+"https://www.uab.edu/sitemap.xml"
+],
+"sample": [
+"Postdoctoral Training at UAB",
+"Current Postdocs"
+]
+},
+{
+"id": "Rf5c742d1",
+"name": "University of California San Diego",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "San Diego",
+"url": "https://ucsd.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I36258959",
+"ror": "https://ror.org/0168r3w48",
+"works": 423863,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"admission.universityofcalifornia.edu"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://employment.ucsd.edu/",
+"https://career.ucsd.edu/",
+"https://grad.ucsd.edu/",
+"https://medschool.ucsd.edu/education/masters-phd-programs.html",
+"https://medschool.ucsd.edu/education/md-combined/md-phd/index.html"
+],
+"rss": [],
+"sitemap": [
+"https://ucsd.edu/sitemap.xml"
+],
+"sample": [
+"UC SAN DIEGO Internal Careers",
+"Postdocs Ask Bold Questions"
+]
+},
+{
+"id": "Re55c2a91",
+"name": "University of California, Berkeley",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Berkeley",
+"url": "https://www.berkeley.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I95457486",
+"ror": "https://ror.org/01an7q238",
+"works": 485554,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://news.berkeley.edu/2026/11/17/she-felt-her-latino-community-was-sidelined-now-her-scholarship-centers-it/",
+"https://www.berkeley.edu/jobs/",
+"https://grad.berkeley.edu/admissions/choosing-your-program/list/",
+"https://financialaid.berkeley.edu/",
+"https://sph.berkeley.edu/areas-study/health-policy-phd"
+],
+"rss": [
+"https://www.berkeley.edu/feed/",
+"https://www.berkeley.edu/comments/feed/"
+],
+"sitemap": [
+"https://www.berkeley.edu/sitemap_index.xml"
+],
+"sample": [
+"Jobs - University of California, Berkeley",
+"Doctoral Degree Progress"
+]
+},
+{
+"id": "Rcfa77def",
+"name": "University of California, Los Angeles",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Los Angeles",
+"url": "https://www.ucla.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I161318765",
+"ror": "https://ror.org/046rm7j60",
+"works": 509398,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"uclaextension.edu",
+"universityofcalifornia.edu"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.ucla.edu/careers",
+"https://career.ucla.edu",
+"https://admission.ucla.edu/tuition-aid/financial-aid-and-scholarships",
+"https://apo.ucla.edu/postdoctoral-scholars",
+"https://apo.ucla.edu/faculty-resources/career-development"
+],
+"rss": [],
+"sitemap": [
+"https://www.ucla.edu/sitemap.xml"
+],
+"sample": [
+"International Applicants",
+"Masters Students"
+]
+},
+{
+"id": "R8f0711b1",
+"name": "University of California, San Francisco",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "San Francisco",
+"url": "https://www.ucsf.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I180670191",
+"ror": "https://ror.org/043mz5j54",
+"works": 329594,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"ucnet.universityofcalifornia.edu"
+],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://postdocs.ucsf.edu/",
+"https://graduate.ucsf.edu",
+"https://career.ucsf.edu/",
+"https://www.ucsf.edu/about/working-ucsf",
+"https://www.ucsf.edu/saving-lives-with-science#jobs-description",
+"https://dentistry.ucsf.edu/programs/oral-cranio-phd"
+],
+"rss": [],
+"sitemap": [
+"https://www.ucsf.edu/index/sitemap.xml",
+"https://www.ucsf.edu/sitemap.xml"
+],
+"sample": [
+"Prospective Postdocs | UCSF Postdoctoral Affairs",
+"Postdoc Statistics | UCSF Postdoctoral Affairs"
+]
+},
+{
+"id": "R77af085a",
+"name": "University of Cape Town",
+"type": "university",
+"country": "South Africa",
+"cc": "ZA",
+"city": "Rondebosch",
+"url": "https://uct.ac.za",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I157614274",
+"ror": "https://ror.org/03p74gp79",
+"works": 227779,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://uct.ac.za/research-innovation-postdoctoral-research-fellowships/postdoctoral-research-fellowships",
+"https://uct.ac.za/research-support-hub/new-existing-postdocs#contact",
+"https://uct.ac.za/staff/general-vacancies",
+"https://uct.ac.za/staff/internal-vacancies",
+"https://uct.ac.za/research-innovation-postdoctoral-research-fellowships/fellowships-noticeboard",
+"https://uct.ac.za/research-support-hub/new-existing-postdocs#enrollment"
+],
+"rss": [],
+"sitemap": [
+"https://uct.ac.za/sitemap.xml"
+],
+"sample": [
+"University of Cape Town",
+"University of Cape Town"
+]
+},
+{
+"id": "R1bb0ca9a",
+"name": "University of Cincinnati",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Cincinnati",
+"url": "http://www.uc.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I63135867",
+"ror": "https://ror.org/01e3m7079",
+"works": 160147,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.uc.edu/scholarships-financial-aid.html",
+"https://www.uc.edu/careers.html",
+"https://www.uc.edu/blog/education-in-action/career-paths.html",
+"https://www.uc.edu/blog/career-ready.html",
+"https://www.uc.edu/about/event-services/services/promotional-tabling.html",
+"https://www.uc.edu/about/financial-aid/aid/scholarships.html"
+],
+"rss": [],
+"sitemap": [
+"https://www.uc.edu/.sitemap.xml"
+],
+"sample": [
+"Scholarships & Financial Aid",
+"Co-Op Internships | University of Cincinnati"
+]
+},
+{
+"id": "R9ac2a703",
+"name": "University of Kentucky",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Lexington",
+"url": "https://www.uky.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I143302722",
+"ror": "https://ror.org/02k3smh20",
+"works": 169712,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.uky.edu/financialaid/scholarships",
+"https://careers.uky.edu/",
+"https://studentsuccess.uky.edu/financial-aid-and-scholarships",
+"https://martin.uky.edu/programs/doctoral-program-phd",
+"https://martin.uky.edu/research/understanding-impact-work-ready-kentucky-scholarships",
+"https://pattersonschool.uky.edu/community"
+],
+"rss": [],
+"sitemap": [
+"https://www.uky.edu/sitemap.xml"
+],
+"sample": [
+"Student Financial Aid and Scholarships",
+"Academic Scholarships"
+]
+},
+{
+"id": "Ra6077df2",
+"name": "University of Miami",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Coral Gables",
+"url": "https://welcome.miami.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I145608581",
+"ror": "https://ror.org/02dgjyy92",
+"works": 172330,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"http://careers.miami.edu",
+"https://www.arc.miami.edu/admissions/financial-aid-and-scholarships/index.html",
+"https://career.arc.miami.edu/index.html",
+"https://com.miami.edu/phd-communication/",
+"https://com.miami.edu/scholarships/",
+"https://www.edu.miami.edu/degrees/doctoral-degrees/index.html"
+],
+"rss": [],
+"sitemap": [
+"https://welcome.miami.edu/sitemap.xml"
+],
+"sample": [
+"Division of Continuing and International Education | University of Miami",
+"International Student and Scholar Services | University of Miami"
+]
+},
+{
+"id": "R83e82ce3",
+"name": "University of Milan",
+"type": "university",
+"country": "Italy",
+"cc": "IT",
+"city": "Milan",
+"url": "https://www.unimi.it",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I189158943",
+"ror": "https://ror.org/00wjc7c48",
+"works": 373552,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.unimi.it/it/corsi/corsi-post-laurea-e-formazione-continua/corsi-di-dottorato-phd"
+],
+"rss": [],
+"sitemap": [
+"https://www.unimi.it/sitemap.xml"
+],
+"sample": [
+"Tasse e pagamenti dottorato",
+"Fees and payments"
+]
+},
+{
+"id": "R70ed8ad4",
+"name": "University of Southampton",
+"type": "university",
+"country": "United Kingdom",
+"cc": "GB",
+"city": "Southampton",
+"url": "https://www.southampton.ac.uk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I43439940",
+"ror": "https://ror.org/01ryk1543",
+"works": 183339,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"jobs.soton.ac.uk",
+"southamptonmalaysia.edu.my",
+"sussed.soton.ac.uk",
+"thecompleteuniversityguide.co.uk"
+],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.southampton.ac.uk/business/develop-organisation/research-studentships",
+"https://www.southampton.ac.uk/careers/employers/advertise-your-vacancies.page",
+"https://www.southampton.ac.uk/study/career-advantage",
+"https://www.southampton.ac.uk/study/postgraduate-research/projects/mayflower-studentship",
+"https://www.southampton.ac.uk/study/postgraduate-research/funding/doctoral-training-programmes",
+"https://www.southampton.ac.uk/study/fees-funding/scholarships"
+],
+"rss": [],
+"sitemap": [
+"https://www.southampton.ac.uk/sitemap.xml"
+],
+"sample": [
+"Earn your online master's with the University of Southampton",
+"Pre-master's programmes for international students"
+]
+},
+{
+"id": "Rdc50ae00",
+"name": "University of Utah",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Salt Lake City",
+"url": "https://www.utah.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I223532165",
+"ror": "https://ror.org/03r0ha626",
+"works": 223924,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://financialaid.utah.edu/index.php",
+"https://careers.utah.edu/",
+"https://artsandhealth.utah.edu/news/titze-deroaldes"
+],
+"rss": [],
+"sitemap": [
+"https://www.utah.edu/sitemap.xml"
+],
+"sample": [
+"International Students",
+"Scholarships"
+]
+},
+{
+"id": "R080d212c",
+"name": "Vanderbilt University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Nashville",
+"url": "https://www.vanderbilt.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I200719446",
+"ror": "https://ror.org/02vm5rt34",
+"works": 179337,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"vu.edu"
+],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.vanderbilt.edu/career/",
+"https://www.vanderbilt.edu/postdoc/current-opportunities/",
+"https://www.vanderbilt.edu/admissions/financial-aid/",
+"https://www.vanderbilt.edu/provost/jobs/"
+],
+"rss": [],
+"sitemap": [
+"https://www.vanderbilt.edu/sitemap.xml"
+],
+"sample": [
+"New York City Academic Internship Program",
+"International Students"
+]
+},
+{
+"id": "R4fe4f3a6",
+"name": "Virginia Tech",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Blacksburg",
+"url": "https://www.vt.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I859038795",
+"ror": "https://ror.org/02smfhw86",
+"works": 172323,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.vt.edu/advantage/scholarships.html",
+"https://www.vt.edu/advantage/career.html",
+"https://www.vt.edu/campus-life/career-professional-development.html",
+"https://www.vt.edu/plates",
+"https://jobs.vt.edu"
+],
+"rss": [],
+"sitemap": [
+"https://www.vt.edu/sitemap.xml"
+],
+"sample": [
+"Hokies License Plates",
+"Scholarship support from Virginia Tech Advantage"
+]
+},
+{
+"id": "Re09b87de",
+"name": "World Health Organization",
+"type": "institute",
+"country": "Switzerland",
+"cc": "CH",
+"city": "Geneva",
+"url": "http://www.who.int/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210105654",
+"ror": "https://ror.org/01f80g185",
+"works": 41383,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.who.int/news-room/events/detail/2026/11/23/default-calendar/ottawa-charter-at-40--health-promotion--well-being-and-sustainability",
+"https://www.who.int/redirect-pages/footer/about-us/careers"
+],
+"rss": [],
+"sitemap": [
+"http://www.who.int/sitemaps/sitemapindex.xml"
+],
+"sample": [
+"International health regulations",
+"Internal Oversight Services"
+]
+},
+{
+"id": "R65cecf6b",
+"name": "École des hautes études en sciences sociales",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Paris",
+"url": "https://www.ehess.fr",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I90669466",
+"ror": "https://ror.org/02d9dg697",
+"works": 48216,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.ehess.fr/sitemap.xml"
+],
+"sample": [
+"Les « Ateliers doctoraux à l'international » de l’EHESS 2025-2026",
+"rentree-2023-doctorants-ehess"
+]
+},
+{
+"id": "R23267229",
+"name": "Arizona State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Tempe",
+"url": "https://www.asu.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I55732556",
+"ror": "https://ror.org/03efmqc40",
+"works": 196779,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://cfo.asu.edu/applicant",
+"https://news.asu.edu/20261102-university-news-classroom-career-asu-graduates-stand-out-employers"
+],
+"rss": [],
+"sitemap": [
+"https://www.asu.edu/sitemap.xml"
+],
+"sample": [
+"Internal Hiring Procedure",
+"International"
+]
+},
+{
+"id": "R4188b66c",
+"name": "Baylor College of Medicine",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Houston",
+"url": "https://www.bcm.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I181547552",
+"ror": "https://ror.org/02pttbw34",
+"works": 174203,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://jobs.bcm.edu/go/Postdoctoral-Research/7891800/",
+"https://www.bcm.edu/education/graduate-school-of-biomedical-sciences/postdoctoral-affairs",
+"https://www.bcm.edu/careers"
+],
+"rss": [],
+"sitemap": [
+"https://www.bcm.edu/sitemap.xml"
+],
+"sample": [
+"Office of Postdoctoral Affairs",
+"Career Development Center"
+]
+},
+{
+"id": "R56a66372",
+"name": "Broad Institute",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Cambridge",
+"url": "http://www.broadinstitute.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I107606265",
+"ror": "https://ror.org/05a0ya142",
+"works": 57264,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.broadinstitute.org/careers",
+"https://www.broadinstitute.org/modal_paragraph/4513"
+],
+"rss": [],
+"sitemap": [
+"https://www.broadinstitute.org/sitemap.xml"
+],
+"sample": [
+"Klarman Fellowship",
+"The Sklar Fellowship in Psychiatric Genetics and Neuroscience"
+]
+},
+{
+"id": "R183d19ee",
+"name": "Brown University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Providence",
+"url": "https://www.brown.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I27804330",
+"ror": "https://ror.org/05gq02987",
+"works": 171841,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.brown.edu/careers",
+"https://chphe.sph.brown.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://www.brown.edu/sitemap.xml"
+],
+"sample": [
+"Researchers @ Brown",
+"Center for Health Promotion and Health Equity (CHPHE)"
+]
+},
+{
+"id": "R2ea94674",
+"name": "Czech Academy of Sciences, Institute of Archaeology, Prague",
+"type": "institute",
+"country": "Czechia",
+"cc": "CZ",
+"city": "Prague",
+"url": "https://www.arup.cas.cz",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210114415",
+"ror": "https://ror.org/0287jta43",
+"works": 125268,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [],
+"rss": [
+"https://www.arup.cas.cz/zkusebni-stranka/feed/"
+],
+"sitemap": [
+"https://www.arup.cas.cz/wp-sitemap.xml"
+],
+"sample": [
+"Výběrové řízení | Postdoktorand/ka na Oddělení přírodních věd a archeometrie",
+"Výběrové řízení | Senior Researcher from Abroad"
+]
+},
+{
+"id": "R933d73d6",
+"name": "Duke University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Durham",
+"url": "https://duke.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I170897317",
+"ror": "https://ror.org/00py81415",
+"works": 292391,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"admissions.dukekunshan.edu.cn",
+"duke-nus.edu.sg",
+"graduate.dukekunshan.edu.cn",
+"ugstudies.dukekunshan.edu.cn"
+],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://home.careers.duke.edu/",
+"https://www.fuqua.duke.edu/programs/phd",
+"https://www.fuqua.duke.edu/about/jobs-fuqua",
+"https://law.duke.edu/scholarship/activities",
+"https://law.duke.edu/career",
+"https://medschool.duke.edu/education/biomedical-phd-programs"
+],
+"rss": [
+"https://www.duke.edu/feed/index.xml"
+],
+"sitemap": [
+"https://www.duke.edu/sitemap_index.xml"
+],
+"sample": [
+"PROGRAMS | Duke's Fuqua School of Business",
+"PROGRAMS | Duke's Fuqua School of Business"
+]
+},
+{
+"id": "R49b2fba8",
+"name": "Euro Science Jobs",
+"type": "aggregator-europe",
+"country": "Europe",
+"cc": null,
+"city": "",
+"url": "https://www.eurosciencejobs.com/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.eurosciencejobs.com/saved-jobs",
+"https://www.eurosciencejobs.com/jobs-expiring-soon",
+"https://www.eurosciencejobs.com/career_guide",
+"https://www.eurosciencejobs.com/post_job",
+"https://www.eurosciencejobs.com/job_display/299367/Post_Doctoral_Research_Associate_Battery_Electrolyte_Synthesis_University_of_Cambridge_Department_of_Chemistry_Cambridge_United_Kingdom",
+"https://www.eurosciencejobs.com/job_display/299201/Postdoctoral_Researcher_in_Forest_Biodiversity_SLU_Swedish_University_of_Agricultural_Sciences_Ume_Sweden"
+],
+"rss": [],
+"sitemap": [
+"https://www.eurosciencejobs.com/sitemap.xml"
+],
+"sample": [
+"Search for Research Science Jobs and Postdocs in Europe",
+"Search for Science Jobs and Postdocs in Europe"
+]
+},
+{
+"id": "R6210a51e",
+"name": "Georgia Institute of Technology",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Atlanta",
+"url": "https://www.gatech.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I130701444",
+"ror": "https://ror.org/01zkghx44",
+"works": 200819,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.gatech.edu/news/2026/10/08/georgia-tech-and-emory-invest-more-1b-ai-drive-states-jobs-economic-growth",
+"https://finaid.gatech.edu/",
+"https://career.gatech.edu/",
+"https://gradpostdoc.gatech.edu/",
+"https://postdocs.gatech.edu/",
+"http://www.career.gatech.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://www.gatech.edu/sitemap.xml"
+],
+"sample": [
+"Root: Fellowships Office",
+"Root: Financial Aid (See Scholarships & Financial Aid)"
+]
+},
+{
+"id": "R962a2c11",
+"name": "National Institutes of Health",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Bethesda",
+"url": "https://www.nih.gov",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1299303238",
+"ror": "https://ror.org/01cwqze88",
+"works": 402063,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://hr.nih.gov/jobs",
+"https://www.jobs.nih.gov/"
+],
+"rss": [
+"https://www.nih.gov/rss.xml"
+],
+"sitemap": [
+"https://www.nih.gov/sitemap.xml"
+],
+"sample": [
+"NIH taps Bruce J. Tromberg, Ph.D., to lead the National Institute of Biomedical ",
+"New fellowship program will support the next generation of African scientific le"
+]
+},
+{
+"id": "R2b56d947",
+"name": "Northwestern University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Evanston",
+"url": "https://www.northwestern.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I111979921",
+"ror": "https://ror.org/000e0be47",
+"works": 327649,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://hr.northwestern.edu/careers/",
+"https://news.northwestern.edu/stories/2026/10/chemist-james-gaynor-receives-department-of-energy-early-career-award",
+"https://www.northwestern.edu/faculty-accolades/awards-and-medals/national-science-foundation-early-career-award.html"
+],
+"rss": [],
+"sitemap": [
+"https://www.northwestern.edu/sitemap.xml"
+],
+"sample": [
+"Postdoc Benefit Plans: Human Resources - Northwestern University",
+"View Caregiving Resources as Faculty, Staff, Graduate Student or Postdoc: Human "
+]
+},
+{
+"id": "R2ab12bee",
+"name": "Pacific Northwest National Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Richland",
+"url": "https://www.pnnl.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I142606810",
+"ror": "https://ror.org/05h992307",
+"works": 1754980,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.pnnl.gov/publications/two-pnnl-researchers-win-doe-early-career-research-awards",
+"https://careers.pnnl.gov/",
+"https://careers.pnnl.gov",
+"https://www.pnnl.gov/people/william-pike-phd"
+],
+"rss": [],
+"sitemap": [
+"https://www.pnnl.gov/sitemap.xml"
+],
+"sample": [
+"PNNL's 1st Annual Virtual Career Fair - Energy and Environment | Other | PNNL",
+"PNNL's 1st Annual Virtual Career Fair - Physical and Computational Science | Oth"
+]
+},
+{
+"id": "R1b490bf6",
+"name": "Purdue University West Lafayette",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "West Lafayette",
+"url": "http://www.purdue.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I219193219",
+"ror": "https://ror.org/02dqehb95",
+"works": 299087,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.purdue.edu/home/careers/",
+"https://careers.purdue.edu/",
+"https://www.purdue.edu/purdue/careers/index.php"
+],
+"rss": [],
+"sitemap": [
+"https://www.purdue.edu/sitemap.xml",
+"https://www.purdue.edu/science/sitemap.xml"
+],
+"sample": [
+"Career Development",
+"Staff Promotion Requirements"
+]
+},
+{
+"id": "Ra25393c3",
+"name": "Stanford University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Stanford",
+"url": "https://www.stanford.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I97018004",
+"ror": "https://ror.org/00f54p054",
+"works": 553134,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://news.stanford.edu/",
+"https://careered.stanford.edu",
+"https://news.stanford.edu/research-and-scholarship"
+],
+"rss": [],
+"sitemap": [
+"https://www.stanford.edu/sitemap.xml"
+],
+"sample": [
+"Crafting Your Humanist Career (HumSci 326)",
+"PhD Pathways"
+]
+},
+{
+"id": "R3d984d31",
+"name": "Study in Norway",
+"type": "funder",
+"country": "Norway",
+"cc": null,
+"city": "",
+"url": "https://www.studyinnorway.no/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://studyinnorway.no/scholarships-degree-students",
+"https://studyinnorway.no/scholarships-exchange-students"
+],
+"rss": [],
+"sitemap": [
+"https://studyinnorway.no/sitemap.xml"
+],
+"sample": [
+"International scholarships",
+"The Anglo-Norse Society in London is a registered charity for the purpose of pro"
+]
+},
+{
+"id": "Ra2d39b30",
+"name": "The University of Sydney",
+"type": "university",
+"country": "Australia",
+"cc": "AU",
+"city": "Sydney",
+"url": "https://www.sydney.edu.au",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I129604602",
+"ror": "https://ror.org/0384j8v12",
+"works": 338443,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.sydney.edu.au/about-us/careers-at-sydney.html",
+"https://www.sydney.edu.au/news-opinion/news/2026/10/16/sydney-student-creates-first-map-of-martian-soils.html"
+],
+"rss": [],
+"sitemap": [
+"https://www.sydney.edu.au/sitemap.xml"
+],
+"sample": [
+"Graduate Diploma in Indigenous Health Promotion - The University of Sydney",
+"Doctor of Clinical Dentistry (Oral Medicine) - The University of Sydney"
+]
+},
+{
+"id": "R4bfc38d6",
+"name": "The University of Texas at Austin",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Austin",
+"url": "http://www.utexas.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I86519309",
+"ror": "https://ror.org/00hj54h04",
+"works": 283772,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.utexas.edu/jobs",
+"https://onestop.utexas.edu/managing-costs/scholarships-financial-aid/",
+"https://faculty.utexas.edu/career",
+"https://law.utexas.edu/careers/outcomes/",
+"https://law.utexas.edu/financial-aid/scholarships-info/"
+],
+"rss": [],
+"sitemap": [
+"https://www.utexas.edu/sitemap.xml"
+],
+"sample": [
+"Financial Aid and Scholarships",
+"Internal Transfer"
+]
+},
+{
+"id": "R016ce11b",
+"name": "University of Arizona",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Tucson",
+"url": "http://www.arizona.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I138006243",
+"ror": "https://ror.org/03m2x1q45",
+"works": 277260,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://facultyaffairs.arizona.edu/early-career-award",
+"https://osirisrex.arizona.edu/person/dante-lauretta-phd",
+"https://facultyaffairs.arizona.edu/about-promotion",
+"https://talent.arizona.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://www.arizona.edu/sitemap.xml"
+],
+"sample": [
+"First-Year Merit Scholarships",
+"Transfer Merit Scholarships"
+]
+},
+{
+"id": "R1671b2ec",
+"name": "University of California, Irvine",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Irvine",
+"url": "https://uci.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I204250578",
+"ror": "https://ror.org/04gyf1771",
+"works": 204425,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://jobs.uci.edu/careers-home/",
+"https://news.uci.edu/2023/01/11/how-uci-saved-the-ozone-layer/"
+],
+"rss": [],
+"sitemap": [
+"https://uci.edu/sitemap.xml"
+],
+"sample": [
+"Eight postdoctoral scholars chosen for Moore Foundation support – UC Irvine News",
+"UC Irvine, UCLA researchers identify new therapeutic approach to prevent ARDS – "
+]
+},
+{
+"id": "R6ec37668",
+"name": "University of Chicago",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Chicago",
+"url": "https://www.uchicago.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I40347166",
+"ror": "https://ror.org/024mw5h28",
+"works": 294017,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.uchicago.edu/careers",
+"https://www.uchicago.edu/research-and-scholarship",
+"https://www.uchicago.edu/research-and-scholarship/breakthroughs",
+"https://www.uchicago.edu/research-and-scholarship/center",
+"https://www.uchicago.edu/research-and-scholarship/affiliated-laboratories",
+"https://www.uchicago.edu/research-and-scholarship/global-campuses-and-centers"
+],
+"rss": [],
+"sitemap": [
+"https://www.uchicago.edu/sitemap.xml",
+"https://www.uchicago.edu/emergency/sitemap.xml"
+],
+"sample": [
+"Career Opportunities",
+"From Idea to Industry"
+]
+},
+{
+"id": "Rcb883658",
+"name": "University of Colorado Boulder",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Boulder",
+"url": "https://www.colorado.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I188538660",
+"ror": "https://ror.org/02ttsq026",
+"works": 177910,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.colorado.edu/jobs",
+"https://www.colorado.edu/postdoctoralaffairs/",
+"https://www.colorado.edu/crdds/"
+],
+"rss": [],
+"sitemap": [
+"https://www.colorado.edu/sitemap.xml"
+],
+"sample": [
+"Jobs & Internships Resources",
+"Scholarships & Financial Aid"
+]
+},
+{
+"id": "R67521eb3",
+"name": "Wake Forest University Health Sciences",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Winston-Salem",
+"url": "https://school.wakehealth.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4405269449",
+"ror": "https://ror.org/046r1r105",
+"works": 50294,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://school.wakehealth.edu/about-the-school/careers",
+"https://school.wakehealth.edu/faculty/h/erich-senin-huang"
+],
+"rss": [],
+"sitemap": [
+"https://school.wakehealth.edu/sitemap.xml"
+],
+"sample": [
+"PA Studies Plans New Doctoral Program",
+"Scholarships: How Alumni Can Pay It Forward"
+]
+},
+{
+"id": "Ra885c0bd",
+"name": "Washington University in St. Louis",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "St Louis",
+"url": "http://wustl.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I204465549",
+"ror": "https://ror.org/01yc7t268",
+"works": 291999,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"equity.wustl.edu",
+"financialaid.wustl.edu",
+"happenings.wustl.edu",
+"mycanvas.wustl.edu",
+"one.wustl.edu",
+"physicians.wustl.edu",
+"registrar.wustl.edu",
+"stlouis.wustl.edu"
+],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://washu.edu/academics/academic-degrees-and-programs/?selectedFilter=degreeTypes&selectedRadio=doctoral",
+"https://careers.washu.edu",
+"https://publichealth.washu.edu/education/phd/",
+"https://publichealth.washu.edu/admissions/apply-phd/"
+],
+"rss": [
+"https://washu.edu/feed/"
+],
+"sitemap": [
+"https://washu.edu/sitemap_index.xml"
+],
+"sample": [
+"A New Kind of School",
+"Internal Selections"
+]
+},
+{
+"id": "R47300c50",
+"name": "Commonwealth Scientific and Industrial Research Organisation",
+"type": "institute",
+"country": "Australia",
+"cc": "AU",
+"city": "Canberra",
+"url": "https://www.csiro.au",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1292875679",
+"ror": "https://ror.org/03qn8fb07",
+"works": 146130,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.csiro.au/en/careers",
+"https://www.csiro.au/en/careers/Scholarships-student-opportunities",
+"https://www.csiro.au/en/work-with-us",
+"https://jobs.csiro.au/"
+],
+"rss": [],
+"sitemap": [
+"https://www.csiro.au/sitemap.xml"
+],
+"sample": [
+"Industry PhD Program",
+"CSIRO Alumni Physics Scholarship Appeal 2022 - CSIRO"
+]
+},
+{
+"id": "Rc93b6ce4",
+"name": "Consejo Nacional de Investigaciones Científicas y Técnicas",
+"type": "institute",
+"country": "Argentina",
+"cc": "AR",
+"city": "Buenos Aires",
+"url": "https://www.conicet.gov.ar",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I151201029",
+"ror": "https://ror.org/03cqe8w59",
+"works": 251775,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.conicet.gov.ar/convocatoria-a-proyectos-de-investigacion-plurianuales-2026-2028/",
+"https://convocatorias.conicet.gov.ar/"
+],
+"rss": [
+"https://www.conicet.gov.ar/feed/",
+"https://www.conicet.gov.ar/comments/feed/"
+],
+"sitemap": [
+"https://www.conicet.gov.ar/sitemap.xml"
+],
+"sample": [
+"Cooperación Internacional",
+"Convocatorias y eventos | CONICET"
+]
+},
+{
+"id": "R4c1c8b0b",
+"name": "Cornell University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Ithaca",
+"url": "https://www.cornell.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I205783295",
+"ror": "https://ror.org/05bnh6r87",
+"works": 362535,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://hr.cornell.edu",
+"https://teach.weill.cornell.edu/mdphd",
+"https://news.cornell.edu/stories/2026/01/three-early-career-professors-win-nsf-development-awards"
+],
+"rss": [],
+"sitemap": [
+"https://www.cornell.edu/sitemap.xml"
+],
+"sample": [
+"MD-PhD Specific Courses and Seminars",
+"Fellowships and Awards"
+]
+},
+{
+"id": "R612b708d",
+"name": "Fred Hutch Cancer Center",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Seattle",
+"url": "https://www.fredhutch.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210089486",
+"ror": "https://ror.org/007ps6h72",
+"works": 56558,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.fredhutch.org/en/about/careers.html",
+"https://www.fredhutch.org/en/education-training/postdoctoral-fellows-programs.html",
+"https://www.fredhutch.org/en/education-training/office-of-scientific-career-development.html",
+"https://www.fredhutch.org/en/education-training/student-postdoc-advisory-committee.html"
+],
+"rss": [],
+"sitemap": [
+"https://www.fredhutch.org/en.sitemap.xml"
+],
+"sample": [
+"Pathfinders Postdoc Symposium",
+"Pathfinders Postdoc Symposium Application"
+]
+},
+{
+"id": "R23491a5b",
+"name": "Harvard University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Cambridge",
+"url": "https://www.harvard.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I136199984",
+"ror": "https://ror.org/03vek6s52",
+"works": 973889,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"hbs.edu",
+"library.hbs.edu"
+],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://hr.harvard.edu/careers",
+"https://gsas.harvard.edu/resource/alumni-network",
+"https://engage.gsas.harvard.edu/web/rsvp_boot?id=375190",
+"https://www.gsd.harvard.edu/funding-opportunities/outside-scholarships/",
+"https://www.gsd.harvard.edu/offices-and-facilities/career-services/"
+],
+"rss": [],
+"sitemap": [
+"https://www.harvard.edu/sitemap_index.xml",
+"https://www.harvard.edu/president/sitemap_index.xml"
+],
+"sample": [
+"Commencement Address at UMBC: \"The Fellowship of Educated Men and Women\" - Harva",
+"Scholarship and the Role of the University: Remarks at the Boston College Sesqui"
+]
+},
+{
+"id": "R3384d4c2",
+"name": "Howard Hughes Medical Institute",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Chevy Chase",
+"url": "https://www.hhmi.org",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1344073410",
+"ror": "https://ror.org/006w34k90",
+"works": 100654,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.hhmi.org/sitemap.xml"
+],
+"sample": [
+"World-Class Scientists Chosen for HHMI’s First International Early Career Award",
+"HHMI Expands Support of Postdoctoral Scientists"
+]
+},
+{
+"id": "R7cc60c1c",
+"name": "IBM Research - Thomas J. Watson Research Center",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Yorktown Heights",
+"url": "http://research.ibm.com/labs/watson/index.shtml",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210114115",
+"ror": "https://ror.org/0265w5591",
+"works": 55960,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"research-website-prod-cms-uploads.s3.us.cloud-object-storage.appdomain.cloud"
+],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.ibm.com/careers/us-en/teams/research/"
+],
+"rss": [
+"https://research.ibm.com/rss"
+],
+"sitemap": [
+"https://research.ibm.com/sitemap.xml"
+],
+"sample": [
+"Geoffrey Burr - IBM Research",
+"Geoffrey Dawson - IBM Research"
+]
+},
+{
+"id": "R9077b69a",
+"name": "Institut Gustave Roussy",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Villejuif",
+"url": "http://www.gustaveroussy.fr/en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2801843802",
+"ror": "https://ror.org/0321g0743",
+"works": 42076,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.gustaveroussy.fr/en/job-offers",
+"https://www.gustaveroussy.fr/en/join-us",
+"https://www.gustaveroussy.fr/en/becoming-a-nurse-at-gustave-roussy"
+],
+"rss": [],
+"sitemap": [
+"https://www.gustaveroussy.fr/sitemap.xml",
+"https://www.gustaveroussy.fr/sitemap-news.xml"
+],
+"sample": [
+"Gustave Roussy to host its first ESMO Fellowship Awardee",
+"Opening of the First Gustave Roussy-Branded Facility in Egypt"
+]
+},
+{
+"id": "R736134d8",
+"name": "Institut Pasteur",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Paris",
+"url": "https://www.pasteur.fr",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I157536573",
+"ror": "https://ror.org/0495fxg12",
+"works": 58748,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.pasteur.fr/fr/nous-connaitre/nous-rejoindre-0"
+],
+"rss": [],
+"sitemap": [
+"https://www.pasteur.fr/sitemap.xml"
+],
+"sample": [
+"Five young researchers from the Institut Pasteur International Network, at the 2",
+"New Fellowships have been announced to enhance the next generation of global hea"
+]
+},
+{
+"id": "R1ebebe6a",
+"name": "Study in Finland",
+"type": "funder",
+"country": "Finland",
+"cc": null,
+"city": "",
+"url": "https://www.studyinfinland.fi/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.studyinfinland.fi/admissions/doctoral-admissions",
+"https://www.studyinfinland.fi/funding-your-studies/bachelors-and-masters-scholarships",
+"https://www.studyinfinland.fi/funding-your-studies/doctoral-funding"
+],
+"rss": [],
+"sitemap": [
+"https://www.studyinfinland.fi/sitemap.xml"
+],
+"sample": [
+"Doctoral Admissions",
+"Bachelor's and Master's Scholarships"
+]
+},
+{
+"id": "Rc24124d6",
+"name": "Swiss Government Excellence Scholarships",
+"type": "funder",
+"country": "Switzerland",
+"cc": null,
+"city": "",
+"url": "https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants.html",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.sbfi.admin.ch/en/federal-commission-for-scholarships-for-foreign-students",
+"https://www.sbfi.admin.ch/en/scholarships-for-the-college-of-europe-in-bruges-and-natolin",
+"https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships"
+],
+"rss": [],
+"sitemap": [
+"https://www.sbfi.admin.ch/sitemap.xml"
+],
+"sample": [
+"Programmes cantonaux de promotion des compétences de base des adultes",
+"Promotion des MINT"
+]
+},
+{
+"id": "Rddd5f5b3",
+"name": "UNSW Sydney",
+"type": "university",
+"country": "Australia",
+"cc": "AU",
+"city": "Sydney",
+"url": "https://www.unsw.edu.au/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I31746571",
+"ror": "https://ror.org/03r8z3t63",
+"works": 274184,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"go8.edu.au",
+"universitas21.com"
+],
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.unsw.edu.au/study/how-to-apply/scholarships",
+"https://www.unsw.edu.au/research/hdr/scholarships",
+"https://research.unsw.edu.au/researcher",
+"https://www.unsw.edu.au/research/hdr",
+"https://www.unsw.edu.au/alumni/professional-hub",
+"https://www.jobs.unsw.edu.au/"
+],
+"rss": [],
+"sitemap": [
+"https://www.unsw.edu.au/news.sitemap.xml",
+"https://www.unsw.edu.au/staff.sitemap.xml"
+],
+"sample": [
+"rCITI celebrates three PhD",
+"My PhD Journey: Engineering, Sustainability and Motherhood"
+]
+},
+{
+"id": "Re1d1c22c",
+"name": "Universidade Federal de Minas Gerais",
+"type": "university",
+"country": "Brazil",
+"cc": "BR",
+"city": "Belo Horizonte",
+"url": "https://www.ufmg.br/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I110200422",
+"ror": "https://ror.org/0176yjw32",
+"works": 156731,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.ufmg.br/cursos/formas-de-ingresso/concursos-publicos/"
+],
+"rss": [
+"https://www.ufmg.br/feed/",
+"https://www.ufmg.br/comments/feed/"
+],
+"sitemap": [
+"https://www.ufmg.br/sitemap.xml"
+],
+"sample": [
+"International",
+"Internacionalização"
+]
+},
+{
+"id": "Rf10b1aa2",
+"name": "Universidade Federal do Rio de Janeiro",
+"type": "university",
+"country": "Brazil",
+"cc": "BR",
+"city": "Rio de Janeiro",
+"url": "https://ufrj.br",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I122140584",
+"ror": "https://ror.org/03490as77",
+"works": 192719,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [
+"https://ufrj.br/en/feed/",
+"https://ufrj.br/en/comments/feed/"
+],
+"sitemap": [
+"https://ufrj.br/wp-sitemap.xml"
+],
+"sample": [
+"Internacional – Universidade Federal do Rio de Janeiro",
+"Superintendência Geral de Relações Internacionais – Superintendência Geral de Re"
+]
+},
+{
+"id": "Rbf4ae183",
+"name": "University of Washington",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Seattle",
+"url": "https://www.washington.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I201448701",
+"ror": "https://ror.org/00cvxb145",
+"works": 529468,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"directory.uw.edu",
+"finance.uw.edu",
+"honors.uw.edu",
+"lib.uw.edu",
+"map.uw.edu",
+"my.uw.edu",
+"pce.uw.edu",
+"research.uw.edu",
+"tacoma.uw.edu",
+"transportation.uw.edu",
+"uw.edu",
+"uwb.edu"
+],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.washington.edu/jobs/",
+"https://www.washington.edu/giving/",
+"https://ap.washington.edu/ahr/academic-jobs/",
+"https://www.washington.edu/jobs/?utm_source=FSI&utm_medium=fsi_headlines&utm_campaign=UW_jobs_01.16.26",
+"https://globalhealth.washington.edu/academic-programs/phd-pathobiology/"
+],
+"rss": [
+"https://www.washington.edu/static/home/feed/"
+],
+"sitemap": [
+"https://www.washington.edu/sitemap.xml"
+],
+"sample": [
+"Librarian Reappointment & Promotion - Academic Personnel & Faculty",
+"Postdoctoral Scholars - Academic Personnel & Faculty"
+]
+},
+{
+"id": "Rc07753bb",
+"name": "Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional",
+"type": "institute",
+"country": "Mexico",
+"cc": "MX",
+"city": "Mexico City",
+"url": "https://www.cinvestav.mx",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I68368234",
+"ror": "https://ror.org/009eqmr18",
+"works": 52665,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.cinvestav.mx/Academia/Convocatorias"
+],
+"rss": [],
+"sitemap": [
+"https://www.cinvestav.mx/sitemap.xml"
+],
+"sample": [
+"Doctorado en Neurofarmacología y Terapéutica...",
+"Profesorado de Tiempo Completo Con doctorado, una..."
+]
+},
+{
+"id": "R7786c549",
+"name": "Dana-Farber Cancer Institute",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Boston",
+"url": "http://www.dana-farber.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210117453",
+"ror": "https://ror.org/02jzgtq86",
+"works": 88633,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://careers.dana-farber.org/",
+"https://labs.dana-farber.org/shapirolab/"
+],
+"rss": [],
+"sitemap": [
+"https://www.dana-farber.org/sitemap.xml"
+],
+"sample": [
+"Post-doctoral Research Fellow - Rashidian Lab",
+"Communications and Marketing Internships"
+]
+},
+{
+"id": "R4d0b7138",
+"name": "Ifremer",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Brest",
+"url": "https://www.ifremer.fr",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I154202486",
+"ror": "https://ror.org/044jxhp58",
+"works": 53099,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.ifremer.fr/sitemap.xml"
+],
+"sample": [
+"Lumexplore junior",
+"Adopt a float"
+]
+},
+{
+"id": "R90eac4f3",
+"name": "Instituto de Salud Carlos III",
+"type": "institute",
+"country": "Spain",
+"cc": "ES",
+"city": "Madrid",
+"url": "https://www.isciii.es",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2801357902",
+"ror": "https://ror.org/00ca2c886",
+"works": 63993,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.isciii.es/en/financiacion/otras-convocatorias"
+],
+"rss": [],
+"sitemap": [
+"https://www.isciii.es/sitemap.xml"
+],
+"sample": [
+"Compra Pública de Innovación",
+"Internacional - ISCIII Portal Web"
+]
+},
+{
+"id": "R75d0c651",
+"name": "Joint Institute for Nuclear Research",
+"type": "institute",
+"country": "Russia",
+"cc": "RU",
+"city": "Dubna",
+"url": "https://www.jinr.ru/main-en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I32699454",
+"ror": "https://ror.org/044yd9t77",
+"works": 49574,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.jinr.ru/careers-en/"
+],
+"rss": [],
+"sitemap": [
+"https://www.jinr.ru/wp-sitemap.xml"
+],
+"sample": [
+"International cooperation",
+"JINR at meeting of Council of International Association of Academies of Sciences"
+]
+},
+{
+"id": "R04996b7d",
+"name": "Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures",
+"type": "institute",
+"country": "Germany",
+"cc": "DE",
+"city": "Braunschweig",
+"url": "https://www.dsmz.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I7935750",
+"ror": "https://ror.org/02tyer376",
+"works": 528701,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"researchgate.net"
+],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.dsmz.de/dsmz/career",
+"https://www.dsmz.de/dsmz/staff-boards/phd-initiative"
+],
+"rss": [],
+"sitemap": [
+"https://www.dsmz.de/sitemap.xml"
+],
+"sample": [
+"PhD Initiative",
+"Article 3 Performance Only in Hollywood Searching for the Agency of Support Stru"
+]
+},
+{
+"id": "R69fffb7f",
+"name": "National Institute of Standards and Technology",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Gaithersburg",
+"url": "https://www.nist.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1321296531",
+"ror": "https://ror.org/05xpvk416",
+"works": 103243,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.nist.gov/careers",
+"https://www.nist.gov/el/about-el/careers"
+],
+"rss": [],
+"sitemap": [
+"https://www.nist.gov/sitemap.xml"
+],
+"sample": [
+"Shaffique Adam Receives Singapore National Research Foundation Fellowship",
+"MML Researcher R. Joseph Kline Receives Presidential Early Career Award for Scie"
+]
+},
+{
+"id": "Rcf855c18",
+"name": "Study in Sweden – Scholarships",
+"type": "funder",
+"country": "Sweden",
+"cc": null,
+"city": "",
+"url": "https://studyinsweden.se/scholarships/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://studyinsweden.se/scholarships/"
+],
+"rss": [],
+"sitemap": [
+"https://studyinsweden.se/sitemap_index.xml"
+],
+"sample": [
+"On being a Swedish Institute Scholarship Holder",
+"What happens after you find a job in Sweden?"
+]
+},
+{
+"id": "R9bd82dff",
+"name": "Tel Aviv University",
+"type": "university",
+"country": "Israel",
+"cc": "IL",
+"city": "Tel Aviv",
+"url": "https://english.tau.ac.il/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I16391192",
+"ror": "https://ror.org/04mhzgx49",
+"works": 209071,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://english.tau.ac.il/career_center",
+"https://english.tau.ac.il/news/rhodes_scholarship",
+"https://ias.tau.ac.il/events/wrokshop_andres_martin_30_11_26"
+],
+"rss": [],
+"sitemap": [
+"https://english.tau.ac.il/sitemap.xml"
+],
+"sample": [
+"International Ranking",
+"Connections: International Reach"
+]
+},
+{
+"id": "R35c86b27",
+"name": "Tokyo Institute of Technology",
+"type": "university",
+"country": "Japan",
+"cc": "JP",
+"city": "Tokyo",
+"url": "http://www.titech.ac.jp/english/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I114531698",
+"ror": "https://ror.org/0112mx960",
+"works": 176556,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"admissions.isct.ac.jp",
+"isct.ac.jp"
+],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.titech.ac.jp/sitemap.xml"
+],
+"sample": [
+"Scholarships & Aid",
+"Industry and Researchers"
+]
+},
+{
+"id": "Ra1e7891f",
+"name": "United States Geological Survey",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Reston",
+"url": "https://www.usgs.gov",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1286329397",
+"ror": "https://ror.org/035a68863",
+"works": 105378,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.usgs.gov/human-capital"
+],
+"rss": [],
+"sitemap": [
+"https://www.usgs.gov/sitemap.xml"
+],
+"sample": [
+"Mendenhall Research Fellowship Program",
+"USGS Science Career Day"
+]
+},
+{
+"id": "R0c7ca190",
+"name": "Universidade Estadual Paulista (Unesp)",
+"type": "university",
+"country": "Brazil",
+"cc": "BR",
+"city": "São Paulo",
+"url": "https://www2.unesp.br",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I879563668",
+"ror": "https://ror.org/00987cb86",
+"works": 213742,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"institutoconfucio.com.br"
+],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www2.unesp.br/sitemap.xml"
+],
+"sample": [
+"Unesp - Instituto de Políticas Públicas e Relações Internacionais - IPPRI - Câmp",
+"Jornal da Unesp | Unesp vai sediar a SP+10: Conferência Internacional do Fórum S"
+]
+},
+{
+"id": "R00972c34",
+"name": "Universidade Estadual de Campinas (UNICAMP)",
+"type": "university",
+"country": "Brazil",
+"cc": "BR",
+"city": "Campinas",
+"url": "https://www.unicamp.br",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I181391015",
+"ror": "https://ror.org/04wffgt70",
+"works": 212676,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"instituto-iou.com.br"
+],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.unicamp.br/sitemap_index.xml",
+"https://multisite.unicamp.br/sitemap_index.xml"
+],
+"sample": [
+"Página Inicial DERI",
+"Serviço VIDAS – Veículo Interno de Atendimento em Saúde"
+]
+},
+{
+"id": "Rf2d25be9",
+"name": "University of California, Davis",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Davis",
+"url": "https://www.ucdavis.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I84218800",
+"ror": "https://ror.org/05rrcem69",
+"works": 307087,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"universityofcalifornia.edu"
+],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.ucdavis.edu/cost/financial-aid-scholarships",
+"https://www.ucdavis.edu/campus-life/student-jobs-internships",
+"https://www.ucdavis.edu/student-research/news/students-learn-plant-breeding-gain-career-experience",
+"https://www.ucdavis.edu/about/jobs#footer",
+"https://www.ucdavis.edu/admissions/financial-aid-scholarships/higher-education-emergency-relief-fund"
+],
+"rss": [],
+"sitemap": [
+"https://www.ucdavis.edu/sitemap.xml"
+],
+"sample": [
+"Nursing Science and Health-Care Leadership (Ph.D.)",
+"Education (Ph.D.)"
+]
+},
+{
+"id": "R445454b0",
+"name": "University of Connecticut",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Storrs",
+"url": "https://uconn.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I140172145",
+"ror": "https://ror.org/02der9h97",
+"works": 153695,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://uconn.edu/careers/",
+"https://hr.uconn.edu/jobs",
+"https://jobs.hr.uconn.edu/en-us/job/499892/assistant-directorviolence-against-women-prevention-program-director"
+],
+"rss": [
+"https://uconn.edu/feed/",
+"https://uconn.edu/comments/feed/"
+],
+"sitemap": [
+"https://uconn.edu/sitemap.xml",
+"https://uconn.edu/sitemap.xml"
+],
+"sample": [
+"UConn Cookie Information"
+]
+},
+{
+"id": "R731d8cfa",
+"name": "University of Iowa",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Iowa City",
+"url": "https://uiowa.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I126307644",
+"ror": "https://ror.org/036jqmy94",
+"works": 202466,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://uiowa.edu/academics/career-preparation",
+"https://jobs.uiowa.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://uiowa.edu/sitemap.xml"
+],
+"sample": [
+"Career Preparation",
+"Is a PhD in biomedical engineering worth it?"
+]
+},
+{
+"id": "R9e5b0f8c",
+"name": "University of Minnesota",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Minneapolis",
+"url": "https://twin-cities.umn.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I130238516",
+"ror": "https://ror.org/017zqws13",
+"works": 420732,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://hr.umn.edu/jobs",
+"https://humanresources.umn.edu/content/find-job"
+],
+"rss": [],
+"sitemap": [
+"https://twin-cities.umn.edu/sitemap.xml"
+],
+"sample": [
+"UMN announces scholarship program for CFANS",
+"University of Minnesota announces scholarship program with Raise.Me"
+]
+},
+{
+"id": "R12103d36",
+"name": "University of Pennsylvania",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Philadelphia",
+"url": "https://www.upenn.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I79576946",
+"ror": "https://ror.org/00b30xv10",
+"works": 443254,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://penntoday.upenn.edu/news/penn-mcneil-center-scholarship-black-midwives-and-birth-workers-early-american-history",
+"https://www.hr.upenn.edu/PennHR/careers-at-penn",
+"https://www.hr.upenn.edu/PennHR/learn-grow/career-coaching"
+],
+"rss": [],
+"sitemap": [
+"https://www.upenn.edu/sitemap.xml"
+],
+"sample": [
+"Postdoctoral Researchers and Fellows",
+"Find opportunities that match your goals at any point in a career."
+]
+},
+{
+"id": "Ra1b2c6f2",
+"name": "University of Wisconsin–Madison",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Madison",
+"url": "https://www.wisc.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I135310074",
+"ror": "https://ror.org/01y2jtd41",
+"works": 396381,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"wisconsin.edu"
+],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://jobs.wisc.edu/",
+"http://jobs.wisc.edu"
+],
+"rss": [],
+"sitemap": [
+"https://www.wisc.edu/sitemap.xml"
+],
+"sample": [
+"Postdoc, Postgrad, and Research Intern Vacancies | Human Resources | UW–Madison"
+]
+},
+{
+"id": "R2728dbdd",
+"name": "Washington State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Pullman",
+"url": "https://wsu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I72951846",
+"ror": "https://ror.org/05dk0ce17",
+"works": 155589,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://wsu.edu/jobs/",
+"https://hrs.wsu.edu/jobs/"
+],
+"rss": [
+"https://wsu.edu/sample-page/feed/"
+],
+"sitemap": [
+"https://wsu.edu/wp-sitemap.xml",
+"https://wsu.edu/sitemap.xml"
+],
+"sample": [
+"Future Students | WSU International | Washington State University"
+]
+},
+{
+"id": "R340c2b4e",
+"name": "Australian National University",
+"type": "university",
+"country": "Australia",
+"cc": "AU",
+"city": "Canberra",
+"url": "https://www.anu.edu.au",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I118347636",
+"ror": "https://ror.org/019wvm592",
+"works": 188997,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.anu.edu.au/jobs",
+"https://www.anu.edu.au/students/scholarships",
+"https://www.anu.edu.au/students/careers-opportunities",
+"https://study.anu.edu.au/scholarships"
+],
+"rss": [],
+"sitemap": [
+"https://www.anu.edu.au/sitemap.xml"
+],
+"sample": [
+"Translational Fellowship Scheme"
+]
+},
+{
+"id": "R2e8828f4",
+"name": "Bhabha Atomic Research Centre",
+"type": "institute",
+"country": "India",
+"cc": "IN",
+"city": "Mumbai",
+"url": "https://www.barc.gov.in/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1329621470",
+"ror": "https://ror.org/05w6wfp17",
+"works": 51473,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.barc.gov.in/careers/recruitment.html",
+"https://www.barc.gov.in/careers/cg_all.html",
+"https://www.barc.gov.in/careers/ddfs.html",
+"https://www.barc.gov.in/rti/career_digests.html",
+"https://www.barc.gov.in/careers",
+"https://www.barc.gov.in/careers/result.html"
+],
+"rss": [],
+"sitemap": [
+"http://www.barc.gov.in/sitemap/"
+],
+"sample": [
+"DAE Doctoral Fellowship Scheme (DDFS): Bhabha Atomic Research Centre ( BARC )"
+]
+},
+{
+"id": "Rb90fd01d",
+"name": "Brookhaven National Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Upton",
+"url": "https://www.bnl.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I200870766",
+"ror": "https://ror.org/02ex6cf31",
+"works": 80834,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://jobs.bnl.gov/"
+],
+"rss": [],
+"sitemap": [
+"https://www.bnl.gov/sitemap.xml"
+],
+"sample": [
+"BNL | Goldhaber Distinguished Fellowship | Home"
+]
+},
+{
+"id": "R529503d7",
+"name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Paris",
+"url": "https://www.cea.fr",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2738703131",
+"ror": "https://ror.org/00jjx8s55",
+"works": 202282,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.cea.fr/recrutement",
+"https://www.cea.fr/recrutement/",
+"https://www.cea.fr/recrutement/Pages/Accueil.aspx",
+"https://www.cea.fr/recrutement/Pages/Accueil_ancienne.aspx",
+"https://www.cea.fr/Pages/innovation-industrie/politique-innovation.aspx",
+"https://www.cea.fr/recrutement/Pages/pourquoi-nous-rejoindre.aspx"
+],
+"rss": [],
+"sitemap": [
+"https://www.cea.fr/sitemap.xml"
+],
+"sample": [
+"Frédéric Joliot Institute for Life Sciences - Irtelis CEA PhD program"
+]
+},
+{
+"id": "Rd46f3e83",
+"name": "Fundação Oswaldo Cruz",
+"type": "institute",
+"country": "Brazil",
+"cc": "BR",
+"city": "Rio de Janeiro",
+"url": "https://fiocruz.br/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I52325",
+"ror": "https://ror.org/04jhswv08",
+"works": 66150,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://fiocruz.br/concurso-fiocruz",
+"https://fiocruz.br/concurso-fiocruz-concursos-anteriores",
+"https://fiocruz.br/concurso-fiocruz-editais",
+"https://fiocruz.br/concurso-fiocruz-perguntas-frequentes"
+],
+"rss": [],
+"sitemap": [
+"https://fiocruz.br/sitemap.xml"
+],
+"sample": [
+"Unidade de Controle Interno (UCI)"
+]
+},
+{
+"id": "Ra330ee2d",
+"name": "Inserm",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Paris",
+"url": "https://www.inserm.fr",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I154526488",
+"ror": "https://ror.org/02vjkv261",
+"works": 490912,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [],
+"wp": "https://www.inserm.fr",
+"sample": [
+"Fani Koukouli: Targeting Interneurons to Treat Brain Diseases · Inserm"
+]
+},
+{
+"id": "R2030119c",
+"name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Paris",
+"url": "https://www.inrae.fr/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210088668",
+"ror": "https://ror.org/003vg9w96",
+"works": 240182,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://jobs.inrae.fr/actualites/creez-votre-alerte-emploi-moins-dune-minute",
+"https://jobs.inrae.fr/",
+"https://jobs.inrae.fr",
+"https://jobs.inrae.fr/node/1572"
+],
+"rss": [],
+"sitemap": [
+"https://www.inrae.fr/sitemap.xml",
+"https://www.inrae.fr/en/sitemap.xml"
+],
+"sample": [
+"8th edition of the international doctoral course “Stable Isotopes in Forest Ecos"
+]
+},
+{
+"id": "R16109b11",
+"name": "Institut de Recherche pour le Développement",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Marseille",
+"url": "https://en.ird.fr/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210166444",
+"ror": "https://ror.org/05q3vnk25",
+"works": 114063,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://en.ird.fr/sitemap.xml"
+],
+"sample": [
+"Discover the two winners of the 2026 Innovation Awards"
+]
+},
+{
+"id": "R24b52a5c",
+"name": "Kaiser Permanente",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Oakland",
+"url": "https://healthy.kaiserpermanente.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1343052199",
+"ror": "https://ror.org/00t60zh31",
+"works": 43415,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.kaiserpermanente.org/careers"
+],
+"rss": [],
+"sitemap": [
+"https://healthy.kaiserpermanente.org/sitemap",
+"https://healthy.kaiserpermanente.org/sitemapdam"
+],
+"sample": [
+"Glossary of location terms"
+]
+},
+{
+"id": "R42f113e9",
+"name": "Louisiana State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Baton Rouge",
+"url": "http://www.lsu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I121820613",
+"ror": "https://ror.org/05ect4e57",
+"works": 162044,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"lsua.edu",
+"lsue.edu",
+"lsuhs.edu",
+"lsuhsc.edu",
+"lsuneworleans.edu",
+"lsus.edu",
+"lsusystem.edu",
+"pbrc.edu"
+],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.lsu.edu/career/index.php",
+"https://www.lsu.edu/hrm/careers/index.php",
+"https://www.lsu.edu/financialaid/index.php",
+"https://www.lsu.edu/career/sfmc.php",
+"https://www.lsu.edu/manship/scholarships/index.php",
+"https://www.lsu.edu/manship/student-support/undergraduate-student-support/jobs-internships/index.php"
+],
+"rss": [],
+"sitemap": [
+"https://www.lsu.edu/sitemap.xml"
+],
+"sample": [
+"PhD program"
+]
+},
+{
+"id": "R5ac3f36d",
+"name": "National Institute for Fusion Science",
+"type": "institute",
+"country": "Japan",
+"cc": "JP",
+"city": "Toki",
+"url": "https://www.nifs.ac.jp",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210108322",
+"ror": "https://ror.org/01t3wyv61",
+"works": 45956586,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"soken.ac.jp"
+],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.nifs.ac.jp/sitemap.xml"
+],
+"sample": [
+"21st International Workshop on Plasma Edge Theory in Fusion Devices (PET21)"
+]
+},
+{
+"id": "Ra4d18038",
+"name": "Rutgers, The State University of New Jersey",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "New Brunswick",
+"url": "https://www.rutgers.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I102322142",
+"ror": "https://ror.org/05vt9qd57",
+"works": 247717,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.rutgers.edu/news/university-celebrates-eva-andreis-kavli-prize-and-career-discovery",
+"https://www.rutgers.edu/why-work-rutgers",
+"https://www.rutgers.edu/internships",
+"https://www.rutgers.edu/news/rutgers-autism-center-director-honored-career-contributions-applied-behavior-analysis"
+],
+"rss": [],
+"sitemap": [
+"https://www.rutgers.edu/sitemap.xml"
+],
+"sample": [
+"Stay alert: Protect yourself from job and internship scams"
+]
+},
+{
+"id": "R9e9db74b",
+"name": "United States Department of Veterans Affairs",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Washington",
+"url": "https://www.va.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1322918889",
+"ror": "https://ror.org/05rsv9s98",
+"works": 78483,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.va.gov/sitemap_index.xml",
+"https://www.va.gov/sitemap-cb.xml"
+],
+"sample": [
+"Apply For The Rogers STEM Scholarship | Veterans Affairs"
+]
+},
+{
+"id": "R144b13d9",
+"name": "United States Food and Drug Administration",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Silver Spring",
+"url": "https://www.fda.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1320320070",
+"ror": "https://ror.org/034xvzb47",
+"works": 55242,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.fda.gov/about-fda/jobs-and-training-fda/no-fear-act"
+],
+"rss": [],
+"sitemap": [
+"https://www.fda.gov/sitemap.xml"
+],
+"sample": [
+"International Programs | FDA"
+]
+},
+{
+"id": "Rd4eb172d",
+"name": "University of Maryland, College Park",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "College Park",
+"url": "https://umd.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I66946132",
+"ror": "https://ror.org/047s2c258",
+"works": 238986,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://uhr.umd.edu/work_at_umd",
+"https://umpd.umd.edu/careers",
+"https://umpd.umd.edu/careers/police-positions"
+],
+"rss": [],
+"sitemap": [
+"https://umd.edu/sitemaps-1-sitemap.xml"
+],
+"sample": [
+"Internal Affairs Annual Reports"
+]
+},
+{
+"id": "R64b2b4c1",
+"name": "University of Pittsburgh",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Pittsburgh",
+"url": "https://www.pitt.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I170201317",
+"ror": "https://ror.org/01an3r305",
+"works": 364051,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.join.pitt.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://www.pitt.edu/sitemap.xml"
+],
+"sample": [
+"Talent Center: Careers at Pitt"
+]
+},
+{
+"id": "Rcb7386cc",
+"name": "University of Turin",
+"type": "university",
+"country": "Italy",
+"cc": "IT",
+"city": "Turin",
+"url": "https://www.unito.it",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I55143463",
+"ror": "https://ror.org/048tbm396",
+"works": 167847,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"univ-unita.eu"
+],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.unito.it/sitemap.xml"
+],
+"sample": [
+"Programma Dual Career - Studenti atlete e atleti | Università di Torino"
+]
+},
+{
+"id": "Rfa17df49",
+"name": "Yale University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "New Haven",
+"url": "https://www.yale.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I32971472",
+"ror": "https://ror.org/03v76x132",
+"works": 412921,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://your.yale.edu/work-yale/careers",
+"https://ventures.yale.edu/about/fellows-associates",
+"https://ventures.yale.edu/about/work-us"
+],
+"rss": [],
+"sitemap": [
+"https://www.yale.edu/sitemap.xml"
+],
+"sample": [
+"Catharine Bond Hill, ’85 Ph.D."
+]
+},
+{
+"id": "R9fe8c849",
+"name": "Bulgarian Academy of Sciences",
+"type": "institute",
+"country": "Bulgaria",
+"cc": "BG",
+"city": "Sofia",
+"url": "https://www.bas.bg",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I24768866",
+"ror": "https://ror.org/01x8hew03",
+"works": 69762,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [],
+"rss": [
+"https://www.bas.bg/?feed=rss2"
+],
+"sitemap": [
+"https://www.bas.bg/sitemap.xml"
+]
+},
+{
+"id": "Rcceb54bf",
+"name": "Centre de Coopération Internationale en Recherche Agronomique pour le Développement",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Paris",
+"url": "https://www.cirad.fr",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I131077856",
+"ror": "https://ror.org/05kpkpg04",
+"works": 44612,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://recrutement.cirad.fr/accueil.aspx?LCID=103"
+],
+"rss": [],
+"sitemap": [
+"https://www.cirad.fr/sitemap.xml"
+]
+},
+{
+"id": "Rf3960d7d",
+"name": "Council of Scientific and Industrial Research",
+"type": "institute",
+"country": "India",
+"cc": "IN",
+"city": "New Delhi",
+"url": "https://www.csir.res.in",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I66760702",
+"ror": "https://ror.org/021wm7p51",
+"works": 51055,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.csir.res.in/hi/career-opportunities/recruitment",
+"https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
+"https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+"https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana",
+"https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
+"https://www.csir.res.in/hi/career-opportunities"
+],
+"rss": [],
+"sitemap": [
+"https://www.csir.res.in/sitemap.xml"
+]
+},
+{
+"id": "R1c730cf6",
+"name": "Deutsches Elektronen-Synchrotron DESY",
+"type": "institute",
+"country": "Germany",
+"cc": "DE",
+"city": "Hamburg",
+"url": "https://desy.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2801876189",
+"ror": "https://ror.org/01js2sh04",
+"works": 50424,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://desy.de/desy_karriere/index_ger.html",
+"https://www.desy.de/karriere/index_ger.html",
+"https://v22.desy.de/index_ger.html"
+],
+"rss": [],
+"sitemap": [
+"https://desy.de/sitemap.xml"
+]
+},
+{
+"id": "R5bca8d81",
+"name": "Emory University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Atlanta",
+"url": "https://www.emory.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I150468666",
+"ror": "https://ror.org/03czfpz43",
+"works": 235208,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"http://hr.emory.edu/eu/careers/",
+"http://www.hr.emory.edu/careers/index.html",
+"https://hr.emory.edu/eu/career/index.html"
+],
+"rss": [],
+"sitemap": [
+"https://www.emory.edu/sitemap.xml"
+]
+},
+{
+"id": "Rbde449c9",
+"name": "Environmental Protection Agency",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Washington",
+"url": "https://www.epa.gov",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1302368450",
+"ror": "https://ror.org/03tns0030",
+"works": 44729,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.epa.gov/careers"
+],
+"rss": [],
+"sitemap": [
+"https://www.epa.gov/sitemap.xml"
+]
+},
+{
+"id": "R188a9e94",
+"name": "European Organization for Nuclear Research",
+"type": "institute",
+"country": "Switzerland",
+"cc": "CH",
+"city": "Geneva",
+"url": "https://home.web.cern.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I67311998",
+"ror": "https://ror.org/01ggx4157",
+"works": 79714,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [],
+"rss": [
+"https://home.cern/feed/",
+"https://home.cern/comments/feed/"
+],
+"sitemap": [
+"/sitemap.xml"
+]
+},
+{
+"id": "Radb3b49e",
+"name": "Istituto Nazionale di Fisica Nucleare, Sezione di Milano",
+"type": "institute",
+"country": "Italy",
+"cc": "IT",
+"city": "Milan",
+"url": "https://www.mi.infn.it",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210136779",
+"ror": "https://ror.org/04w4m6z96",
+"works": 145801,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.ac.infn.it/job/"
+],
+"rss": [
+"https://www.mi.infn.it/it/indexc0d0.html?format=feed&type=rss",
+"https://www.mi.infn.it/it/index7b17.html?format=feed&type=atom"
+],
+"sitemap": [
+"https://www.mi.infn.it/sitemap.xml"
+]
+},
+{
+"id": "R53a83113",
+"name": "Japan Atomic Energy Agency",
+"type": "institute",
+"country": "Japan",
+"cc": "JP",
+"city": "Tōkai Mura",
+"url": "https://www.jaea.go.jp/english/index.html",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I117197279",
+"ror": "https://ror.org/05nf86y53",
+"works": 50654,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.jaea.go.jp/04/nrr/en/"
+],
+"rss": [],
+"sitemap": [
+"https://www.jaea.go.jp/sitemap.xml"
+]
+},
+{
+"id": "Re28fe553",
+"name": "Pennsylvania State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "State College",
+"url": "https://www.psu.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I130769515",
+"ror": "https://ror.org/04p491231",
+"works": 355965,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+"https://hr.psu.edu/careers",
+"https://senate.psu.edu/students/awards-and-scholarships/"
+],
+"rss": [],
+"sitemap": [
+"https://www.psu.edu/sitemap.xml"
+]
+},
+{
+"id": "R80a55edd",
+"name": "RIKEN",
+"type": "institute",
+"country": "Japan",
+"cc": "JP",
+"city": "Wako",
+"url": "https://www.riken.jp",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210110652",
+"ror": "https://ror.org/01sjwvz98",
+"works": 88509,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.riken.jp/careers/",
+"https://www.riken.jp/careers/openings/",
+"https://www.riken.jp/careers/programs/",
+"https://www.riken.jp/careers/general/"
+],
+"rss": [],
+"sitemap": [
+"https://www.riken.jp/sitemap.xml"
+]
+},
+{
+"id": "R73190974",
+"name": "The Ohio State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Columbus",
+"url": "https://www.osu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I52357470",
+"ror": "https://ror.org/00rs6vg23",
+"works": 398489,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://hr.osu.edu/careers/",
+"https://hr.osu.edu/"
+],
+"rss": [],
+"sitemap": [
+"https://www.osu.edu/sitemap.xml"
+]
+},
+{
+"id": "Rc082b8f5",
+"name": "Universidad Nacional Autónoma de México",
+"type": "university",
+"country": "Mexico",
+"cc": "MX",
+"city": "Mexico City",
+"url": "http://www.unam.mx",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I8961855",
+"ror": "https://ror.org/01tmp8f25",
+"works": 267700,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://normateca.unam.mx/concursos_seleccion_ingreso/"
+],
+"rss": [],
+"sitemap": [
+"https://www.unam.mx/sitemap.xml"
+]
+},
+{
+"id": "R290b4331",
+"name": "University of Electronic Science and Technology of China",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Chengdu",
+"url": "https://www.uestc.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I150229711",
+"ror": "https://ror.org/04qr3zq92",
+"works": 152362,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://jiuye.uestc.edu.cn/career/"
+],
+"rss": [],
+"sitemap": [
+"https://www.uestc.edu.cn/sitemap.xml"
+]
+},
+{
+"id": "Re05fb993",
+"name": "University of North Carolina at Chapel Hill",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Chapel Hill",
+"url": "https://www.unc.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I114027177",
+"ror": "https://ror.org/0130frc33",
+"works": 334018,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"northcarolina.edu"
+],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://hr.unc.edu/careers/",
+"https://pharmacy.unc.edu/education/phd/",
+"http://sph.unc.edu/gps/?rasp_st_level_tax%5B%5D=doctoral"
+],
+"rss": [
+"https://www.unc.edu/feed/",
+"https://www.unc.edu/comments/feed/"
+],
+"sitemap": [
+"https://www.unc.edu/sitemap_index.xml"
+]
+},
+{
+"id": "R5c34b9b9",
+"name": "University of Rochester",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Rochester",
+"url": "https://www.rochester.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I5388228",
+"ror": "https://ror.org/022kthw22",
+"works": 162385,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"univofrochester-ss1.prd.mykronos.com"
+],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.rochester.edu/working",
+"https://www.rochester.edu/newscenter/coursework-reporting-writing-the-news-journalism-class-733502/",
+"https://www.rochester.edu/human-resources/careers/",
+"https://www.rochester.edu/working/"
+],
+"rss": [],
+"sitemap": [
+"https://www.rochester.edu/sitemap.xml"
+]
+},
+{
+"id": "R5f17a8d6",
+"name": "University of Southern California",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Los Angeles",
+"url": "https://usc.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1174212",
+"ror": "https://ror.org/03taz7m60",
+"works": 292027,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://usc.edu/academics/explore-our-programs/postdoctoral/",
+"https://usccareers.usc.edu/?utm_campaign=Brand&utm_medium=referral&utm_source=USC%20Homepage&utm_term=footer",
+"https://faculty.usc.edu/dualcareer/",
+"https://faculty.usc.edu/dual-career-assistance/"
+],
+"rss": [
+"https://usc.edu/feed/",
+"https://usc.edu/comments/feed/"
+],
+"sitemap": [
+"https://usc.edu/sitemap_index.xml"
+]
+},
+{
+"id": "Rab47e11d",
+"name": "Academia Sinica",
+"type": "institute",
+"country": "Taiwan",
+"cc": "TW",
+"city": "Taipei",
+"url": "http://www.sinica.edu.tw/main_e.shtml",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I84653119",
+"ror": "https://ror.org/05bxb3784",
+"works": 77849,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 404",
+"quality": 0
+},
+{
+"id": "R88e7ca80",
+"name": "Argonne National Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Lemont",
+"url": "https://www.anl.gov",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1282105669",
+"ror": "https://ror.org/05gvnxz63",
+"works": 120829,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R856efcac",
+"name": "Australia Awards",
+"type": "funder",
+"country": "Australia",
+"cc": null,
+"city": "",
+"url": "https://www.dfat.gov.au/people-to-people/australia-awards",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='www.dfat.gov.au', port=443): Read timed out. (read tim",
+"quality": 0
+},
+{
+"id": "R05e7a7d1",
+"name": "Beihang University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Beijing",
+"url": "https://buaa.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I82880672",
+"ror": "https://ror.org/00wk2mp56",
+"works": 158907,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rd525f53b",
+"name": "Central South University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Changsha",
+"url": "https://www.csu.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I139660479",
+"ror": "https://ror.org/00f1zfq44",
+"works": 223245,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"harvard.edu",
+"pku.edu.cn",
+"tsinghua.edu.cn",
+"yale.edu"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Ref4b1ba7",
+"name": "Chinese Academy of Agricultural Sciences",
+"type": "institute",
+"country": "China",
+"cc": "CN",
+"city": "Beijing",
+"url": "http://www.caas.cn/en/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210138501",
+"ror": "https://ror.org/0313jb750",
+"works": 99087,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='www.caas.cn', port=80): Max retries exceeded with url: ",
+"quality": 0
+},
+{
+"id": "R576c2eb2",
+"name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Beijing",
+"url": "https://www.pumc.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I200296433",
+"ror": "https://ror.org/02drdmm93",
+"works": 175708,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"cibr.ac.cn",
+"cicams.ac.cn",
+"ibtcams.ac.cn",
+"imbcams.ac.cn",
+"imicams.ac.cn",
+"imm.ac.cn",
+"implad.ac.cn",
+"ipbcams.ac.cn",
+"irm-cams.ac.cn"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R34739209",
+"name": "Chinese Academy of Sciences",
+"type": "institute",
+"country": "China",
+"cc": "CN",
+"city": "Beijing",
+"url": "https://www.cas.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I19820366",
+"ror": "https://ror.org/034t30j35",
+"works": 1232091,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"casip.ac.cn",
+"shanghaitech.edu.cn",
+"ucas.ac.cn",
+"ustc.edu.cn"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Ra4137957",
+"name": "Chinese People's Liberation Army",
+"type": "institute",
+"country": "China",
+"cc": "CN",
+"city": "Beijing",
+"url": "http://eng.chinamil.com.cn/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210160531",
+"ror": "https://ror.org/05tf9r976",
+"works": 53818,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R65bb6a12",
+"name": "Columbia University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "New York",
+"url": "https://www.columbia.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I78577930",
+"ror": "https://ror.org/00hj8s172",
+"works": 407946,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Rbea1d8d5",
+"name": "Czech Academy of Sciences",
+"type": "institute",
+"country": "Czechia",
+"cc": "CZ",
+"city": "Prague",
+"url": "http://www.avcr.cz/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I202391551",
+"ror": "https://ror.org/053avzc18",
+"works": 111041,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R445b3088",
+"name": "Fudan University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Shanghai",
+"url": "https://fudan.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I24943067",
+"ror": "https://ror.org/013q1eq08",
+"works": 279791,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"ch.shmu.edu.cn"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R44119ac1",
+"name": "Global Centroid-Moment-Tensor (CMT) Project",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Palisades",
+"url": "https://www.globalcmt.org",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4405260999",
+"ror": "https://ror.org/04knth696",
+"works": 72644,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"ldeo.columbia.edu"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R133abbb5",
+"name": "HigherEdJobs",
+"type": "aggregator-global",
+"country": "United States",
+"cc": null,
+"city": "",
+"url": "https://www.higheredjobs.com/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "hub-seed",
+"hub": true,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "js_required",
+"reason": "page is built with JavaScript; add an \"api\" adapter (see adapters.py)",
+"quality": 0,
+"listing": [
+"https://www.higheredjobs.com/"
+],
+"rss": [],
+"sitemap": [
+"https://www.higheredjobs.com/sitemap.xml"
+]
+},
+{
+"id": "R0e4b2c70",
+"name": "Institut National de la Recherche Agronomique",
+"type": "institute",
+"country": "France",
+"cc": "FR",
+"city": "Paris",
+"url": "http://institut.inra.fr/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4387154544",
+"ror": "https://ror.org/01x3gbx83",
+"works": 88210,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='institut.inra.fr', port=443): Max retries exceeded wit",
+"quality": 0
+},
+{
+"id": "R9d89cc6a",
+"name": "Japan Science and Technology Agency",
+"type": "institute",
+"country": "Japan",
+"cc": "JP",
+"city": "Tokyo",
+"url": "https://www.jst.go.jp",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210086780",
+"ror": "https://ror.org/00097mb19",
+"works": 78349,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rf210adea",
+"name": "Jet Propulsion Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Pasadena",
+"url": "https://www.jpl.nasa.gov",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1334627681",
+"ror": "https://ror.org/027k65916",
+"works": 105296,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R5a495351",
+"name": "Jilin University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Changchun",
+"url": "https://www.jlu.edu.cn/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I194450716",
+"ror": "https://ror.org/00js3aw79",
+"works": 178394,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R4830d48b",
+"name": "Johns Hopkins University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Baltimore",
+"url": "https://www.jhu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I145311948",
+"ror": "https://ror.org/00za53h95",
+"works": 515687,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R9ef26b3b",
+"name": "Lawrence Berkeley National Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Berkeley",
+"url": "https://www.lbl.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I148283060",
+"ror": "https://ror.org/02jbv0t02",
+"works": 201987,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Re88e82bb",
+"name": "Lomonosov Moscow State University",
+"type": "university",
+"country": "Russia",
+"cc": "RU",
+"city": "Moscow",
+"url": "https://msu.ru/en/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I19880235",
+"ror": "https://ror.org/010pmpe69",
+"works": 228253,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rf7ed7f63",
+"name": "Los Alamos National Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Los Alamos",
+"url": "http://lanl.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1343871089",
+"ror": "https://ror.org/01e41cf67",
+"works": 142685,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Rd15bcaf0",
+"name": "Ministry of Agriculture and Rural Affairs",
+"type": "institute",
+"country": "China",
+"cc": "CN",
+"city": "Beijing",
+"url": "http://english.agri.gov.cn/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210151987",
+"ror": "https://ror.org/05ckt8b96",
+"works": 64317,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='english.agri.gov.cn', port=80): Max retries exceeded wi",
+"quality": 0
+},
+{
+"id": "R9266d127",
+"name": "Ministry of Health of the Russian Federation",
+"type": "institute",
+"country": "Russia",
+"cc": "RU",
+"city": "Moscow",
+"url": "https://minzdrav.gov.ru",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210117042",
+"ror": "https://ror.org/01p8ehb87",
+"works": 42722,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='minzdrav.gov.ru', port=443): Max retries exceeded with",
+"quality": 0
+},
+{
+"id": "Ra712e52e",
+"name": "Monash University",
+"type": "university",
+"country": "Australia",
+"cc": "AU",
+"city": "Melbourne",
+"url": "https://www.monash.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I56590836",
+"ror": "https://ror.org/02bfwt286",
+"works": 282836,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R20b88aa1",
+"name": "Nanjing University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Nanjing",
+"url": "http://www.nju.edu.cn/english/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I881766915",
+"ror": "https://ror.org/01rxvg760",
+"works": 205036,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 404",
+"quality": 0
+},
+{
+"id": "R60202d9c",
+"name": "National Cancer Institute",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Bethesda",
+"url": "http://www.cancer.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210140884",
+"ror": "https://ror.org/040gcmg81",
+"works": 136994,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rda274061",
+"name": "National Institute for Astrophysics",
+"type": "institute",
+"country": "Italy",
+"cc": "IT",
+"city": "Rome",
+"url": "http://www.inaf.it/en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I875825670",
+"ror": "https://ror.org/02gh4kt33",
+"works": 45369,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rc23fa523",
+"name": "National Institute for Materials Science",
+"type": "institute",
+"country": "Japan",
+"cc": "JP",
+"city": "Tsukuba",
+"url": "http://www.nims.go.jp/eng/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I205401836",
+"ror": "https://ror.org/026v1ze26",
+"works": 74669,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='www.nims.go.jp', port=80): Max retries exceeded with ur",
+"quality": 0
+},
+{
+"id": "Rec317527",
+"name": "National Oceanic and Atmospheric Administration",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Washington",
+"url": "https://www.noaa.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1308126019",
+"ror": "https://ror.org/02z5nhe81",
+"works": 61925,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R5d476b2b",
+"name": "National Research Centre",
+"type": "institute",
+"country": "Egypt",
+"cc": "EG",
+"city": "Giza",
+"url": "https://www.nrc.sci.eg/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210131959",
+"ror": "https://ror.org/02n85j827",
+"works": 51898,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='www.nrc.sci.eg', port=443): Max retries exceeded with ",
+"quality": 0
+},
+{
+"id": "R0912734d",
+"name": "National Research Council",
+"type": "institute",
+"country": "Italy",
+"cc": "IT",
+"city": "Rome",
+"url": "https://www.cnr.it",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210155236",
+"ror": "https://ror.org/04zaypm56",
+"works": 185353,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='www.cnr.it', port=443): Max retries exceeded with url:",
+"quality": 0
+},
+{
+"id": "R2e19a106",
+"name": "National Research Council Canada",
+"type": "institute",
+"country": "Canada",
+"cc": "CA",
+"city": "Ottawa",
+"url": "https://nrc.canada.ca",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210159778",
+"ror": "https://ror.org/04mte1k06",
+"works": 71189,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R4522ed4b",
+"name": "National Research and Innovation Agency",
+"type": "institute",
+"country": "Indonesia",
+"cc": "ID",
+"city": "Jakarta",
+"url": "https://www.brin.go.id",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4387154144",
+"ror": "https://ror.org/02hmjzt55",
+"works": 41578,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R8996d19e",
+"name": "North Carolina State University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Raleigh",
+"url": "https://www.ncsu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I137902535",
+"ror": "https://ror.org/04tj63d06",
+"works": 188763,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R8c2bd0e0",
+"name": "Princeton University",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Princeton",
+"url": "https://www.princeton.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I20089843",
+"ror": "https://ror.org/00hx57361",
+"works": 209763,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R2545a9cb",
+"name": "Russian Academy of Sciences",
+"type": "institute",
+"country": "Russia",
+"cc": "RU",
+"city": "Moscow",
+"url": "http://www.ras.ru/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1313323035",
+"ror": "https://ror.org/05qrfxd25",
+"works": 565320,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R3a2a5b6b",
+"name": "Shandong University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Jinan",
+"url": "https://www.sdu.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I154099455",
+"ror": "https://ror.org/0207yh398",
+"works": 221259,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"fudan.edu.cn",
+"pku.edu.cn",
+"tsinghua.edu.cn",
+"zju.edu.cn"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rcf531cbe",
+"name": "Siberian Branch of the Russian Academy of Sciences",
+"type": "institute",
+"country": "Russia",
+"cc": "RU",
+"city": "Novosibirsk",
+"url": "http://www.sbras.ru/en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210127387",
+"ror": "https://ror.org/02frkq021",
+"works": 96550,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R5e4b36a2",
+"name": "Sichuan University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Chengdu",
+"url": "https://scu.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I24185976",
+"ror": "https://ror.org/011ashp19",
+"works": 254076,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R87593126",
+"name": "Smithsonian Institution",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Washington",
+"url": "https://www.si.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I103187081",
+"ror": "https://ror.org/01pp8nd67",
+"works": 47564,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R0a640972",
+"name": "Sun Yat-sen University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Guangzhou",
+"url": "https://www.sysu.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I157773358",
+"ror": "https://ror.org/0064kty71",
+"works": 252128,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"enaea.edu.cn"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Re33c0c51",
+"name": "The University of Melbourne",
+"type": "university",
+"country": "Australia",
+"cc": "AU",
+"city": "Melbourne",
+"url": "https://www.unimelb.edu.au",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I165779595",
+"ror": "https://ror.org/01ej9dk98",
+"works": 347005,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Rb2e55d97",
+"name": "United States Army",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Arlington",
+"url": "http://www.army.mil/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210088792",
+"ror": "https://ror.org/00afsp483",
+"works": 59385,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R3d533f53",
+"name": "United States Department of Agriculture",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Washington",
+"url": "http://www.usda.gov/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1336096307",
+"ror": "https://ror.org/01na82s61",
+"works": 177336,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R54e23b30",
+"name": "United States Naval Research Laboratory",
+"type": "institute",
+"country": "United States",
+"cc": "US",
+"city": "Washington",
+"url": "http://www.nrl.navy.mil/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1288214837",
+"ror": "https://ror.org/04d23a975",
+"works": 66193,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Ra6954378",
+"name": "Universidade Federal do Rio Grande do Sul",
+"type": "university",
+"country": "Brazil",
+"cc": "BR",
+"city": "Porto Alegre",
+"url": "https://www.ufrgs.br/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I130442723",
+"ror": "https://ror.org/041yk2d64",
+"works": 172932,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='www.ufrgs.br', port=443): Max retries exceeded with ur",
+"quality": 0
+},
+{
+"id": "R31ab8cdf",
+"name": "University of Chinese Academy of Sciences",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Beijing",
+"url": "https://www.ucas.ac.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210165038",
+"ror": "https://ror.org/05qbk4x57",
+"works": 401503,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"caf.ac.cn",
+"cams.ac.cn",
+"cas.ac.cn",
+"fudan.edu.cn",
+"hust.edu.cn",
+"mooc.ucas.edu.cn",
+"nju.edu.cn",
+"onestop.ucas.edu.cn",
+"pku.edu.cn",
+"shanghaitech.edu.cn",
+"sjtu.edu.cn",
+"sysu.edu.cn",
+"tsinghua.edu.cn",
+"ustc.edu.cn",
+"whu.edu.cn",
+"zju.edu.cn"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rbd90bb3b",
+"name": "University of Georgia",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Athens",
+"url": "https://www.uga.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I165733156",
+"ror": "https://ror.org/00te3t702",
+"works": 175789,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "js_required",
+"reason": "page is built with JavaScript; add an \"api\" adapter (see adapters.py)",
+"quality": 0,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.uga.edu/sitemap.xml"
+]
+},
+{
+"id": "Rfd5a892b",
+"name": "University of Illinois Chicago",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Chicago",
+"url": "https://www.uic.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I39422238",
+"ror": "https://ror.org/02mpq6x41",
+"works": 185201,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='www.uic.edu', port=443): Max retries exceeded with url",
+"quality": 0
+},
+{
+"id": "Ra9e2f7d6",
+"name": "University of Illinois Urbana-Champaign",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Urbana",
+"url": "https://illinois.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I157725225",
+"ror": "https://ror.org/047426m28",
+"works": 355028,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='illinois.edu', port=443): Max retries exceeded with ur",
+"quality": 0
+},
+{
+"id": "R01d095c6",
+"name": "University of Michigan",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Ann Arbor",
+"url": "https://www.umich.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I27837315",
+"ror": "https://ror.org/00jmfr291",
+"works": 984116,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R2b46069d",
+"name": "University of Science and Technology of China",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Hefei",
+"url": "https://ustc.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I126520041",
+"ror": "https://ror.org/04c4dkn09",
+"works": 218393,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R11357de7",
+"name": "University of Tehran",
+"type": "university",
+"country": "Iran",
+"cc": "IR",
+"city": "Tehran",
+"url": "https://ut.ac.ir",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I23946033",
+"ror": "https://ror.org/05vf56z40",
+"works": 162029,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Re10e859f",
+"name": "University of Virginia",
+"type": "university",
+"country": "United States",
+"cc": "US",
+"city": "Charlottesville",
+"url": "https://virginia.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I51556381",
+"ror": "https://ror.org/0153tk833",
+"works": 209541,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='virginia.edu', port=443): Max retries exceeded with ur",
+"quality": 0
+},
+{
+"id": "Rf9306f23",
+"name": "Westerdijk Fungal Biodiversity Institute",
+"type": "institute",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Utrecht",
+"url": "https://wi.knaw.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210113371",
+"ror": "https://ror.org/030a5r161",
+"works": 71764,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"status": "js_required",
+"reason": "page is built with JavaScript; add an \"api\" adapter (see adapters.py)",
+"quality": 0,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://wi.knaw.nl/sitemap.xml"
+]
+},
+{
+"id": "Rd5f50805",
+"name": "Wuhan University",
+"type": "university",
+"country": "China",
+"cc": "CN",
+"city": "Wuhan",
+"url": "https://www.whu.edu.cn",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I37461747",
+"ror": "https://ror.org/033vjfk17",
+"works": 194358,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"dukekunshan.edu.cn"
+],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+}
+]
+}

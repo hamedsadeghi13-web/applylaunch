@@ -1,12 +1,18 @@
 {
  "sources": {
   "curated": 886,
-  "discovered": 0,
-  "discovered_by_status": {},
+  "discovered": 200,
+  "discovered_by_status": {
+   "verified": 126,
+   "unverified": 17,
+   "unreachable": 29,
+   "no_listing": 25,
+   "js_required": 3
+  },
   "curated_reachable": 589,
   "curated_with_real_positions": 439,
-  "discovered_verified": 0,
-  "really_extractable_total": 439
+  "discovered_verified": 126,
+  "really_extractable_total": 565
  },
  "positions": {
   "total": 3377,
