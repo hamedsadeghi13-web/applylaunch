@@ -38,7 +38,30 @@ sstat = state.get('sources', {})
 reg_status = Counter(s.get('status') for s in reg)
 extractable_curated = sum(1 for s in curated if per_src.get(s['id']))
 extractable_reg = sum(1 for s in reg if s.get('status') == 'verified')
+meth = Counter()
+for sid, v in sstat.items():
+    m = v.get('method') or ('unreachable' if not v.get('ok') else 'no-extraction')
+    meth[m] += 1
+js_src = [v for v in sstat.values() if v.get('js')]
+js_ok = [v for v in js_src if 'playwright' in (v.get('method') or '')]
+cc_pos = Counter(p.get('cc') for p in pos if p.get('cc'))
+reg_cc = Counter((s.get('cc') or s.get('country') or '?') for s in reg)
+cur_cc = Counter((s.get('country') or '?') for s in curated)
+import datetime as _dt
+new_today = sum(1 for p in state.get('positions', {}).values() if p.get('first_seen') == _dt.date.today().isoformat())
+meta = state.get('meta', {})
+extraction = dict(
+    by_method=dict(meth),
+    js_sources_detected=len(js_src), js_sources_extracted_with_browser=len(js_ok),
+    sources_needing_custom_adapter=sorted([k for k, v in sstat.items() if v.get('needs_adapter')])[:200],
+    needs_adapter_count=sum(1 for v in sstat.values() if v.get('needs_adapter')),
+    registry_js_required=sum(1 for s in reg if s.get('status') == 'js_required'),
+    browser=meta.get('render', {}), duplicates_dropped_last_run=meta.get('duplicates_dropped'), stale_or_expired_dropped_last_run=meta.get('expired_or_stale_dropped'),
+    failed_sources=sum(1 for v in sstat.values() if not v.get('ok')), new_positions_first_seen_today=new_today,
+    discovery_by_method=dict(Counter(s.get('via', '?') for s in reg)),
+    positions_by_country=dict(cc_pos.most_common()), discovered_sources_by_country=dict(reg_cc.most_common()))
 rep = dict(
+    extraction=extraction,
     sources=dict(curated=len(curated), discovered=len(reg), discovered_by_status=dict(reg_status),
                  curated_reachable=sum(1 for s in curated if sstat.get(s['id'], {}).get('ok')),
                  curated_with_real_positions=extractable_curated, discovered_verified=extractable_reg,
@@ -60,6 +83,12 @@ md = f"""## ApplyLaunch run report
 | **Sources really extractable (total)** | **{extractable_curated + extractable_reg}** |
 | Real current positions | {len(pos)} ({rep['positions']['by_type']}) |
 | Professors found / with official page / public e-mail | {len(profs)} / {rep['professors']['with_official_page']} / {rep['professors']['with_public_email']} |
+| Sources by extraction method | {dict(meth)} |
+| JavaScript sources detected / extracted with the browser | {len(js_src)} / {len(js_ok)} |
+| Sources needing a custom adapter | {extraction['needs_adapter_count']} |
+| New positions first seen today | {new_today} |
+| Duplicates / stale dropped (last run) | {meta.get('duplicates_dropped')} / {meta.get('expired_or_stale_dropped')} |
+| Countries with positions | {len(cc_pos)} |
 | Admission status 1/2/3/4 | {rep['professors']['status']} |
 | Professors with an evidence link | {rep['professors']['with_evidence_link']} |
 """

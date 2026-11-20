@@ -26,6 +26,8 @@ jobs:
           cache: pip
           cache-dependency-path: crawler/requirements.txt
       - run: pip install -r crawler/requirements.txt
+      - name: Install headless browser (only used for JavaScript-built sites)
+        run: python -m playwright install --with-deps chromium || echo "browser not installed - JavaScript sources will be marked as needing a browser"
       - name: Run
         run: |
           # "timeout" stops the program from outside even if it is frozen; the last checkpoint is still published
@@ -39,6 +41,7 @@ jobs:
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           BUDGET_MIN: "210"
           WORKERS: "24"
+          RENDER_BUDGET_MIN: "45"
       - name: Publish data
         if: always()          # also commit partial results if the run above failed or was stopped
         run: |

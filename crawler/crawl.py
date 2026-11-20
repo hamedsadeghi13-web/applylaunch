@@ -19,6 +19,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 UA = os.environ.get('CRAWLER_UA', 'ApplyLaunchBot/1.0 (academic opportunity search; respects robots.txt)')
 TODAY = dt.date.today()
+sys.path.insert(0, HERE)
+import render                                              # optional headless browser for JavaScript-built pages
+MAX_RENDER_DETAIL = 8                                      # detail pages rendered with the browser per source and run
 
 # ------------------------------------------------------------------ keyword lists
 TYPES = [  # first match wins (checked on the title, then on the start of the page)
@@ -374,7 +377,8 @@ def listing_candidates(text, ctype, base):
     return out, jobs
 
 def crawl_source(src, F, state_pos, max_links, deadline_ts):
-    stat = dict(ok=False, found=0, new=0, seen=0, err='')
+    stat = dict(ok=False, found=0, new=0, seen=0, err='', method='', js=False, needs_adapter=False, rendered=0)
+    methods = []
     hub = src['name']
     urls = []
     for u in list(src.get('listing') or []) + [src.get('search'), src.get('url')] + list(src.get('rss') or []):
@@ -382,6 +386,7 @@ def crawl_source(src, F, state_pos, max_links, deadline_ts):
             urls.append(u)
     new_recs, touched = [], []
     cands_all, direct = [], []
+    js_listing = set()
     import adapters
     extra_c, extra_raw = adapters.run(src, F)
     cands_all += extra_c
@@ -391,6 +396,7 @@ def crawl_source(src, F, state_pos, max_links, deadline_ts):
             new_recs.append(rec)
     if extra_c or extra_raw:
         stat['ok'] = True
+        methods.append('adapter')
     for lu in urls[:5]:
         if time.time() > deadline_ts:
             break
@@ -401,6 +407,25 @@ def crawl_source(src, F, state_pos, max_links, deadline_ts):
             continue
         stat['ok'] = True
         c, jobs = listing_candidates(text, ctype, final)
+        if c or jobs:
+            methods.append('rss' if ('xml' in ctype or text.lstrip()[:200].lower().startswith(('<?xml', '<rss', '<feed'))) else 'html')
+        elif render.looks_js(text) or src.get('js'):
+            # the light method found nothing and the page is an empty JavaScript shell -> retry with the headless browser
+            stat['js'] = True
+            try:
+                snaps, rfinal = render.render(lu)
+                stat['rendered'] += 1
+                for snap in snaps:
+                    c2, j2 = listing_candidates(snap, 'text/html', rfinal)
+                    c += c2
+                    jobs += j2
+                if c or jobs:
+                    methods.append('playwright')
+                    js_listing.add(norm_url(rfinal))
+            except Exception as e:
+                stat['err'] = ('browser: ' + str(e))[:80]
+            if not (c or jobs):
+                stat['needs_adapter'] = True
         cands_all += c
         direct += jobs
     # direct JSON-LD postings found on listing pages
@@ -430,6 +455,15 @@ def crawl_source(src, F, state_pos, max_links, deadline_ts):
         n_open += 1
         try:
             html, _, final = F.get(u)
+            if stat['js'] and stat['rendered'] <= MAX_RENDER_DETAIL and render.looks_js(html):     # detail pages of a JS site are JS-built too
+                try:
+                    snaps, final = render.render(u, pages=1)
+                    html = snaps[-1]
+                    stat['rendered'] += 1
+                    if 'playwright' not in methods:
+                        methods.append('playwright')
+                except Exception:
+                    pass
             rec, why = analyse(final, html, src, hub)
         except Exception:
             continue
@@ -440,6 +474,9 @@ def crawl_source(src, F, state_pos, max_links, deadline_ts):
         r['sid'] = src['id']
     stat['found'] = len(cands_all)
     stat['new'] = len(new_recs)
+    stat['method'] = '+'.join(dict.fromkeys(methods))
+    if new_recs or stat['seen']:
+        stat['needs_adapter'] = False
     return stat, new_recs, touched
 
 # ------------------------------------------------------------------ main
@@ -460,7 +497,7 @@ def main():
     reg_path = os.path.join(HERE, 'registry.json')           # sources found by discover.py
     if os.path.exists(reg_path):
         known = {s['id'] for s in sources}
-        sources += [r for r in json.load(open(reg_path, encoding='utf-8')).get('sources', []) if r.get('status') == 'verified' and r['id'] not in known]
+        sources += [r for r in json.load(open(reg_path, encoding='utf-8')).get('sources', []) if r.get('status') in ('verified', 'js_required') and r['id'] not in known]
     state = json.load(open(a.state, encoding='utf-8')) if os.path.exists(a.state) else {}
     pos = state.get('positions', {})
     sstat = state.get('sources', {})
@@ -474,15 +511,17 @@ def main():
     todo.sort(key=lambda s: sstat.get(s['id'], {}).get('last_try', ''))   # least recently visited first, so every source is covered over time
     if a.limit:
         todo = todo[:a.limit]
+    render.configure(float(os.environ.get('RENDER_BUDGET_MIN', 45)))
     F = Fetcher(delay=a.delay)
     lock = threading.Lock()
     done = [0]
+    dup_n, stale_n = [0], [0]
 
     def work(s):
         if time.time() > deadline_ts:
             return
         try:
-            stat, recs, touched = crawl_source(s, F, pos, a.max_links, deadline_ts)
+            stat, recs, touched = crawl_source(dict(s, js=bool(sstat.get(s['id'], {}).get('js') or s.get('js'))), F, pos, a.max_links, deadline_ts)
         except Exception as e:
             stat, recs, touched = dict(ok=False, err=str(e)[:80], found=0, new=0, seen=0), [], []
         with lock:
@@ -496,7 +535,9 @@ def main():
                 pos[k] = r
             old = sstat.get(s['id'], {})
             sstat[s['id']] = dict(name=s['name'], last_try=now, ok=stat['ok'], found=stat['found'], new=stat['new'], err=stat['err'],
-                                  fails=0 if stat['ok'] else old.get('fails', 0) + 1)
+                                  fails=0 if stat['ok'] else old.get('fails', 0) + 1,
+                                  method=stat.get('method') or old.get('method', ''), js=bool(stat.get('js') or old.get('js')),
+                                  needs_adapter=bool(stat.get('needs_adapter')), rendered=stat.get('rendered', 0))
             done[0] += 1
             if done[0] % 25 == 0:
                 print(f'  {done[0]}/{len(todo)} sources, {len(pos)} positions, {int(time.time()-t0)}s', flush=True)
@@ -506,14 +547,17 @@ def main():
         import guard
         pos_c, ss_c = guard.snapshot(pos), guard.snapshot(sstat)
         out, seen_key = [], set()
+        dup_n[0] = stale_n[0] = 0
         for k, r in list(pos_c.items()):
             dl = dt.date.fromisoformat(r['deadline']) if r.get('deadline') else None
             stale = (TODAY - dt.date.fromisoformat(r['last_seen'])).days > 21
             if (dl and dl < TODAY) or stale:
                 del pos_c[k]
+                stale_n[0] += 1
                 continue
             dk = (re.sub(r'\W+', '', r['title'].lower()), re.sub(r'\W+', '', (r['inst'] or '').lower()))
             if dk in seen_key:
+                dup_n[0] += 1
                 continue
             seen_key.add(dk)
             out.append(r)
@@ -521,7 +565,8 @@ def main():
         pub = [{k: v for k, v in r.items() if k != 'sid'} for r in out]
         os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
         json.dump(dict(updated=TODAY.isoformat(), count=len(pub), positions=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-        json.dump(dict(positions=pos_c, sources=ss_c), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        meta = dict(updated=TODAY.isoformat(), render=render.stats(), duplicates_dropped=dup_n[0], expired_or_stale_dropped=stale_n[0])
+        json.dump(dict(positions=pos_c, sources=ss_c, meta=meta), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         return out, ss_c
 
     import guard

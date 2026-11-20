@@ -151,13 +151,15 @@ def vet(entry, F, deadline_ts):
         except Exception:
             pass
     valid = len(recs)
+    e['js'] = bool(stat.get('js'))
+    e['method_used'] = stat.get('method', '')
     if valid:
         with_dl = sum(1 for r in recs if r.get('deadline'))
         q = 30 + 10 * min(valid, 5) + (10 if (rss or used.get('rss')) else 0) + (10 if with_dl * 2 >= valid else 0)
         e.update(status='verified', reason=f'{valid} real position(s) extracted at vetting', quality=min(100, q), **used,
                  sample=[r['title'][:80] for r in recs[:2]])
     elif js_hint and not stat.get('found'):
-        e.update(status='js_required', reason='page is built with JavaScript; add an "api" adapter (see adapters.py)', quality=0, **used)
+        e.update(status='js_required', reason='page is built with JavaScript; the browser pass found nothing extractable yet - needs a custom adapter (see adapters.py)' if stat.get('js') else 'page is built with JavaScript; add an "api" adapter (see adapters.py)', quality=0, **used)
     elif listing or rss:
         e.update(status='unverified', reason='listing page found but no current position could be extracted', quality=10, **used)
     else:
@@ -199,8 +201,7 @@ def oa_candidates(oa, per_kind, min_works):
              ('funders', 'works_count:>%d' % (min_works * 2), 'funder')]
     CCS = 'DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA'.split()
     # one single-page request per country (OpenAlex answers cursor paging with 401 when no API key is set), so every country is covered
-    plan = [(path, (flt + ',country_code:' + cc) if path == 'institutions' else flt, typ, 100 if path == 'institutions' else per_kind)
-            for path, flt, typ in kinds for cc in (CCS if path == 'institutions' else [None])]
+    plan = [(path, flt + ',country_code:' + cc, typ, 100) for path, flt, typ in kinds for cc in CCS]
     for path, flt, typ, limit in plan:
         sel = 'id,display_name,homepage_url,country_code,ror,works_count,geo' if path == 'institutions' else 'id,display_name,homepage_url,country_code,works_count'
         for it in oa.pages(path, flt, sel, limit):
@@ -211,6 +212,32 @@ def oa_candidates(oa, per_kind, min_works):
             yield dict(id=sid_for(u), name=it.get('display_name', host_of(u)), type=typ, country=crawl.ISO_NAME.get(cc, cc), cc=cc or None,
                        city=((it.get('geo') or {}).get('city') or ''), url=u, search=None, method='auto', active=True, via='openalex',
                        oa=it.get('id'), ror=it.get('ror'), works=it.get('works_count'))
+
+
+WD_URL = 'https://query.wikidata.org/sparql'
+WD_TYPES = {'university': 'wd:Q3918 wd:Q875538 wd:Q15936437 wd:Q902104 wd:Q23002054', 'institute': 'wd:Q31855 wd:Q1664720 wd:Q2467461 wd:Q16519632'}
+
+
+def wikidata_candidates(per_country=150):
+    """Second, independent directory: official websites of universities and research institutes recorded in Wikidata."""
+    CCS = 'DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA'.split()
+    for cc in CCS:
+        for typ, qs in WD_TYPES.items():
+            q = ('SELECT ?i ?iLabel ?site WHERE { VALUES ?t { %s } ?i wdt:P31 ?t; wdt:P856 ?site; wdt:P17 ?c. ?c wdt:P297 "%s". '
+                 'FILTER NOT EXISTS { ?i wdt:P576 ?end } SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } } LIMIT %d') % (qs, cc, per_country)
+            try:
+                r = requests.get(WD_URL, params={'query': q, 'format': 'json'}, headers={'User-Agent': crawl.UA, 'Accept': 'application/sparql-results+json'}, timeout=60)
+                rows = r.json()['results']['bindings'] if r.status_code == 200 else []
+            except Exception as ex:
+                print('  Wikidata error:', str(ex)[:80], flush=True)
+                rows = []
+            for b in rows:
+                u = b['site']['value']
+                if not u.startswith('http') or BAD_HOST.search(host_of(u)):
+                    continue
+                yield dict(id=sid_for(u), name=b.get('iLabel', {}).get('value', host_of(u))[:90], type=typ, country=crawl.ISO_NAME.get(cc, cc), cc=cc, city='', url=u,
+                           search=None, method='auto', active=True, via='wikidata')
+            time.sleep(1.0)
 
 
 def seed_candidates(path):
@@ -253,8 +280,8 @@ def main():
     ap.add_argument('--seeds', default=os.path.join(HERE, 'seeds.json'))
     ap.add_argument('--openalex-base', default=os.environ.get('OPENALEX_BASE', 'https://api.openalex.org'))
     ap.add_argument('--search-base', default='https://api.search.brave.com/res/v1/web/search')
-    ap.add_argument('--max-new', type=int, default=int(os.environ.get('MAX_NEW', 150)))
-    ap.add_argument('--max-revet', type=int, default=int(os.environ.get('MAX_REVET', 60)))
+    ap.add_argument('--max-new', type=int, default=int(os.environ.get('MAX_NEW', 450)))
+    ap.add_argument('--max-revet', type=int, default=int(os.environ.get('MAX_REVET', 120)))
     ap.add_argument('--min-works', type=int, default=int(os.environ.get('MIN_WORKS', 500)))
     ap.add_argument('--workers', type=int, default=8)
     ap.add_argument('--delay', type=float, default=float(os.environ.get('DELAY', 1.0)))
@@ -278,20 +305,24 @@ def main():
         known_dom.add(d)
         c['discovered'] = TODAY.isoformat()
         cands.append(c)
-    gens = [seed_candidates(a.seeds), oa_candidates(OpenAlex(a.openalex_base), a.max_new, a.min_works)]
+    gens = [seed_candidates(a.seeds), oa_candidates(OpenAlex(a.openalex_base), a.max_new, a.min_works), wikidata_candidates()]
     # snowball: education-looking domains linked from verified portals
     snow = [dict(id=sid_for('https://' + h), name=h, type='university', country='', cc=None, city='', url='https://' + h + '/', search=None, method='auto', active=True, via='snowball')
             for s in entries.values() if s.get('status') == 'verified' and s.get('hub') for h in s.get('outlinks', [])]
     gens.append(iter(snow))
     countries = sorted({s.get('country') for s in curated if s.get('country') and s['country'] not in ('Global', 'Multi', 'Europe')})[:12]
     gens.append(search_candidates(a.search_base, SEARCH_QUERIES, countries))
+    # each independent method gets its own share, so no single directory fills the whole quota
+    quota = max(20, a.max_new // max(1, len(gens)))
+    by_via = {}
     for g in gens:
-        n = 0
+        n0 = len(cands)
         for c in g:
             push(c)
-            n += 1
-            if len(cands) >= a.max_new:
+            if len(cands) - n0 >= quota:
                 break
+        by_via[g.__name__ if hasattr(g, '__name__') else 'list'] = len(cands) - n0
+    print('candidates by method:', by_via, flush=True)
     new = cands[:a.max_new]
     # ---- 2. which existing entries are due for a re-test
     due = []
@@ -300,6 +331,7 @@ def main():
         if not s.get('vetted') or (TODAY - dt.date.fromisoformat(s['vetted'])).days >= iv:
             due.append(s)
     due = sorted(due, key=lambda s: s.get('vetted', ''))[:a.max_revet]
+    crawl.render.configure(float(os.environ.get('RENDER_BUDGET_MIN', 30)))
     F = crawl.Fetcher(delay=a.delay)
 
     def work(e):
