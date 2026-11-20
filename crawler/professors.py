@@ -25,6 +25,7 @@ import crawl, discover, guard                    # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 TODAY = dt.date.today()
+KEEP_FULL = 40000
 COUNTRIES = ('DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA').split()
 
 RANK_RX = [('s', r'assistant professor|lecturer|junior professor|juniorprofessor|maître de conférences|ricercatore|universitair docent|yrd\.? ?doç|dr\. öğr'),
@@ -417,7 +418,8 @@ def main():
     inst_dom_of = lambda inst: inst_dom(inst['home'])
     def save():
         """link, publish and checkpoint (called at the end, every 15 min and by the watchdog)"""
-        plist = list(guard.snapshot(profs).values())
+        snap = guard.snapshot(profs)
+        plist = [p for p in snap.values() if p.get('name')]      # compact records (see below) carry no name and are not published
         try:
             positions = json.load(open(a.positions, encoding='utf-8')).get('positions', [])
         except Exception:
@@ -427,7 +429,13 @@ def main():
         pub = [{k: v for k, v in p.items() if k not in ('works',) and v not in ('', None, [])} for p in plist[:a.publish_max]]
         os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
         json.dump(dict(updated=TODAY.isoformat(), count=len(pub), professors=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-        json.dump(dict(institutions=guard.snapshot(insts), professors=guard.snapshot(profs)), open(a.state, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        # keep the state file well below GitHub's 100 MB file limit: the best KEEP_FULL records stay complete,
+        # the rest keep only (id, last-checked date) so they are not processed again within 30 days
+        keep = {p['oa'] for p in plist[:KEEP_FULL]}
+        small = {k: (v if k in keep else dict(oa=v.get('oa', k), checked=v.get('checked', ''))) for k, v in snap.items()}
+        tmp = a.state + '.tmp'
+        json.dump(dict(institutions=guard.snapshot(insts), professors=small), open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        os.replace(tmp, a.state)
         return plist, linked
 
     SAVE['f'] = save
