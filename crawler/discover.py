@@ -199,7 +199,6 @@ def oa_candidates(oa, per_kind, min_works):
     kinds = [('institutions', 'type:education,works_count:>%d' % min_works, 'university'),
              ('institutions', 'type:facility|government|nonprofit,works_count:>%d' % (min_works * 2), 'institute'),
              ('funders', 'works_count:>%d' % (min_works * 2), 'funder')]
-    CCS = 'DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA'.split()
     # one single-page request per country (OpenAlex answers cursor paging with 401 when no API key is set), so every country is covered
     plan = [(path, flt + ',country_code:' + cc, typ, 100) for path, flt, typ in kinds for cc in CCS]
     for path, flt, typ, limit in plan:
@@ -214,23 +213,29 @@ def oa_candidates(oa, per_kind, min_works):
                        oa=it.get('id'), ror=it.get('ror'), works=it.get('works_count'))
 
 
+CCS = ('DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA CY MT AL BA RS MK ME XK BY GE AM AZ KZ UZ KG MD MA DZ TN JO LB OM KW BH IQ NG GH KE UG TZ ET RW SN CM BD LK NP ID PH MN PE EC UY VE CR PA CU JM').split()      # all countries used by the directory-based discovery methods
 WD_URL = 'https://query.wikidata.org/sparql'
 WD_TYPES = {'university': 'wd:Q3918 wd:Q875538 wd:Q15936437 wd:Q902104 wd:Q23002054', 'institute': 'wd:Q31855 wd:Q1664720 wd:Q2467461 wd:Q16519632'}
 
 
 def wikidata_candidates(per_country=150):
     """Second, independent directory: official websites of universities and research institutes recorded in Wikidata."""
-    CCS = 'DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA'.split()
+    fails = 0
     for cc in CCS:
+        if fails >= 4:
+            print('  Wikidata unavailable - skipping the rest of this method', flush=True)
+            return
         for typ, qs in WD_TYPES.items():
             q = ('SELECT ?i ?iLabel ?site WHERE { VALUES ?t { %s } ?i wdt:P31 ?t; wdt:P856 ?site; wdt:P17 ?c. ?c wdt:P297 "%s". '
                  'FILTER NOT EXISTS { ?i wdt:P576 ?end } SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } } LIMIT %d') % (qs, cc, per_country)
             try:
-                r = requests.get(WD_URL, params={'query': q, 'format': 'json'}, headers={'User-Agent': crawl.UA, 'Accept': 'application/sparql-results+json'}, timeout=60)
+                r = requests.get(WD_URL, params={'query': q, 'format': 'json'}, headers={'User-Agent': crawl.UA, 'Accept': 'application/sparql-results+json'}, timeout=40)
                 rows = r.json()['results']['bindings'] if r.status_code == 200 else []
+                fails = 0 if rows else fails
             except Exception as ex:
                 print('  Wikidata error:', str(ex)[:80], flush=True)
                 rows = []
+                fails += 1
             for b in rows:
                 u = b['site']['value']
                 if not u.startswith('http') or BAD_HOST.search(host_of(u)):
@@ -238,6 +243,33 @@ def wikidata_candidates(per_country=150):
                 yield dict(id=sid_for(u), name=b.get('iLabel', {}).get('value', host_of(u))[:90], type=typ, country=crawl.ISO_NAME.get(cc, cc), cc=cc, city='', url=u,
                            search=None, method='auto', active=True, via='wikidata')
             time.sleep(1.0)
+
+
+def ror_candidates(pages=3):
+    """Third, independent directory: the Research Organization Registry (ROR) - official websites of universities, institutes and funders."""
+    fails = 0
+    for cc in CCS:
+        for typ, types in (('university', 'education'), ('institute', 'facility,government,nonprofit'), ('funder', 'funder')):
+            for page in range(1, pages + 1):
+                if fails >= 6:
+                    print('  ROR unavailable - skipping the rest of this method', flush=True)
+                    return
+                try:
+                    r = requests.get('https://api.ror.org/v2/organizations', params={'filter': f'country.country_code:{cc},types:{types},status:active', 'page': page}, headers={'User-Agent': crawl.UA}, timeout=30)
+                    items = r.json().get('items', []) if r.status_code == 200 else []
+                    fails = 0 if r.status_code == 200 else fails + 1
+                except Exception as ex:
+                    print('  ROR error:', str(ex)[:80], flush=True)
+                    items, fails = [], fails + 1
+                if not items:
+                    break
+                for it in items:
+                    u = next((l.get('value') for l in it.get('links', []) if l.get('type') == 'website'), '')
+                    if not u or not u.startswith('http') or BAD_HOST.search(host_of(u)):
+                        continue
+                    name = next((n.get('value') for n in it.get('names', []) if 'ror_display' in n.get('types', [])), host_of(u))
+                    yield dict(id=sid_for(u), name=name[:90], type=typ, country=crawl.ISO_NAME.get(cc, cc), cc=cc, city='', url=u, search=None, method='auto', active=True, via='ror', ror=it.get('id'))
+                time.sleep(0.4)
 
 
 def seed_candidates(path):
@@ -305,7 +337,7 @@ def main():
         known_dom.add(d)
         c['discovered'] = TODAY.isoformat()
         cands.append(c)
-    gens = [seed_candidates(a.seeds), oa_candidates(OpenAlex(a.openalex_base), a.max_new, a.min_works), wikidata_candidates()]
+    gens = [seed_candidates(a.seeds), oa_candidates(OpenAlex(a.openalex_base), a.max_new, a.min_works), wikidata_candidates(), ror_candidates()]
     # snowball: education-looking domains linked from verified portals
     snow = [dict(id=sid_for('https://' + h), name=h, type='university', country='', cc=None, city='', url='https://' + h + '/', search=None, method='auto', active=True, via='snowball')
             for s in entries.values() if s.get('status') == 'verified' and s.get('hub') for h in s.get('outlinks', [])]

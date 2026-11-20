@@ -15,16 +15,37 @@
    "adapter+playwright": 1,
    "adapter+rss": 1
   },
-  "js_sources_detected": 0,
-  "js_sources_extracted_with_browser": 0,
-  "sources_needing_custom_adapter": [],
-  "needs_adapter_count": 0,
+  "js_sources_detected": 34,
+  "js_sources_extracted_with_browser": 16,
+  "sources_needing_custom_adapter": [
+   "R133abbb5",
+   "S0045",
+   "S0062",
+   "S0107",
+   "S0113",
+   "S0193",
+   "S0281",
+   "S0308",
+   "S0320",
+   "S0394",
+   "S0551",
+   "S0602",
+   "S0664",
+   "S0813",
+   "S0817"
+  ],
+  "needs_adapter_count": 15,
   "registry_js_required": 4,
-  "browser": {},
-  "duplicates_dropped_last_run": null,
-  "stale_or_expired_dropped_last_run": null,
-  "failed_sources": 264,
-  "new_positions_first_seen_today": 1882,
+  "browser": {
+   "rendered": 73,
+   "failed": 0,
+   "seconds": 559,
+   "available": true
+  },
+  "duplicates_dropped_last_run": 377,
+  "stale_or_expired_dropped_last_run": 0,
+  "failed_sources": 269,
+  "new_positions_first_seen_today": 2321,
   "discovery_by_method": {
    "hub-seed": 11,
    "wikidata": 90,
@@ -158,10 +179,10 @@
    "blocked_robots": 2,
    "js_required": 4
   },
-  "curated_reachable": 596,
-  "curated_with_real_positions": 439,
+  "curated_reachable": 592,
+  "curated_with_real_positions": 445,
   "discovered_verified": 244,
-  "really_extractable_total": 683
+  "really_extractable_total": 689
  },
  "positions": {
   "total": 5175,

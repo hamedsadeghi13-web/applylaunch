@@ -20,6 +20,8 @@ jobs:
     timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}      # newest commit of the branch, not the commit that was current when the run was queued
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -40,7 +42,7 @@ jobs:
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           BUDGET_MIN: "90"
-          MAX_NEW: "450"
+          MAX_NEW: "800"
           RENDER_BUDGET_MIN: "30"
       - name: Publish data
         if: always()          # also commit partial results if the run above failed or was stopped
