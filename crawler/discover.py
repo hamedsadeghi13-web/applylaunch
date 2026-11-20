@@ -185,7 +185,7 @@ class OpenAlex:
                 r.raise_for_status()
                 j = r.json()
             except Exception as ex:
-                print('  OpenAlex error:', str(ex)[:100])
+                print('  OpenAlex error:', str(ex)[:100], flush=True)
                 return
             for it in j.get('results', []):
                 got += 1
@@ -197,9 +197,13 @@ def oa_candidates(oa, per_kind, min_works):
     kinds = [('institutions', 'type:education,works_count:>%d' % min_works, 'university'),
              ('institutions', 'type:facility|government|nonprofit,works_count:>%d' % (min_works * 2), 'institute'),
              ('funders', 'works_count:>%d' % (min_works * 2), 'funder')]
-    for path, flt, typ in kinds:
+    CCS = 'DE NL SE DK NO FI CH AT BE FR GB IE ES PT IT PL CZ HU GR TR EE LV LT SI SK HR RO BG IS LU US CA AU NZ JP KR CN SG HK TW MY TH VN IN SA AE QA IL EG ZA BR MX CL AR CO PK IR RU UA'.split()
+    # one single-page request per country (OpenAlex answers cursor paging with 401 when no API key is set), so every country is covered
+    plan = [(path, (flt + ',country_code:' + cc) if path == 'institutions' else flt, typ, 100 if path == 'institutions' else per_kind)
+            for path, flt, typ in kinds for cc in (CCS if path == 'institutions' else [None])]
+    for path, flt, typ, limit in plan:
         sel = 'id,display_name,homepage_url,country_code,ror,works_count,geo' if path == 'institutions' else 'id,display_name,homepage_url,country_code,works_count'
-        for it in oa.pages(path, flt, sel, per_kind):
+        for it in oa.pages(path, flt, sel, limit):
             u = it.get('homepage_url')
             if not u or not u.startswith('http'):
                 continue
