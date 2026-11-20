@@ -48,8 +48,9 @@
   "new_positions_first_seen_today": 2321,
   "discovery_by_method": {
    "hub-seed": 11,
-   "wikidata": 90,
-   "openalex": 279
+   "wikidata": 223,
+   "ror": 133,
+   "openalex": 412
   },
   "positions_by_country": {
    "US": 1033,
@@ -123,21 +124,24 @@
    "CO": 1
   },
   "discovered_sources_by_country": {
+   "DE": 134,
+   "CH": 101,
    "US": 98,
-   "NL": 42,
-   "CH": 33,
-   "DK": 32,
+   "AT": 77,
+   "FI": 70,
+   "NL": 65,
+   "FR": 33,
+   "DK": 33,
    "SE": 26,
-   "DE": 24,
+   "NO": 22,
    "CN": 18,
    "PT": 16,
    "IE": 11,
-   "FR": 10,
+   "BE": 10,
    "AU": 8,
    "JP": 7,
    "BR": 7,
    "IT": 5,
-   "FI": 5,
    "RU": 5,
    "United States": 3,
    "IL": 2,
@@ -170,19 +174,19 @@
  },
  "sources": {
   "curated": 886,
-  "discovered": 380,
+  "discovered": 779,
   "discovered_by_status": {
-   "verified": 244,
-   "unverified": 29,
-   "unreachable": 50,
-   "no_listing": 51,
-   "blocked_robots": 2,
+   "verified": 486,
+   "unverified": 80,
+   "unreachable": 115,
+   "no_listing": 90,
+   "blocked_robots": 4,
    "js_required": 4
   },
   "curated_reachable": 592,
   "curated_with_real_positions": 445,
-  "discovered_verified": 244,
-  "really_extractable_total": 689
+  "discovered_verified": 486,
+  "really_extractable_total": 931
  },
  "positions": {
   "total": 5175,
