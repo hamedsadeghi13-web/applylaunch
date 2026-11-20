@@ -223,16 +223,50 @@
  },
  "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score.",
  "institutions": {
-  "total": 0,
-  "countries": 0,
-  "with_website": 0,
-  "with_ror": 0,
-  "by_directory": {},
-  "checked_for_opportunities": 0,
-  "with_verified_source": 0,
+  "total": 26547,
+  "countries": 171,
+  "with_website": 23075,
+  "with_ror": 21850,
+  "by_directory": {
+   "ror": 17898,
+   "openalex": 21590,
+   "wikidata": 8573
+  },
+  "checked_for_opportunities": 553,
+  "with_verified_source": 674,
   "pages_identified": {},
-  "directory_tasks_done": {},
-  "top_countries": {},
-  "updated": null
+  "directory_tasks_done": {
+   "ror": 172,
+   "openalex": 172,
+   "wikidata": 152
+  },
+  "top_countries": {
+   "CN": 3191,
+   "ID": 2240,
+   "IN": 2235,
+   "JP": 1248,
+   "PH": 930,
+   "RU": 801,
+   "MX": 759,
+   "KR": 708,
+   "NG": 592,
+   "DE": 591,
+   "GB": 586,
+   "IR": 578,
+   "BR": 551,
+   "MY": 524,
+   "FR": 485,
+   "PK": 421,
+   "BD": 335,
+   "CO": 319,
+   "CA": 315,
+   "RO": 301,
+   "PL": 280,
+   "CH": 265,
+   "IT": 256,
+   "PT": 241,
+   "AU": 208
+  },
+  "updated": "2026-11-20"
  }
 }
