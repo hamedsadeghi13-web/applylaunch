@@ -1379,6 +1379,9 @@ function profCard(p){
   ${p.score!=null?`<h3 style="margin:16px 0 8px;font-size:16px">${T('pfMatch')}: ${fmt(p.score)}</h3><ul class="why">${p.why.map(w=>`<li>${w}</li>`).join('')}</ul>`:''}
   <div class="xf"><a class="btn sm" href="${profEmail(p)}">${T('pfDraft')}</a><a class="btn fill sm" href="#" data-act="modal">${T('pfOpen')} ↗</a></div></div></div></div>`;
 }
+let PLIM=30,PSIG='';
+function profPage(l){const sg=l.length+'|'+(l[0]?((l[0].p&&l[0].p.id)||l[0].id||''):'')+'|'+S.pmode+'|'+JSON.stringify(PQ);if(sg!==PSIG){PSIG=sg;PLIM=30}
+ return l.slice(0,PLIM).map(profCard).join('')+(l.length>PLIM?`<div style="text-align:center;margin:18px 0"><button class="btn fill" data-act="pmore">${T('showMoreB')} (${fmt(l.length-PLIM)})</button></div>`:'')}
 function viewProfs(){
  const prof=S.pmode==='profile';
  const tabs=`<div class="langs" style="display:inline-flex"><button class="${prof?'on':''}" data-act="pmode" data-v="profile">${T('rProf')}</button><button class="${prof?'':'on'}" data-act="pmode" data-v="search">${T('rSearch')}</button></div>`;
@@ -1391,11 +1394,11 @@ function viewProfs(){
   const empty=!P.goals.length&&!P.fieldSel.length&&!P.customFields.length&&!P.rkw&&!P.regions.length&&!P.countries.length&&!P.unis.length&&!P.topN;
   if(empty)body=`<div class="empty">${T('noProf')}<div style="margin-top:14px"><button class="btn fill" data-act="nav" data-v="profile">${T('pbB')}</button></div></div>`;
   else{if(LIVE&&P.fieldSel.length)profOnlineKick(TMAP[P.fieldSel[0]].n[0]);
-  l=profFilter(profAll().map(profMatch).filter(Boolean)).sort((a,b)=>b.score-a.score||a.st-b.st);body=`<div style="margin:16px 0">${flt}</div><p class="muted small"><b>${fmt(l.length)}</b> ${T('pfCount')}</p>${l.map(profCard).join('')||`<div class="empty">${T('noRes')}</div>`}`}
+  l=profFilter(profAll().map(profMatch).filter(Boolean)).sort((a,b)=>b.score-a.score||a.st-b.st);body=`<div style="margin:16px 0">${flt}</div><p class="muted small"><b>${fmt(l.length)}</b> ${T('pfCount')}</p>${profPage(l)||`<div class="empty">${T('noRes')}</div>`}`}
  }else{
   profOnlineKick(PQ.text);
   l=profFilter(profSearch()).sort((a,b)=>a.st-b.st||a.name.localeCompare(b.name));
-  body=`<div style="margin:18px 0"><div class="gs"><input data-pq="text" value="${esc(PQ.text)}" aria-label="${esc(T('pfSearchA'))}" autocomplete="off" placeholder="${esc(T('pfPh'))}"><button class="go" data-act="psearch">${T('goB')}</button></div></div>${flt}<p class="muted small"><b>${fmt(l.length)}</b> ${T('pfCount')}</p>${l.map(profCard).join('')||`<div class="empty">${T('noRes')}</div>`}`}
+  body=`<div style="margin:18px 0"><div class="gs"><input data-pq="text" value="${esc(PQ.text)}" aria-label="${esc(T('pfSearchA'))}" autocomplete="off" placeholder="${esc(T('pfPh'))}"><button class="go" data-act="psearch">${T('goB')}</button></div></div>${flt}<p class="muted small"><b>${fmt(l.length)}</b> ${T('pfCount')}</p>${profPage(l)||`<div class="empty">${T('noRes')}</div>`}`}
  const legend=`<div class="plegend">${[1,2,3,4].map(i=>`<div style="--c:${PST[i]}"><b><i></i>${T('pst'+i)}</b><span>${T('pstD'+i)}</span></div>`).join('')}</div>`;
  return `<div class="wrap"><section class="sec" style="padding-top:20px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center"><h1>${T('profNav')}</h1><div>${tabs}</div></section><p class="muted" style="max-width:760px;margin:0 0 16px">${T('pfIntro')}</p>${legend}${body}${LIVE&&ONL.list.length?`<p class="muted small" style="max-width:760px">${T('onlineN')}</p>`:''}${LIVE&&!PROFL.length&&!(l&&l.length)?`<div class="empty">${T('profSoon')}</div>`:''}<p class="muted small" style="margin-top:22px;max-width:760px">${LIVE?T('pfNoteLive'):T('pfNote')}</p></div>`;
 }
@@ -1751,6 +1754,7 @@ document.addEventListener('click',e=>{
   case'add':P[el.dataset.k].push(el.dataset.k==='edu'?emptyP().edu[0]:el.dataset.k==='work'?{title:'',org:'',yrs:'',desc:''}:el.dataset.k==='tests'?{test:'',score:''}:{lang:'',lvl:'Fluent'});persist();break;
   case'del':P[el.dataset.k].splice(+el.dataset.i,1);persist();break;
   case'more':LIM+=40;keep=true;break;
+  case'pmore':PLIM+=30;keep=true;break;
   case'sample':P=SAMPLE_P();persist();break;
   case'reset':P=emptyP();persist();break;
   case'goto':{const t=document.getElementById(v);if(t)t.scrollIntoView({behavior:'smooth'});return}
