@@ -110,12 +110,16 @@ for s in reg:
     for k in (s.get('pages') or {}):
         pages_found[k] += 1
 prog = idb.get('progress', {})
+# honest count: records without a real name (bare Wikidata ids) and government offices are not universities / higher-education institutions
+_junk = _re.compile(r'^Q\d+$|ministr|directorate|department of (public|education)|public works|ministerio', _re.I)
+clean = {k: r for k, r in irecs.items() if not _junk.search(r.get('n', ''))}
+multi = sum(1 for r in clean.values() if len(r.get('s', [])) >= 2)
 rep['institutions'] = dict(
-    total=len(irecs), countries=len(inst_cc), with_website=sum(1 for r in irecs.values() if r.get('w')), with_ror=sum(1 for r in irecs.values() if r.get('ror')),
+    total=len(irecs), clean_total=len(clean), excluded_non_institutions=len(irecs) - len(clean), confirmed_by_2plus_directories=multi, single_directory_only=len(clean) - multi, countries=len(inst_cc), with_website=sum(1 for r in irecs.values() if r.get('w')), with_ror=sum(1 for r in irecs.values() if r.get('ror')),
     by_directory=dict(Counter(x for r in irecs.values() for x in r.get('s', []))), checked_for_opportunities=checked, with_verified_source=inst_with_src,
     pages_identified=dict(pages_found), directory_tasks_done={d: sum(1 for v in c.values() if v.get('done')) for d, c in prog.items()},
     top_countries=dict(inst_cc.most_common(25)), updated=idb.get('updated'))
-coverage = dict(updated=_dt.date.today().isoformat(), countries=len(src_cc), cities=len(cities), universities=max(len(irecs), sum(1 for s in curated + ver if s.get('type') == 'university')), sources=len(curated) + len(ver),
+coverage = dict(updated=_dt.date.today().isoformat(), countries=len(src_cc), cities=len(cities), universities=max(len(clean), sum(1 for s in curated + ver if s.get('type') == 'university')), sources=len(curated) + len(ver),
                 institutions_countries=len(inst_cc), institutions_with_website=rep['institutions']['with_website'], institutions_checked=checked, institutions_with_source=inst_with_src)
 os.makedirs(os.path.join(ROOT, 'docs', 'data'), exist_ok=True)
 json.dump(coverage, open(os.path.join(ROOT, 'docs', 'data', 'coverage.json'), 'w'))

@@ -224,6 +224,10 @@
  "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score.",
  "institutions": {
   "total": 26547,
+  "clean_total": 25839,
+  "excluded_non_institutions": 708,
+  "confirmed_by_2plus_directories": 17969,
+  "single_directory_only": 7870,
   "countries": 171,
   "with_website": 23075,
   "with_ror": 21850,
