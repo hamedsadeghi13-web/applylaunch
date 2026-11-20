@@ -81,6 +81,45 @@
 ]
 },
 {
+"id": "R3e5501ba",
+"name": "ADAPT Centre",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "https://www.adaptcentre.ie/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.adaptcentre.ie/careers/",
+"https://www.adaptcentre.ie/careers/?sort=posted&dropto=module-careers",
+"https://www.adaptcentre.ie/careers/?sort=location&dropto=module-careers",
+"https://www.adaptcentre.ie/careers/?sort=level&dropto=module-careers",
+"https://www.adaptcentre.ie/careers/?sort=closes&dropto=module-careers"
+],
+"rss": [
+"https://www.adaptcentre.ie/feed/",
+"https://www.adaptcentre.ie/comments/feed/"
+],
+"sitemap": [
+"https://www.adaptcentre.ie/sitemap_index.xml"
+],
+"sample": [
+"Fellowships · ADAPT, the Research Ireland Research Centre for AI-Driven Digital ",
+"EDGE: New €6m fund for Post-Doc Fellowships · ADAPT, the Research Ireland Resear"
+]
+},
+{
 "id": "Rceeafbab",
 "name": "Helmholtz Munich",
 "type": "institute",
@@ -119,6 +158,165 @@
 "sample": [
 "Gute wissenschaftliche Praxis",
 "Postdoc Center"
+]
+},
+{
+"id": "R698f9f48",
+"name": "International Migration, Integration and Social Cohesion in Europe",
+"type": "institute",
+"country": "Netherlands",
+"cc": "NL",
+"city": "",
+"url": "https://www.imiscoe.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"migrationresearch.com"
+],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.imiscoe.org/news-and-blog/phd-blog",
+"https://www.imiscoe.org/news-and-blog/jobs-opportunities",
+"https://www.imiscoe.org/training-phds/phd-network",
+"https://www.imiscoe.org/training-phds/phd-academy",
+"https://www.imiscoe.org/training-phds/phd-network/phd-network-structure",
+"https://www.imiscoe.org/training-phds/phd-winter-and-summer-schools"
+],
+"rss": [
+"https://www.imiscoe.org/?format=feed&type=rss",
+"https://www.imiscoe.org/?format=feed&type=atom"
+],
+"sitemap": [
+"https://www.imiscoe.org/sitemap.xml"
+],
+"sample": [
+"PhD Network",
+"PhD Blog"
+]
+},
+{
+"id": "R63eddd35",
+"name": "International Papillomavirus Society",
+"type": "institute",
+"country": "Netherlands",
+"cc": "NL",
+"city": "",
+"url": "https://ipvsoc.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html+rss",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://ipvsoc.org/job-board/",
+"https://ipvsoc.org/early-career-training-award/",
+"https://ipvsoc.org/early-career-recognition-award-2026/"
+],
+"rss": [
+"https://ipvsoc.org/feed/",
+"https://ipvsoc.org/comments/feed/"
+],
+"sitemap": [
+"http://ipvsoc.org/sitemap_index.xml"
+],
+"sample": [
+"Post-Doctoral Fellowship position – HPV Infection, Immunity & Cancer Prevention",
+"Post-Doctoral position at ICESP"
+]
+},
+{
+"id": "R98d1e314",
+"name": "International School of Business Management",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.isbm-school.com/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"executive.swissuniversity.com",
+"swissuniversity.com",
+"topuniversities.com"
+],
+"js": false,
+"method_used": "html+rss",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.isbm-school.ch/doctorate",
+"https://www.isbm-school.ch/scholarships"
+],
+"rss": [
+"https://www.isbm-school.ch/blog-feed.xml"
+],
+"sitemap": [
+"https://www.isbm-school.ch/ar_ar-sitemap.xml",
+"https://www.isbm-school.ch/de_de-sitemap.xml"
+],
+"sample": [
+"ISBM - International School of Business Management Switzerland",
+"Part of the"
+]
+},
+{
+"id": "R3690e5d0",
+"name": "International University in Geneva",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.iug.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"eduniversal-ranking.com"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://iig.ch/programs/master-of-international-relations-diplomacy-mird/",
+"https://iig.ch/programs/bachelor-of-arts-in-international-relations-diplomacy/",
+"https://iig.ch/programs/bachelor-of-international-management-international-law-taxation-trade/",
+"https://iig.ch/faculty/stephania-bonilla-feret-2/"
+],
+"rss": [
+"https://iig.ch/feed/",
+"https://iig.ch/comments/feed/"
+],
+"sitemap": [
+"https://iig.ch/sitemap.xml"
+],
+"sample": [
+"Do you offer any scholarships? - IIG Geneva",
+"What career support does IIG provide? - IIG Geneva"
 ]
 },
 {
@@ -191,6 +389,44 @@
 "sample": [
 "Doctoral education at MTC",
 "PhD Education at the Department"
+]
+},
+{
+"id": "R948b3966",
+"name": "Martin Luther University Halle-Wittenberg",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Halle",
+"url": "https://www.uni-halle.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I68956291",
+"ror": "https://ror.org/05gqaka33",
+"works": 84039,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html+rss",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.uni-halle.de/karriere/",
+"http://immaamt.verwaltung.uni-halle.de/bewerbung/"
+],
+"rss": [
+"https://www.uni-halle.de/rss.en.php"
+],
+"sitemap": [
+"https://www.uni-halle.de/sitemap.xml"
+],
+"sample": [
+"International",
+"Karriere"
 ]
 },
 {
@@ -276,6 +512,157 @@
 ]
 },
 {
+"id": "R39af16da",
+"name": "State-independent Theological University of Basel",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://sthbasel.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://sthbasel.ch/jobs/",
+"https://sthbasel.ch/promotion-von-jonin-koechli/",
+"https://sthbasel.ch/doktorat/",
+"https://sthbasel.ch/spannende-offene-stellen-an-der-sth-basel/"
+],
+"rss": [
+"https://sthbasel.ch/feed/",
+"https://sthbasel.ch/comments/feed/"
+],
+"sitemap": [
+"https://sthbasel.ch/sitemap_index.xml"
+],
+"sample": [
+"Rückblick Promotion Dr. Lukas Stolz – STH Basel",
+"Ehrenpromotion für Prof. Dr. Gerhard Maier – STH Basel"
+]
+},
+{
+"id": "Rb4d94713",
+"name": "Stockholm Resilience Centre",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "http://www.stockholmresilience.org",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I138595864",
+"ror": "https://ror.org/0145rpw38",
+"works": 3544,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.stockholmresilience.org/about-us/careers.html",
+"https://www.stockholmresilience.org/education/phd-programme.html",
+"https://www.stockholmresilience.org/meet-our-team.html?type=PhD+candidates"
+],
+"rss": [
+"http://www.stockholmresilience.org/4.aeea46911a3127427980005758/12.aeea46911a31274279800043060.portlet?state=rss&sv.contenttype=text/xml;charset=UTF-8"
+],
+"sitemap": [
+"https://www.stockholmresilience.org/sitemap.xml"
+],
+"sample": [
+"Social-Ecological Resilience for Sustainable Development",
+"PhD programme in Sustainability Science"
+]
+},
+{
+"id": "Raf1ec2be",
+"name": "Tyndall National Institute",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "https://www.tyndall.ie",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"advance-he.ac.uk"
+],
+"js": false,
+"method_used": "adapter+html+rss",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://www.tyndall.ie/careers/",
+"https://www.tyndall.ie/careers/benefits/"
+],
+"rss": [
+"https://www.tyndall.ie/feed/",
+"https://www.tyndall.ie/comments/feed/"
+],
+"sitemap": [
+"https://www.tyndall.ie/sitemap_index.xml"
+],
+"sample": [
+"Postdoctoral/Senior Postdoctoral Researcher – Electromigration Study of Metallis",
+"Expressions of Interest for PhD, Postdoctoral and Research Fellowship Opportunit"
+]
+},
+{
+"id": "R3051dbfb",
+"name": "Universidade Atlântica",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.uatlantica.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html+rss",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 90,
+"listing": [
+"https://uatlantica.pt/concursos-especiais/",
+"https://uatlantica.pt/concursos-especiais-para-estudante-internacional/"
+],
+"rss": [
+"https://uatlantica.pt/feed/",
+"https://uatlantica.pt/comments/feed/"
+],
+"sitemap": [
+"https://uatlantica.pt/sitemap.xml"
+],
+"sample": [
+"Doutoramentos | Atlântica",
+"International Student | Atlântica"
+]
+},
+{
 "id": "R8e5cac2f",
 "name": "University of Florida",
 "type": "university",
@@ -311,6 +698,81 @@
 "sample": [
 "Academic & Career Services",
 "International Applicants"
+]
+},
+{
+"id": "R3cac3302",
+"name": "Academic Center for Dentistry Amsterdam",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Amsterdam",
+"url": "https://acta.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2898155008",
+"ror": "https://ror.org/04x5wnb75",
+"works": 8859,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"research.vu.nl"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://acta.nl/sitemap.xml"
+],
+"sample": [
+"Dentistry for non-Dentists course",
+"Scientific Writing and Presenting in English"
+]
+},
+{
+"id": "R14c3563c",
+"name": "Berliner Hochschule für Technik",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Berlin",
+"url": "https://www.bht-berlin.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I129643931",
+"ror": "https://ror.org/00w7whj55",
+"works": 4306,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.bht-berlin.de/bewerbung",
+"https://www.bht-berlin.de/career",
+"https://www.bht-berlin.de/promotion",
+"https://www.bht-berlin.de/karriere",
+"https://www.bht-berlin.de/jobs",
+"https://www.bht-berlin.de/promotionsstipendium"
+],
+"rss": [],
+"sitemap": [
+"https://www.bht-berlin.de/sitemap.xml"
+],
+"sample": [
+"Promotionskolleg & Early Career Support",
+"Promotionsstipendium"
 ]
 },
 {
@@ -488,6 +950,258 @@
 ]
 },
 {
+"id": "Rfd68a236",
+"name": "Dalarna University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Falun",
+"url": "https://www.du.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I122274158",
+"ror": "https://ror.org/000hdh770",
+"works": 5902,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"research.ebsco.com"
+],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"http://www.du.se/sitemap.xml"
+],
+"sample": [
+"Doctoral Thesis within Work Life Science Field",
+"Priyanka Mehra has earned her PhD in Microdata Analysis i mikrodataanalys"
+]
+},
+{
+"id": "R7fb5da61",
+"name": "Darmstadt University of Applied Sciences",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Darmstadt",
+"url": "https://h-da.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I107257983",
+"ror": "https://ror.org/047wbd030",
+"works": 5050,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"univ-tech.eu"
+],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://h-da.de/studium/studienangebot/bewerbung",
+"https://h-da.de/hochschule/wofuer-wir-stehen/karrierestart-und-lebenslange-qualifizierung",
+"https://h-da.de/hochschule/campusentwicklung/wettbewerb-freiflaechen",
+"https://h-da.de/stellen",
+"https://h-da.de/hochschule/arbeiten-an-der-hochschule/stellenangebote/beschaeftigte",
+"https://h-da.de/hochschule/nachhaltig/promotionszentrum-nachhaltigkeitswissenschaften"
+],
+"rss": [],
+"sitemap": [
+"https://h-da.de/sitemap.xml"
+],
+"sample": [
+"Beratung International – h_da",
+"International Office h_da"
+]
+},
+{
+"id": "R3bae5390",
+"name": "Design School Kolding",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Kolding",
+"url": "https://www.designskolenkolding.dk/en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I893397424",
+"ror": "https://ror.org/00a736592",
+"works": 726,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.designskolenkolding.dk/en/study-at-the-school/phd",
+"https://www.designskolenkolding.dk/skolen/ledige-stillinger"
+],
+"rss": [],
+"sitemap": [
+"https://www.designskolenkolding.dk/sitemaps-1-sitemap.xml",
+"https://www.designskolenkolding.dk/en/sitemaps-1-sitemap.xml"
+],
+"sample": [
+"Footwear Design for Resale",
+"Lise Hostrup Sønnichsen"
+]
+},
+{
+"id": "Ra1af306f",
+"name": "ESM - Ecole de Management et de Communication",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.esm.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.esm.ch/formations/doctorat-en-administration-des-affaires"
+],
+"rss": [],
+"sitemap": [
+"https://www.esm.ch/sitemap.xml"
+],
+"sample": [
+"Doctorat en Administration des Affaires",
+"Doctorate of Business Administration"
+]
+},
+{
+"id": "R0c78209b",
+"name": "European Graduate School of Neuroscience",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Maastricht",
+"url": "https://www.euronschool.eu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210097778",
+"ror": "https://ror.org/00ftg6h50",
+"works": 1308,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.euronschool.eu/about/phd-committee",
+"https://www.euronschool.eu/phd-training-programme",
+"https://www.euronschool.eu/networking/phd-days",
+"https://www.euronschool.eu/euron-phd",
+"https://www.euronschool.eu/euron-phd/joint-doctorates",
+"https://www.euronschool.eu/euron-phd/certificate-excellence"
+],
+"rss": [],
+"sitemap": [
+"https://www.euronschool.eu/sitemap.xml"
+],
+"sample": [
+"PhD committee",
+"EURON PhD"
+]
+},
+{
+"id": "Rfc32c829",
+"name": "FH Münster University of Applied Sciences",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Münster",
+"url": "https://www.fh-muenster.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I63274643",
+"ror": "https://ror.org/00pv45a02",
+"works": 4414,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": true,
+"method_used": "playwright",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.fh-muenster.de/sitemap.xml"
+],
+"sample": [
+"Promovieren an der FH Münster",
+"Internationale Studienbewerbung - Welcome at FH Münster"
+]
+},
+{
+"id": "Rdde4b899",
+"name": "Fernando Pessoa University",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.ufp.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html+rss",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [
+"https://www.ufp.pt/feed/",
+"https://www.ufp.pt/comments/feed/"
+],
+"sitemap": [
+"https://www.ufp.pt/sitemap_index.xml"
+],
+"sample": [
+"Doctoral Program in Biomedical and Health Sciences marks the start of the academ",
+"Opening lecture of the Doctorate in Biomedical and Health SciencesSalão Nobre • "
+]
+},
+{
 "id": "R09550be2",
 "name": "Fulbright",
 "type": "funder",
@@ -513,6 +1227,75 @@
 "sample": [
 "Forging America’s Critical Minerals Partnerships",
 "Ruth Siboni"
+]
+},
+{
+"id": "Rcfbaae46",
+"name": "Geneva Graduate Institute",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.graduateinstitute.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.graduateinstitute.ch/master-phd-programmes",
+"https://www.graduateinstitute.ch/alumni-and-careers",
+"https://www.graduateinstitute.ch/career-services",
+"https://www.graduateinstitute.ch/career-services/internships-and-jobs",
+"https://www.graduateinstitute.ch/career-services/career-workshops-events",
+"https://www.graduateinstitute.ch/research-support/phd-support"
+],
+"rss": [],
+"sitemap": [
+"https://www.graduateinstitute.ch/sitemap.xml"
+],
+"sample": [
+"News Alumni",
+"News on Alumni"
+]
+},
+{
+"id": "Rb6233a06",
+"name": "Geneva School of Diplomacy and International Relations",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.genevadiplomacy.com",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://genevadiplomacy.ch/alumni/"
+],
+"rss": [],
+"sitemap": [
+"https://genevadiplomacy.ch/wp-sitemap.xml"
+],
+"sample": [
+"GSD Featured in UN Today Following Honorary Doctorate for Martin Chungong",
+"Bachelor of International Relations"
 ]
 },
 {
@@ -551,6 +1334,118 @@
 "sample": [
 "Wissenschaftliche Core Facilities und Services",
 "Internationale Kooperationen"
+]
+},
+{
+"id": "R0ef9c894",
+"name": "HAW Hamburg",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Hamburg",
+"url": "https://www.haw-hamburg.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I70451448",
+"ror": "https://ror.org/00fkqwx76",
+"works": 7219,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.haw-hamburg.de/promotion/",
+"https://www.haw-hamburg.de/studium/bewerbung/",
+"https://www.haw-hamburg.de/forschung/eigenstaendiges-promotionsrecht/",
+"https://www.haw-hamburg.de/forschung/kooperative-promotionen/",
+"https://www.haw-hamburg.de/hochschule/stellenangebote/",
+"https://www.haw-hamburg.de/detail/news/news/show/wie-hochschulen-klimaangst-begegnen-koennen/"
+],
+"rss": [],
+"sitemap": [
+"https://www.haw-hamburg.de/sitemap.xml"
+],
+"sample": [
+"HAW-Hamburg: Eigenständiges Promotionsrecht der HAW Hamburg",
+"HAW-Hamburg: Kooperative Promotionen an der HAW Hamburg"
+]
+},
+{
+"id": "Rbe6cf666",
+"name": "HTW Berlin - University of Applied Sciences",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Berlin",
+"url": "https://www.htw-berlin.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I122228004",
+"ror": "https://ror.org/01xzwj424",
+"works": 4124,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.htw-berlin.de/karriere",
+"https://www.htw-berlin.de/studium/bewerbung",
+"https://www.htw-berlin.de/studium/faq-studium-bewerbung",
+"https://www.htw-berlin.de/karriere/jobs/professuren/ihre-professur-an-der-htw-berlin/",
+"https://events.htw-berlin.de/studium/dein-studium-dein-stipendium",
+"https://www.htw-berlin.de/karriere/jobs"
+],
+"rss": [],
+"sitemap": [
+"https://www.htw-berlin.de/sitemap.xml"
+],
+"sample": [
+"HTW Berlin international",
+"Wissenschaftliches Personal"
+]
+},
+{
+"id": "R13480d29",
+"name": "Haute école de musique de Genève",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.hemge.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://hem.hesge.ch/la-hem/emploi"
+],
+"rss": [],
+"sitemap": [
+"https://hem.hesge.ch/sitemap.xml"
+],
+"sample": [
+"Masterclass de composition par Yann Robin",
+"Masterclass de composition par Beat Furrer"
 ]
 },
 {
@@ -660,6 +1555,39 @@
 ]
 },
 {
+"id": "R63daccb8",
+"name": "IHE Delft Institute for Water Education",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Delft",
+"url": "https://www.un-ihe.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2799973717",
+"ror": "https://ror.org/030deh410",
+"works": 7346,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": true,
+"method_used": "adapter+playwright",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.un-ihe.org/sitemap.xml"
+],
+"sample": [
+"Brockmann IHE Delft Scholarships | IHE Delft Institute for Water Education",
+"Dams and flows: Afua Owusu earns PhD for research on environment-friendly dam op"
+]
+},
+{
 "id": "R305796f0",
 "name": "Icahn School of Medicine at Mount Sinai",
 "type": "university",
@@ -729,6 +1657,86 @@
 "sample": [
 "Prepare for a rewarding career",
 "Discover more help for college costs"
+]
+},
+{
+"id": "Rd4686aec",
+"name": "International Institute of Social Studies",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "The Hague",
+"url": "https://www.iss.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4405273105",
+"ror": "https://ror.org/059fp9t53",
+"works": 2719,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.iss.nl/en/research/phd-programme",
+"https://www.iss.nl/en/funding-scholarships",
+"https://www.iss.nl/en/education/career-services",
+"https://www.iss.nl/en/about-iss/vacancies",
+"https://www.iss.nl/en/funding-scholarships/iss-scholarships",
+"https://www.iss.nl/en/people"
+],
+"rss": [],
+"sitemap": [
+"https://www.iss.nl/sitemap.xml"
+],
+"sample": [
+"PhD defence by Jimmy Maguru Mugisha",
+"PhD defence by Irene Among"
+]
+},
+{
+"id": "R544ba7b8",
+"name": "Interuniversity Center for Social Science Theory and Methodology",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Groningen",
+"url": "http://ics-graduateschool.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210087716",
+"ror": "https://ror.org/005rems48",
+"works": 559,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://ics-graduateschool.nl/phds/",
+"https://ics-graduateschool.nl/postdocs/",
+"https://ics-graduateschool.nl/phd-program/",
+"https://ics-graduateschool.nl/vacancies/",
+"https://ics-graduateschool.nl/about/phd-thesis/",
+"https://ics-graduateschool.nl/projects/"
+],
+"rss": [],
+"sitemap": [
+"https://ics-graduateschool.nl/sitemap.xml"
+],
+"sample": [
+"Interuniversity Center for Social Science Theory and Methodology",
+"Interuniversity Center for Social Science Theory and Methodology"
 ]
 },
 {
@@ -805,6 +1813,45 @@
 ]
 },
 {
+"id": "R01b914dd",
+"name": "Leibniz Institute for the Analysis of Biodiversity Change",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Bonn",
+"url": "https://leibniz-lib.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4387155279",
+"ror": "https://ror.org/03k5bhd83",
+"works": 6038,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://leibniz-lib.de/de/karriere.html",
+"https://leibniz-lib.de/de/ueber-das-lib/struktur/phd-programm.html",
+"https://leibniz-lib.de/de/news/09112026-akg-fotowettbewerb-preisverleihung-und-ausstellungseroeffnung.html",
+"https://leibniz-lib.de/de/news/23062026-malwettbewerb.html"
+],
+"rss": [],
+"sitemap": [
+"https://leibniz-lib.de/de/sitemap.xml",
+"https://leibniz-lib.de/en/sitemap.xml"
+],
+"sample": [
+"Geowissenschaftliche Sammlungen - LIB",
+"Wissenschaftlicher Beirat - LIB"
+]
+},
+{
 "id": "R93596729",
 "name": "Leibniz-Institut für Pflanzengenetik und Kulturpflanzenforschung (IPK)",
 "type": "institute",
@@ -840,6 +1887,45 @@
 "sample": [
 "Wissenschaftlicher Beirat | Leibniz-Institut (IPK)",
 "PostDoc Board | Leibniz-Institut (IPK)"
+]
+},
+{
+"id": "R12134ae7",
+"name": "Les Roches International School of Hotel Management",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.lesroches.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"topuniversities.com"
+],
+"js": false,
+"method_used": "adapter+html+rss",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://lesroches.edu/hospitality-management/hospitality-careers/",
+"https://lesroches.edu/apply/scholarships/"
+],
+"rss": [
+"https://lesroches.edu/feed/",
+"https://lesroches.edu/comments/feed/"
+],
+"sitemap": [
+"https://lesroches.edu/post-sitemap.xm",
+"https://lesroches.edu/page-sitemap.xml"
+],
+"sample": [
+"Companies that recruit our students",
+"Scholarships and Financial aid"
 ]
 },
 {
@@ -910,6 +1996,45 @@
 "sample": [
 "First-year scholarships",
 "Scholarships for transfer students"
+]
+},
+{
+"id": "R21ee8c15",
+"name": "Moore Institute for Research in the Humanities and Social Studies",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "https://mooreinstitute.ie/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"universityofgalway.ie"
+],
+"js": false,
+"method_used": "adapter+html+rss",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://mooreinstitute.ie/2024/05/27/galway-doctoral-research-scholarship-scheme/",
+"https://mooreinstitute.ie/2024/04/25/postdoctoral-researcher-stemma-systems-of-transmitting-early-modern-manuscript-verse-1475-1700/",
+"https://mooreinstitute.ie/about-us/postdoctoral-researchers/"
+],
+"rss": [
+"https://mooreinstitute.ie/feed/",
+"https://mooreinstitute.ie/comments/feed/"
+],
+"sitemap": [
+"https://mooreinstitute.ie/sitemap.xml"
+],
+"sample": [
+"Senior Research Fellowship Award for Prof. Dan Carey - Moore Institute",
+"Former Postdoctoral Researcher of the Moore Institute receives IRCHSS Research F"
 ]
 },
 {
@@ -1056,6 +2181,39 @@
 ]
 },
 {
+"id": "R0c08479f",
+"name": "Open University of the Netherlands",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Heerlen",
+"url": "https://www.ou.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I7876267",
+"ror": "https://ror.org/018dfmf50",
+"works": 9408,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.ou.nl/sitemap.xml"
+],
+"sample": [
+"Studieaanbod - Open Universiteit - Open Universiteit",
+"Open Universiteit partner van Privacy Symposium 2027"
+]
+},
+{
 "id": "R473b85fa",
 "name": "Oregon Health & Science University",
 "type": "university",
@@ -1096,6 +2254,47 @@
 ]
 },
 {
+"id": "R4a2e7be2",
+"name": "Paracelsus Medizinische Privatuniversität",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Nuremberg",
+"url": "https://www.pmu.ac.at/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210116085",
+"ror": "https://ror.org/022zhm372",
+"works": 4330,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.pmu.ac.at/karriere",
+"https://www.pmu.ac.at/studium-weiterbildung/doktoratstudien-phd/doctoral-service-centre",
+"https://www.pmu.ac.at/studium-weiterbildung/humanmedizin/bachelorstudium-humanmedizin/anmeldung-aufnahme/bewerbungsinformationen",
+"https://www.pmu.ac.at/ueber-die-pmu/internationales/mobilitaeten/stipendien-zuschuesse-und-fellowships",
+"https://www.pmu.ac.at/studium-weiterbildung/doktoratstudien-phd",
+"https://www.pmu.ac.at/studium-weiterbildung/doktoratstudien-phd/nursing-allied-health-sciences/alumni"
+],
+"rss": [],
+"sitemap": [
+"https://www.pmu.ac.at/sitemap.xml",
+"https://www.pmu.ac.at/en/sitemap.xml"
+],
+"sample": [
+"Internationales",
+"Doktoratstudien & Ph.D."
+]
+},
+{
 "id": "R9ca34dc0",
 "name": "Polish Academy of Sciences",
 "type": "institute",
@@ -1124,6 +2323,110 @@
 "sample": [
 "Zapraszamy na MSCA@30 Poland: Celebrating Careers, Connections and Impact",
 "We are now accepting applications for long-term research fellowships in Japan"
+]
+},
+{
+"id": "R8d594ea5",
+"name": "Polytechnic University of Castelo Branco",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "https://www.ipcb.pt",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.ipcb.pt/conhecer/recursos-humanos/concursos/",
+"https://www.ipcb.pt/investigar-e-inovar/inovacao/projetos-de-ignicao-e-provas-de-conceito/"
+],
+"rss": [],
+"sitemap": [
+"https://www.ipcb.pt/sitemap.xml"
+],
+"sample": [
+"Doutoramentos",
+"Estudante Internacional"
+]
+},
+{
+"id": "Re2797d23",
+"name": "Research Center for Education and the Labour Market",
+"type": "institute",
+"country": "Netherlands",
+"cc": "NL",
+"city": "",
+"url": "https://roa.nl/home",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.roa.nl/over-ons/geaffilieerde-phds",
+"https://www.roa.nl/over-ons/job-market-kandidaten-roa",
+"https://www.roa.nl/nieuws/biased-beliefs-job-search-and-welfare-structural-analysis-coaching-and-counseling",
+"https://www.roa.nl/nieuws/op-4-november-2026-verdedigde-affiliated-phd-kandidaat-juan-gabriel-malagon-gonzalez-met"
+],
+"rss": [],
+"sitemap": [
+"https://www.roa.nl/sitemap.xml"
+],
+"sample": [
+"Current and former PhDs",
+"Affiliated PhDs"
+]
+},
+{
+"id": "Rf72cc5e8",
+"name": "Royal Danish Academy – Architecture, Design, Conservation",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Copenhagen",
+"url": "https://royaldanishacademy.com",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210128030",
+"ror": "https://ror.org/031gjxb79",
+"works": 2740,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://royaldanishacademy.com/en/phd-and-research-school",
+"https://royaldanishacademy.com/en/vacancies"
+],
+"rss": [],
+"sitemap": [
+"https://royaldanishacademy.com/sitemap.xml"
+],
+"sample": [
+"Admission Master's",
+"Meet the Researchers at the Royal Danish Academy | Royal Danish Academy"
 ]
 },
 {
@@ -1160,6 +2463,72 @@
 "sample": [
 "MSCA PF podpora",
 "Témy doktorandského štúdia"
+]
+},
+{
+"id": "R60bde9a4",
+"name": "Sophiahemmet University College",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "https://www.shh.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I140508470",
+"ror": "https://ror.org/01aem0w72",
+"works": 1142,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.shh.se/sv/studera-pa-shh/bidrag-och-stipendier/"
+],
+"rss": [],
+"sitemap": [
+"https://www.shh.se/sitemap.xml",
+"https://www.shh.se/en/sitemap.xml"
+],
+"sample": [
+"Sexuell, prekonceptionell och reproduktiv hälsopromotion bland ungdomar",
+"Jobbtorget"
+]
+},
+{
+"id": "R9684e3c5",
+"name": "The Danish Research Centre for Manorial Studies",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://herregaardsforskning.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://herregaardsforskning.dk/sitemap.xml"
+],
+"sample": [
+"Den 11. april forsvarede Rasmus Skovgaard Jakobsen sin ph.d.-afhandling",
+"Nyudklækket ph.d. skal undersøge herregårdens ansatte"
 ]
 },
 {
@@ -1281,6 +2650,79 @@
 "sample": [
 "Cooperação internacional – # USP – Universidade de São Paulo #",
 "Institutional – # USP – Universidade de São Paulo #"
+]
+},
+{
+"id": "R1fdef6f9",
+"name": "University College South Denmark",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Esbjerg",
+"url": "https://www.ucsyd.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2801328042",
+"ror": "https://ror.org/058q57q63",
+"works": 890,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.ucsyd.dk/om-uc-syd/job-ved-uc-syd"
+],
+"rss": [],
+"sitemap": [
+"https://www.ucsyd.dk/sitemap.xml"
+],
+"sample": [
+"Bachelor på deltid, job på fuld tid | UC SYD",
+"Jobgaranti skal sælge ny skatteuddannelse"
+]
+},
+{
+"id": "R2a2de0d9",
+"name": "University West",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Trollhättan",
+"url": "https://www.hv.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I110263422",
+"ror": "https://ror.org/0257kt353",
+"works": 4154,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "6 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.hv.se/student/studier/stipendier/",
+"https://www.hv.se/student/studier/stipendier/resestipendium-fran-swedbanks-agarstiftelse-vast/",
+"https://www.hv.se/student/studier/stipendier/stipendium-fran-gkn-aerospace2/",
+"https://www.hv.se/kalender/2026/december/study-in-sweden-collaboration-culture--career/"
+],
+"rss": [],
+"sitemap": [
+"https://www.hv.se/sitemap.xml"
+],
+"sample": [
+"Nordic conference on PhD supervision (CoPhS)",
+"Hälsopromotion - Vår utgångspunkt"
 ]
 },
 {
@@ -1747,6 +3189,46 @@
 ]
 },
 {
+"id": "Rb8b9d24d",
+"name": "Universität Greifswald",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Greifswald",
+"url": "https://www.uni-greifswald.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I36522303",
+"ror": "https://ror.org/00r1edq15",
+"works": 41435,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.uni-greifswald.de/universitaet/information/stellenausschreibungen/",
+"https://www.uni-greifswald.de/studium/vor-dem-studium/bewerbung/",
+"https://www.uni-greifswald.de/studium/nach-dem-studium/promotionsstudium/",
+"https://www.uni-greifswald.de/studium/nach-dem-studium/career-services/",
+"https://www.uni-greifswald.de/international/incoming/promotion-in-greifswald/",
+"https://www.uni-greifswald.de/international/internationales-profil/international-career-service/"
+],
+"rss": [],
+"sitemap": [
+"https://www.uni-greifswald.de/sitemap.xml"
+],
+"sample": [
+"Ausschreibungen",
+"Stellenausschreibungen für wissenschaftliches Personal"
+]
+},
+{
 "id": "R080d212c",
 "name": "Vanderbilt University",
 "type": "university",
@@ -1822,6 +3304,86 @@
 ]
 },
 {
+"id": "R4e392985",
+"name": "WHU – Otto Beisheim School of Management",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Vallendar",
+"url": "https://www.whu.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I84340266",
+"ror": "https://ror.org/01yhahq71",
+"works": 4012,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.whu.edu/de/programme/promotionsprogramm/",
+"https://www.whu.edu/de/ueber-die-whu/karriere/",
+"https://www.whu.edu/de/ueber-die-whu/stiftung-whu/deutschlandstipendium/",
+"https://www.whu.edu/de/",
+"https://www.whu.edu/de/ueber-die-whu/rekrutierung-an-der-whu/",
+"https://www.whu.edu/de/news-insights/whu-magazin/artikel/wie-die-whu-diversitaet-in-der-wirtschaft-foerdert-mba-student-ha-mai-erhaelt-das-in-praxi-diversity-stipendium/"
+],
+"rss": [],
+"sitemap": [
+"https://www.whu.edu/de/sitemap.xml",
+"https://www.whu.edu/en/sitemap.xml"
+],
+"sample": [
+"Wissenschaftlicher Mitarbeiter/Doktorand (w/m/d) - LS B2B Verhandlungen & Bescha",
+"Bachelor in Internationaler BWL/Management"
+]
+},
+{
+"id": "R91983a15",
+"name": "Webster Geneva Campus",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.webster.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"webster.ac.at",
+"webster.edu.ge",
+"webster.edu.gr"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://geneva.webster.edu/careerservices/index.php",
+"https://geneva.webster.edu/admissions/tuition.php",
+"https://geneva.webster.edu/admissions/",
+"https://geneva.webster.edu/careerservices/internships.php"
+],
+"rss": [],
+"sitemap": [
+"https://geneva.webster.edu/sitemap.xml"
+],
+"sample": [
+"Career Services",
+"Internship Opportunities"
+]
+},
+{
 "id": "Re09b87de",
 "name": "World Health Organization",
 "type": "institute",
@@ -1853,6 +3415,42 @@
 "sample": [
 "International health regulations",
 "Internal Oversight Services"
+]
+},
+{
+"id": "R91bfab80",
+"name": "World Maritime University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Malmo",
+"url": "https://www.wmu.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I139559945",
+"ror": "https://ror.org/00v542r37",
+"works": 1817,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "5 real position(s) extracted at vetting",
+"quality": 80,
+"listing": [
+"https://www.wmu.se/about/careers",
+"https://www.wmu.se/programmes/phd-in-maritime-affairs"
+],
+"rss": [],
+"sitemap": [
+"https://www.wmu.se/sitemap.xml"
+],
+"sample": [
+"Dr Yohei Sasakawa Meets with Class of 2022 Sasakawa Fellowship Students",
+"Government of Australia Funds 10 New MSc Fellowships"
 ]
 },
 {
@@ -2102,6 +3700,46 @@
 ]
 },
 {
+"id": "Rb786c979",
+"name": "EU Business School",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.euruni.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"derby.ac.uk",
+"londonmet.ac.uk"
+],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.euruni.edu/en/Alumni-Careers.html",
+"https://www.euruni.edu/en/Alumni-Careers/Career-Support.html",
+"https://www.euruni.edu/en/Alumni-Careers/Alumni.html"
+],
+"rss": [
+"https://www.euruni.edu/documents.rdf?idz=32&cid=9589"
+],
+"sitemap": [
+"https://www.euruni.edu/sitemap/Deutsch_de_de_z33_sitemap_p.xml",
+"https://www.euruni.edu/sitemap/Italiano_it_it_z39_sitemap_p.xml"
+],
+"sample": [
+"Master's",
+"International Experience"
+]
+},
+{
 "id": "R49b2fba8",
 "name": "Euro Science Jobs",
 "type": "aggregator-europe",
@@ -2173,6 +3811,220 @@
 "sample": [
 "Root: Fellowships Office",
 "Root: Financial Aid (See Scholarships & Financial Aid)"
+]
+},
+{
+"id": "R4b20b2f3",
+"name": "Hanze University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Groningen",
+"url": "https://www.hanze.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I180755707",
+"ror": "https://ror.org/00xqtxw43",
+"works": 2825,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.hanze.nl/nl/opleidingen/voltijd/bachelor/bio-informatica/projecten-met-impact/margriet-van-der-molen"
+],
+"rss": [],
+"sitemap": [
+"https://www.hanze.nl/sitemap-index.xml"
+],
+"sample": [
+"Professional Doctorate (PD): bevorderen groen gas in gasnetwerk",
+"Wat is een Professional Doctorate: 'Het is vooral gericht op het oplossen van pr"
+]
+},
+{
+"id": "R1cd1cd11",
+"name": "International Federation of Clinical Neurophysiology",
+"type": "institute",
+"country": "Netherlands",
+"cc": "NL",
+"city": "",
+"url": "https://www.ifcn.info/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.ifcn.info/sitemap.xml"
+],
+"sample": [
+"Education",
+"Education"
+]
+},
+{
+"id": "R9623a0de",
+"name": "International Institute for Management Development",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.imd.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.imd.org/about/imd-careers/"
+],
+"rss": [],
+"sitemap": [
+"https://www.imd.org/sitemap.xml",
+"https://www.imd.org/sitemap.rss"
+],
+"sample": [
+"Master of Business Administration (MBA)",
+"Master of Science in Sustainable Management and Technology"
+]
+},
+{
+"id": "Rdfcc3616",
+"name": "Leiden University",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Leiden",
+"url": "http://www.leiden.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I121797337",
+"ror": "https://ror.org/027bh9e22",
+"works": 137903,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.universiteitleiden.nl/en/academic-staff/studying-for-a-phd",
+"https://www.universiteitleiden.nl/en/search",
+"https://www.organisatiegids.universiteitleiden.nl/en/university-management/board-of-deans---doctorate-board",
+"https://www.organisatiegids.universiteitleiden.nl/en/faculties-and-institutes/archaeology/committees/career-committee"
+],
+"rss": [],
+"sitemap": [
+"https://www.universiteitleiden.nl/sitemap.xml"
+],
+"sample": [
+"6 PhD positions Johannes Gutenberg University of Mainz",
+"FGGA PhD Conferentie - Universiteit Leiden"
+]
+},
+{
+"id": "Rff3f0856",
+"name": "Maastricht School of Management",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Maastricht",
+"url": "https://www.msm.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I209991678",
+"ror": "https://ror.org/04zb8fk81",
+"works": 695,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"aacsb.edu"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.msm.nl/education-programs/executive-phd/intro-executive-phd",
+"https://www.msm.nl/news-events-and-blogs/events/webinar-executive-phd-in-private-sector-development-november-2026-1",
+"https://www.msm.nl/information-for/current-students/intro",
+"https://www.msm.nl/education-programs/master-in-management/intro-master-in-management",
+"https://www.msm.nl/information-for/current-students/career-services/about"
+],
+"rss": [],
+"sitemap": [
+"https://www.msm.nl/sitemap-index.xml"
+],
+"sample": [
+"Executive PhD",
+"Executive PhD"
+]
+},
+{
+"id": "Rf211bf6f",
+"name": "Monarch Business School",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://umonarch.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://umonarch.ch/phd-in-business-research/",
+"https://umonarch.ch/phd-in-leadership/",
+"https://umonarch.ch/phd-in-economics/",
+"https://umonarch.ch/phd-in-finance/",
+"https://umonarch.ch/phd-in-international-relations/",
+"https://umonarch.ch/phd-in-csr-sustainability/"
+],
+"rss": [],
+"sitemap": [
+"https://umonarch.ch/sitemap_index.xml"
+],
+"sample": [
+"The Master-in-Passing: A Milestone in Doctoral Research - Monarch Business Schoo",
+"PhD in Business Research - Monarch Business School Switzerland"
 ]
 },
 {
@@ -2319,6 +4171,43 @@
 ]
 },
 {
+"id": "R8e28eb59",
+"name": "Saxion",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Enschede",
+"url": "https://www.saxion.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2801398864",
+"ror": "https://ror.org/005t9n460",
+"works": 1854,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"saxion.edu"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.saxion.nl/onderzoek/professional-doctorate"
+],
+"rss": [],
+"sitemap": [
+"https://www.saxion.nl/sitemap-index.xml"
+],
+"sample": [
+"Career Services",
+"TelePal - Acceptatie van telehealth in de palliatieve terminale zorg (hbo postdo"
+]
+},
+{
 "id": "Ra25393c3",
 "name": "Stanford University",
 "type": "university",
@@ -2454,6 +4343,152 @@
 "sample": [
 "Financial Aid and Scholarships",
 "Internal Transfer"
+]
+},
+{
+"id": "R3b34613a",
+"name": "Tinbergen Institute",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Rotterdam",
+"url": "https://tinbergen.nl/home",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I198488067",
+"ror": "https://ror.org/054xxtt73",
+"works": 6609,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://tinbergen.nl/job-market-candidates-2026-2027",
+"https://tinbergen.nl/transfer-to-phd",
+"https://tinbergen.nl/job-market-career-perspectives",
+"https://tinbergen.nl/tuition-fees-scholarships-and-financial-support",
+"https://tinbergen.nl/job-market-placements",
+"https://tinbergen.nl/phd-vacancies"
+],
+"rss": [],
+"sitemap": [
+"https://tinbergen.nl/sitemap.xml"
+],
+"sample": [
+"Discover Your Path: Exploring Academic Careers in Economics and Business",
+"Alumnus Andrea Titton EAERE Best Doctoral Dissertation Awardee 2026"
+]
+},
+{
+"id": "Rb66db36b",
+"name": "UNEP Copenhagen Climate Centre",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://unepccc.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://unepccc.org/jobs/"
+],
+"rss": [],
+"sitemap": [
+"https://unepccc.org/sitemap_index.xml"
+],
+"sample": [
+"UDP organizes Danida Fellowship Course on Green Energy and Low Carbon Developmen",
+"Danida Fellowship course on ‘Green Growth and Carbon Markets’ held in Copenhagen"
+]
+},
+{
+"id": "Rdc770a8b",
+"name": "Umeå University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Umeå",
+"url": "https://www.umu.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I90267481",
+"ror": "https://ror.org/05kb8h459",
+"works": 81477,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"umeauniversity.sharepoint.com"
+],
+"js": false,
+"method_used": "adapter+rss",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [],
+"rss": [
+"https://www.umu.se/nyheter/alla-nyheter/rssnews?id=10421080"
+],
+"sitemap": [
+"https://www.umu.se/sitemapindex.xml"
+],
+"sample": [
+"Så arbetar universitetet med HR Excellence in Research",
+"PhD position in Experimental Physics with a focus on photonics and materials sci"
+]
+},
+{
+"id": "Ra0a9f5bc",
+"name": "University College Absalon",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Næstved",
+"url": "https://phabsalon.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210158696",
+"ror": "https://ror.org/05sv58043",
+"works": 802,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://phabsalon.dk/job-i-absalon",
+"https://phabsalon.dk/videreuddannelse/erhvervspaedagogik-og-karrierevejledning",
+"https://phabsalon.dk/job-i-absalon/ledige-stillinger"
+],
+"rss": [],
+"sitemap": [
+"https://phabsalon.dk/sitemap.xml"
+],
+"sample": [
+"Ph.d.-nyt: Er der fisk i fiskefrikadeller? | Professionshøjskolen Absalon",
+"Nyt ph.d.-studie skal styrke rehabiliteringen af ældre | Professionshøjskolen Ab"
 ]
 },
 {
@@ -2601,6 +4636,36 @@
 ]
 },
 {
+"id": "Rae670b3a",
+"name": "VIVE – The Danish Center for Social Science Research",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.vive.dk/da/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.vive.dk/sitemap.xml"
+],
+"sample": [
+"Digital kommunikation med børn og unge i udsatte positioner - En vidensindsamlin",
+"Fleksjob giver mening, også når kompetencerne ikke kommer i spil - vive.dk"
+]
+},
+{
 "id": "R67521eb3",
 "name": "Wake Forest University Health Sciences",
 "type": "institute",
@@ -2679,6 +4744,148 @@
 "sample": [
 "A New Kind of School",
 "Internal Selections"
+]
+},
+{
+"id": "R43b42e33",
+"name": "Zuyd University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Heerlen",
+"url": "https://www.zuyd.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I193397943",
+"ror": "https://ror.org/02m6k0m40",
+"works": 1712,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "4 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [
+"https://www.zuyd.nl/samenwerken/vacature-plaatsen"
+],
+"rss": [],
+"sitemap": [
+"https://www.zuyd.nl/sitemap.xml"
+],
+"sample": [
+"Nieuwe doctorstitel voor hbo: kandidaten Zuyd zijn al bezig",
+"Vacatures en bijbanen"
+]
+},
+{
+"id": "R9c8a2b25",
+"name": "Örebro University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Örebro",
+"url": "https://www.oru.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I26437253",
+"ror": "https://ror.org/05kytsw45",
+"works": 22028,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html+rss",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 70,
+"listing": [],
+"rss": [
+"https://site106.reachmee.com/Public/rssfeed/external.ashx?id=5&InstallationID=I003&CustomerName=oru&lang=SE",
+"https://www.oru.se/funktioner/rss/nyheter/"
+],
+"sitemap": [
+"https://www.oru.se/sitemap.xml",
+"https://www.oru.se/sitemap_en.xml"
+],
+"sample": [
+"Nationell webbutbildning “Research Ethics for Researchers in Medicine”",
+"Doctoral Student Day"
+]
+},
+{
+"id": "R2dc4a92d",
+"name": "Amsterdam University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Amsterdam",
+"url": "https://www.hva.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I55106644",
+"ror": "https://ror.org/00y2z2s03",
+"works": 4312,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.hva.nl/onderzoek/promoveren"
+],
+"rss": [],
+"sitemap": [
+"https://www.hva.nl/sitemap.xml"
+],
+"sample": [
+"Onderwijs- en Innovatieplein",
+"Opleidingen Career day"
+]
+},
+{
+"id": "Re752804c",
+"name": "Avans University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Breda",
+"url": "https://www.avans.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I151001089",
+"ror": "https://ror.org/015d5s513",
+"works": 1125,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.avans.nl/werken-bij-avans/vacatures"
+],
+"rss": [],
+"sitemap": [
+"https://www.avans.nl/sitemap.xml"
+],
+"sample": [
+"De Professional Doctorate maakt een opmars: ‘We onderzoeken door te doen’",
+"Risk Hazekamp eerste kandidaat in pilot Professional Doctorate"
 ]
 },
 {
@@ -2787,6 +4994,76 @@
 "sample": [
 "MD-PhD Specific Courses and Seminars",
 "Fellowships and Awards"
+]
+},
+{
+"id": "Rd3e4820f",
+"name": "César Ritz Colleges",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.cesarritzcolleges.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"topuniversities.com"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.cesarritzcolleges.edu/en/hotel-management-programs/career-services/",
+"https://www.cesarritzcolleges.edu/en/admissions-cesar-ritz-colleges/#fees"
+],
+"rss": [],
+"sitemap": [
+"https://www.cesarritzcolleges.edu/sitemap.xml"
+],
+"sample": [
+"Career Services",
+"International Recruitment Forum | Careers in Hospitality"
+]
+},
+{
+"id": "Rc9e48ecd",
+"name": "Danish Institute for International Studies",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.diis.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.diis.dk/diis/job-karriere/karrieremuligheder",
+"https://www.diis.dk/diis/job-karriere/naar-soeger-job-diis",
+"https://www.diis.dk/diis/job-karriere/ledige-stillinger-0",
+"https://www.diis.dk/diis/job-karriere/diis-arbejdsplads"
+],
+"rss": [],
+"sitemap": [
+"https://www.diis.dk/sitemap.xml"
+],
+"sample": [
+"Personer og politik: Ph.d.-præsentation af personlighedsdrevet politik",
+"Wagnergruppen: Ph.d.-præsentation"
 ]
 },
 {
@@ -2935,6 +5212,75 @@
 ]
 },
 {
+"id": "R3e387eb7",
+"name": "ISPA – University Institute",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.ispa.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.ispa.pt/concursos-docentes-investigadores-ispa/",
+"https://www.ispa.pt/agenda/noticias/bolsa-investigacao-psicologia-luto-intervencao-comunitaria/",
+"https://www.ispa.pt/agenda/noticias/bolsa-investigacao-cares2care-2026/",
+"https://www.ispa.pt/agenda/noticias/bolsa-investigacao-projeto-timidez-insociabilidade-2faces/",
+"https://www.ispa.pt/agenda/noticias/bolsa-investigacao-interferencia-uso-telemoveis-qualidade-parental-emocoes-crianca/",
+"https://www.ispa.pt/agenda/noticias/bolsa-investigacao-brave-elephant-program/"
+],
+"rss": [],
+"sitemap": [
+"https://www.ispa.pt/sitemap.xml"
+],
+"sample": [
+"Scholarships",
+"Doutoramentos"
+]
+},
+{
+"id": "R27a89409",
+"name": "IT University of Copenhagen",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Copenhagen",
+"url": "https://itu.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I83467386",
+"ror": "https://ror.org/02309jg23",
+"works": 7776,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [],
+"wp": "https://itu.dk",
+"sample": [
+"Master i it-ledelse",
+"Masterkurser"
+]
+},
+{
 "id": "R9077b69a",
 "name": "Institut Gustave Roussy",
 "type": "institute",
@@ -3004,6 +5350,217 @@
 ]
 },
 {
+"id": "R1ba7cd92",
+"name": "Irish Theatre Institute",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "https://www.irishtheatreinstitute.ie/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.irishtheatreinstitute.ie/news/5371/"
+],
+"rss": [],
+"sitemap": [
+"https://www.irishtheatreinstitute.ie/wp-sitemap.xml"
+],
+"sample": [
+"Irish Theatre Institute",
+"Irish Theatre Institute"
+]
+},
+{
+"id": "Rbf0e2308",
+"name": "Linnaeus University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Vaxjo",
+"url": "https://lnu.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I223464139",
+"ror": "https://ror.org/00j9qag85",
+"works": 16798,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.lnu.se/sitemap.xml"
+],
+"sample": [
+"Internationella möjligheter",
+"Linnéuniversitetet satsar på internationella frågor och global samverkan i nytt "
+]
+},
+{
+"id": "Rbd264dec",
+"name": "Oporto Global University",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "https://www.upt.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"europeanlawinstitute.eu",
+"universia.net"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.upt.pt/en/honorary-doctorate-of-the-president-of-cabo-verde-doctor-jorge-carlos-de-almeida-fonseca/",
+"https://www.upt.pt/en/doctorate-honoris-causa-manoel-de-oliveira/",
+"https://www.upt.pt/en/home/study-programmes/phds-2/",
+"https://www.upt.pt/en/phds-applications/",
+"https://www.upt.pt/en/social-support-scholarships-2/",
+"https://www.upt.pt/en/news/universidade-portucalense-launches-a-doctoral-programme-in-translational-psychology/"
+],
+"rss": [
+"https://www.upt.pt/en/feed/",
+"https://www.upt.pt/en/comments/feed/"
+],
+"sitemap": [
+"https://www.upt.pt/sitemap_index.xml"
+],
+"sample": [
+"Doctoral Scholarships",
+"Scholarship Award"
+]
+},
+{
+"id": "R633b4787",
+"name": "Polytechnic Institute of Viseu",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.ipv.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html+rss",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [
+"https://univiseu.pt/feed/",
+"https://univiseu.pt/comments/feed/"
+],
+"sitemap": [
+"https://univiseu.pt/sitemap.xml"
+],
+"sample": [
+"Internacional",
+"III International Congress of Quality of Life"
+]
+},
+{
+"id": "R5c9ff07c",
+"name": "Polytechnic University of Lisbon",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.ipl.pt/en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.upl.pt/sitemap.xml"
+],
+"sample": [
+"Job Shop 2013",
+"Job Shop 2013"
+]
+},
+{
+"id": "R8eb4cb62",
+"name": "Stockholm School of Economics",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "https://www.hhs.se/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I180242103",
+"ror": "https://ror.org/01s5jzh92",
+"works": 7949,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.hhs.se/education/phd/",
+"https://www.hhs.se/education/information/scholarships/",
+"https://www.hhs.se/community/alumni/career-support/",
+"https://www.hhs.se/life-at-sse/career-services/",
+"https://www.hhs.se/support-sse/ways-to-give/american-friends-of-sse-scholarship/",
+"https://www.hhs.se/news/dmo/2026/phd-position-at-dmo/"
+],
+"rss": [],
+"sitemap": [
+"https://www.hhs.se/sitemap.xml"
+],
+"sample": [
+"Phd Students",
+"SSE MBA Carl Silfvén Scholarship"
+]
+},
+{
 "id": "R1ebebe6a",
 "name": "Study in Finland",
 "type": "funder",
@@ -3037,6 +5594,42 @@
 ]
 },
 {
+"id": "R087f3049",
+"name": "Swedish Institute of Space Physics",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Kiruna",
+"url": "https://www.irf.se/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I1319905951",
+"ror": "https://ror.org/043kppn11",
+"works": 4361,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.irf.se/en/om-irf/utbildning/phd-studies-at-irf-in-kiruna/",
+"https://www.irf.se/en/om-irf/utbildning/phd-studies-at-irf-in-uppsala/"
+],
+"rss": [],
+"sitemap": [
+"https://www.irf.se/sitemap.xml"
+],
+"sample": [
+"Exploring the Aurora: A research perspective from postdoctoral scientist Sota Na",
+"Louis Richard nailed his doctoral thesis – focus on energy conversion and partic"
+]
+},
+{
 "id": "Rc24124d6",
 "name": "Swiss Government Excellence Scholarships",
 "type": "funder",
@@ -3067,6 +5660,103 @@
 "sample": [
 "Programmes cantonaux de promotion des compétences de base des adultes",
 "Promotion des MINT"
+]
+},
+{
+"id": "Reb13ffc1",
+"name": "Swiss UMEF University",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.umef-university.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "rss",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [
+"https://webmax.ch/feed/",
+"https://webmax.ch/comments/feed/"
+],
+"sitemap": [
+"https://webmax.ch/sitemap.xml",
+"https://webmax.ch/sitemap.rss"
+],
+"sample": [
+"Warum eine eigene Website für Prominente heute Pflicht ist",
+"Vertrauensverlust per Mausklick: Wenn die Website eines Gesundheitsnetzwerks zum"
+]
+},
+{
+"id": "R00d7312a",
+"name": "The Hague University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "The Hague",
+"url": "https://www.dehaagsehogeschool.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I930713850",
+"ror": "https://ror.org/021zvq422",
+"works": 2343,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.dehaagsehogeschool.nl/sitemap.xml"
+],
+"sample": [
+"Comenius Fellowship voor onderzoek naar advocacy, conflictmanagement en duurzaam",
+"Cyber PhD-dag verrijkt onderzoekers met nieuwe inzichten | De Haagse Hogeschool"
+]
+},
+{
+"id": "R12794232",
+"name": "UC Viden/ Danish University Colleges",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.ucviden.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.ucviden.dk/sitemap.xml"
+],
+"sample": [
+"Ph.d.-forsvar Katrine Lund Berke",
+"En lærebog i tværprofessionelle samarbejder fra ph.d.-forsker ved UC Syd"
 ]
 },
 {
@@ -3109,6 +5799,39 @@
 "sample": [
 "rCITI celebrates three PhD",
 "My PhD Journey: Engineering, Sustainability and Motherhood"
+]
+},
+{
+"id": "R95d4fb9d",
+"name": "Universidade Aberta de Portugal",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "https://www.uab.pt",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html+rss",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [
+"https://portal.uab.pt/feed/",
+"https://portal.uab.pt/comments/feed/"
+],
+"sitemap": [
+"https://portal.uab.pt/wp-sitemap.xml"
+],
+"sample": [
+"Bolsa PhD no âmbito das Ações Marie Curie – Portal da Universidade Aberta",
+"Internacionalização – Portal da Universidade Aberta"
 ]
 },
 {
@@ -3182,6 +5905,77 @@
 ]
 },
 {
+"id": "Rbe289b8f",
+"name": "University of Applied Sciences Utrecht",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Utrecht",
+"url": "http://www.english.hu.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I173063890",
+"ror": "https://ror.org/028z9kw20",
+"works": 4374,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.internationalhu.com/fees-and-scholarships",
+"https://www.internationalhu.com/research/professional-doctorate"
+],
+"rss": [],
+"sitemap": [
+"https://www.internationalhu.com/sitemap"
+],
+"sample": [
+"HU Scholarships available for non-EEA students",
+"Pilot doctoral programme for hbo launched at HU"
+]
+},
+{
+"id": "R44e35238",
+"name": "University of Applied Sciences of the Grisons",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.fhgr.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"swissuniversities.ch"
+],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [
+"https://www.fhgr.ch/unterlagen-bestellen/",
+"https://jobs.fhgr.ch/Jobs/All?lang=ger"
+],
+"rss": [],
+"sitemap": [
+"https://www.fhgr.ch/sitemap.xml"
+],
+"sample": [
+"Masterangebot",
+"Internationales Studium"
+]
+},
+{
 "id": "Rbf4ae183",
 "name": "University of Washington",
 "type": "university",
@@ -3231,6 +6025,196 @@
 "sample": [
 "Librarian Reappointment & Promotion - Academic Personnel & Faculty",
 "Postdoctoral Scholars - Academic Personnel & Faculty"
+]
+},
+{
+"id": "R473228a7",
+"name": "Windesheim University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Zwolle",
+"url": "https://www.windesheim.com",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I242486142",
+"ror": "https://ror.org/04zmc0e16",
+"works": 1427,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.windesheim.com/sitemap.xml"
+],
+"sample": [
+"PhD research into math interviews in education",
+"Opening of the green recovery space in Curaçao marks a new step in recovery-orie"
+]
+},
+{
+"id": "R8e2cc647",
+"name": "Zurich University of the Arts",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.zhdk.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.zhdk.ch/sitemap.xml"
+],
+"sample": [
+"PhD Projects PhD Projects",
+"Core Subject Composition"
+]
+},
+{
+"id": "Rd9227698",
+"name": "École Hôtelière de Genève",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.ehg.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "3 real position(s) extracted at vetting",
+"quality": 60,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.ehg.ch/sitemap.xml"
+],
+"sample": [
+"J. Tarabori",
+"When AI reaches PhD level: why hotel education remains a safe bet"
+]
+},
+{
+"id": "Rba89c5ba",
+"name": "Aalborg Centre for Problem-Based Learning in Engineering Science and Sustainability",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.ucpbl.net/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.ucpbl.net/education-and-training/phd"
+],
+"rss": [],
+"sitemap": [
+"https://www.ucpbl.net/sitemap.xml"
+],
+"sample": [
+"Opportunities for a PhD at the Aalborg UNESCO PBL Centre",
+"Master in Problem Based Learning"
+]
+},
+{
+"id": "R7fe5c6bd",
+"name": "Actors Academy Finland",
+"type": "university",
+"country": "Finland",
+"cc": "FI",
+"city": "",
+"url": "https://www.actorsacademy.fi/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+rss",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.actorsacademy.fi/open-jobs"
+],
+"rss": [
+"https://www.actorsacademy.fi/blog-feed.xml"
+],
+"sitemap": [
+"https://www.actorsacademy.fi/sitemap.xml"
+],
+"sample": [
+"How to Build an International Acting Career from the Nordic Countries"
+]
+},
+{
+"id": "R535ec88f",
+"name": "Alexandra Institute",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://alexandra.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "rss",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [
+"https://alexandra.dk/feed/",
+"https://alexandra.dk/comments/feed/"
+],
+"sitemap": [
+"https://alexandra.dk/sitemap_index.xml"
+],
+"sample": [
+"Nyt nationalt initiativ skal ruste danske virksomheder mod kvantetruslen"
 ]
 },
 {
@@ -3301,6 +6285,123 @@
 ]
 },
 {
+"id": "Rb7ceca74",
+"name": "Glion Institute of Higher Education",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.glion.edu/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.glion.edu/magazine/how-to-choose-a-career-in-hospitality/",
+"https://www.glion.edu/masters-degrees/",
+"https://www.glion.edu/executive-masters-degrees/",
+"https://www.glion.edu/magazine/what-does-a-hotel-general-manager-do/",
+"https://www.glion.edu/magazine/alumnus-jad-karam-making-waves-in-high-finance/"
+],
+"rss": [],
+"sitemap": [
+"https://www.glion.edu/sitemap.xml",
+"https://www.glion.edu/post-sitemap.xml"
+],
+"sample": [
+"Voyager mission: alumna sets sights on a stellar hospitality career",
+"Hospitality and tourism careers: how to get started"
+]
+},
+{
+"id": "R1b78592c",
+"name": "Hanken School of Economics",
+"type": "university",
+"country": "Finland",
+"cc": "FI",
+"city": "",
+"url": "https://www.hanken.fi",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"aacsb.edu",
+"engageuniversity.eu"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.hanken.fi/sv/forskning/doktorspromotion",
+"https://www.hanken.fi/sv/forskning/doktorspromotion/tidigare-promotioner",
+"https://www.hanken.fi/sv/forskning/doktorspromotion/tidigare-promotioner/doktorspromotionen-2024",
+"https://www.hanken.fi/sv/forskning/doktorspromotion/tidigare-promotioner/doktorspromotionen-2019",
+"https://www.hanken.fi/sv/forskning/forskningsfinansiering/stiftelsen-svenska-handelshogskolans-stipendier",
+"https://www.hanken.fi/sv/forskning/forskningsfinansiering/stiftelsen-svenska-handelshogskolans-stipendier/stipendieformer"
+],
+"rss": [],
+"sitemap": [
+"https://www.hanken.fi/sitemap.xml"
+],
+"sample": [
+"The PhD programme",
+"Career Services - Your link to the world of work"
+]
+},
+{
+"id": "Rcb201c7f",
+"name": "Hochschule Osnabrück",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Osnabrück",
+"url": "https://www.hs-osnabrueck.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210159638",
+"ror": "https://ror.org/059vymd37",
+"works": 4358,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.hs-osnabrueck.de/studium/rund-ums-studium/bewerbung/",
+"https://www.hs-osnabrueck.de/deutschlandstipendium/",
+"https://www.hs-osnabrueck.de/wir/jobs-und-karriere/karriereziel-haw-professur/",
+"https://www.hs-osnabrueck.de/wir/jobs-und-karriere/stellenangebote/",
+"https://www.hs-osnabrueck.de/nachrichten/2026/11/maschinenbaustudentin-alicia-alberti-erhaelt-mint-stipendium-des-zonta-clubs-westfaelischer-friede/",
+"https://www.hs-osnabrueck.de/job-tarif/mkt-33-2026/"
+],
+"rss": [],
+"sitemap": [
+"https://www.hs-osnabrueck.de/sitemap.xml"
+],
+"sample": [
+"Wofür WIR stehen | Hochschule Osnabrück",
+"Nachrichten | Hochschule Osnabrück"
+]
+},
+{
 "id": "R4d0b7138",
 "name": "Ifremer",
 "type": "institute",
@@ -3329,6 +6430,41 @@
 "sample": [
 "Lumexplore junior",
 "Adopt a float"
+]
+},
+{
+"id": "R9a73c16b",
+"name": "Inholland University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Haarlem",
+"url": "https://www.inholland.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I896005021",
+"ror": "https://ror.org/03cfsyg37",
+"works": 1131,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.inholland.nl/over-inholland/werken-bij-inholland/vacatures/"
+],
+"rss": [],
+"sitemap": [
+"https://www.inholland.nl/sitemap"
+],
+"sample": [
+"Student job in the Netherlands",
+"An e-learning on interprofessional collaboration for health promotion"
 ]
 },
 {
@@ -3398,6 +6534,39 @@
 ]
 },
 {
+"id": "R42581c57",
+"name": "Jönköping University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Jönköping",
+"url": "https://ju.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I94616838",
+"ror": "https://ror.org/03t54am93",
+"works": 11269,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"http://ju.se/sitemapindex.xml"
+],
+"sample": [
+"Jönköping International Business School",
+"Internationella samarbeten"
+]
+},
+{
 "id": "R04996b7d",
 "name": "Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures",
 "type": "institute",
@@ -3431,6 +6600,74 @@
 "sample": [
 "PhD Initiative",
 "Article 3 Performance Only in Hollywood Searching for the Agency of Support Stru"
+]
+},
+{
+"id": "R52a0814e",
+"name": "Medizinische Hochschule Brandenburg Theodor Fontane",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Neuruppin",
+"url": "https://www.mhb-fontane.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210145679",
+"ror": "https://ror.org/04839sh14",
+"works": 5099,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.mhb-fontane.de/de/karriere-jobs"
+],
+"rss": [],
+"sitemap": [
+"https://www.mhb-fontane.de/sitemap.xml"
+],
+"sample": [
+"Wissenschaftliche Qualifikationen und Titel an der MHB",
+"FMP Promotion - MHB Fontane"
+]
+},
+{
+"id": "R7e7a146c",
+"name": "NHL Stenden University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Leeuwarden",
+"url": "https://www.nhlstenden.com",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4387154156",
+"ror": "https://ror.org/02xgxme97",
+"works": 1071,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.nhlstenden.com/sitemap.xml"
+],
+"sample": [
+"Future career after completing Sustainable Innovation in Hospitality",
+"Future career after completing Sustainable Innovation in Hospitality (master)"
 ]
 },
 {
@@ -3468,6 +6705,114 @@
 ]
 },
 {
+"id": "R16905864",
+"name": "Nyenrode Business University",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Breukelen",
+"url": "http://www.nyenrode.com/Pages/Default.aspx",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I870178186",
+"ror": "https://ror.org/018528593",
+"works": 1791,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"aacsb.edu"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.nyenrode.nl/opleidingen/phd",
+"https://www.nyenrode.nl/opleidingen/phd/deeltijd-phd-programma",
+"https://www.nyenrode.nl/opleidingen/phd/phd-cursussen",
+"https://www.nyenrode.nl/faculteit-en-onderzoek/faculteit/eredoctoraten",
+"https://www.nyenrode.nl/over-ons/stichting-nyenrode-fonds/scholarships",
+"https://www.nyenrode.nl/over-ons/werken-bij/vacatures"
+],
+"rss": [],
+"sitemap": [
+"https://www.nyenrode.nl/sitemap/sitemap-index.xml"
+],
+"sample": [
+"Honorary doctorates",
+"Eredoctoraten"
+]
+},
+{
+"id": "R99bd2c10",
+"name": "Protestant Theological University",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Utrecht",
+"url": "https://www.pthu.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I34427333",
+"ror": "https://ror.org/016w23120",
+"works": 811,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"/sitemap.xml",
+"/en/sitemap.xml"
+],
+"sample": [
+"Masters van de PThU",
+"Meeloopdag master Theologie"
+]
+},
+{
+"id": "R2d0a81c3",
+"name": "Statens Serum Institut",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.ssi.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.ssi.dk/om-ssi/job-hos-ssi"
+],
+"rss": [],
+"sitemap": [
+"https://www.ssi.dk/sitemap"
+],
+"sample": [
+"Mød en medarbejder",
+"Afdelingslæge"
+]
+},
+{
 "id": "Rcf855c18",
 "name": "Study in Sweden – Scholarships",
 "type": "funder",
@@ -3496,6 +6841,41 @@
 "sample": [
 "On being a Swedish Institute Scholarship Holder",
 "What happens after you find a job in Sweden?"
+]
+},
+{
+"id": "R8ddb66e6",
+"name": "Södertörn University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Huddinge",
+"url": "https://www.sh.se/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I129826125",
+"ror": "https://ror.org/00d973h41",
+"works": 5522,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://www.sh.se/kalender/kalenderposter/2026-11-20-public-defence-of-doctoral-thesis-with-saralie-sernhede-media-and-communication-studies"
+],
+"rss": [],
+"sitemap": [
+"https://www.sh.se/sitemapindex.xml"
+],
+"sample": [
+"Public defence of doctoral thesis with Saralie Sernhede, Media and Communication",
+"School, Sport, Screen: Value-Laden Learning Practices"
 ]
 },
 {
@@ -3531,6 +6911,43 @@
 "sample": [
 "International Ranking",
 "Connections: International Reach"
+]
+},
+{
+"id": "Rea9277b9",
+"name": "TiFN",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Wageningen",
+"url": "http://www.tifn.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210109520",
+"ror": "https://ror.org/0183vre95",
+"works": 1154,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+rss",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://nextfoodcollective.nl/vacancies/"
+],
+"rss": [
+"https://nextfoodcollective.nl/feed/",
+"https://nextfoodcollective.nl/comments/feed/"
+],
+"sitemap": [
+"https://nextfoodcollective.nl/sitemap_index.xml"
+],
+"sample": [
+"Next Food Collective appoints Tina Scheele as Executive Director - Next Food Col"
 ]
 },
 {
@@ -3668,6 +7085,70 @@
 ]
 },
 {
+"id": "Rf40e1538",
+"name": "University College Capital",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Hillerød",
+"url": "https://ucc.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2800924971",
+"ror": "https://ror.org/05041v694",
+"works": 677,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [],
+"wp": "https://www.kp.dk",
+"sample": [
+"Professionsmaster - Københavns Professionshøjskole",
+"Pædagogisk-psykologisk rådgivning"
+]
+},
+{
+"id": "Raadd6c44",
+"name": "University College Copenhagen",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Copenhagen",
+"url": "https://www.kp.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210088332",
+"ror": "https://ror.org/004r9h172",
+"works": 3393,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [],
+"wp": "https://www.kp.dk",
+"sample": [
+"Professionsmaster - Københavns Professionshøjskole",
+"Pædagogisk-psykologisk rådgivning"
+]
+},
+{
 "id": "Rf2d25be9",
 "name": "University of California, Davis",
 "type": "university",
@@ -3745,6 +7226,73 @@
 ]
 },
 {
+"id": "R964f8271",
+"name": "University of Copenhagen Department of Computer Science",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "http://diku.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [
+"https://di.ku.dk/forsidebegivenheder/kalender-2027/it-karrieredag-2027/",
+"https://jobportal.ku.dk/"
+],
+"rss": [],
+"sitemap": [
+"https://di.ku.dk/sitemap.xml"
+],
+"sample": [
+"Ph.d. på Københavns Universitet",
+"Ph.d.-stillinger"
+]
+},
+{
+"id": "Ref84f7e2",
+"name": "University of Humanistic Studies",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Utrecht",
+"url": "http://www.uvh.nl/english/home",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I122285577",
+"ror": "https://ror.org/04w5ec154",
+"works": 1558,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.uvh.nl/sitemap_index.xml",
+"https://www.uvh.nl/en/sitemap_index.xml"
+],
+"sample": [
+"Eredoctoraten",
+"Ben Eggink has been awarded NWO doctoral grant for teachers for research into en"
+]
+},
+{
 "id": "R731d8cfa",
 "name": "University of Iowa",
 "type": "university",
@@ -3776,6 +7324,34 @@
 "sample": [
 "Career Preparation",
 "Is a PhD in biomedical engineering worth it?"
+]
+},
+{
+"id": "Re08382f5",
+"name": "University of Lapland",
+"type": "university",
+"country": "Finland",
+"cc": "FI",
+"city": "",
+"url": "https://www.ulapland.fi",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [],
+"wp": "https://ulapland.fi",
+"sample": [
+"MLL Research Foundation grant to Syed Musa Kajim Nuri for PhD research - Univers"
 ]
 },
 {
@@ -3845,6 +7421,68 @@
 "sample": [
 "Postdoctoral Researchers and Fellows",
 "Find opportunities that match your goals at any point in a career."
+]
+},
+{
+"id": "Re91df6b5",
+"name": "University of Trás-os-Montes and Alto Douro",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "https://www.utad.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [
+"https://www.utad.pt/feed/",
+"https://www.utad.pt/comments/feed/"
+],
+"sitemap": [
+"https://www.utad.pt/sitemap.xml"
+],
+"sample": [
+"Honorary Doctorates"
+]
+},
+{
+"id": "R63070689",
+"name": "University of Vaasa",
+"type": "university",
+"country": "Finland",
+"cc": "FI",
+"city": "",
+"url": "http://www.uwasa.fi",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "2 real position(s) extracted at vetting",
+"quality": 50,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.uwasa.fi/sitemap.xml"
+],
+"sample": [
+"Finnish Cultural Foundation awarded grants to the University of Vaasa PhD studen",
+"Take Universum's CareerTest"
 ]
 },
 {
@@ -4060,6 +7698,138 @@
 ]
 },
 {
+"id": "R22d22a6f",
+"name": "Danish Institute for Advanced Study",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://danish-ias.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.sdu.dk/en/forskning/dias/jobs",
+"https://www.sdu.dk/en/updates/4b6282bd-94f7-4f41-aa77-725ca74aeace",
+"https://www.sdu.dk/en/updates/9074561e-ef20-41b2-93e8-92ea840bd7ed",
+"https://www.sdu.dk/en/updates/14d93d6b-57fb-4681-b73b-27a389e76a6b",
+"https://www.sdu.dk/en/updates/4a75249b-a2ab-41e6-93eb-1f128a67f56b",
+"https://www.sdu.dk/en/om-sdu/job-sdu"
+],
+"rss": [],
+"sitemap": [
+"https://www.sdu.dk/sitemap.xml"
+],
+"sample": [
+"Ph.d.-uddannelser på Syddansk Universitet"
+]
+},
+{
+"id": "R59e0a9a2",
+"name": "Danish Research Institute for Suicide Prevention",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://drisp.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://drisp.dk/sitemap.xml"
+],
+"sample": [
+"Forskning"
+]
+},
+{
+"id": "Rb75ce6a6",
+"name": "Economic and Social Research Institute",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "http://www.esri.ie/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.esri.ie/careers"
+],
+"rss": [],
+"sitemap": [
+"https://www.esri.ie/sitemap.xml"
+],
+"sample": [
+"ESRI Seminar: \"Differences in Job De-Routinization in OECD Countries: Evidence f"
+]
+},
+{
+"id": "R574e1fe2",
+"name": "FernUniversität in Hagen",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Hagen",
+"url": "https://www.fernuni-hagen.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I120691247",
+"ror": "https://ror.org/04tkkr536",
+"works": 12696,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.fernuni-hagen.de/universitaet/karriere.shtml",
+"https://www.fernuni-hagen.de/universitaet/stimmen/neugebauer.shtml",
+"https://jobs.fernuni-hagen.de/"
+],
+"rss": [],
+"sitemap": [
+"https://www.fernuni-hagen.de/sitemap.xml"
+],
+"sample": [
+"Promotion"
+]
+},
+{
 "id": "Rd46f3e83",
 "name": "Fundação Oswaldo Cruz",
 "type": "institute",
@@ -4092,6 +7862,118 @@
 ],
 "sample": [
 "Unidade de Controle Interno (UCI)"
+]
+},
+{
+"id": "R32f795d3",
+"name": "Geneva Business School",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.gbs-ge.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"eduniversal-ranking.com"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://gbsge.com/programs/doctorate-of-business-administration/",
+"https://gbsge.com/programs/doctorate-of-business-administration/fees/",
+"https://gbsge.com/community/career-opportunities/",
+"https://gbsge.com/community/career-opportunities/#careerfaqs",
+"https://gbsge.com/programs/doctorate-of-business-administration/entry-requirements/"
+],
+"rss": [],
+"sitemap": [
+"https://gbsge.com/sitemap.xml"
+],
+"sample": [
+"Learning on the job: Handball World Cup in Egypt"
+]
+},
+{
+"id": "R37daddb6",
+"name": "German Sport University Cologne",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Cologne",
+"url": "https://www.dshs-koeln.de",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I137533716",
+"ror": "https://ror.org/0189raq88",
+"works": 9528,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"familie-in-der-hochschule.de"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.dshs-koeln.de/universitaet/profil/gleichstellung-und-diversitaet/karrierefoerderung-fuer-frauen",
+"https://www.dshs-koeln.de/universitaet/organisation/verwaltung-und-stabsstellen",
+"https://www.dshs-koeln.de/universitaet/organisation/organe-und-gremien/promotionsausschuss",
+"https://www.dshs-koeln.de/universitaet/organisation/anlaufstellen-und-services",
+"https://www.dshs-koeln.de/universitaet/organisation/anlaufstellen-und-services/career-service",
+"https://www.dshs-koeln.de/universitaet/die-uni-als-arbeitgeberin/unsere-stellenangebote"
+],
+"rss": [],
+"sitemap": [
+"https://www.dshs-koeln.de/sitemap.xml"
+],
+"sample": [
+"Postdocs & Karriereentwicklung"
+]
+},
+{
+"id": "Ra767f2e9",
+"name": "HAN University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Arnhem",
+"url": "https://www.han.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I103855431",
+"ror": "https://ror.org/0500gea42",
+"works": 3345,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"hanuniversity.com"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.han.nl/sitemap-hannl.xml"
+],
+"sample": [
+"Eerste Professional Doctorate (PD) toegekend in Gezondheid & Welzijn"
 ]
 },
 {
@@ -4190,6 +8072,41 @@
 ]
 },
 {
+"id": "R284ba794",
+"name": "Institut für Medizinische Informationsverarbeitung, Biometrie und Epidemiologie",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Munich",
+"url": "https://www.ibe.med.uni-muenchen.de/index.html",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4405260893",
+"ror": "https://ror.org/04eb1yz45",
+"works": 4168,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.lmu.de/de/die-lmu/arbeiten-an-der-lmu/stellenportal/index.html"
+],
+"rss": [],
+"sitemap": [
+"https://www.med.uni-muenchen.de/funktionen/xml-sitemap.xml",
+"https://www.med.lmu.de/pathologie/sitemap.xml"
+],
+"sample": [
+"Ph.D. Medical Research in Epidemiology and Public Health"
+]
+},
+{
 "id": "R24b52a5c",
 "name": "Kaiser Permanente",
 "type": "institute",
@@ -4220,6 +8137,71 @@
 ],
 "sample": [
 "Glossary of location terms"
+]
+},
+{
+"id": "R205b8461",
+"name": "Karlstad University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Karlstad",
+"url": "https://www.kau.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I43968019",
+"ror": "https://ror.org/05s754026",
+"works": 11226,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.kau.se/sitemap.xml"
+],
+"sample": [
+"Eunice - the European University for Customised Education | Karlstads universite"
+]
+},
+{
+"id": "R71a8d6d7",
+"name": "Kristianstad University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Kristianstad",
+"url": "https://www.hkr.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I193278943",
+"ror": "https://ror.org/00tkrft03",
+"works": 3690,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.hkr.se/sitemap.xml",
+"https://www.hkr.se/sitemapPrograms.xml"
+],
+"sample": [
+"Are you an EU citizen and curious about an international career in the EU instit"
 ]
 },
 {
@@ -4301,6 +8283,39 @@
 ]
 },
 {
+"id": "R7b0a7187",
+"name": "Q108902427",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://danscatt.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.dtu.dk/english/about/job-and-career",
+"https://www.dtu.dk/english/about/job-and-career/Vacant-positions"
+],
+"rss": [],
+"sitemap": [
+"https://www.dtu.dk/sitemap.xml",
+"https://www.dtu.dk/sitemap.xml"
+],
+"sample": [
+"DTU Inside - PhD"
+]
+},
+{
 "id": "Ra4d18038",
 "name": "Rutgers, The State University of New Jersey",
 "type": "university",
@@ -4333,6 +8348,70 @@
 ],
 "sample": [
 "Stay alert: Protect yourself from job and internship scams"
+]
+},
+{
+"id": "Rb4beaa12",
+"name": "Swedish Defence University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "https://www.fhs.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I101466613",
+"ror": "https://ror.org/04mj8af82",
+"works": 1785,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.fhs.se/sitemapindex.xml"
+],
+"sample": [
+"Vilma fick jobb i försvarsindustrin under masterutbildningen"
+]
+},
+{
+"id": "R01c3f503",
+"name": "TIAS School for Business and Society",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Tilburg",
+"url": "https://www.tias.edu",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I124486421",
+"ror": "https://ror.org/03q7ay915",
+"works": 564,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.tias.edu/sitemap.xml"
+],
+"sample": [
+"Wat als jij de juiste vragen kon stellen aan Big Data?"
 ]
 },
 {
@@ -4396,6 +8475,75 @@
 ],
 "sample": [
 "International Programs | FDA"
+]
+},
+{
+"id": "R4d7ee3ec",
+"name": "University of Applied Sciences Western Switzerland - Valais",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.hevs.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"swissuniversities.ch"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [
+"https://www.hevs.ch/fr/events/webinaire-career-women--leadership-au-feminin--ce-que-jaurais-aime-savoir-a-20-ans-215551",
+"https://www.hevs.ch/fr/hes-so-valais-wallis/career-design-center/",
+"https://www.hevs.ch/fr/emplois/",
+"https://www.hevs.ch/fr/annonces-200086",
+"https://www.hevs.ch/fr/hes-so-valais-wallis/debouches-et-emplois/"
+],
+"rss": [],
+"sitemap": [
+"https://www.hevs.ch/sitemap.xml"
+],
+"sample": [
+"Un prix international pour Mara Graziani, Post-doctorante à"
+]
+},
+{
+"id": "R6caf221a",
+"name": "University of Gävle",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Gävle",
+"url": "https://www.hig.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210141702",
+"ror": "https://ror.org/043fje207",
+"works": 6022,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.hig.se/sitemapindex.xml"
+],
+"sample": [
+"Globalt engagemang och internationella samarbeten"
 ]
 },
 {
@@ -4497,6 +8645,38 @@
 ]
 },
 {
+"id": "Rad5547a7",
+"name": "Van Hall Larenstein University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Leeuwarden",
+"url": "https://www.hvhl.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2800435062",
+"ror": "https://ror.org/02mdbnd10",
+"works": 830,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "verified",
+"reason": "1 real position(s) extracted at vetting",
+"quality": 40,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.hvhl.nl/sitemap.xml"
+],
+"sample": [
+"Internationalisering"
+]
+},
+{
 "id": "Rfa17df49",
 "name": "Yale University",
 "type": "university",
@@ -4528,6 +8708,37 @@
 ],
 "sample": [
 "Catharine Bond Hill, ’85 Ph.D."
+]
+},
+{
+"id": "R0dfc131e",
+"name": "Benedict International Education Group",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.benedict.ch/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.benedict.ch/jobs/",
+"https://blog.benedict.ch/lebenslanges-lernen-ki-co-fit-fuer-die-arbeitswelt-von-morgen/",
+"https://blog.benedict.ch/ki-im-berufsalltag/",
+"https://blog.benedict.ch/wie-entscheidend-ist-das-ergebnis-im-multicheck/"
+],
+"rss": [],
+"sitemap": [
+"https://www.benedict.ch/sitemap.xml"
 ]
 },
 {
@@ -4589,6 +8800,34 @@
 ]
 },
 {
+"id": "Rce0185f4",
+"name": "Centre européen de calcul atomique et moléculaire",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.cecam.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": true,
+"method_used": "adapter",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.cecam.org/careers"
+],
+"rss": [],
+"sitemap": [
+"https://www.cecam.org/sitemap.xml"
+]
+},
+{
 "id": "Rf3960d7d",
 "name": "Council of Scientific and Industrial Research",
 "type": "institute",
@@ -4620,6 +8859,71 @@
 "rss": [],
 "sitemap": [
 "https://www.csir.res.in/sitemap.xml"
+]
+},
+{
+"id": "R232b7dcb",
+"name": "Danish Meat Research Institute",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.teknologisk.dk/danish-meat-research-institute/27239",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+rss",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.teknologisk.dk/job",
+"https://www.teknologisk.dk/jobs"
+],
+"rss": [
+"https://www.teknologisk.dk/rss.xml"
+],
+"sitemap": [
+"https://www.teknologisk.dk/sitemap.xml"
+]
+},
+{
+"id": "Rc6fb4600",
+"name": "Data Processing and Analysis Consortium",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.cosmos.esa.int/web/gaia/dpac",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"gsaweb.ast.cam.ac.uk"
+],
+"js": false,
+"method_used": "html",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.cosmos.esa.int/web/gaia/vacancies1",
+"https://www.cosmos.esa.int/web/gaia/vacancies",
+"https://www.cosmos.esa.int/web/gaia/phd-theses",
+"http://www.esa.int/About_Us/Careers_at_ESA",
+"https://www.cosmos.esa.int/web/space-science-faculty/opportunities/phds"
+],
+"rss": [],
+"sitemap": [
+"https://www.cosmos.esa.int/sitemap.xml"
 ]
 },
 {
@@ -4744,6 +9048,37 @@
 ]
 },
 {
+"id": "R9aebc075",
+"name": "Halmstad University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Halmstad",
+"url": "https://www.hh.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I746986",
+"ror": "https://ror.org/03h0qfp10",
+"works": 6699,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "rss",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [],
+"rss": [
+"https://www.hh.se/4.16be565916914b791c7cf2c2/12.16be565916914b791c7cf511.portlet?state=rss&sv.contenttype=text/xml;charset=UTF-8"
+],
+"sitemap": [
+"https://www.hh.se/sitemapindex.xml"
+]
+},
+{
 "id": "Radb3b49e",
 "name": "Istituto Nazionale di Fisica Nucleare, Sezione di Milano",
 "type": "institute",
@@ -4836,6 +9171,34 @@
 ]
 },
 {
+"id": "Rdcbab835",
+"name": "Q117298756",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.cefu.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.cefu.dk/emner/podcast/baeredygtigt-laerlingeliv-praksischok-eller-oenskejob.aspx"
+],
+"rss": [],
+"sitemap": [
+"https://www.cefu.dk/sitemap.xml"
+]
+},
+{
 "id": "R80a55edd",
 "name": "RIKEN",
 "type": "institute",
@@ -4865,6 +9228,100 @@
 "rss": [],
 "sitemap": [
 "https://www.riken.jp/sitemap.xml"
+]
+},
+{
+"id": "Rfd907b25",
+"name": "Rotterdam University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Rotterdam",
+"url": "https://www.rotterdamuas.com/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I907135538",
+"ror": "https://ror.org/0481e1q24",
+"works": 2030,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.rotterdamuas.com/about/jobs/"
+],
+"rss": [],
+"sitemap": [
+"https://www.hogeschoolrotterdam.nl/sitemap.xml",
+"https://www.rotterdamuas.com/sitemap.xml"
+]
+},
+{
+"id": "Rab829646",
+"name": "School of Cosmic Physics",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "https://www.dias.ie/cosmicphysics/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.dias.ie/vacancies/"
+],
+"rss": [
+"https://www.dias.ie/feed/",
+"https://www.dias.ie/feed/podcast"
+],
+"sitemap": [
+"https://www.dias.ie/sitemap.xml"
+]
+},
+{
+"id": "R5f7dacf2",
+"name": "Terra",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Groningen",
+"url": "https://terra.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210103329",
+"ror": "https://ror.org/01dn09e98",
+"works": 720,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.dcterra.nl/werken-bij/vacatures/"
+],
+"rss": [],
+"sitemap": [
+"https://www.dcterra.nl/sitemap.xml"
 ]
 },
 {
@@ -4924,6 +9381,37 @@
 "rss": [],
 "sitemap": [
 "https://www.unam.mx/sitemap.xml"
+]
+},
+{
+"id": "R0664cde5",
+"name": "University College of Northern Denmark",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Aalborg",
+"url": "https://www.ucn.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I315070680",
+"ror": "https://ror.org/056c4z730",
+"works": 2115,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://www.ucn.dk/efteruddannelse/studie-og-karrierevejledning/"
+],
+"rss": [],
+"sitemap": [
+"https://www.ucn.dk/sitemap.xml"
 ]
 },
 {
@@ -5061,6 +9549,66 @@
 ]
 },
 {
+"id": "R2d689cf8",
+"name": "University of the Azores",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.uac.pt",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://uac.pt/pt-pt/recrutamento",
+"https://uac.pt/career-lab"
+],
+"rss": [],
+"sitemap": [
+"https://uac.pt/sitemap.xml"
+]
+},
+{
+"id": "R9223b7bc",
+"name": "VIA University College",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Aarhus",
+"url": "http://en.via.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I69601649",
+"ror": "https://ror.org/04ctbxy49",
+"works": 4361,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "unverified",
+"reason": "listing page found but no current position could be extracted",
+"quality": 10,
+"listing": [
+"https://en.via.dk/working-in-denmark/meet-the-graduates"
+],
+"rss": [],
+"sitemap": [
+"https://www.via.dk/sitemap.xml"
+]
+},
+{
 "id": "Rab47e11d",
 "name": "Academia Sinica",
 "type": "institute",
@@ -5079,6 +9627,42 @@
 "vetted": "2026-11-20",
 "status": "unreachable",
 "reason": "HTTP 404",
+"quality": 0
+},
+{
+"id": "Recf66856",
+"name": "American College of Switzerland",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.american-college.com/front_content.php",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 444",
+"quality": 0
+},
+{
+"id": "R3980a4f7",
+"name": "American University in Switzerland",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.auis.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 530",
 "quality": 0
 },
 {
@@ -5122,6 +9706,24 @@
 "quality": 0
 },
 {
+"id": "Rb9d4982d",
+"name": "Basel School of Business",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.bsob.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without",
+"quality": 0
+},
+{
 "id": "R05e7a7d1",
 "name": "Beihang University",
 "type": "university",
@@ -5141,6 +9743,27 @@
 "outlinks": [],
 "status": "no_listing",
 "reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R8adb4fff",
+"name": "Breda University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Breda",
+"url": "https://www.buas.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I128589980",
+"ror": "https://ror.org/04mfj5474",
+"works": 1181,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
 "quality": 0
 },
 {
@@ -5294,6 +9917,51 @@
 "quality": 0
 },
 {
+"id": "R0bd28f7a",
+"name": "Copenhagen Academy for Medical Education and Simulation",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Copenhagen",
+"url": "https://www.regionh.dk/CAMES-english",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210099625",
+"ror": "https://ror.org/012rrxx37",
+"works": 1163,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": true,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rcab4b31d",
+"name": "Copenhagen Research Centre for Mental Health",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "https://www.psykiatri-regionh.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": true,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
 "id": "Rbea1d8d5",
 "name": "Czech Academy of Sciences",
 "type": "institute",
@@ -5311,6 +9979,149 @@
 "discovered": "2026-11-20",
 "vetted": "2026-11-20",
 "outlinks": [],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R7f570ad5",
+"name": "DTU Space",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "http://www.spacecenter.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "blocked_robots",
+"reason": "robots.txt does not allow automated access",
+"quality": 0
+},
+{
+"id": "Rf77c1003",
+"name": "Digital Enterprise Research Institute",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "http://www.deri.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='www.deri.org', port=80): Max retries exceeded with url:",
+"quality": 0
+},
+{
+"id": "R487a97f9",
+"name": "Dutch Defense Academy",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "",
+"url": "http://www.defensie.nl/nlda",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 404",
+"quality": 0
+},
+{
+"id": "R03d3970c",
+"name": "European Association of Geochemistry",
+"type": "institute",
+"country": "Netherlands",
+"cc": "NL",
+"city": "",
+"url": "http://eag.eu.com/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R5a3445c7",
+"name": "European Society of Radiotherapy & Oncology",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "https://www.estro.org",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": true,
+"method_used": "",
+"status": "js_required",
+"reason": "page is built with JavaScript; the browser pass found nothing extractable yet - needs a custom adapter (see adapters.py)",
+"quality": 0,
+"listing": [],
+"rss": [],
+"sitemap": [
+"https://www.estro.org/sitemap.xml"
+]
+},
+{
+"id": "R611f3684",
+"name": "FH Aachen",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Aachen",
+"url": "https://www.fh-aachen.de/en/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I99977706",
+"ror": "https://ror.org/04tqgg260",
+"works": 4359,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R8b60ab84",
+"name": "Fontys University of Applied Sciences",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Eindhoven",
+"url": "https://www.fontys.nl",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I21516984",
+"ror": "https://ror.org/01jwcme05",
+"works": 2373,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
 "status": "no_listing",
 "reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
@@ -5335,6 +10146,48 @@
 "outlinks": [
 "ch.shmu.edu.cn"
 ],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R1570eb6a",
+"name": "Geneva Institute for Democracy and Development",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://gidd.eu.org",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R2ade2ea8",
+"name": "Geological Survey of Denmark and Greenland",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "http://www.geus.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
 "status": "no_listing",
 "reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
@@ -5409,6 +10262,45 @@
 "vetted": "2026-11-20",
 "status": "unreachable",
 "reason": "HTTPSConnectionPool(host='institut.inra.fr', port=443): Max retries exceeded wit",
+"quality": 0
+},
+{
+"id": "R4db4ea6e",
+"name": "Institute for the Blind and Partially Sighted",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "http://www.ibos.dk/instituttet.html",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 404",
+"quality": 0
+},
+{
+"id": "R81939291",
+"name": "Institute of Higher Studies of Fafe",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.iesfafe.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
 },
 {
@@ -5498,6 +10390,24 @@
 "quality": 0
 },
 {
+"id": "R4567f581",
+"name": "LRG University of Applied Sciences",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.lrguas.ch/les_roches_gruyere/en/en-en/index.cfm?",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='www.lrguas.ch', port=80): Max retries exceeded with url",
+"quality": 0
+},
+{
 "id": "R9ef26b3b",
 "name": "Lawrence Berkeley National Laboratory",
 "type": "institute",
@@ -5562,6 +10472,141 @@
 "quality": 0
 },
 {
+"id": "Rcfe88851",
+"name": "Lusíada University",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.ulusiada.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R22bc6859",
+"name": "Marie Cederschiöld University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "https://www.mchs.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I75511499",
+"ror": "https://ror.org/00ajvsd91",
+"works": 1536,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R26b55458",
+"name": "Medicines Evaluation Board",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Utrecht",
+"url": "https://english.cbg-meb.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210150351",
+"ror": "https://ror.org/05mv4rb84",
+"works": 1063,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R8106d4bc",
+"name": "Metropolitan University College",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Copenhagen",
+"url": "http://www.phmetropol.dk/English",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I203428652",
+"ror": "https://ror.org/032rem971",
+"works": 1139,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='www.phmetropol.dk', port=80): Max retries exceeded with",
+"quality": 0
+},
+{
+"id": "Rb924974e",
+"name": "Mid Sweden University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Sundsvall",
+"url": "https://www.miun.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I56475706",
+"ror": "https://ror.org/019k1pd13",
+"works": 10326,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R93f7d95e",
+"name": "Milltown Institute of Theology and Philosophy",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "http://www.milltown-institute.ie",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
 "id": "Rd15bcaf0",
 "name": "Ministry of Agriculture and Rural Affairs",
 "type": "institute",
@@ -5622,6 +10667,30 @@
 "vetted": "2026-11-20",
 "status": "unreachable",
 "reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R3ee2e80c",
+"name": "Mälardalen University",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Västerås",
+"url": "https://www.mdu.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I82509713",
+"ror": "https://ror.org/033vfbz75",
+"works": 11752,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
 },
 {
@@ -5817,6 +10886,27 @@
 "quality": 0
 },
 {
+"id": "R9b39185c",
+"name": "Netherlands Youth Institute",
+"type": "institute",
+"country": "Netherlands",
+"cc": "NL",
+"city": "",
+"url": "https://www.nji.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
 "id": "R8996d19e",
 "name": "North Carolina State University",
 "type": "university",
@@ -5836,6 +10926,45 @@
 "outlinks": [],
 "status": "no_listing",
 "reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rc2fb0f28",
+"name": "Oncode Institute",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Utrecht",
+"url": "https://www.oncodeinstitute.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210111138",
+"ror": "https://ror.org/01n92vv28",
+"works": 3218,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "R54e5b7b5",
+"name": "Polytechnic Institute of Setúbal",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.ips.pt/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='www.unips.pt', port=443): Max retries exceeded with ur",
 "quality": 0
 },
 {
@@ -5882,6 +11011,50 @@
 "quality": 0
 },
 {
+"id": "Rec4140d1",
+"name": "Röda Korsets Högskola",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "https://www.rkh.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2801901481",
+"ror": "https://ror.org/01f0prq08",
+"works": 672,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [
+"redcrossuniversitycollege.sharepoint.com"
+],
+"js": false,
+"method_used": "adapter+html",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Raefcb6ca",
+"name": "Schaffhausen Institute of Technology",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://sit.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPSConnectionPool(host='sit.org', port=443): Max retries exceeded with url: / ",
+"quality": 0
+},
+{
 "id": "R3a2a5b6b",
 "name": "Shandong University",
 "type": "university",
@@ -5904,6 +11077,27 @@
 "tsinghua.edu.cn",
 "zju.edu.cn"
 ],
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R83061bdd",
+"name": "Sibelius Academy",
+"type": "university",
+"country": "Finland",
+"cc": "FI",
+"city": "",
+"url": "http://www.uniarts.fi/siba",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
 "status": "no_listing",
 "reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
@@ -5998,6 +11192,111 @@
 "quality": 0
 },
 {
+"id": "R52b59b78",
+"name": "Swedish Collegium for Advanced Study",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Uppsala",
+"url": "https://www.swedishcollegium.se/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I185977053",
+"ror": "https://ror.org/03gc71b86",
+"works": 614,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rc59a8099",
+"name": "Swedish School of Sport and Health Sciences",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Stockholm",
+"url": "https://www.gih.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I4210136707",
+"ror": "https://ror.org/046hach49",
+"works": 2050,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "Rae3330ff",
+"name": "Swiss Association for Private Schools and Universities",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.sapsu.org/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Rad317a75",
+"name": "Swiss Hotel Schools Association",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "http://www.aseh.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='www.aseh.ch', port=80): Max retries exceeded with url: ",
+"quality": 0
+},
+{
+"id": "R87aad348",
+"name": "The Economic Council of the Labour Movement",
+"type": "institute",
+"country": "Denmark",
+"cc": "DK",
+"city": "",
+"url": "http://www.ae.dk",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
 "id": "Re33c0c51",
 "name": "The University of Melbourne",
 "type": "university",
@@ -6016,6 +11315,72 @@
 "vetted": "2026-11-20",
 "status": "unreachable",
 "reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Rad69d7ae",
+"name": "Transnational University Limburg",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Maastricht",
+"url": "http://www.tul.edu/default.asp",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I183941352",
+"ror": "https://ror.org/05f0rzm15",
+"works": 899,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R2f832dc8",
+"name": "Trinity Quantum Alliance",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "https://www.trinity-quantum-alliance.com/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R509bf5ff",
+"name": "UBIS SA Geneva",
+"type": "university",
+"country": "Switzerland",
+"cc": "CH",
+"city": "",
+"url": "https://www.ubis-geneva.ch",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": true,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
 },
 {
@@ -6083,6 +11448,24 @@
 "quality": 0
 },
 {
+"id": "Rc4ae9892",
+"name": "Universidade Autónoma de Lisboa",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.autonoma.pt",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
 "id": "Ra6954378",
 "name": "Universidade Federal do Rio Grande do Sul",
 "type": "university",
@@ -6101,6 +11484,90 @@
 "vetted": "2026-11-20",
 "status": "unreachable",
 "reason": "HTTPSConnectionPool(host='www.ufrgs.br', port=443): Max retries exceeded with ur",
+"quality": 0
+},
+{
+"id": "R9754a038",
+"name": "Universidade Lusófona do Porto",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.ulp.pt",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "blocked_robots",
+"reason": "robots.txt does not allow automated access",
+"quality": 0
+},
+{
+"id": "Rac6d056e",
+"name": "University College Lillebaelt",
+"type": "university",
+"country": "Denmark",
+"cc": "DK",
+"city": "Odense",
+"url": "http://international.ucl.dk/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I240344557",
+"ror": "https://ror.org/04dj1na10",
+"works": 1098,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTPConnectionPool(host='international.ucl.dk', port=80): Max retries exceeded w",
+"quality": 0
+},
+{
+"id": "R347b18a2",
+"name": "University of Applied Sciences Leiden",
+"type": "university",
+"country": "Netherlands",
+"cc": "NL",
+"city": "Leiden",
+"url": "https://www.hsleiden.nl/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I210716285",
+"ror": "https://ror.org/0093src13",
+"works": 874,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 403",
+"quality": 0
+},
+{
+"id": "Rf5562011",
+"name": "University of Borås",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Borås",
+"url": "https://www.hb.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I992397",
+"ror": "https://ror.org/01fdxwh83",
+"works": 5615,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
 },
 {
@@ -6212,6 +11679,72 @@
 "quality": 0
 },
 {
+"id": "Radc8611a",
+"name": "University of Kaiserslautern",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Kaiserslautern",
+"url": "http://www.uni-kl.de/no_cache/en/home/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I153267046",
+"ror": "https://ror.org/04zrf7b53",
+"works": 37508,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "HTTP 404",
+"quality": 0
+},
+{
+"id": "R98221214",
+"name": "University of Koblenz and Landau",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Mainz",
+"url": "http://www.uni-koblenz-landau.de/en",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I2802076133",
+"ror": "https://ror.org/01j9f6752",
+"works": 9965,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
+"id": "R4291b972",
+"name": "University of Madeira",
+"type": "university",
+"country": "Portugal",
+"cc": "PT",
+"city": "",
+"url": "http://www.uma.pt",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
 "id": "R01d095c6",
 "name": "University of Michigan",
 "type": "university",
@@ -6255,6 +11788,30 @@
 "quality": 0
 },
 {
+"id": "Rb3d4e2d2",
+"name": "University of Skövde",
+"type": "university",
+"country": "Sweden",
+"cc": "SE",
+"city": "Skövde",
+"url": "https://www.his.se",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I205158640",
+"ror": "https://ror.org/051mrsz47",
+"works": 6171,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "adapter+html",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
+"quality": 0
+},
+{
 "id": "R11357de7",
 "name": "University of Tehran",
 "type": "university",
@@ -6277,6 +11834,27 @@
 "quality": 0
 },
 {
+"id": "R783040cd",
+"name": "University of Veterinary Medicine Hannover, Foundation",
+"type": "university",
+"country": "Germany",
+"cc": "DE",
+"city": "Hanover",
+"url": "https://www.tiho-hannover.de/",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "openalex",
+"oa": "https://openalex.org/I189991",
+"ror": "https://ror.org/015qjqf64",
+"works": 18007,
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"status": "unreachable",
+"reason": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+"quality": 0
+},
+{
 "id": "Re10e859f",
 "name": "University of Virginia",
 "type": "university",
@@ -6295,6 +11873,27 @@
 "vetted": "2026-11-20",
 "status": "unreachable",
 "reason": "HTTPSConnectionPool(host='virginia.edu', port=443): Max retries exceeded with ur",
+"quality": 0
+},
+{
+"id": "R2c6ecb40",
+"name": "Veterinary Ireland",
+"type": "institute",
+"country": "Ireland",
+"cc": "IE",
+"city": "",
+"url": "http://www.veterinaryireland.ie",
+"search": null,
+"method": "auto",
+"active": true,
+"via": "wikidata",
+"discovered": "2026-11-20",
+"vetted": "2026-11-20",
+"outlinks": [],
+"js": false,
+"method_used": "html",
+"status": "no_listing",
+"reason": "no jobs / PhD / scholarship page found from the home page",
 "quality": 0
 },
 {
