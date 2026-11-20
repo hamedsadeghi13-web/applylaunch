@@ -9,24 +9,24 @@
    "no_listing": 25,
    "js_required": 3
   },
-  "curated_reachable": 589,
+  "curated_reachable": 596,
   "curated_with_real_positions": 439,
   "discovered_verified": 126,
   "really_extractable_total": 565
  },
  "positions": {
-  "total": 3377,
+  "total": 4812,
   "by_type": {
-   "Research job": 361,
-   "PhD": 792,
-   "Scholarship": 389,
-   "Internship": 1147,
-   "Postdoc": 238,
-   "Master": 450
+   "Research job": 430,
+   "PhD": 1246,
+   "Scholarship": 712,
+   "Internship": 1469,
+   "Postdoc": 429,
+   "Master": 526
   },
-  "with_deadline": 401,
-  "with_salary": 260,
-  "countries": 61
+  "with_deadline": 494,
+  "with_salary": 308,
+  "countries": 69
  },
  "professors": {
   "total": 12000,
