@@ -28,6 +28,9 @@ jobs:
           cache: pip
           cache-dependency-path: crawler/requirements.txt
       - run: pip install -r crawler/requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
       - name: Install headless browser (only used for JavaScript-built sites)
         run: python -m playwright install --with-deps chromium || echo "browser not installed - JavaScript sources will be marked as needing a browser"
       - name: Run
@@ -35,6 +38,7 @@ jobs:
           # "timeout" stops the program from outside even if it is frozen; the last checkpoint is still published
           timeout -k 30 "$((BUDGET_MIN + 6))m" python crawler/crawl.py || echo "Stopped by the time limit (exit code $?) - publishing the last checkpoint"
           python crawler/report.py
+          node tools/bake.js          # domain scores (title + page text) for the search engine; same engine file as the site
         env:
           # optional secrets: add them in GitHub -> Settings -> Secrets and variables -> Actions (never in the code)
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}

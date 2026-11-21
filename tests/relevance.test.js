@@ -7,7 +7,7 @@ const cases = [
   ['Landscape Architecture', 'direct'], ['Interior Architecture', 'direct'], ['Junior Architect - Retail', 'direct'], ['Project Architect', 'direct'],
   ['DIPLÔME D’ÉTAT D\'ARCHITECTE (MASTER)', 'direct'],
   ['Urban Design', 'related'], ['Computational Design in Architecture and Fabrication', 'direct'],
-  ['Parametric design and robotic fabrication for timber construction', 'related'],
+  ['Parametric design and robotic fabrication for timber construction', 'direct'],
   ['Software Architect', 'irrelevant'], ['C++ Software Architecture', 'irrelevant'], ['Software Development Architect', 'irrelevant'],
   ['Solutions Architect', 'irrelevant'], ['Cloud Architect - AWS', 'irrelevant'], ['Enterprise Architect', 'irrelevant'],
   ['PhD in computer architecture and processors', 'irrelevant'], ['Neural network architecture search PhD', 'irrelevant'],

@@ -21,6 +21,7 @@ UA = os.environ.get('CRAWLER_UA', 'ApplyLaunchBot/1.0 (academic opportunity sear
 TODAY = dt.date.today()
 sys.path.insert(0, HERE)
 import render                                              # optional headless browser for JavaScript-built pages
+import extract as X                                        # page understanding: type, kind (opening/programme/info/noise), description, requirements, topics
 MAX_RENDER_DETAIL = 8                                      # detail pages rendered with the browser per source and run
 
 # ------------------------------------------------------------------ keyword lists
@@ -230,27 +231,37 @@ def _kw_rx(k):
     return re.compile(r'(?<![a-z\u00c0-\u024f])' + re.escape(k) + (r"(?:s|'s|e?s)?(?![a-z\u00c0-\u024f])" if k in _STRICT else ''))
 _TYPE_RX = [(n, [_kw_rx(k) for k in kws]) for n, kws in TYPES]
 
-def classify(title, body):
-    for scope in (title, body[:800]):
-        s = scope.lower()
-        for name, rxs in _TYPE_RX:
-            if any(r.search(s) for r in rxs):
-                return name
-    return None
+_KEY = {v: k for k, v in X._NAME.items()}                      # 'PhD' -> 'phd'
 
-_TYPE_NAME = {'phd': 'PhD', 'master': 'Master', 'scholar': 'Scholarship', 'postdoc': 'Postdoc', 'intern': 'Internship', 'job': 'Research job'}
+def classify(title, body):
+    """opportunity type by WHOLE WORDS: the title decides; the start of the main text only if the title says nothing"""
+    if X.is_professor(title):
+        return 'professor'
+    t = X.type_of(title, body)
+    return _KEY.get(t) if t else None
+
+_TYPE_NAME = X._NAME
 
 def retype_stored(pos):
-    """One-time repair of records that were typed with the old substring rule (e.g. 'International ...' stored as Internship).
-    Nothing is deleted: a record that no longer looks like an internship becomes the generic 'Research job' type."""
+    """Principled repair of stored records (nothing is deleted):
+       * type: re-derived from the title by whole words. A record whose title has no evidence for Internship / Research job
+         (e.g. 'International Students' once caught by the substring rule) becomes 'Other', never a made-up job type.
+       * kind: opening / programme / info / noise from the title (refined later from the page text by --enrich)."""
     n = 0
     for r in pos.values():
-        t = classify(r.get('title', ''), '')
+        title = r.get('title', '')
+        t = classify(title, '')
         new = _TYPE_NAME.get(t) if t and t != 'professor' else None
-        if new and new != r.get('type') and (r.get('type') == 'Internship' or not r.get('retyped')):
+        old = r.get('type')
+        if new and new != old and (old in ('Internship', 'Research job', 'Other') or not r.get('retyped')):
             r['type'], r['retyped'] = new, True; n += 1
-        elif not new and r.get('type') == 'Internship':
-            r['type'], r['retyped'] = 'Research job', True; n += 1
+        elif not new and old in ('Internship', 'Research job'):
+            r['type'], r['retyped'] = 'Other', True; n += 1
+        if not r.get('ks') or r.get('ks') == 't':                 # title-level verdict; page-level verdicts ('p') are kept
+            k = X.kind_of_title(title)
+            if k != r.get('kind'):
+                n += 1
+            r['kind'], r['ks'] = k, 't'
     return n
 
 def analyse(url, html, src, hub, jobld=None):
@@ -271,7 +282,8 @@ def analyse(url, html, src, hub, jobld=None):
     if len(title) < 8:
         return None, 'no title'
     body = re.sub(r'\s+', ' ', (BeautifulSoup(str(jl.get('description', '')), 'lxml').get_text(' ') + ' ' if jl and jl.get('description') else '') + soup.get_text(' '))[:120000]
-    typ = classify(title, body)
+    main = X.main_text(soup)
+    typ = classify(title, main)
     if typ in (None, 'professor'):
         return None, 'type'
     if typ == 'job' and not re.search(r'phd|doctoral|research|science|scientific|wissenschaft', title, re.I):
@@ -337,8 +349,10 @@ def analyse(url, html, src, hub, jobld=None):
     for m in re.finditer(r'(?:Prof\.?(?: Dr\.?)?(?: habil\.?)?|Professor|Dr\.) ([A-ZÀ-Ý][\w\-\']+(?: [A-ZÀ-Ý][\w\-\']+){1,2})', body[:20000]):
         if m.group(1) not in sup:
             sup.append(m.group(1))
-    meta = soup.find('meta', attrs={'name': re.compile('^keywords$', re.I)})
-    topics = (meta.get('content', '') if meta else '')[:200]
+    topics = X.page_keywords(soup)
+    kind = X.kind_of_page(title, main, jl, dl)
+    if kind == 'noise':
+        return None, 'noise'
     ielts = ''
     m = re.search(r'IELTS[^.]{0,50}?\b([5-8](?:\.[05])?)\b', body)
     if m:
@@ -355,7 +369,8 @@ def analyse(url, html, src, hub, jobld=None):
         hub=hub, url=url, deadline=dl.isoformat() if dl else None, funding=funding, duration=find_duration(body),
         salary=sal, currency=cur, portfolio=yes_no(body, 'portfolio', r'no portfolio|portfolio (is )?not required'),
         proposal=yes_no(body, 'proposal', r'no (research )?proposal|proposal (is )?not required'),
-        fee=fee or 'Not stated', ielts=ielts, gre='Yes' if re.search(r'\bGRE\b', body) and not re.search(r'no GRE|GRE (is )?not (required|needed)|without GRE|GRE waived', body, re.I) else '', topics=topics, sup=sup[:3])
+        fee=fee or 'Not stated', ielts=ielts, desc=X.describe(soup, jl, main), req=X.requirements(main), rt=X.research_topics(soup, jl, main), kind=kind, ks='p', enr=TODAY.isoformat(),
+        gre='Yes' if re.search(r'\bGRE\b', body) and not re.search(r'no GRE|GRE (is )?not (required|needed)|without GRE|GRE waived', body, re.I) else '', topics=topics, sup=sup[:3])
     return rec, 'ok'
 
 # ------------------------------------------------------------------ one source
@@ -501,6 +516,66 @@ def crawl_source(src, F, state_pos, max_links, deadline_ts):
         stat['needs_adapter'] = False
     return stat, new_recs, touched
 
+# ------------------------------------------------------------------ enrichment of stored records
+def enrich_one(r, F):
+    """fetch the source page of a stored record and fill description / admission requirements / research topics / kind from the page itself"""
+    html, _, final = F.get(r['url'])
+    soup = BeautifulSoup(html, 'lxml')
+    jl = (jsonld_jobs(soup) or [None])[0]
+    for t in soup(['script', 'style', 'noscript', 'nav', 'footer', 'header', 'form']):
+        if not (t.name == 'script' and t.get('type') == 'application/ld+json'):
+            t.decompose()
+    main = X.main_text(soup)
+    if len(main) < 80:
+        raise ValueError('empty page')
+    dl = None
+    if r.get('deadline'):
+        try:
+            dl = dt.date.fromisoformat(r['deadline'])
+        except Exception:
+            dl = None
+    r['desc'], r['req'], r['rt'] = X.describe(soup, jl, main), X.requirements(main), X.research_topics(soup, jl, main)
+    kw = X.page_keywords(soup)
+    if kw:
+        r['topics'] = kw
+    k = X.kind_of_page(r.get('title', ''), main, jl, dl)
+    r['kind'], r['ks'] = k, 'p'
+    # a page that is itself a posting but was typed 'Other' gets its type from the main text, whole words only
+    if r.get('type') == 'Other' and k in ('opening', 'programme'):
+        t = X.type_of(r.get('title', ''), main)
+        if t and not X.is_professor(r.get('title', '')):
+            r['type'] = t
+    r['enr'] = TODAY.isoformat()
+
+def enrich(pos, F, n_max, deadline_ts, workers):
+    todo = [(k, r) for k, r in pos.items() if not r.get('enr') and r.get('enr_fail', 0) < 3 and r.get('url')]
+    # records that look most like real opportunities first, then oldest
+    pri = {'opening': 0, 'programme': 1, 'info': 2, 'noise': 3}
+    todo.sort(key=lambda kr: (pri.get(kr[1].get('kind'), 2), kr[1].get('first_seen', '')))
+    todo = todo[:n_max]
+    ok = [0]
+    fail = [0]
+    lock = threading.Lock()
+    def go(kr):
+        if time.time() > deadline_ts:
+            return
+        k, r = kr
+        try:
+            enrich_one(r, F)
+            with lock:
+                ok[0] += 1
+        except Exception:
+            with lock:
+                r['enr_fail'] = r.get('enr_fail', 0) + 1
+                fail[0] += 1
+        with lock:
+            if (ok[0] + fail[0]) % 100 == 0:
+                print(f'  enriched {ok[0]} (failed {fail[0]}) of {len(todo)}', flush=True)
+    ex = ThreadPoolExecutor(workers)
+    list(ex.map(go, todo))
+    ex.shutdown(wait=False)
+    return ok[0], fail[0], len([1 for r in pos.values() if r.get('enr')]), len(pos)
+
 # ------------------------------------------------------------------ main
 def main():
     ap = argparse.ArgumentParser()
@@ -512,6 +587,8 @@ def main():
     ap.add_argument('--max-links', type=int, default=int(os.environ.get('MAX_LINKS', 40)))
     ap.add_argument('--budget-min', type=int, default=int(os.environ.get('BUDGET_MIN', 300)))
     ap.add_argument('--delay', type=float, default=float(os.environ.get('DELAY', 1.0)))
+    ap.add_argument('--enrich-max', type=int, default=int(os.environ.get('ENRICH_MAX', 0)), help='fetch the source pages of up to N stored records that have no page text yet')
+    ap.add_argument('--enrich-only', action='store_true', help='skip source crawling, only enrich stored records')
     a = ap.parse_args()
     t0 = time.time()
     deadline_ts = t0 + a.budget_min * 60
@@ -530,7 +607,7 @@ def main():
         if st.get('fails', 0) >= 6 and st.get('last_try') and (TODAY - dt.date.fromisoformat(st['last_try'])).days < 7:
             return False
         return s.get('active', True)
-    todo = [s for s in sources if due(s)]
+    todo = [] if a.enrich_only else [s for s in sources if due(s)]
     todo.sort(key=lambda s: sstat.get(s['id'], {}).get('last_try', ''))   # least recently visited first, so every source is covered over time
     if a.limit:
         todo = todo[:a.limit]
@@ -553,6 +630,8 @@ def main():
                 pos[k]['last_seen'] = now
             for r in recs:
                 k = r.pop('_k', None) or norm_url(r['url'])
+                r.setdefault('kind', X.kind_of_title(r.get('title', '')))
+                r.setdefault('ks', 't')
                 r['first_seen'] = now
                 r['last_seen'] = now
                 pos[k] = r
@@ -585,7 +664,10 @@ def main():
             seen_key.add(dk)
             out.append(r)
         out.sort(key=lambda r: (r['deadline'] or '9999', r['title']))
-        pub = [{k: v for k, v in r.items() if k != 'sid'} for r in out]
+        PRIV = ('sid', 'desc', 'req', 'rt', 'ks', 'enr', 'enr_fail')            # page text lives in text.json (loaded on demand), not in the search index
+        pub = [{k: v for k, v in r.items() if k not in PRIV} for r in out]
+        txt = {str(r['id']): [r.get('desc', ''), r.get('req', ''), r.get('rt', '')] for r in out if r.get('desc') or r.get('req') or r.get('rt')}
+        json.dump(dict(updated=TODAY.isoformat(), count=len(txt), text=txt), open(os.path.join(os.path.dirname(a.out), 'text.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         os.makedirs(os.path.dirname(a.out) or '.', exist_ok=True)
         json.dump(dict(updated=TODAY.isoformat(), count=len(pub), positions=pub), open(a.out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         meta = dict(updated=TODAY.isoformat(), render=render.stats(), duplicates_dropped=dup_n[0], expired_or_stale_dropped=stale_n[0])
@@ -597,6 +679,9 @@ def main():
     ex = ThreadPoolExecutor(a.workers)
     list(ex.map(work, todo))
     ex.shutdown(wait=False)
+    if a.enrich_max:
+        er = enrich(pos, F, a.enrich_max, deadline_ts, min(a.workers, 16))
+        print(f'ENRICH: ok {er[0]} failed {er[1]} | records with page text {er[2]}/{er[3]}', flush=True)
     out, ss_c = save()
     ok = sum(1 for v in ss_c.values() if v.get('ok'))
     print(f'DONE: {len(out)} positions | {done[0]} sources visited this run | {ok}/{len(ss_c)} sources reachable | {int(time.time()-t0)}s')
