@@ -541,6 +541,7 @@ footer{padding-left:56px}
 </head>
 <body>
 <div id="app"><p style="font:15px sans-serif;padding:40px;text-align:center;color:#667">Loading… / در حال بارگذاری…</p></div><noscript><p style="font:16px sans-serif;padding:40px;text-align:center">ApplyLaunch needs JavaScript. Please enable it in your browser. / برای استفاده از سایت جاوااسکریپت را فعال کنید.</p></noscript>
+<script src="relevance.js"></script>
 <script>
 /* ============================ SETTINGS ============================ */
 // Numbers shown at the top of the home page. Replace with real numbers from your server.
@@ -670,7 +671,8 @@ const STR = {
  matchesN:['sample matches for this profile','نتیجه‌ی نمونه برای این پروفایل','bu profil için örnek eşleşme'], showM:['Show my matches','نتایج را نشان بده','Eşleşmelerimi göster'],
  loadSample:['Load an example profile','بارگذاری یک پروفایل نمونه','Örnek profil yükle'], reset:['Clear profile','پاک کردن پروفایل','Profili temizle'],
  /* results */
- rProf:['Your matches','نتایج تو','Eşleşmelerin'], rSearch:['Search results','نتایج جستجو','Arama sonuçları'], rCount:['positions','موقعیت','pozisyon'],
+ rProf:['Your matches','نتایج تو','Eşleşmelerin'], rSearch:['Search results','نتایج جستجو','Arama sonuçları'], irrHidden:['Hidden: matched the word but belong to another field','پنهان شد: کلمه مشترک دارند اما به رشتهٔ دیگری تعلق دارند','Gizlendi: kelime eşleşti ama başka bir alana ait'],irrShown:['Shown at the end: other-field look-alikes','در انتها نمایش داده شد: نتایج رشتهٔ دیگر با کلمهٔ مشابه','Sonda gösterildi: başka alandaki benzerler'],irrShow:['Show them','نمایش','Göster'],irrHide:['Hide them','پنهان کن','Gizle'],relRelated:['Related field','رشتهٔ مرتبط','İlgili alan'],relOther:['Other field','رشتهٔ دیگر','Başka alan'],
+ rCount:['positions','موقعیت','pozisyon'],
  sortL:['Sort by','مرتب‌سازی','Sırala'], sortM:['Best match','بیشترین تطابق','En iyi eşleşme'], sortD:['Nearest deadline','نزدیک‌ترین مهلت','En yakın son tarih'], sortP:['Highest pay','بیشترین حقوق','En yüksek maaş'],
  types:[['phd','PhD','دکتری','Doktora'],['master','Master','ارشد','Yüksek lisans'],['scholar','Scholarship','بورسیه','Burs'],['job','Research job','شغل پژوهشی','Araştırma işi'],['postdoc','Postdoc','پسادکتری','Doktora sonrası'],['intern','Internship','کارآموزی','Staj']],
  fundNames:{full:['Fully funded','فاند کامل','Tam burs'],partial:['Partial funding','فاند جزئی','Kısmi burs'],none:['No funding','بدون فاند','Burs yok']},
@@ -1055,7 +1057,7 @@ const emptyP=()=>({name:'',email:'',alerts:{on:false,max:'10'},citizen:'',curCou
 const SAMPLE_P=()=>Object.assign(emptyP(),{goals:['phd'],edu:[{level:'Bachelor',field:'Architectural engineering',uni:'',country:'Iran',gpa:'',scale:'20',year:'',thesis:''},{level:'Master',field:'Architectural engineering',uni:'',country:'Iran',gpa:'16.43',scale:'20',year:'',thesis:'Sustainable architecture'}],rkw:'sustainability, urban resilience, energy-efficient buildings',skills:'AutoCAD, Revit, EnergyPlus',langs:[{lang:'English',lvl:'Intermediate'},{lang:'Persian',lvl:'Native'}],tests:[{test:'IELTS',score:'6.5'}],citizen:'Iran',fieldSel:['arch.arch','arch.urban','env.clim','arch.build.energy'],regions:['eu','na','oc','as'],fundReq:'full',spouse:true,res:true,ins:true,recs:'2',canProposal:'yes',hasPortfolio:'yes'});
 function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
 function store(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
-const S={lang:load('orb_lang','en'),screen:'home',ptab:1,mode:'profile',member:false,open:null,saved:load('orb_saved',[]),q:{text:'',deg:'all',opp:'all',ft:'all',cov:'all',emp:'all',region:'all'},sort:'match',pmode:'profile',popen:null,modal:false,user:(load('orb_in',false)?load('orb_user',null):null),acc:'ov',dossier:null,fx:{},uniOpen:false};
+const S={lang:load('orb_lang','en'),screen:'home',ptab:1,mode:'profile',member:false,open:null,saved:load('orb_saved',[]),q:{text:'',kind:'all',deg:'all',opp:'all',ft:'all',cov:'all',emp:'all',region:'all'},sort:'match',pmode:'profile',popen:null,modal:false,user:(load('orb_in',false)?load('orb_user',null):null),acc:'ov',dossier:null,fx:{},uniOpen:false};
 let P=Object.assign(emptyP(),load('orb_profile',{}));
 /* migrate profiles saved by older versions */
 (function(){
@@ -1093,12 +1095,13 @@ const XOV={
  69:{deg:AL,opp:['training'],ft:['unfunded'],cov:'unfunded',emp:'unpaid'},
  70:{deg:['master','phd'],opp:['school'],ft:['scholarship'],cov:'travel',emp:'unpaid'}};
 const QL={
+ kind:[['phd','PhD position','موقعیت دکتری (PhD)','Doktora pozisyonu'],['postdoc','Postdoctoral position','موقعیت پسادکتری','Doktora sonrası pozisyon'],['master','Master’s programme','کارشناسی ارشد','Yüksek lisans'],['bachelor','Bachelor’s programme','کارشناسی','Lisans'],['scholar','Scholarship / fellowship','بورسیه / فلوشیپ','Burs / fellowship'],['intern','Internship','کارآموزی','Staj'],['job','Academic / research job','شغل دانشگاهی / پژوهشی','Akademik / araştırma işi']],
  deg:[['bachelor','Bachelor’s','کارشناسی','Lisans'],['master','Master’s','کارشناسی ارشد','Yüksek lisans'],['phd','Doctoral (PhD)','دکتری (PhD)','Doktora (PhD)']],
  opp:[['degree','Degree Program','برنامه‌ی تحصیلی مدرک‌دار','Derece programı'],['phd','PhD Position','موقعیت دکتری','Doktora pozisyonu'],['postdoc','Postdoctoral Position','موقعیت پسادکتری','Doktora sonrası pozisyon'],['research','Research Position','موقعیت پژوهشی','Araştırma pozisyonu'],['intern','Internship','کارآموزی','Staj'],['visiting','Visiting Researcher','پژوهشگر مهمان','Misafir araştırmacı'],['exchange','Exchange Program','برنامه‌ی تبادل دانشجو','Değişim programı'],['school','Summer / Winter School','مدرسه‌ی تابستانی / زمستانی','Yaz / Kış okulu'],['training','Professional Training','آموزش حرفه‌ای','Mesleki eğitim']],
  ft:[['scholarship','Scholarship','بورسیه','Burs'],['fellowship','Fellowship','فلوشیپ','Fellowship'],['ra','Research Assistantship (RA)','دستیار پژوهشی (RA)','Araştırma asistanlığı (RA)'],['ta','Teaching Assistantship (TA)','دستیار آموزشی (TA)','Eğitim asistanlığı (TA)'],['ga','Graduate Assistantship (GA)','دستیار تحصیلات تکمیلی (GA)','Lisansüstü asistanlık (GA)'],['grant','Research Grant','گرنت پژوهشی','Araştırma hibesi'],['employment','Employment / Salary','استخدام / حقوق','İstihdam / maaş'],['self','Self-funded','هزینه‌ی شخصی','Kendi finansmanı'],['unfunded','Unfunded','بدون فاند','Finansmansız']],
  cov:[['full','Fully Funded','فاند کامل','Tam burslu'],['fulltl','Fully Funded (Tuition + Living Expenses)','فاند کامل (شهریه + هزینه‌ی زندگی)','Tam burslu (harç + yaşam gideri)'],['tuition','Full Tuition Waiver','معافیت کامل از شهریه','Tam harç muafiyeti'],['partial','Partially Funded','فاند جزئی','Kısmi burslu'],['living','Living Expenses Only','فقط هزینه‌ی زندگی','Yalnızca yaşam gideri'],['travel','Travel / Research Expenses Only','فقط هزینه‌ی سفر / پژوهش','Yalnızca seyahat / araştırma gideri'],['unfunded','Unfunded','بدون فاند','Finansmansız'],['notspec','Not Specified','نامشخص','Belirtilmemiş']],
  emp:[['paid','Paid','دارای حقوق','Ücretli'],['unpaid','Unpaid','بدون حقوق','Ücretsiz çalışma'],['salaried','Salaried Employment','استخدام با حقوق ثابت','Maaşlı istihdam'],['stipend','Stipend-based','دریافت کمک‌هزینه (استایپند)','Burs/ödenek bazlı'],['notspec','Not Specified','نامشخص','Belirtilmemiş']]};
-const QT={deg:['Academic level','مقطع تحصیلی','Akademik düzey'],opp:['Opportunity type','نوع فرصت','Fırsat türü'],ft:['Funding type','نوع تأمین مالی','Finansman türü'],cov:['Funding coverage','میزان پوشش مالی','Finansman kapsamı'],emp:['Employment type','نوع اشتغال','İstihdam türü']};
+const QT={kind:['Academic opportunity','فرصت تحصیلی','Akademik fırsat'],deg:['Academic level','مقطع تحصیلی','Akademik düzey'],opp:['Opportunity type','نوع فرصت','Fırsat türü'],ft:['Funding type','نوع تأمین مالی','Finansman türü'],cov:['Funding coverage','میزان پوشش مالی','Finansman kapsamı'],emp:['Employment type','نوع اشتغال','İstihdam türü']};
 const qlab=(g,id)=>{const x=QL[g].find(t=>t[0]===id);return x?nm(x):''};
 function xa(p){
  if(p.x)return p.x;
@@ -1191,21 +1194,39 @@ function posOnlineKick(q){
  q=(q||'').trim();if(!LIVE||!SITE.api||q.length<3||q===ONP.q)return;ONP.q=q;
  fetch(String(SITE.api).replace(/\/$/,'')+'/search?q='+encodeURIComponent(q)).then(r=>r.ok?r.json():Promise.reject()).then(j=>{const ex=new Set(POSITIONS.map(p=>p.id));(j.positions||[]).forEach(r=>{const p=normPos(r);if(p&&!ex.has(p.id)){p.online=true;POSITIONS.push(p);ex.add(p.id)}});render(true)}).catch(()=>{});
 }
+function kindsOf(p){const t=p.type,ti=p.title||'',k=[];
+ if(t==='phd'||(t==='scholar'&&/ph\.?d|doctor/i.test(ti)))k.push('phd');
+ if(t==='postdoc')k.push('postdoc');
+ if(t==='master'||(t==='scholar'&&/master|msc\b/i.test(ti)))k.push('master');
+ if(/bachelor|bsc\b|undergraduate/i.test(ti)&&t!=='job')k.push('bachelor');
+ if(t==='scholar')k.push('scholar');if(t==='intern')k.push('intern');if(t==='job')k.push('job');
+ return k}
+let IRR=[];
+/* Topical relevance: results are grouped direct / related / unclassified; look-alike words in another field (e.g. "Software Architect" for "Architecture") are held back */
 function searchResults(){
  posOnlineKick(S.q.text);
- const q=S.q,toks=q.text.toLowerCase().split(/\s+/).filter(Boolean);
- return POSITIONS.filter(p=>{
+ const q=S.q,pq=Rel.parseQuery(q.text),toksAll=q.text.toLowerCase().split(/\s+/).filter(Boolean),toks=pq.doms.size?pq.rest:toksAll;
+ const out=[];IRR=[];
+ POSITIONS.forEach(p=>{
   const c=CBYCODE[p.cc];
   const X=xa(p);
-  if(q.deg!=='all'&&!X.deg.includes(q.deg))return false;
-  if(q.opp!=='all'&&!X.opp.includes(q.opp))return false;
-  if(q.ft!=='all'&&!X.ft.includes(q.ft))return false;
-  if(q.cov!=='all'&&X.cov!==q.cov)return false;
-  if(q.emp!=='all'&&X.emp!==q.emp)return false;
-  if(q.region!=='all'&&c[4]!==q.region)return false;
+  if(q.kind&&q.kind!=='all'&&!kindsOf(p).includes(q.kind))return;
+  if(q.deg!=='all'&&!X.deg.includes(q.deg))return;
+  if(q.opp!=='all'&&!X.opp.includes(q.opp))return;
+  if(q.ft!=='all'&&!X.ft.includes(q.ft))return;
+  if(q.cov!=='all'&&X.cov!==q.cov)return;
+  if(q.emp!=='all'&&X.emp!==q.emp)return;
+  if(q.region!=='all'&&c[4]!==q.region)return;
   const hay=[p.title,p.uni,p.city,p.topics||'',c[1],c[2],c[3],...p.fields.map(f=>TAXS[f])].join(' ').toLowerCase();
-  return toks.every(t=>hay.includes(t));
- }).map(p=>Object.assign({},p,{score:null,why:[],warn:[]}));
+  if(!toks.every(t=>hay.includes(t)))return;
+  let j;
+  if(pq.doms.size){j=Rel.judge(p,pq,Rel.wordHit(pq,p.title+' '+Rel.cleanTopics(p.topics)));if(!j)return}
+  else j='direct';
+  const r=Object.assign({},p,{score:null,why:[],warn:[],rel:j,relRank:{direct:0,related:1,unclassified:2,irrelevant:3}[j]});
+  (j==='irrelevant'?IRR:out).push(r);
+ });
+ if(S.showIrr&&IRR.length)return out.concat(IRR);
+ return out;
 }
 const SORTS={
  match:(a,b)=>(b.score-a.score)||((a.dl??9999)-(b.dl??9999)),
@@ -1215,7 +1236,7 @@ const SORTS={
  rank:(a,b)=>(rankOf(a.uni)||9999)-(rankOf(b.uni)||9999),
  cost:(a,b)=>(CITYCOST[a.city]||99999)-(CITYCOST[b.city]||99999)
 };
-function sorted(list){let by=S.sort;if(by==='match'&&S.mode!=='profile')by='dl';return list.slice().sort(SORTS[by])}
+function sorted(list){let by=S.sort;if(by==='match'&&S.mode!=='profile')by='dl';return list.slice().sort((a,b)=>((a.relRank||0)-(b.relRank||0))||SORTS[by](a,b))}
 function completeness(){
  const f=[P.goals.length,P.edu.some(e=>e.level||e.field),P.work.some(w=>w.title),P.rkw||P.skills||P.pubs||P.certs,P.langs.some(l=>l.lang)||P.tests.some(t=>t.score),P.fieldSel.length||P.customFields.length,P.regions.length||P.countries.length||P.fundReq!=='any'||P.minPay];
  return Math.round(100*f.filter(Boolean).length/f.length);
@@ -1408,7 +1429,7 @@ function side(){const n=[['home','home'],['explore','explore'],['profs','profNav
 const qt=g=>tr3(QT[g]);
 function searchBar(){const q=S.q;
  return `<div class="gs"><input data-q="text" value="${esc(q.text)}" aria-label="${esc(T('qsAria'))}" autocomplete="off"><button class="go" data-act="search">${T('goB')}</button></div>
- <div class="qf"><div class="fld"><label>${qt('deg')}</label><select data-q="deg">${opt('all',T('all'),q.deg==='all')}${QL.deg.map(t=>opt(t[0],nm(t),q.deg===t[0])).join('')}</select></div><div class="fld"><label>${qt('opp')}</label><select data-q="opp">${opt('all',T('all'),q.opp==='all')}${QL.opp.map(t=>opt(t[0],nm(t),q.opp===t[0])).join('')}</select></div><div class="fld"><label>${qt('ft')}</label><select data-q="ft">${opt('all',T('all'),q.ft==='all')}${QL.ft.map(t=>opt(t[0],nm(t),q.ft===t[0])).join('')}</select></div><div class="fld"><label>${qt('cov')}</label><select data-q="cov">${opt('all',T('all'),q.cov==='all')}${QL.cov.map(t=>opt(t[0],nm(t),q.cov===t[0])).join('')}</select></div><div class="fld"><label>${qt('emp')}</label><select data-q="emp">${opt('all',T('all'),q.emp==='all')}${QL.emp.map(t=>opt(t[0],nm(t),q.emp===t[0])).join('')}</select></div><div class="fld"><label>${T('regL')}</label><select data-q="region">${opt('all',T('all'),q.region==='all')}${REGIONS.map(r=>opt(r[0],nm(r),q.region===r[0])).join('')}</select></div></div>`}
+ <div class="qf"><div class="fld"><label>${qt('kind')}</label><select data-q="kind">${opt('all',T('all'),q.kind==='all')}${QL.kind.map(t=>opt(t[0],nm(t),q.kind===t[0])).join('')}</select></div><div class="fld"><label>${qt('ft')}</label><select data-q="ft">${opt('all',T('all'),q.ft==='all')}${QL.ft.map(t=>opt(t[0],nm(t),q.ft===t[0])).join('')}</select></div><div class="fld"><label>${qt('cov')}</label><select data-q="cov">${opt('all',T('all'),q.cov==='all')}${QL.cov.map(t=>opt(t[0],nm(t),q.cov===t[0])).join('')}</select></div><div class="fld"><label>${qt('emp')}</label><select data-q="emp">${opt('all',T('all'),q.emp==='all')}${QL.emp.map(t=>opt(t[0],nm(t),q.emp===t[0])).join('')}</select></div><div class="fld"><label>${T('regL')}</label><select data-q="region">${opt('all',T('all'),q.region==='all')}${REGIONS.map(r=>opt(r[0],nm(r),q.region===r[0])).join('')}</select></div></div>`}
 
 const SITE={email:'hamedsadeghi13@gmail.com',ads:'hamedsadeghi13@gmail.com',phone:'+989141464164'}; /* replace with your real phone and emails */
 /* MEDIA KIT: fill these from Google Analytics once the site is live; while a value is null the page shows a dash.
@@ -1581,12 +1602,14 @@ function viewUnis(){
 function lockedFact(k,v,locked){return `<div class="fact"><small>${k}</small><b class="${locked?'blur':''}">${locked?'€0,000':v}</b></div>`}
 
 const IC={"bld": "<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6\"/></svg>", "pin": "<svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z\"/><circle cx=\"12\" cy=\"10\" r=\"2.5\"/></svg>", "cap": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 10l9-5 9 5-9 5-9-5z\"/><path d=\"M7 12.5V17c0 1 2.2 2.5 5 2.5s5-1.5 5-2.5v-4.5\"/></svg>", "clock": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/></svg>", "doc": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 3h7l5 5v13H7z\"/><path d=\"M14 3v5h5M10 13h6M10 17h6\"/></svg>", "field": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 20V10M10 20V4M16 20v-8M22 20H2\"/></svg>", "heartO": "<svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z\"/></svg>", "heartF": "<svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z\"/></svg>", "swap": "<svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12a9 9 0 0 1 15-6.7L21 8M21 4v4h-4M21 12a9 9 0 0 1-15 6.7L3 16M3 20v-4h4\"/></svg>", "plus": "<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v8M8 12h8\"/></svg>", "minus": "<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 12h8\"/></svg>", "back": "<svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M19 12H5M11 6l-6 6 6 6\"/></svg>", "ext": "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M14 4h6v6M20 4l-9 9M18 14v5H5V6h5\"/></svg>", "up": "<svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 15l6-6 6 6\"/></svg>"};
+function irrNote(){if(!IRR.length)return'';return `<p class="small" style="background:var(--soft,#f3f5f8);border-radius:10px;padding:10px 14px">${S.showIrr?T('irrShown'):T('irrHidden')}: <b>${fmt(IRR.length)}</b> \u00b7 <a href="#" data-act="irr">${S.showIrr?T('irrHide'):T('irrShow')}</a></p>`}
+function relChip(p){return p.rel==='related'?` \u00b7 <span class="small" style="color:var(--muted)">${T('relRelated')}</span>`:p.rel==='irrelevant'?` \u00b7 <span class="small" style="color:var(--warn)">${T('relOther')}</span>`:''}
 function card(p,idx){
  const c=CBYCODE[p.cc],locked=false,open=S.open===p.id,saved=S.saved.includes(p.id),rk=rankOf(p.uni);
  const cls=p.score==null?'':p.score>=75?'':p.score>=55?'mid':'low';
  const pay=p.pay?'\u20ac'+fmt(p.pay)+' '+T('perMo'):(LIVE?T('nsd'):T('none'));
  const urgent=(p.dl!=null&&p.dl<=10)?' style="color:var(--warn)"':'';
- const head=`<div class="head" data-act="open" data-v="${p.id}">${p.score!=null?`<div class="score ${cls}">${fmt(p.score)}</div>`:''}<div class="t"><b>${esc(p.title)}<span class="samp">${T('sampleTag')}</span></b><span class="small muted">${esc(p.uni)} \u00b7 ${esc(p.city)}, ${esc(nm(c))} \u00b7 ${kindName(p)}</span></div>
+ const head=`<div class="head" data-act="open" data-v="${p.id}">${p.score!=null?`<div class="score ${cls}">${fmt(p.score)}</div>`:''}<div class="t"><b>${esc(p.title)}<span class="samp">${T('sampleTag')}</span></b><span class="small muted">${esc(p.uni)} \u00b7 ${esc(p.city)}, ${esc(nm(c))} \u00b7 ${kindName(p)}${relChip(p)}</span></div>
  <div class="meta"><div><small>${T('rankL')}</small><b class="rankb">${rk?'#'+fmt(rk):'\u2014'}</b></div><div><small>${T('pay')}</small><b class="${locked?'blur':''}">${locked?'\u20ac0,000':pay}</b></div><div><small>${T('fund')}</small><b>${covName(p)}</b></div><div><small>${T('dl')}</small><b${urgent}>${inDays(p.dl)}</b></div><div class="vd">${open?T('dLess'):T('dView')} <span class="chev">${open?'\u2303':(S.lang==='fa'?'\u2039':'\u203a')}</span></div></div></div>`;
  if(!open)return `<div class="card">${head}</div>`;
  const tabs=[['ov',T('dTabOv')],['req',T('dTabReq')],['fund',T('dTabFund')],['apply',T('dTabApply')]].concat(p.score!=null?[['match',T('dTabMatch')]]:[]);
@@ -1615,7 +1638,7 @@ function viewExplore(){
   const empty=!P.goals.length&&!P.fieldSel.length&&!P.customFields.length&&!P.rkw&&!P.regions.length&&!P.countries.length&&P.fundReq==='any'&&!P.unis.length&&!P.topN;
   if(empty)body=`<div class="empty">${T('noProf')}<div style="margin-top:14px"><button class="btn fill" data-act="nav" data-v="profile">${T('pbB')}</button></div></div>`;
   else{const l=sorted(profileResults());body=`<div class="filters">${sortSel()}<div class="fld" style="justify-content:flex-end;flex:0 0 auto"><button class="btn" data-act="nav" data-v="profile">${T('pbB2')}</button></div></div><p class="muted small"><b>${fmt(l.length)}</b> ${T('rCount')}</p>${resultList(l)}`}
- }else{const l=sorted(searchResults());body=`<div style="margin:18px 0">${searchBar()}</div><div class="filters" style="margin-top:0">${sortSel()}</div><p class="muted small"><b>${fmt(l.length)}</b> ${T('rCount')}</p>${resultList(l)}`}
+ }else{const l=sorted(searchResults());body=`<div style="margin:18px 0">${searchBar()}</div><div class="filters" style="margin-top:0">${sortSel()}</div><p class="muted small"><b>${fmt(l.length)}</b> ${T('rCount')}</p>${irrNote()}${resultList(l)}`}
  return `<div class="wrap"><section class="sec" style="padding-top:20px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center"><h1>${T('explore')}</h1><div style="display:flex;gap:10px;flex-wrap:wrap">${tabs}</div></section>${body}</div>`;
 }
 function viewSaved(){
@@ -1747,7 +1770,7 @@ document.addEventListener('click',e=>{
   case'dunlock':S.dossier=null;S.screen='plans';keep=false;break;
   case'save':{toggleIn(S.saved,+v);persist();break}
   case'search':S.screen='explore';S.mode='search';S.open=null;if(S.sort==='match')S.sort='dl';keep=false;break;
-  case'tag':S.q={text:'',deg:'all',opp:'all',ft:'all',cov:'all',emp:'all',region:'all'};if(v==='fullphd'){S.q.deg='phd';S.q.cov='full'}else S.q.text=fieldName(v);S.screen='explore';S.mode='search';if(S.sort==='match')S.sort='dl';keep=false;break;
+  case'tag':S.q={text:'',kind:'all',deg:'all',opp:'all',ft:'all',cov:'all',emp:'all',region:'all'};if(v==='fullphd'){S.q.kind='phd';S.q.cov='full'}else S.q.text=fieldName(v);S.screen='explore';S.mode='search';if(S.sort==='match')S.sort='dl';keep=false;break;
   case'show':S.screen='explore';S.mode='profile';S.open=null;keep=false;break;
   case'chip':toggleIn(P[el.dataset.g],v);persist();break;
   case'fundreq':P.fundReq=v;persist();break;
@@ -1756,6 +1779,7 @@ document.addEventListener('click',e=>{
   case'del':P[el.dataset.k].splice(+el.dataset.i,1);persist();break;
   case'more':LIM+=40;keep=true;break;
   case'pmore':PLIM+=30;keep=true;break;
+  case'irr':S.showIrr=!S.showIrr;keep=true;break;
   case'sample':P=SAMPLE_P();persist();break;
   case'reset':P=emptyP();persist();break;
   case'goto':{const t=document.getElementById(v);if(t)t.scrollIntoView({behavior:'smooth'});return}
@@ -1820,7 +1844,7 @@ const yn=v=>/^(yes|true|1|required)$/i.test(String(v==null?'':v).trim());
 const num=v=>{const m=String(v==null?'':v).replace(/[, ]/g,'').match(/\d+(\.\d+)?/);return m?parseFloat(m[0]):0};
 function liveType(t,title){const s=(t+' '+title).toLowerCase();
  if(/post-?doc/.test(s))return'postdoc';if(/ph\.?d|doctor|dphil|promotion|doktor/.test(s))return'phd';
- if(/intern|praktik/.test(s))return'intern';if(/master|msc|m\.sc|ma\b|m\.a\./.test(s))return'master';
+ if(/\binterns?\b|internship|praktik|\bstage\b|trainee|stagiaire/.test(s))return'intern';if(/master|\bmsc\b|m\.sc|\bma\b|m\.a\./.test(s))return'master';
  if(/scholar|fellow|stipend|grant|bursary/.test(s))return'scholar';return'job'}
 function inferFields(txt){txt=' '+txt.toLowerCase()+' ';const out=[];
  TAX.forEach(n=>{if(n.lvl<2)return;const nn=n.n[0].toLowerCase();if(nn.length>=5&&txt.includes(nn))out.push([n.lvl,n.id])});

@@ -223,13 +223,35 @@ def jsonld_jobs(soup):
                         stack.append(x[k])
     return out
 
+# keywords are matched as WORDS (a keyword may continue into a longer word only if listed that way), never as bare substrings:
+# "intern" used to match "international", "burs" matched "Bursa", "master" matched "Mastering" ...
+_STRICT = {'intern', 'master', 'burs', 'promotion', 'grant for', 'chair of', 'msc', 'm.sc', 'trainee', 'tenure'}
+def _kw_rx(k):
+    return re.compile(r'(?<![a-z\u00c0-\u024f])' + re.escape(k) + (r"(?:s|'s|e?s)?(?![a-z\u00c0-\u024f])" if k in _STRICT else ''))
+_TYPE_RX = [(n, [_kw_rx(k) for k in kws]) for n, kws in TYPES]
+
 def classify(title, body):
     for scope in (title, body[:800]):
         s = scope.lower()
-        for name, kws in TYPES:
-            if any(k in s for k in kws):
+        for name, rxs in _TYPE_RX:
+            if any(r.search(s) for r in rxs):
                 return name
     return None
+
+_TYPE_NAME = {'phd': 'PhD', 'master': 'Master', 'scholar': 'Scholarship', 'postdoc': 'Postdoc', 'intern': 'Internship', 'job': 'Research job'}
+
+def retype_stored(pos):
+    """One-time repair of records that were typed with the old substring rule (e.g. 'International ...' stored as Internship).
+    Nothing is deleted: a record that no longer looks like an internship becomes the generic 'Research job' type."""
+    n = 0
+    for r in pos.values():
+        t = classify(r.get('title', ''), '')
+        new = _TYPE_NAME.get(t) if t and t != 'professor' else None
+        if new and new != r.get('type') and (r.get('type') == 'Internship' or not r.get('retyped')):
+            r['type'], r['retyped'] = new, True; n += 1
+        elif not new and r.get('type') == 'Internship':
+            r['type'], r['retyped'] = 'Research job', True; n += 1
+    return n
 
 def analyse(url, html, src, hub, jobld=None):
     soup = BeautifulSoup(html, 'lxml')
@@ -500,6 +522,7 @@ def main():
         sources += [r for r in json.load(open(reg_path, encoding='utf-8')).get('sources', []) if r.get('status') in ('verified', 'js_required') and r['id'] not in known]
     state = json.load(open(a.state, encoding='utf-8')) if os.path.exists(a.state) else {}
     pos = state.get('positions', {})
+    print('retyped stored positions:', retype_stored(pos), flush=True)
     sstat = state.get('sources', {})
     # sources that failed many times in a row are retried only once a week
     def due(s):
