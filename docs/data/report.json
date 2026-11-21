@@ -490,12 +490,12 @@
   "total": 18976,
   "by_type": {
    "PhD": 7558,
-   "Master": 3016,
+   "Master": 3017,
    "Scholarship": 3859,
-   "Internship": 385,
-   "Other": 3175,
+   "Internship": 383,
+   "Other": 3178,
    "Postdoc": 831,
-   "Research job": 152
+   "Research job": 150
   },
   "with_deadline": 727,
   "with_salary": 705,
