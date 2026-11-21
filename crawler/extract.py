@@ -23,10 +23,11 @@ _T = {
  'master':   W([r'master', r'masters', r'master[’\']s', r'msc', r'm\.sc\.?', r'm\.arch\.?', r'mphil', r'mres', r'mba', r'llm', r'ma', r'm\.a\.', r'maestr[ií]a', r'm[aá]ster', r'mestrado', r'laurea magistrale', r'yüksek lisans', r'masterstudium', r'masterstudiengang', r'masterprogramm\w*', r'master[- ]?thesis', r'masterarbeit']),
  'scholar':  W([r'scholarships?', r'fellowships?', r'stipend\w*', r'bursar(?:y|ies)', r'studentships?', r'bourses?', r'borse? di studio', r'becas?', r'bolsas?', r'burs', r'stipendi\w+', r'stipendiat\w*', r'stipendije', r'grants?', r'sponsorship']),
  'intern':   W([r'interns?', r'internships?', r'praktikum', r'praktikant\w*', r'pflichtpraktikum', r'trainee\w*', r'stagiaires?', r'pr[aá]cticas', r'becari[oa]s?', r'est[aá]gio', r'stajyer\w*', r'stage (?:h/f|f/h|de fin d.[eé]tudes|master|m2|ing[eé]nieur)', r'werkstudent\w*']),
- 'job':      W([r'research (?:assistant|associate|fellow|scientist|engineer|officer|staff|technician|support|specialist)s?', r'researchers?', r'wissenschaftliche[rn]?(?: mitarbeiter\w*)?', r'wiss\.? mitarbeit\w*', r'chercheu[rs]e?s?', r'ing[eé]nieur d.[eé]tudes?', r'investigador\w*', r'scientists?', r'forscher\w*', r'junior researcher', r'project (?:assistant|scientist|officer|researcher)', r'projektmitarbeit\w*', r'doctoral researcher', r'lecturer', r'professor\w*']),
+ 'job':      W([r'research (?:assistant|associate|fellow|scientist|engineer|officer|staff|technician|support|specialist)s?', r'wiss\.? mitarbeit\w*', r'wissenschaftliche[rn]? mitarbeiter\w*', r'junior researcher', r'project (?:assistant|scientist|officer|researcher)', r'projektmitarbeit\w*', r'doctoral researcher', r'ing[eé]nieur d.[eé]tudes?']),
+ 'jobw':     W([r'researchers?', r'wissenschaftliche[rn]?', r'wiss\.? mitarbeit\w*', r'wiss\.? mitarbeit\w*', r'chercheu[rs]e?s?', r'ing[eé]nieur d.[eé]tudes?', r'investigador\w*', r'scientists?', r'forscher\w*', r'junior researcher', r'project (?:assistant|scientist|officer|researcher)', r'projektmitarbeit\w*', r'doctoral researcher', r'lecturer', r'professor\w*']),
 }
-_ORDER = ['postdoc', 'phd', 'intern', 'master', 'scholar', 'job']      # first match wins (title evidence)
-_NAME = {'phd': 'PhD', 'master': 'Master', 'scholar': 'Scholarship', 'postdoc': 'Postdoc', 'intern': 'Internship', 'job': 'Research job'}
+_ORDER = ['postdoc', 'phd', 'intern', 'master', 'scholar', 'job', 'jobw']      # first match wins (title evidence)
+_NAME = {'phd': 'PhD', 'master': 'Master', 'scholar': 'Scholarship', 'postdoc': 'Postdoc', 'intern': 'Internship', 'job': 'Research job', 'jobw': 'Research job'}
 
 def type_of(title, lead=''):
     """whole-word type of an opportunity; the title decides, the first 400 characters of the main text only break a tie when the title says nothing"""
@@ -35,6 +36,8 @@ def type_of(title, lead=''):
             continue
         for k in _ORDER:
             if _T[k].search(scope):
+                if k == 'jobw' and not ROLE.search(scope):
+                    continue      # generic noun (researchers, scientists, lecturer...) is a type only when the text is a vacancy
                 return _NAME[k]
         if scope is title and False:
             pass
