@@ -517,21 +517,21 @@
  },
  "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score.",
  "institutions": {
-  "total": 26547,
-  "clean_total": 25839,
-  "excluded_non_institutions": 708,
-  "confirmed_by_2plus_directories": 17969,
-  "single_directory_only": 7870,
-  "countries": 171,
-  "with_website": 23075,
-  "with_ror": 21850,
+  "total": 33579,
+  "clean_total": 32826,
+  "excluded_non_institutions": 753,
+  "confirmed_by_2plus_directories": 23444,
+  "single_directory_only": 9382,
+  "countries": 221,
+  "with_website": 29791,
+  "with_ror": 28776,
   "by_directory": {
-   "ror": 17898,
-   "openalex": 21590,
-   "wikidata": 8573
+   "ror": 23394,
+   "openalex": 28509,
+   "wikidata": 8722
   },
-  "checked_for_opportunities": 3394,
-  "with_verified_source": 2028,
+  "checked_for_opportunities": 3595,
+  "with_verified_source": 2187,
   "pages_identified": {
    "jobs": 721,
    "phd": 368,
@@ -540,11 +540,12 @@
    "scholarship": 675
   },
   "directory_tasks_done": {
-   "ror": 172,
-   "openalex": 172,
-   "wikidata": 152
+   "ror": 224,
+   "openalex": 224,
+   "wikidata": 153
   },
   "top_countries": {
+   "US": 4150,
    "CN": 3191,
    "ID": 2240,
    "IN": 2235,
@@ -553,6 +554,7 @@
    "RU": 801,
    "MX": 759,
    "KR": 708,
+   "UA": 673,
    "NG": 592,
    "DE": 591,
    "GB": 586,
@@ -567,10 +569,8 @@
    "RO": 301,
    "PL": 280,
    "CH": 265,
-   "IT": 256,
-   "PT": 241,
-   "AU": 208
+   "IT": 256
   },
-  "updated": "2026-11-20"
+  "updated": "2026-11-21"
  }
 }
