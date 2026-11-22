@@ -899,7 +899,17 @@ const QSKEY = {}; QS.forEach(q=>{QSKEY[normU(q.name)]=q.rank; if(q.abbr)QSKEY[no
 const _rk={};
 function rankOf(name){ if(!(name in _rk)){ const k=normU(name); _rk[name]=QSKEY[k]||null; } return _rk[name]; }
 
-const REGIONS = [['eu','Europe','اروپا','Avrupa'],['na','North America','آمریکای شمالی','Kuzey Amerika'],['oc','Australia and New Zealand','استرالیا و نیوزیلند','Avustralya ve Yeni Zelanda'],['as','Asia (incl. Turkey)','آسیا (از جمله ترکیه)','Asya (Türkiye dahil)']];
+const REGIONS = [['eu','Europe','اروپا','Avrupa'],['na','North America (incl. Central America & Caribbean)','آمریکای شمالی (با آمریکای مرکزی و کارائیب)','Kuzey Amerika (Orta Amerika ve Karayipler dahil)'],['sa','South America','آمریکای جنوبی','Güney Amerika'],['as','Asia (incl. Middle East & Turkey)','آسیا (از جمله خاورمیانه و ترکیه)','Asya (Orta Doğu ve Türkiye dahil)'],['af','Africa','آفریقا','Afrika'],['oc','Oceania (Australia, New Zealand, Pacific)','اقیانوسیه (استرالیا، نیوزیلند، پاسیفیک)','Okyanusya (Avustralya, Yeni Zelanda, Pasifik)']];
+// every ISO country belongs to exactly one region, so a region filter never drops a country that is simply not in COUNTRIES
+const REG_OF={};
+[['eu','AD AL AT BA BE BG BY CH CY CZ DE DK EE ES FI FO FR GB UK GG GI GR HR HU IE IM IS IT JE LI LT LU LV MC MD ME MK MT NL NO PL PT RO RS RU SE SI SK SM UA VA XK'],
+ ['na','US CA MX BM GL PM AG AI AW BB BL BQ BS BZ CR CU CW DM DO GD GP GT HN HT JM KN KY LC MF MQ MS NI PA PR SV SX TC TT VC VG VI'],
+ ['sa','AR BO BR CL CO EC FK GF GY PE PY SR UY VE'],
+ ['af','AO BF BI BJ BW CD CF CG CI CM CV DJ DZ EG EH ER ET GA GH GM GN GQ GW KE KM LR LS LY MA MG ML MR MU MW MZ NA NE NG RE RW SC SD SL SN SO SS ST SZ TD TG TN TZ UG YT ZA ZM ZW'],
+ ['oc','AU NZ FJ FM GU KI MH MP NC NR NU PF PG PW SB TO TV VU WF WS AS CK'],
+ ['as','AE AF AM AZ BD BH BN BT CN GE HK ID IL IN IQ IR JO JP KG KH KP KR KW KZ LA LB LK MM MN MO MV MY NP OM PH PK PS QA SA SG SY TH TJ TL TM TR TW UZ VN YE']
+].forEach(([r,l])=>l.split(' ').forEach(c=>REG_OF[c]=r));
+const regOf=cc=>REG_OF[cc]||'other';
 // code, en, fa, tr, region, spouse visa (yes/limited), study counts for residence (yes/partial/no), insurance (covered/self)   [SAMPLE values, verify before using]
 const COUNTRIES = [
  ['DE','Germany','آلمان','Almanya','eu','yes','yes','self'],['NL','Netherlands','هلند','Hollanda','eu','yes','partial','covered'],['SE','Sweden','سوئد','İsveç','eu','yes','yes','covered'],
@@ -1164,8 +1174,10 @@ function matchOne(pos){
  if(!uniAllowed(pos))return null;
  const hay=(pos.title+' '+(pos.topics||'')+' '+pos.fields.map(f=>TAXS[f]).join(' ')).toLowerCase();
  const kws=kwList(),kh=kws.some(k=>hay.includes(k));
- let topic=topicScore(pos.fields);
- if(topic===null)topic=kws.length?(kh?.8:0):.5;else if(kh)topic=Math.max(topic,.8);
+ let topic,pqf=P.fieldSel.length?profileQuery():null;
+ if(pqf&&pqf.doms.size){const j=Rel.judge2(pos,pqf,true);topic={direct:1,related:.6,unclassified:.3}[j.k]||0;if(kh)topic=Math.max(topic,.8)}
+ else{topic=topicScore(pos.fields);
+ if(topic===null)topic=kws.length?(kh?.8:0):.5;else if(kh)topic=Math.max(topic,.8)}
  if(topic===0)return null;
  if(topic>.5)why.push(T('whyTopic'));
  let s=45*topic;
@@ -1222,7 +1234,7 @@ function searchResults(){
   if(!toks.every(t=>hay.includes(t)))return;
   let j={k:'direct',s:0};
   if(pq.doms.size){j=Rel.judge2(p,pq,Rel.wordHit(pq,p.title+' '+Rel.cleanTopics(p.topics)));if(!j.k)return}
-  const r=Object.assign({},p,{score:null,why:[],warn:[],rel:j.k,rs:j.s,relRank:{direct:0,related:1,unclassified:2,irrelevant:3}[j.k],kr:p.kind==='info'?1:0});
+  const r=Object.assign({},p,{score:null,why:[],warn:[],rel:j.k,rs:j.s,relRank:j.w?1.5:{direct:0,related:1,unclassified:2,irrelevant:3}[j.k],kr:p.kind==='info'?1:0});
   if(p.kind==='noise'){NOISEL.push(r);return}
   (j.k==='irrelevant'?IRR:out).push(r);
  });
@@ -1239,7 +1251,7 @@ const SORTS={
  rank:(a,b)=>(rankOf(a.uni)||9999)-(rankOf(b.uni)||9999),
  cost:(a,b)=>(CITYCOST[a.city]||99999)-(CITYCOST[b.city]||99999)
 };
-function sorted(list){let by=S.sort;if(by==='match'&&S.mode!=='profile')by='dl';return list.slice().sort((a,b)=>((a.relRank||0)-(b.relRank||0))||((a.kr||0)-(b.kr||0))||SORTS[by](a,b))}
+function sorted(list){let by=S.sort;if(by==='match'&&S.mode!=='profile')by='dl';return list.slice().sort((a,b)=>((a.relRank||0)-(b.relRank||0))||((a.kr||0)-(b.kr||0))||(((b.rs||0)>=4.5)-((a.rs||0)>=4.5))||SORTS[by](a,b))}
 function completeness(){
  const f=[P.goals.length,P.edu.some(e=>e.level||e.field),P.work.some(w=>w.title),P.rkw||P.skills||P.pubs||P.certs,P.langs.some(l=>l.lang)||P.tests.some(t=>t.score),P.fieldSel.length||P.customFields.length,P.regions.length||P.countries.length||P.fundReq!=='any'||P.minPay];
  return Math.round(100*f.filter(Boolean).length/f.length);
@@ -1301,7 +1313,7 @@ function profInfo(r){
 }
 let PROFL=PROFS.map(profInfo),PROFLIVE=false;
 const regionName=(cc,l)=>{try{return new Intl.DisplayNames([l],{type:'region'}).of(cc)||cc}catch(e){return cc}};
-function ensureCC(cc){if(cc&&!CBYCODE[cc])CBYCODE[cc]=[cc,regionName(cc,'en'),regionName(cc,'fa'),regionName(cc,'tr'),'other','?','?','?',1]}
+function ensureCC(cc){if(cc&&!CBYCODE[cc])CBYCODE[cc]=[cc,regionName(cc,'en'),regionName(cc,'fa'),regionName(cc,'tr'),regOf(cc),'?','?','?',1]}
 const su=u=>/^https?:\/\//i.test(String(u||'').trim())?String(u).trim():'';
 function normProf(r){
  if(!r||!r.name||!r.uni||!r.cc||String(r.cc).length!==2)return null;ensureCC(r.cc);
@@ -1346,6 +1358,13 @@ function profCardLive(p){
   ${p.score!=null?`<h3 style="margin:16px 0 8px;font-size:16px">${T('pfMatch')}: ${fmt(p.score)}</h3><ul class="why">${p.why.map(w=>`<li>${w}</li>`).join('')}</ul>`:''}
   <div class="xf">${p.email?`<a class="btn sm" href="${profEmail(p)}">${T('pfDraft')}</a>`:''}${prof?`<a class="btn fill sm" href="${esc(prof)}" target="_blank" rel="noopener noreferrer">${T('pfOpen')} \u2197</a>`:''}</div></div></div></div>`;
 }
+let PFQ={key:'',pq:null};
+function profileQuery(){
+ const key=P.fieldSel.join('|');if(PFQ.key===key)return PFQ.pq;
+ const doms=new Set();
+ P.fieldSel.forEach(id=>{let a=id;while(a){const n=TAX.find(x=>x.id===a);const pq=n?Rel.parseQuery(n.n.join(' , ')):{doms:new Set()};if(pq.doms.size){pq.doms.forEach(d=>doms.add(d));break}const i=a.lastIndexOf('.');a=i>0?a.slice(0,i):''}});
+ PFQ={key,pq:{doms,rest:[],lower:''}};return PFQ.pq;
+}
 function profMatch(p){
  const c=CBYCODE[p.cc],why=[];
  const accT=[...p.acc].filter(x=>ACCN[x]).map(x=>ACCN[x][0]);
@@ -1353,8 +1372,10 @@ function profMatch(p){
  if(P.countries.length){if(!P.countries.includes(p.cc))return null}else if(P.regions.length&&!P.regions.includes(c[4]))return null;
  if(!uniAllowed(p))return null;
  const hay=(p.fields.map(f=>TAXS[f]).join(' ')+' '+p.uni+' '+(p.topicsT||[]).join(' ')+' '+(p.dept||'')).toLowerCase(),kws=kwList(),kh=kws.some(k=>hay.includes(k));
- let t=topicScore(p.fields);
- if(t===null)t=kws.length?(kh?.8:0):.5;else if(kh)t=Math.max(t,.8);
+ let t,pqf=P.fieldSel.length?profileQuery():null;
+ if(pqf&&pqf.doms.size){const j=Rel.judge2(profPseudo(p),pqf,true);t={direct:1,related:.6,unclassified:.3}[j.k]||0;if(kh)t=Math.max(t,.8)}
+ else{t=topicScore(p.fields);
+ if(t===null)t=kws.length?(kh?.8:0):.5;else if(kh)t=Math.max(t,.8)}
  if(t===0)return null;
  if(t>.5)why.push(T('whyTopic'));
  let sc=60*t+(P.goals.length?20:14)+(P.countries.length||P.regions.length?10:8)+({1:10,2:7,3:3,4:0}[p.st]);
@@ -1362,13 +1383,21 @@ function profMatch(p){
  if(p.st<=2)why.push(T('pfWhySt'));
  return Object.assign({},p,{score:Math.max(5,Math.min(99,Math.round(sc))),why});
 }
+/* A professor is judged like an opportunity: department = title, the first OpenAlex topics = research topics, the rest = keywords.
+   The taxonomy tags (p.fields) are not used for relevance: they were inferred from single words ("architecture" in computer architecture). */
+function profPseudo(p){return p._pj||(p._pj={title:p.dept||'',rt:(p.topicsT||[]).slice(0,3).join(' , '),topics:(p.topicsT||[]).slice(3).join(' , '),uni:'',desc:'',_tb:false})}
 function profSearch(){
- const toks=PQ.text.toLowerCase().split(/\s+/).filter(Boolean);
- return profAll().filter(p=>{const c=CBYCODE[p.cc];
-  if(PQ.region!=='all'&&c[4]!==PQ.region)return false;
+ const pq=Rel.parseQuery(PQ.text),toksAll=PQ.text.toLowerCase().split(/\s+/).filter(Boolean),toks=pq.doms.size?pq.rest:toksAll;
+ const out=[];
+ profAll().forEach(p=>{const c=CBYCODE[p.cc];
+  if(PQ.region!=='all'&&c[4]!==PQ.region)return;
   const hay=[p.name,p.uni,p.city,c[1],c[2],c[3],p.dept||'',...(p.topicsT||[]),...p.fields.map(f=>TAXS[f])].join(' ').toLowerCase();
-  return toks.every(t=>hay.includes(t));
- }).map(p=>Object.assign({},p,{score:null,why:[]}));
+  if(!toks.every(t=>hay.includes(t)))return;
+  let j={k:'direct',s:0};
+  if(pq.doms.size){const pj=profPseudo(p);j=Rel.judge2(pj,pq,Rel.wordHit(pq,(p.dept||'')+' '+(p.topicsT||[]).join(' , ')));if(!j.k||j.k==='irrelevant')return}
+  out.push(Object.assign({},p,{score:null,why:[],relRank:j.w?1.5:{direct:0,related:1,unclassified:2}[j.k]||0,rs:j.s,rel:j.k,loose:!!j.w}));
+ });
+ return out;
 }
 function profFilter(l){return l.filter(p=>(PQ.deg==='all'||[...p.acc].some(x=>ACCN[x][0]===PQ.deg))&&(PQ.st==='all'||p.st===+PQ.st))}
 function evDate(p){const d=new Date();d.setMonth(d.getMonth()-p.evM);try{return d.toLocaleDateString(S.lang==='fa'?'fa-IR':S.lang==='tr'?'tr-TR':'en-GB',{month:'long',year:'numeric'})}catch(e){return ''}}
@@ -1422,7 +1451,7 @@ function viewProfs(){
   l=profFilter(profAll().map(profMatch).filter(Boolean)).sort((a,b)=>b.score-a.score||a.st-b.st);body=`<div style="margin:16px 0">${flt}</div><p class="muted small"><b>${fmt(l.length)}</b> ${T('pfCount')}</p>${profPage(l)||`<div class="empty">${T('noRes')}</div>`}`}
  }else{
   profOnlineKick(PQ.text);
-  l=profFilter(profSearch()).sort((a,b)=>a.st-b.st||a.name.localeCompare(b.name));
+  l=profFilter(profSearch()).sort((a,b)=>(a.relRank||0)-(b.relRank||0)||(b.rs||0)-(a.rs||0)||a.st-b.st||a.name.localeCompare(b.name));
   body=`<div style="margin:18px 0"><div class="gs"><input data-pq="text" value="${esc(PQ.text)}" aria-label="${esc(T('pfSearchA'))}" autocomplete="off" placeholder="${esc(T('pfPh'))}"><button class="go" data-act="psearch">${T('goB')}</button></div></div>${flt}<p class="muted small"><b>${fmt(l.length)}</b> ${T('pfCount')}</p>${profPage(l)||`<div class="empty">${T('noRes')}</div>`}`}
  const legend=`<div class="plegend">${[1,2,3,4].map(i=>`<div style="--c:${PST[i]}"><b><i></i>${T('pst'+i)}</b><span>${T('pstD'+i)}</span></div>`).join('')}</div>`;
  return `<div class="wrap"><section class="sec" style="padding-top:20px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center"><h1>${T('profNav')}</h1><div>${tabs}</div></section><p class="muted" style="max-width:760px;margin:0 0 16px">${T('pfIntro')}</p>${legend}${body}${LIVE&&ONL.list.length?`<p class="muted small" style="max-width:760px">${T('onlineN')}</p>`:''}${LIVE&&!PROFL.length&&!(l&&l.length)?`<div class="empty">${T('profSoon')}</div>`:''}<p class="muted small" style="margin-top:22px;max-width:760px">${LIVE?T('pfNoteLive'):T('pfNote')}</p></div>`;
@@ -1868,7 +1897,7 @@ function liveX(type,funding,title,r){
 function normPos(r){
  const title=String(r.title||'').replace(/^\s*\[EXAMPLE[^\]]*\]\s*/i,'').trim();if(!title)return null;
  let cc=r.cc&&CBYCODE[r.cc]?r.cc:CCBYNAME[String(r.country||'').toLowerCase().trim()];
- if(!cc&&r.cc&&r.country){cc=String(r.cc);CBYCODE[cc]=[cc,r.country,r.country,r.country,'other','?','?','?',1]}
+ if(!cc&&r.cc&&r.country){cc=String(r.cc);CBYCODE[cc]=[cc,r.country,r.country,r.country,regOf(cc),'?','?','?',1]}
  if(!cc)return null;
  let dl=null;if(r.deadline){const d=new Date(r.deadline);if(!isNaN(d)){const t0=new Date();t0.setHours(0,0,0,0);dl=Math.round((d-t0)/864e5);if(dl<0)return null}}
  const TYMAP={PhD:'phd',Master:'master',Scholarship:'scholar',Postdoc:'postdoc',Internship:'intern','Research job':'job',Other:'other'};

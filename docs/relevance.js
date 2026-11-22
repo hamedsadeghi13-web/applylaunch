@@ -222,6 +222,17 @@
     ORDER.push(id); NAMES[id] = names; if (o.kids) KIDS[id] = o.kids;
   });
   REL_PAIRS.forEach(([a, b]) => { (REL[a] = REL[a] || new Set()).add(b); (REL[b] = REL[b] || new Set()).add(a); });
+  /* Neighbouring fields differ in how tightly they are tied. A record of a STRONG neighbour (architecture-urban, medicine-health, cs-ai ...) is
+     related on its own evidence. A WEAK neighbour (hub topics such as climate, energy, health, geography, development) is related only when the
+     record ALSO shows some evidence of the searched field itself (>= WEAK) - otherwise every climate or health page would "relate" to civil
+     engineering, chemical engineering or psychology. */
+  const WEAK_PAIRS = new Set([
+    ['civil', 'env'], ['civil', 'mining'], ['geo', 'civil'], ['chemeng', 'env'], ['chemeng', 'energy'], ['mech', 'energy'], ['mech', 'biomed'], ['mech', 'marine'],
+    ['elec', 'biomed'], ['elec', 'robotics'], ['land', 'env'], ['env', 'sust'], ['env', 'energy'], ['env', 'agri'], ['env', 'geo'], ['sust', 'energy'], ['sust', 'dev'],
+    ['psych', 'health'], ['soc', 'dev'], ['soc', 'comm'], ['pol', 'econ'], ['pol', 'dev'], ['econ', 'dev'], ['bus', 'tour'], ['bus', 'indeng'], ['construction', 'bus'],
+    ['hum', 'soc'], ['hum', 'art'], ['art', 'comm'], ['sport', 'health'], ['bio', 'agri'], ['vet', 'agri']
+  ].map(([a, b]) => a < b ? a + '|' + b : b + '|' + a));
+  const isWeakPair = (a, b) => WEAK_PAIRS.has(a < b ? a + '|' + b : b + '|' + a);
   const GENERIC_ENG = { q: R('(?:^|[^\\p{L}])(engineering|ingenieur\\w*|ingenier[ií]a|m[uü]hendislik|مهندسی)'), dom: ['civil', 'mech', 'elec', 'chemeng', 'aero', 'mat', 'energy', 'env', 'indeng', 'biomed', 'marine', 'mining', 'construction'] };
 
   /* ---------------- word-sense guards (architecture & friends) ---------------- */
@@ -334,15 +345,20 @@
     if (!q.doms.size) return { k: lexicalHit ? 'direct' : null, s: 0 };
     const c = classify(p), ids = Object.keys(c);
     const ex = q._ex || (q._ex = expandDoms(q));
-    let best = 0, rel = 0, weakOwn = 0;
+    let best = 0, rel = 0, weakOwn = 0, loose = 0;
     const relSet = q._rel || (q._rel = (() => { const s = new Set(); q.doms.forEach(d => (REL[d] || []).forEach(x => { if (!ex.has(x)) s.add(x); })); return s; })());
     ids.forEach(i => {
       if (ex.has(i)) { if (c[i] >= MEMBER) best = Math.max(best, c[i]); else weakOwn = Math.max(weakOwn, c[i]); }
-      else if (relSet.has(i) && c[i] >= 3) rel = Math.max(rel, c[i]);
+    });
+    ids.forEach(i => {
+      if (ex.has(i) || !relSet.has(i) || c[i] < 3) return;
+      const strong = [...q.doms].some(d => (REL[d] || new Set()).has(i) && !isWeakPair(d, i));
+      if (strong || weakOwn >= WEAK) rel = Math.max(rel, c[i]); else loose = Math.max(loose, c[i]);
     });
     if (best) return { k: 'direct', s: best };
     if (rel) return { k: 'related', s: rel };
     if (weakOwn) return { k: 'related', s: weakOwn * 0.5 };
+    if (loose) return { k: 'related', s: loose * 0.4, w: 1 };      /* loosely related: kept (nothing is lost) but listed after the closer matches */
     if (!lexicalHit) return { k: null, s: 0 };
     return { k: ids.some(i => c[i] >= MEMBER) ? 'irrelevant' : 'unclassified', s: 0 };
   }

@@ -41,6 +41,16 @@ ok('energy policy is not mechanical', J({ title: 'PhD Clean Energy Policy and Ma
 // ---- sub-disciplines the user asked about
 [['Landscape Architecture MSc', 'direct'], ['BIM Coordinator, Building Construction', 'direct'], ['MSc Architectural Conservation', 'direct'], ['Building Science and Technology', 'direct'], ['Interior Architecture', 'direct'],
  ['Computational Design and Digital Fabrication, Architecture', 'direct'], ['Urban Design', 'related'], ['Architectural Technology BSc', 'direct']].forEach(([t, w]) => ok('architecture subfield ' + t, J({ title: t }, 'architecture') === w));
+// ---- weak neighbours: hub topics are related only when the searched field itself shows up; they stay listed (loosely related), never dropped
+{
+  const q = Rel.parseQuery('chemical engineering');
+  const j1 = Rel.judge2({ title: 'PhD in Climate Change and Ecology' }, q, true);
+  ok('climate page is only loosely related to chemical engineering', j1.k === 'related' && j1.w === 1);
+  const j2 = Rel.judge2({ title: 'PhD in Environmental Catalysis for Climate Mitigation' }, q, true);
+  ok('climate + catalysis is properly related or direct', (j2.k === 'related' || j2.k === 'direct') && !j2.w);
+  const q2 = Rel.parseQuery('civil engineering');
+  ok('structural civil + climate stays related', !Rel.judge2({ title: 'Climate adaptation of civil infrastructure, postdoc' }, q2, true).w);
+}
 // ---- baked scores are used when the engine version matches
 const p = { title: 'x', dm: [['law', 4]], dv: Rel.VERSION };
 ok('baked dm used', Rel.members(p)[0] === 'law');
