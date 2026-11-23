@@ -166,13 +166,13 @@
   "needs_adapter_count": 142,
   "registry_js_required": 113,
   "browser": {
-   "rendered": 198,
+   "rendered": 0,
    "failed": 0,
-   "seconds": 1652,
-   "available": true
+   "seconds": 0,
+   "available": false
   },
   "duplicates_dropped_last_run": 2227,
-  "stale_or_expired_dropped_last_run": 26,
+  "stale_or_expired_dropped_last_run": 0,
   "failed_sources": 296,
   "new_positions_first_seen_today": 3734,
   "discovery_by_method": {
@@ -640,8 +640,8 @@
    "Postdoc": 1069,
    "PhD": 10496,
    "Research job": 143,
-   "Other": 3250,
-   "Internship": 601,
+   "Other": 3314,
+   "Internship": 537,
    "Scholarship": 5838
   },
   "with_deadline": 843,
