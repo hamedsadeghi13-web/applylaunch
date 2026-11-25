@@ -1,0 +1,52 @@
+name: Embed (Phase 1 - experiment only)
+
+# Manual only. Writes NOTHING to the repository: results are uploaded as a workflow artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Limit records (0 = all)"
+        default: "0"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: applylaunch-data
+  cancel-in-progress: false
+
+jobs:
+  embed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-minilm-l12-v1
+      - name: Install (CPU torch)
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch
+          pip install sentence-transformers numpy
+      - name: Plumbing tests (stub embedder)
+        run: python tests/test_embed.py | tail -3
+      - name: Embed
+        run: python tools/embed/embed.py --data docs/data --out out --limit "${{ inputs.limit }}"
+      - name: Affinity
+        run: python tools/embed/build_affinity.py --out out
+      - name: Model size and license
+        run: |
+          du -sh ~/.cache/huggingface | tee out/model_size.txt
+          find ~/.cache/huggingface -iname "README.md" -exec grep -m3 -i "license" {} \; | tee out/license.txt || true
+          du -sh out/* | tee out/artifact_sizes.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: embed-out
+          path: out/
+          retention-days: 30

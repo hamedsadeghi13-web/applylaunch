@@ -1,0 +1,1031 @@
+{
+ "version": 1,
+ "note": "seeds from field names/subfield vocabulary only",
+ "domains": {
+  "land": {
+   "names": [
+    "Landscape architecture",
+    "معماری منظر",
+    "Peyzaj mimarlığı"
+   ],
+   "seeds": [
+    "Landscape architecture",
+    "Landschaftsarchitektur",
+    "Peyzaj mimarlığı",
+    "architecture du paysage",
+    "landscape architecture",
+    "landscape design and planning",
+    "landscape ecology and urbanism",
+    "paisajismo",
+    "معماری منظر"
+   ]
+  },
+  "interior": {
+   "names": [
+    "Interior architecture",
+    "معماری داخلی",
+    "İç mimarlık"
+   ],
+   "seeds": [
+    "Innenarchitektur",
+    "Interior architecture",
+    "architecture d'intérieur",
+    "diseño de interiores",
+    "interior architecture",
+    "interior design",
+    "spatial design of interiors",
+    "İç mimarlık",
+    "معماری داخلی"
+   ]
+  },
+  "heritage": {
+   "names": [
+    "Heritage conservation",
+    "حفاظت از میراث",
+    "Kültürel miras"
+   ],
+   "seeds": [
+    "Denkmalpflege",
+    "Heritage conservation",
+    "Kültürel miras",
+    "architectural conservation and restoration",
+    "cultural heritage management",
+    "heritage conservation",
+    "historic building preservation",
+    "patrimoine culturel",
+    "restauración del patrimonio",
+    "حفاظت از میراث"
+   ]
+  },
+  "compdesign": {
+   "names": [
+    "Computational design",
+    "طراحی محاسباتی",
+    "Hesaplamalı tasarım"
+   ],
+   "seeds": [
+    "Computational design",
+    "Hesaplamalı tasarım",
+    "algorithmic architecture",
+    "computational design",
+    "digital fabrication and robotic construction",
+    "form finding",
+    "parametric and generative design",
+    "طراحی محاسباتی"
+   ]
+  },
+  "bldtech": {
+   "names": [
+    "Building science & technology",
+    "علوم و فناوری ساختمان",
+    "Yapı bilimi ve teknolojisi"
+   ],
+   "seeds": [
+    "Bauphysik",
+    "Building science & technology",
+    "Yapı bilimi ve teknolojisi",
+    "building information modelling (BIM)",
+    "building physics and energy performance",
+    "building science and technology",
+    "facade engineering",
+    "physique du bâtiment",
+    "timber construction",
+    "علوم و فناوری ساختمان"
+   ]
+  },
+  "construction": {
+   "names": [
+    "Construction management",
+    "مدیریت ساخت",
+    "Yapım yönetimi"
+   ],
+   "seeds": [
+    "Baumanagement",
+    "Construction management",
+    "Yapım yönetimi",
+    "construction engineering and project management",
+    "construction industry",
+    "construction management",
+    "gestion de chantier",
+    "quantity surveying and cost control",
+    "مدیریت ساخت"
+   ]
+  },
+  "urban": {
+   "names": [
+    "Urban planning & design",
+    "شهرسازی",
+    "Şehir planlama"
+   ],
+   "seeds": [
+    "Stadtplanung",
+    "Urban planning & design",
+    "planificación urbana",
+    "regional and spatial planning",
+    "urban design and city planning",
+    "urban planning",
+    "urban studies and urban development",
+    "urbanisme",
+    "Şehir planlama",
+    "شهرسازی"
+   ]
+  },
+  "arch": {
+   "names": [
+    "Architecture",
+    "معماری",
+    "Mimarlık"
+   ],
+   "seeds": [
+    "Architecture",
+    "Architektur",
+    "Mimarlık",
+    "architectural design and theory",
+    "architectural studies and building design",
+    "architecture",
+    "architecture (conception architecturale)",
+    "arquitectura",
+    "history and theory of architecture",
+    "معماری"
+   ]
+  },
+  "civil": {
+   "names": [
+    "Civil engineering",
+    "مهندسی عمران",
+    "İnşaat mühendisliği"
+   ],
+   "seeds": [
+    "Bauingenieurwesen",
+    "Civil engineering",
+    "civil engineering",
+    "geotechnical engineering",
+    "génie civil",
+    "hydraulic and water resources engineering",
+    "infrastructure engineering",
+    "ingeniería civil",
+    "structural engineering",
+    "İnşaat mühendisliği",
+    "مهندسی عمران"
+   ]
+  },
+  "transport": {
+   "names": [
+    "Transport & mobility",
+    "حمل‌ونقل",
+    "Ulaştırma"
+   ],
+   "seeds": [
+    "Transport & mobility",
+    "Ulaştırma",
+    "Verkehrswesen",
+    "ingénierie des transports",
+    "logistics and mobility systems",
+    "railway and road engineering",
+    "transport engineering and mobility",
+    "transportation planning and traffic",
+    "حمل‌ونقل"
+   ]
+  },
+  "mech": {
+   "names": [
+    "Mechanical engineering",
+    "مهندسی مکانیک",
+    "Makine mühendisliği"
+   ],
+   "seeds": [
+    "Makine mühendisliği",
+    "Maschinenbau",
+    "Mechanical engineering",
+    "génie mécanique",
+    "heat transfer and combustion",
+    "ingeniería mecánica",
+    "machine design and manufacturing",
+    "mechanical engineering",
+    "mechatronics",
+    "thermodynamics and fluid mechanics",
+    "مهندسی مکانیک"
+   ]
+  },
+  "aero": {
+   "names": [
+    "Aerospace engineering",
+    "مهندسی هوافضا",
+    "Havacılık ve uzay"
+   ],
+   "seeds": [
+    "Aerospace engineering",
+    "Havacılık ve uzay",
+    "Luft- und Raumfahrttechnik",
+    "aerodynamics and flight dynamics",
+    "aerospace engineering",
+    "aircraft design",
+    "ingénierie aérospatiale",
+    "spacecraft and propulsion",
+    "مهندسی هوافضا"
+   ]
+  },
+  "robotics": {
+   "names": [
+    "Robotics",
+    "رباتیک",
+    "Robotik"
+   ],
+   "seeds": [
+    "Robotics",
+    "Robotik",
+    "autonomous robots and manipulation",
+    "mobile robotics",
+    "robot control and perception",
+    "robotics",
+    "robotique",
+    "رباتیک"
+   ]
+  },
+  "elec": {
+   "names": [
+    "Electrical & electronic engineering",
+    "مهندسی برق و الکترونیک",
+    "Elektrik-elektronik"
+   ],
+   "seeds": [
+    "Electrical & electronic engineering",
+    "Elektrik-elektronik",
+    "Elektrotechnik",
+    "control systems",
+    "electrical and electronic engineering",
+    "electronics and microelectronics",
+    "génie électrique",
+    "ingeniería eléctrica",
+    "power systems and electrical machines",
+    "signal processing and communications",
+    "مهندسی برق و الکترونیک"
+   ]
+  },
+  "energy": {
+   "names": [
+    "Energy",
+    "انرژی",
+    "Enerji"
+   ],
+   "seeds": [
+    "Energietechnik",
+    "Energy",
+    "Enerji",
+    "energy storage and batteries",
+    "energy systems and technology",
+    "renewable energy and power generation",
+    "smart grids and energy efficiency",
+    "énergies renouvelables",
+    "انرژی"
+   ]
+  },
+  "env": {
+   "names": [
+    "Environmental engineering & science",
+    "مهندسی و علوم محیط زیست",
+    "Çevre"
+   ],
+   "seeds": [
+    "Environmental engineering & science",
+    "Umweltwissenschaften",
+    "air pollution and environmental remediation",
+    "climate and ecosystem science",
+    "environmental engineering and science",
+    "ingeniería ambiental",
+    "sciences de l'environnement",
+    "waste management",
+    "water and wastewater treatment",
+    "Çevre",
+    "مهندسی و علوم محیط زیست"
+   ]
+  },
+  "sust": {
+   "names": [
+    "Sustainability",
+    "پایداری",
+    "Sürdürülebilirlik"
+   ],
+   "seeds": [
+    "Nachhaltigkeit",
+    "Sustainability",
+    "Sürdürülebilirlik",
+    "circular economy and sustainable design",
+    "climate change mitigation and adaptation",
+    "développement durable",
+    "sustainability and sustainable development",
+    "sustainability science",
+    "پایداری"
+   ]
+  },
+  "chemeng": {
+   "names": [
+    "Chemical engineering",
+    "مهندسی شیمی",
+    "Kimya mühendisliği"
+   ],
+   "seeds": [
+    "Chemical engineering",
+    "Kimya mühendisliği",
+    "Verfahrenstechnik",
+    "bioprocess engineering",
+    "catalysis and chemical reactors",
+    "chemical engineering",
+    "génie chimique",
+    "ingeniería química",
+    "polymer and petrochemical engineering",
+    "process engineering and reaction engineering",
+    "مهندسی شیمی"
+   ]
+  },
+  "mat": {
+   "names": [
+    "Materials science",
+    "علوم مواد",
+    "Malzeme bilimi"
+   ],
+   "seeds": [
+    "Malzeme bilimi",
+    "Materials science",
+    "Werkstoffwissenschaft",
+    "materials characterization",
+    "materials science and engineering",
+    "metals ceramics and composites",
+    "nanomaterials and functional materials",
+    "science des matériaux",
+    "علوم مواد"
+   ]
+  },
+  "mining": {
+   "names": [
+    "Mining & petroleum",
+    "معدن و نفت",
+    "Maden ve petrol"
+   ],
+   "seeds": [
+    "Bergbau",
+    "Maden ve petrol",
+    "Mining & petroleum",
+    "génie minier",
+    "mineral processing and extraction",
+    "mining engineering",
+    "oil and gas engineering",
+    "petroleum and reservoir engineering",
+    "معدن و نفت"
+   ]
+  },
+  "marine": {
+   "names": [
+    "Naval & ocean engineering",
+    "مهندسی دریا",
+    "Gemi ve deniz"
+   ],
+   "seeds": [
+    "Gemi ve deniz",
+    "Naval & ocean engineering",
+    "Schiffbau",
+    "architecture navale",
+    "maritime engineering",
+    "naval architecture and ocean engineering",
+    "offshore engineering",
+    "ship design and marine technology",
+    "مهندسی دریا"
+   ]
+  },
+  "indeng": {
+   "names": [
+    "Industrial engineering",
+    "مهندسی صنایع",
+    "Endüstri mühendisliği"
+   ],
+   "seeds": [
+    "Endüstri mühendisliği",
+    "Industrial engineering",
+    "Wirtschaftsingenieurwesen",
+    "génie industriel",
+    "industrial engineering",
+    "operations research and production systems",
+    "quality and reliability engineering",
+    "supply chain and logistics optimisation",
+    "مهندسی صنایع"
+   ]
+  },
+  "biomed": {
+   "names": [
+    "Biomedical engineering",
+    "مهندسی پزشکی",
+    "Biyomedikal mühendislik"
+   ],
+   "seeds": [
+    "Biomedical engineering",
+    "Biomedizinische Technik",
+    "Biyomedikal mühendislik",
+    "biomechanics and medical imaging",
+    "biomedical engineering",
+    "génie biomédical",
+    "medical devices and biomaterials",
+    "tissue engineering",
+    "مهندسی پزشکی"
+   ]
+  },
+  "cs": {
+   "names": [
+    "Computer science",
+    "علوم کامپیوتر",
+    "Bilgisayar bilimleri"
+   ],
+   "seeds": [
+    "Bilgisayar bilimleri",
+    "Computer science",
+    "Informatik",
+    "algorithms and computer systems",
+    "ciencias de la computación",
+    "computer science",
+    "cybersecurity and networks",
+    "databases and distributed systems",
+    "informatique",
+    "software engineering and programming",
+    "علوم کامپیوتر"
+   ]
+  },
+  "ai": {
+   "names": [
+    "Artificial intelligence",
+    "هوش مصنوعی",
+    "Yapay zeka"
+   ],
+   "seeds": [
+    "Artificial intelligence",
+    "Künstliche Intelligenz",
+    "Yapay zeka",
+    "artificial intelligence",
+    "inteligencia artificial",
+    "intelligence artificielle",
+    "machine learning and deep learning",
+    "natural language processing and computer vision",
+    "neural networks and reinforcement learning",
+    "هوش مصنوعی"
+   ]
+  },
+  "data": {
+   "names": [
+    "Data science & statistics",
+    "علم داده و آمار",
+    "Veri bilimi"
+   ],
+   "seeds": [
+    "Data science & statistics",
+    "Statistik",
+    "Veri bilimi",
+    "big data and data mining",
+    "biostatistics and econometrics",
+    "data science and statistics",
+    "statistical modelling and data analytics",
+    "statistique",
+    "علم داده و آمار"
+   ]
+  },
+  "math": {
+   "names": [
+    "Mathematics",
+    "ریاضیات",
+    "Matematik"
+   ],
+   "seeds": [
+    "Matematik",
+    "Mathematics",
+    "Mathematik",
+    "algebra geometry and analysis",
+    "matemáticas",
+    "mathematics",
+    "mathématiques",
+    "probability and mathematical modelling",
+    "pure and applied mathematics",
+    "ریاضیات"
+   ]
+  },
+  "phys": {
+   "names": [
+    "Physics",
+    "فیزیک",
+    "Fizik"
+   ],
+   "seeds": [
+    "Fizik",
+    "Physics",
+    "Physik",
+    "astrophysics and particle physics",
+    "física",
+    "optics and photonics",
+    "physics",
+    "physique",
+    "quantum and condensed matter physics",
+    "فیزیک"
+   ]
+  },
+  "chemsci": {
+   "names": [
+    "Chemistry",
+    "شیمی",
+    "Kimya"
+   ],
+   "seeds": [
+    "Chemie",
+    "Chemistry",
+    "Kimya",
+    "analytical and physical chemistry",
+    "chemical synthesis and spectroscopy",
+    "chemistry",
+    "chimie",
+    "organic and inorganic chemistry",
+    "química",
+    "شیمی"
+   ]
+  },
+  "bio": {
+   "names": [
+    "Biology & life sciences",
+    "زیست‌شناسی",
+    "Biyoloji"
+   ],
+   "seeds": [
+    "Biologie",
+    "Biology & life sciences",
+    "Biyoloji",
+    "biologie",
+    "biology and life sciences",
+    "biología",
+    "biotechnology",
+    "ecology and evolution",
+    "microbiology and cell biology",
+    "molecular biology and genetics",
+    "زیست‌شناسی"
+   ]
+  },
+  "neuro": {
+   "names": [
+    "Neuroscience",
+    "علوم اعصاب",
+    "Nörobilim"
+   ],
+   "seeds": [
+    "Neuroscience",
+    "Neurowissenschaften",
+    "Nörobilim",
+    "brain function and cognitive neuroscience",
+    "neurobiology and neuroimaging",
+    "neurological disease research",
+    "neuroscience",
+    "neurosciences",
+    "علوم اعصاب"
+   ]
+  },
+  "med": {
+   "names": [
+    "Medicine",
+    "پزشکی",
+    "Tıp"
+   ],
+   "seeds": [
+    "Medicine",
+    "Medizin",
+    "Tıp",
+    "clinical medicine and surgery",
+    "medical research and physician training",
+    "medicina",
+    "medicine",
+    "médecine",
+    "oncology cardiology and internal medicine",
+    "public health and epidemiology",
+    "پزشکی"
+   ]
+  },
+  "dent": {
+   "names": [
+    "Dentistry",
+    "دندانپزشکی",
+    "Diş hekimliği"
+   ],
+   "seeds": [
+    "Dentistry",
+    "Diş hekimliği",
+    "Zahnmedizin",
+    "dentistry",
+    "médecine dentaire",
+    "oral health and dental surgery",
+    "orthodontics and periodontology",
+    "دندانپزشکی"
+   ]
+  },
+  "vet": {
+   "names": [
+    "Veterinary science",
+    "دامپزشکی",
+    "Veterinerlik"
+   ],
+   "seeds": [
+    "Veterinary science",
+    "Veterinerlik",
+    "Veterinärmedizin",
+    "animal health and veterinary medicine",
+    "livestock and companion animal disease",
+    "médecine vétérinaire",
+    "veterinary science",
+    "دامپزشکی"
+   ]
+  },
+  "pharm": {
+   "names": [
+    "Pharmacy & pharmacology",
+    "داروسازی",
+    "Eczacılık"
+   ],
+   "seeds": [
+    "Eczacılık",
+    "Pharmacy & pharmacology",
+    "Pharmazie",
+    "drug discovery and pharmaceutical sciences",
+    "pharmacie",
+    "pharmacy and pharmacology",
+    "toxicology and clinical pharmacy",
+    "داروسازی"
+   ]
+  },
+  "health": {
+   "names": [
+    "Health sciences & nursing",
+    "علوم بهداشتی و پرستاری",
+    "Sağlık bilimleri"
+   ],
+   "seeds": [
+    "Gesundheitswissenschaften",
+    "Health sciences & nursing",
+    "Sağlık bilimleri",
+    "health sciences and nursing",
+    "nursing and midwifery",
+    "public health and health policy",
+    "rehabilitation and physiotherapy",
+    "sciences infirmières",
+    "علوم بهداشتی و پرستاری"
+   ]
+  },
+  "sport": {
+   "names": [
+    "Sport science",
+    "علوم ورزشی",
+    "Spor bilimleri"
+   ],
+   "seeds": [
+    "Spor bilimleri",
+    "Sport science",
+    "Sportwissenschaft",
+    "exercise physiology and kinesiology",
+    "sciences du sport",
+    "sport science",
+    "sports performance and coaching",
+    "علوم ورزشی"
+   ]
+  },
+  "psych": {
+   "names": [
+    "Psychology",
+    "روانشناسی",
+    "Psikoloji"
+   ],
+   "seeds": [
+    "Psikoloji",
+    "Psychologie",
+    "Psychology",
+    "clinical and counselling psychology",
+    "cognitive and social psychology",
+    "developmental and educational psychology",
+    "psicología",
+    "psychologie",
+    "psychology",
+    "psychotherapy and mental health",
+    "روانشناسی"
+   ]
+  },
+  "soc": {
+   "names": [
+    "Sociology & anthropology",
+    "جامعه‌شناسی و انسان‌شناسی",
+    "Sosyoloji"
+   ],
+   "seeds": [
+    "Sociology & anthropology",
+    "Sosyoloji",
+    "Soziologie",
+    "social research and inequality",
+    "social theory and cultural anthropology",
+    "sociologie",
+    "sociology and anthropology",
+    "sociología",
+    "جامعه‌شناسی و انسان‌شناسی"
+   ]
+  },
+  "pol": {
+   "names": [
+    "Political science & international relations",
+    "علوم سیاسی و روابط بین‌الملل",
+    "Siyaset bilimi"
+   ],
+   "seeds": [
+    "Political science & international relations",
+    "Politikwissenschaft",
+    "Siyaset bilimi",
+    "comparative politics",
+    "political science and international relations",
+    "public policy and governance",
+    "science politique",
+    "security studies and diplomacy",
+    "علوم سیاسی و روابط بین‌الملل"
+   ]
+  },
+  "dev": {
+   "names": [
+    "Development studies",
+    "مطالعات توسعه",
+    "Kalkınma çalışmaları"
+   ],
+   "seeds": [
+    "Development studies",
+    "Entwicklungsstudien",
+    "Kalkınma çalışmaları",
+    "development studies",
+    "global development cooperation",
+    "humanitarian studies",
+    "international development and poverty",
+    "études du développement",
+    "مطالعات توسعه"
+   ]
+  },
+  "econ": {
+   "names": [
+    "Economics",
+    "اقتصاد",
+    "Ekonomi"
+   ],
+   "seeds": [
+    "Economics",
+    "Ekonomi",
+    "Volkswirtschaftslehre",
+    "econometrics and development economics",
+    "economics",
+    "economía",
+    "labour and public economics",
+    "microeconomics and macroeconomics",
+    "sciences économiques",
+    "اقتصاد"
+   ]
+  },
+  "fin": {
+   "names": [
+    "Finance & accounting",
+    "مالی و حسابداری",
+    "Finans ve muhasebe"
+   ],
+   "seeds": [
+    "Finance & accounting",
+    "Finans ve muhasebe",
+    "Finanzwirtschaft",
+    "actuarial science and risk management",
+    "banking and financial markets",
+    "corporate finance and auditing",
+    "finance and accounting",
+    "finance et comptabilité",
+    "مالی و حسابداری"
+   ]
+  },
+  "bus": {
+   "names": [
+    "Business & management",
+    "کسب‌وکار و مدیریت",
+    "İşletme"
+   ],
+   "seeds": [
+    "Betriebswirtschaftslehre",
+    "Business & management",
+    "administración de empresas",
+    "business administration and MBA",
+    "business and management",
+    "gestion des entreprises",
+    "marketing and entrepreneurship",
+    "organisational behaviour and strategy",
+    "İşletme",
+    "کسب‌وکار و مدیریت"
+   ]
+  },
+  "tour": {
+   "names": [
+    "Tourism & hospitality",
+    "گردشگری و مهمان‌داری",
+    "Turizm"
+   ],
+   "seeds": [
+    "Tourism & hospitality",
+    "Tourismus",
+    "Turizm",
+    "hotel and event management",
+    "sustainable tourism",
+    "tourism and hospitality",
+    "tourisme et hôtellerie",
+    "گردشگری و مهمان‌داری"
+   ]
+  },
+  "law": {
+   "names": [
+    "Law",
+    "حقوق",
+    "Hukuk"
+   ],
+   "seeds": [
+    "Hukuk",
+    "Law",
+    "Rechtswissenschaft",
+    "commercial and criminal law",
+    "derecho",
+    "droit",
+    "international and human rights law",
+    "law",
+    "legal studies and jurisprudence",
+    "حقوق"
+   ]
+  },
+  "edu": {
+   "names": [
+    "Education",
+    "آموزش و پرورش",
+    "Eğitim"
+   ],
+   "seeds": [
+    "Education",
+    "Erziehungswissenschaft",
+    "Eğitim",
+    "education",
+    "educational research and curriculum",
+    "higher education and learning sciences",
+    "sciences de l'éducation",
+    "teacher training and pedagogy",
+    "آموزش و پرورش"
+   ]
+  },
+  "lang": {
+   "names": [
+    "Languages & linguistics",
+    "زبان و زبان‌شناسی",
+    "Dil bilimi"
+   ],
+   "seeds": [
+    "Dil bilimi",
+    "Languages & linguistics",
+    "Sprachwissenschaft",
+    "applied linguistics and translation",
+    "languages and linguistics",
+    "linguistique",
+    "literature and language teaching",
+    "زبان و زبان‌شناسی"
+   ]
+  },
+  "hum": {
+   "names": [
+    "Humanities (history & philosophy)",
+    "علوم انسانی",
+    "Beşeri bilimler"
+   ],
+   "seeds": [
+    "Beşeri bilimler",
+    "Geschichtswissenschaft",
+    "Humanities (history & philosophy)",
+    "archaeology and classical studies",
+    "cultural studies and literature",
+    "histoire et philosophie",
+    "history and philosophy",
+    "humanities",
+    "علوم انسانی"
+   ]
+  },
+  "theo": {
+   "names": [
+    "Theology & religion",
+    "الهیات و ادیان",
+    "İlahiyat"
+   ],
+   "seeds": [
+    "Islamic studies and divinity",
+    "Theologie",
+    "Theology & religion",
+    "biblical studies and philosophy of religion",
+    "theology and religious studies",
+    "théologie",
+    "İlahiyat",
+    "الهیات و ادیان"
+   ]
+  },
+  "art": {
+   "names": [
+    "Art & design",
+    "هنر و طراحی",
+    "Sanat ve tasarım"
+   ],
+   "seeds": [
+    "Art & design",
+    "Kunst und Design",
+    "Sanat ve tasarım",
+    "art and design",
+    "arts visuels",
+    "film and creative practice",
+    "fine arts and visual arts",
+    "graphic and product design",
+    "هنر و طراحی"
+   ]
+  },
+  "music": {
+   "names": [
+    "Music",
+    "موسیقی",
+    "Müzik"
+   ],
+   "seeds": [
+    "Music",
+    "Musikwissenschaft",
+    "Müzik",
+    "music",
+    "musicologie",
+    "musicology and composition",
+    "performance and music theory",
+    "موسیقی"
+   ]
+  },
+  "comm": {
+   "names": [
+    "Media & communication",
+    "رسانه و ارتباطات",
+    "İletişim"
+   ],
+   "seeds": [
+    "Kommunikationswissenschaft",
+    "Media & communication",
+    "digital media and film studies",
+    "journalism and public relations",
+    "media and communication studies",
+    "sciences de la communication",
+    "İletişim",
+    "رسانه و ارتباطات"
+   ]
+  },
+  "geo": {
+   "names": [
+    "Earth sciences & geography",
+    "علوم زمین و جغرافیا",
+    "Yer bilimleri"
+   ],
+   "seeds": [
+    "Earth sciences & geography",
+    "Geowissenschaften",
+    "Yer bilimleri",
+    "climate and atmospheric sciences",
+    "earth sciences and geography",
+    "geology and geophysics",
+    "geospatial science and GIS",
+    "géosciences",
+    "علوم زمین و جغرافیا"
+   ]
+  },
+  "agri": {
+   "names": [
+    "Agriculture & forestry",
+    "کشاورزی و منابع طبیعی",
+    "Tarım"
+   ],
+   "seeds": [
+    "Agrarwissenschaft",
+    "Agriculture & forestry",
+    "Tarım",
+    "agricultural economics and food production",
+    "agriculture and forestry",
+    "crop science and soil science",
+    "forestry and natural resources",
+    "sciences agronomiques",
+    "کشاورزی و منابع طبیعی"
+   ]
+  },
+  "food": {
+   "names": [
+    "Food science",
+    "علوم غذایی",
+    "Gıda"
+   ],
+   "seeds": [
+    "Food science",
+    "Gıda",
+    "Lebensmitteltechnologie",
+    "food chemistry and nutrition",
+    "food safety and processing",
+    "food science and technology",
+    "science des aliments",
+    "علوم غذایی"
+   ]
+  }
+ }
+}
