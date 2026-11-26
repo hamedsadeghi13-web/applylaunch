@@ -1,0 +1,5 @@
+{
+ "engine": "rule",
+ "allowUrl": true,
+ "note": "engine: 'rule' (current engine) or 'fusion'. allowUrl:false disables ?engine=fusion too."
+}

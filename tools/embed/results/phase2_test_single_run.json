@@ -1,0 +1,50 @@
+{
+ "n_items": 620,
+ "n_eval": 548,
+ "missing_affinity": 0,
+ "rel": {
+  "rule": 0.7840245031617549,
+  "merged": 0.8482112349711567,
+  "fusion_continuous": 0.923382322452326,
+  "delta_merged_vs_rule_CI95": [
+   0.007306989712527634,
+   0.14671599684259007
+  ],
+  "delta_cont_vs_rule_CI95": [
+   0.04846819155150539,
+   0.2423173539971577
+  ],
+  "topK_precision": {
+   "rule": 0.6458724947985346,
+   "merged": 0.6620195694554379,
+   "fusion_continuous": 0.8163991368633163
+  }
+ },
+ "real": {
+  "rule": 0.565586852782348,
+  "merged": 0.5934364382346495,
+  "fusion_continuous": 0.8138747456088216,
+  "delta_merged_vs_rule_CI95": [
+   -0.035556944173308236,
+   0.12683063211675216
+  ],
+  "delta_cont_vs_rule_CI95": [
+   0.12734091149635796,
+   0.4254314608343724
+  ],
+  "topK_precision": {
+   "rule": 0.44909042340357813,
+   "merged": 0.4983814659315493,
+   "fusion_continuous": 0.6757646849258476
+  }
+ },
+ "demotion_rule_top100_relevant_leaving": {
+  "merged": 0.060124032893036916,
+  "fusion_continuous": 0.37324628737326954
+ },
+ "direct_tier_precision": {
+  "rel": 0.7334459459459459,
+  "real": 0.4993274237540292,
+  "n": 187
+ }
+}
