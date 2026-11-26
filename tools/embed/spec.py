@@ -13,3 +13,8 @@ def opp_text(p,t=None):
     return '. '.join(x for x in parts if x)
 def key(text,model=MODEL,revision=''):
     return hashlib.sha256('\x1f'.join([model,revision,TEXT_SPEC,text]).encode()).hexdigest()[:24]
+
+def prof_text(q):
+    """Whole-profile text (variant B, added AFTER seeing Dev results of the per-topic variant): department | first 8 topics."""
+    d=clean(q.get('dept'));t='; '.join(clean(x) for x in (q.get('topics') or [])[:8] if x)
+    return (d+' | '+t) if d and t else (d or t)

@@ -54,7 +54,7 @@ def embed_texts(emb,texts,cache,stats):
     return np.stack([cache[k] for k in keys]).astype(np.float16)
 def main(argv=None):
     ap=argparse.ArgumentParser();ap.add_argument('--data',default='docs/data');ap.add_argument('--out',required=True);ap.add_argument('--cache',default='')
-    ap.add_argument('--embedder',default='st');ap.add_argument('--revision',default='');ap.add_argument('--limit',type=int,default=0);a=ap.parse_args(argv)
+    ap.add_argument('--embedder',default='st');ap.add_argument('--revision',default='');ap.add_argument('--limit',type=int,default=0);ap.add_argument('--prof-only',action='store_true');a=ap.parse_args(argv)
     os.makedirs(a.out,exist_ok=True);t0=time.time()
     P,T,Q=load_data(a.data,a.limit)
     emb=StubEmbedder() if a.embedder=='stub' else STEmbedder(revision=a.revision or None)
@@ -66,6 +66,10 @@ def main(argv=None):
     def step(name,fn):
         t=time.time();r=fn();tm[name]=round(time.time()-t,1);return r
     E_proto=step('proto',lambda:embed_texts(emb,ptxt,cache,st))
+    if a.prof_only:
+        E_prof=embed_texts(emb,[spec.prof_text(q) for q in Q],cache,st);np.save(os.path.join(a.out,'emb_prof.npy'),E_prof);json.dump([q['id'] for q in Q],open(os.path.join(a.out,'ids_prof.json'),'w'))
+        np.save(os.path.join(a.out,'emb_proto.npy'),E_proto);json.dump(pidx,open(os.path.join(a.out,'proto_index.json'),'w'))
+        json.dump({'revision':emb.revision,'n':len(Q),'seconds':round(time.time()-t0,1),'peak_rss_MB':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024),'text_spec':spec.TEXT_SPEC},open(os.path.join(a.out,'manifest_prof.json'),'w'));return
     topics=sorted({t for q in Q for t in (q.get('topics') or [])});depts=sorted({spec.clean(q.get('dept')) for q in Q if q.get('dept')})
     E_topic=step('topics',lambda:embed_texts(emb,topics,cache,st));E_dept=step('depts',lambda:embed_texts(emb,depts,cache,st))
     ids=[p['id'] for p in P];texts=[spec.opp_text(p,T.get(str(p['id']))) for p in P]
