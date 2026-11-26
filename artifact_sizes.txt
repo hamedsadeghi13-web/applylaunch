@@ -1,0 +1,7 @@
+8.8M	out/emb_prof.npy
+392K	out/emb_proto.npy
+136K	out/ids_prof.json
+4.0K	out/license.txt
+4.0K	out/manifest_prof.json
+4.0K	out/model_size.txt
+8.0K	out/proto_index.json
