@@ -1,0 +1,15 @@
+264K	out/affinity_dept.npy
+4.0K	out/affinity_manifest.json
+1.8M	out/affinity_opp.npy
+184K	out/affinity_topic.npy
+188K	out/depts.json
+3.6M	out/emb_dept.npy
+24M	out/emb_opp.npy
+392K	out/emb_proto.npy
+2.5M	out/emb_topic.npy
+364K	out/ids_opp.json
+4.0K	out/license.txt
+4.0K	out/manifest.json
+4.0K	out/model_size.txt
+8.0K	out/proto_index.json
+132K	out/topics.json

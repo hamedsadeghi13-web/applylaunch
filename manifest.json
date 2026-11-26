@@ -1,0 +1,35 @@
+{
+ "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+ "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+ "text_spec": "v1",
+ "max_seq": 128,
+ "dim": 384,
+ "embedder": "st",
+ "counts": {
+  "opps": 32157,
+  "topics": 3360,
+  "depts": 4806,
+  "seeds": 521
+ },
+ "cache": {
+  "computed": 40767,
+  "reused": 77
+ },
+ "seconds": {
+  "proto": 1.4,
+  "topics": 13.2,
+  "depts": 21.7,
+  "opps": 1110.8
+ },
+ "total_seconds": 1155.1,
+ "sec_per_1000_opps": 34.5,
+ "peak_rss_MB": 1748,
+ "avg_chars": 404,
+ "python": "3.12.16",
+ "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+ "versions": {
+  "sentence_transformers": "6.3.0",
+  "torch": "2.15.0+cpu",
+  "numpy": "2.5.5"
+ }
+}
