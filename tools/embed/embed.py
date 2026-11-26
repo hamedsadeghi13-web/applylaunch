@@ -26,10 +26,13 @@ class StubEmbedder:
 class STEmbedder:
     def __init__(self,model=spec.MODEL,revision=None):
         from sentence_transformers import SentenceTransformer
+        if not revision:
+            try:
+                from huggingface_hub import HfApi;revision=HfApi().model_info(model).sha
+            except Exception:revision=None
         kw={'revision':revision} if revision else {}
         self.m=SentenceTransformer(model,device='cpu',**kw);self.m.max_seq_length=spec.MAX_SEQ
-        try:self.revision=self.m[0].auto_model.config._commit_hash or ''
-        except Exception:self.revision=''
+        self.revision=revision or ''
         self.dim=self.m.get_sentence_embedding_dimension()
     def encode(self,texts):
         return self.m.encode(texts,batch_size=64,normalize_embeddings=True,show_progress_bar=False,convert_to_numpy=True)
