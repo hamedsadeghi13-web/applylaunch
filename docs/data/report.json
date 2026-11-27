@@ -226,13 +226,13 @@
   "needs_adapter_count": 242,
   "registry_js_required": 224,
   "browser": {
-   "rendered": 240,
-   "failed": 1,
-   "seconds": 2244,
-   "available": true
+   "rendered": 0,
+   "failed": 0,
+   "seconds": 0,
+   "available": false
   },
   "duplicates_dropped_last_run": 3792,
-  "stale_or_expired_dropped_last_run": 6,
+  "stale_or_expired_dropped_last_run": 0,
   "failed_sources": 299,
   "new_positions_first_seen_today": 3447,
   "discovery_by_method": {
@@ -698,11 +698,11 @@
   "by_type": {
    "Postdoc": 1488,
    "Scholarship": 9288,
-   "Internship": 842,
+   "Internship": 803,
    "PhD": 15220,
    "Master": 6916,
    "Research job": 140,
-   "Other": 3445
+   "Other": 3484
   },
   "with_deadline": 1264,
   "with_salary": 1150,
