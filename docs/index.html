@@ -1918,8 +1918,10 @@ function normPos(r){
 async function loadData(){
  try{const cr=await fetch('config.json',{cache:'no-store'});if(cr.ok){const c=await cr.json();['email','ads','phone','api'].forEach(k=>{if(c[k])SITE[k]=c[k]})}}catch(e){}
  try{
-  const ac=new AbortController();setTimeout(()=>ac.abort(),8000);const res=await fetch('data/positions.json?v='+Date.now(),{cache:'no-store',signal:ac.signal});if(!res.ok)throw 0;
-  const j=await res.json();const arr=Array.isArray(j)?j:(j.positions||[]);
+  /* the file is ~24 MB (4 MB gzipped): wait generously for the body (slow connections used to fall into demo mode), retry once, revalidate instead of re-downloading */
+  const getJ=async(ms)=>{const ac=new AbortController(),t=setTimeout(()=>ac.abort(),ms);try{const r=await fetch('data/positions.json',{cache:'no-cache',signal:ac.signal});if(!r.ok)throw 0;return await r.json()}finally{clearTimeout(t)}};
+  let j;try{j=await getJ(120000)}catch(e){j=await getJ(120000)}
+  const arr=Array.isArray(j)?j:(j.positions||[]);
   const seen=new Set(),out=[];arr.forEach(r=>{const p=normPos(r);if(p&&!seen.has(p.id)){seen.add(p.id);out.push(p)}});
   if(!out.length)throw 0;
   Rel.prepare(out);POSITIONS=out;LIVE=true;DATAINFO={updated:Array.isArray(j)?'':String(j.updated||''),n:out.length};
