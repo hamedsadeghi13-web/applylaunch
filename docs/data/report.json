@@ -710,17 +710,17 @@
  },
  "professors": {
   "total": 12000,
-  "institutions_processed": 1375,
-  "with_official_page": 5238,
-  "with_public_email": 2131,
+  "institutions_processed": 1525,
+  "with_official_page": 5677,
+  "with_public_email": 2339,
   "status": {
-   "1": 437,
-   "2": 97,
-   "3": 11459,
-   "4": 7
+   "1": 479,
+   "2": 115,
+   "3": 11398,
+   "4": 8
   },
-  "with_evidence_link": 541,
-  "from_open_positions": 345
+  "with_evidence_link": 602,
+  "from_open_positions": 380
  },
  "note": "Status detection accuracy is NOT measured automatically. Run: python crawler/report.py --audit 40, label the CSV (ok/wrong), then --score.",
  "institutions": {
