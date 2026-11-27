@@ -18,8 +18,8 @@ const run=(p,q,o={})=>p.evaluate(([q,o])=>{S.q.text=q;S.q.region=o.region||'all'
 (async()=>{const b=await chromium.launch();
  try{
   /* 1. default engine identical to the ORIGINAL index.html */
-  const base=await open(b,'http://127.0.0.1:8792/'),cur=await open(b,'http://127.0.0.1:8791/');
-  ok('default: fusion.js and affinity files are NOT requested',!cur.reqs.some(u=>/fusion\.js|affinity\./.test(u)));
+  const base=await open(b,'http://127.0.0.1:8792/'),cur=await open(b,'http://127.0.0.1:8791/?engine=rule');
+  ok('?engine=rule: fusion.js and affinity files are NOT requested',!cur.reqs.some(u=>/fusion\.js|affinity\./.test(u)));
   ok('default: window.FUS undefined',await cur.p.evaluate(()=>typeof window.FUS==='undefined'));
   let same=0,tot=0;const qs=[...F,'معماری','mimarlık','AI','engineering','Architecture Italy','phd','zzzz'];
   for(const q of qs)for(const o of [{},{region:'eu'},{sort:'dl'}]){const a=await run(base.p,q,o),c=await run(cur.p,q,o);tot++;if(JSON.stringify(a.ids)===JSON.stringify(c.ids))same++;else console.log('  differs:',q,JSON.stringify(o),a.ids.length,c.ids.length)}
@@ -28,7 +28,7 @@ const run=(p,q,o={})=>p.evaluate(([q,o])=>{S.q.text=q;S.q.region=o.region||'all'
   /* 2. fusion on */
   const fu=await open(b,'http://127.0.0.1:8791/?engine=fusion',{fusion:true});
   ok('fusion: loaded and ready',await fu.p.evaluate(()=>FUS.ready===true));
-  const rb=await open(b,'http://127.0.0.1:8791/');let sup=0,subset=0,addedAll=0,tot2=0,perf=[],perfR=[];const extra={};
+  const rb=await open(b,'http://127.0.0.1:8791/?engine=rule');let sup=0,subset=0,addedAll=0,tot2=0,perf=[],perfR=[];const extra={};
   for(const q of F){const a=await run(rb.p,q),c=await run(fu.p,q);tot2++;
    const A=new Set(a.ids),C=new Set(c.ids);const lostA=a.ids.filter(i=>!C.has(i));const added=c.ids.filter(i=>!A.has(i));
    if(!lostA.length)sup++;if(added.every(i=>c.sem.includes(i))&&c.sem.length===added.length)addedAll++;if(c.ids.length===new Set(c.ids).size)subset++;extra[q]=added.length;perf.push(c.ms);perfR.push(a.ms)}
@@ -50,6 +50,7 @@ const run=(p,q,o={})=>p.evaluate(([q,o])=>{S.q.text=q;S.q.region=o.region||'all'
   for(const [name,route] of [['missing affinity.bin',{pat:/affinity\.bin/,fn:r=>r.abort()}],['corrupt affinity.bin',{pat:/affinity\.bin/,fn:r=>r.fulfill({status:200,body:Buffer.from('xx')})}],['version mismatch',{pat:/affinity\.json/,fn:async r=>{const t=await (await r.fetch()).json();t.relevance_version=99;r.fulfill({json:t})}}]]){
    const f=await open(b,'http://127.0.0.1:8791/?engine=fusion',{fusion:true,route});const a=await run(rb.p,'Architecture'),c=await run(f.p,'Architecture');
    ok('fallback: '+name+' -> rule results unchanged',JSON.stringify(a.ids)===JSON.stringify(c.ids)&&await f.p.evaluate(()=>!FUS.active),'');await f.ctx.close()}
+  const df=await open(b,'http://127.0.0.1:8791/',{fusion:true});ok('default (no param) = fusion per flags.json',await df.p.evaluate(()=>FUS.ready===true&&FUS.spec!==null));await df.ctx.close();
   /* 6. kill switch: allowUrl:false */
   const ks=await open(b,'http://127.0.0.1:8791/?engine=fusion',{route:{pat:/flags\.json/,fn:r=>r.fulfill({json:{engine:'rule',allowUrl:false}})}});
   ok('kill switch: allowUrl=false ignores ?engine=fusion',await ks.p.evaluate(()=>typeof window.FUS==='undefined')&&!ks.reqs.some(u=>/fusion\.js/.test(u)));await ks.ctx.close();
